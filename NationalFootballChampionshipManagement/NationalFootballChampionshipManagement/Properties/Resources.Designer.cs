@@ -93,6 +93,16 @@ namespace NationalFootballChampionshipManagement.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Stadium_Background {
+            get {
+                object obj = ResourceManager.GetObject("Stadium Background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Team_01_Avatar_Example {
             get {
                 object obj = ResourceManager.GetObject("Team 01 Avatar Example", resourceCulture);

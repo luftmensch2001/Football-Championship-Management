@@ -57,150 +57,160 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="File\Player\formPlayerInformation.cs">
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="FORM\File\Player\formPlayerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="File\Player\formPlayerInformation.Designer.cs">
+    <Compile Include="FORM\File\Player\formPlayerInformation.Designer.cs">
       <DependentUpon>formPlayerInformation.cs</DependentUpon>
     </Compile>
-    <Compile Include="File\Player\formAddPlayer.cs">
+    <Compile Include="FORM\File\Player\formAddPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="File\Player\formAddPlayer.Designer.cs">
+    <Compile Include="FORM\File\Player\formAddPlayer.Designer.cs">
       <DependentUpon>formAddPlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="File\Player\formPlayerList.cs">
+    <Compile Include="FORM\File\Player\formPlayerList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="File\Player\formPlayerList.Designer.cs">
+    <Compile Include="FORM\File\Player\formPlayerList.Designer.cs">
       <DependentUpon>formPlayerList.cs</DependentUpon>
     </Compile>
-    <Compile Include="File\Team\formTeam.cs">
+    <Compile Include="FORM\File\Team\formTeam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="File\Team\formTeam.Designer.cs">
+    <Compile Include="FORM\File\Team\formTeam.Designer.cs">
       <DependentUpon>formTeam.cs</DependentUpon>
     </Compile>
-    <Compile Include="Competition Schedule\formCompetitionSchedule.cs">
+    <Compile Include="FORM\Competition Schedule\formCompetitionSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Competition Schedule\formCompetitionSchedule.Designer.cs">
+    <Compile Include="FORM\Competition Schedule\formCompetitionSchedule.Designer.cs">
       <DependentUpon>formCompetitionSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Result\formDetailsResult.cs">
+    <Compile Include="FORM\formHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Result\formDetailsResult.Designer.cs">
+    <Compile Include="FORM\formHome.Designer.cs">
+      <DependentUpon>formHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Result\formDetailsResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Result\formDetailsResult.Designer.cs">
       <DependentUpon>formDetailsResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="Result\formRecordResult.cs">
+    <Compile Include="FORM\Result\formRecordResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Result\formRecordResult.Designer.cs">
+    <Compile Include="FORM\Result\formRecordResult.Designer.cs">
       <DependentUpon>formRecordResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="Result\formResultHistory.cs">
+    <Compile Include="FORM\Result\formResultHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Result\formResultHistory.Designer.cs">
+    <Compile Include="FORM\Result\formResultHistory.Designer.cs">
       <DependentUpon>formResultHistory.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Championship\formAddTypeOfGoal.cs">
+    <Compile Include="FORM\Tools\Championship\formAddTypeOfGoal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\Championship\formAddTypeOfGoal.Designer.cs">
+    <Compile Include="FORM\Tools\Championship\formAddTypeOfGoal.Designer.cs">
       <DependentUpon>formAddTypeOfGoal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Championship\formAddTypeOfPlayer.cs">
+    <Compile Include="FORM\Tools\Championship\formAddTypeOfPlayer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\Championship\formAddTypeOfPlayer.Designer.cs">
+    <Compile Include="FORM\Tools\Championship\formAddTypeOfPlayer.Designer.cs">
       <DependentUpon>formAddTypeOfPlayer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Championship\formChampionshipTools.cs">
+    <Compile Include="FORM\Tools\Championship\formChampionshipTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\Championship\formChampionshipTools.Designer.cs">
+    <Compile Include="FORM\Tools\Championship\formChampionshipTools.Designer.cs">
       <DependentUpon>formChampionshipTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Ranking\formRankingTools.cs">
+    <Compile Include="FORM\Tools\Ranking\formRankingTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\Ranking\formRankingTools.Designer.cs">
+    <Compile Include="FORM\Tools\Ranking\formRankingTools.Designer.cs">
       <DependentUpon>formRankingTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tools\Scores\formScoresTools.cs">
+    <Compile Include="FORM\Tools\Scores\formScoresTools.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tools\Scores\formScoresTools.Designer.cs">
+    <Compile Include="FORM\Tools\Scores\formScoresTools.Designer.cs">
       <DependentUpon>formScoresTools.cs</DependentUpon>
     </Compile>
-    <Compile Include="Help\formHelp.cs">
+    <Compile Include="FORM\Help\formHelp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Help\formHelp.Designer.cs">
+    <Compile Include="FORM\Help\formHelp.Designer.cs">
       <DependentUpon>formHelp.cs</DependentUpon>
     </Compile>
-    <Compile Include="formMain.cs">
+    <Compile Include="FORM\formMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formMain.Designer.cs">
+    <Compile Include="FORM\formMain.Designer.cs">
       <DependentUpon>formMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ranking\formRanking.cs">
+    <Compile Include="FORM\Ranking\formRanking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ranking\formRanking.Designer.cs">
+    <Compile Include="FORM\Ranking\formRanking.Designer.cs">
       <DependentUpon>formRanking.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="File\Player\formPlayerInformation.resx">
+    <EmbeddedResource Include="FORM\File\Player\formPlayerInformation.resx">
       <DependentUpon>formPlayerInformation.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="File\Player\formAddPlayer.resx">
+    <EmbeddedResource Include="FORM\File\Player\formAddPlayer.resx">
       <DependentUpon>formAddPlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="File\Player\formPlayerList.resx">
+    <EmbeddedResource Include="FORM\File\Player\formPlayerList.resx">
       <DependentUpon>formPlayerList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="File\Team\formTeam.resx">
+    <EmbeddedResource Include="FORM\File\Team\formTeam.resx">
       <DependentUpon>formTeam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Competition Schedule\formCompetitionSchedule.resx">
+    <EmbeddedResource Include="FORM\Competition Schedule\formCompetitionSchedule.resx">
       <DependentUpon>formCompetitionSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Result\formDetailsResult.resx">
+    <EmbeddedResource Include="FORM\formHome.resx">
+      <DependentUpon>formHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Result\formDetailsResult.resx">
       <DependentUpon>formDetailsResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Result\formRecordResult.resx">
+    <EmbeddedResource Include="FORM\Result\formRecordResult.resx">
       <DependentUpon>formRecordResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Result\formResultHistory.resx">
+    <EmbeddedResource Include="FORM\Result\formResultHistory.resx">
       <DependentUpon>formResultHistory.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Championship\formAddTypeOfGoal.resx">
+    <EmbeddedResource Include="FORM\Tools\Championship\formAddTypeOfGoal.resx">
       <DependentUpon>formAddTypeOfGoal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Championship\formAddTypeOfPlayer.resx">
+    <EmbeddedResource Include="FORM\Tools\Championship\formAddTypeOfPlayer.resx">
       <DependentUpon>formAddTypeOfPlayer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Championship\formChampionshipTools.resx">
+    <EmbeddedResource Include="FORM\Tools\Championship\formChampionshipTools.resx">
       <DependentUpon>formChampionshipTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Ranking\formRankingTools.resx">
+    <EmbeddedResource Include="FORM\Tools\Ranking\formRankingTools.resx">
       <DependentUpon>formRankingTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tools\Scores\formScoresTools.resx">
+    <EmbeddedResource Include="FORM\Tools\Scores\formScoresTools.resx">
       <DependentUpon>formScoresTools.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Help\formHelp.resx">
+    <EmbeddedResource Include="FORM\Help\formHelp.resx">
       <DependentUpon>formHelp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formMain.resx">
+    <EmbeddedResource Include="FORM\formMain.resx">
       <DependentUpon>formMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Ranking\formRanking.resx">
+    <EmbeddedResource Include="FORM\Ranking\formRanking.resx">
       <DependentUpon>formRanking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -236,7 +246,9 @@
   <ItemGroup>
     <None Include="Resources\Team Logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Stadium Background.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PlayerAvatarExample.png" />
   </ItemGroup>
