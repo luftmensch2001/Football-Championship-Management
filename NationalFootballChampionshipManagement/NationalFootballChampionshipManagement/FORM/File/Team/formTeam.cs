@@ -42,5 +42,23 @@ namespace NationalFootballChampionshipManagement
 
             this.formFather.openChildForm(new formPlayerList(this.formFather));
         }
+
+        private void btnAddTeam_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formAddNewTeam(this.formFather));
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            // Mở form thêm đội bóng mới lên và đôi button "Thêm" thành button "Lưu", 
+            // và đổi tiêu đề thành "THay đổi thông tin đội bóng"
+
+            this.formFather.openChildForm(new formAddNewTeam(this.formFather));
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formHome());
+        }
     }
 }

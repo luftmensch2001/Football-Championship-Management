@@ -58,6 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="FORM\File\Team\formAddNewTeam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\File\Team\formAddNewTeam.Designer.cs">
+      <DependentUpon>formAddNewTeam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\Competition Schedule\formAddCompetition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\Competition Schedule\formAddCompetition.Designer.cs">
+      <DependentUpon>formAddCompetition.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\File\Player\formPlayerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +174,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORM\File\Team\formAddNewTeam.resx">
+      <DependentUpon>formAddNewTeam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\Competition Schedule\formAddCompetition.resx">
+      <DependentUpon>formAddCompetition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\File\Player\formPlayerInformation.resx">
       <DependentUpon>formPlayerInformation.cs</DependentUpon>
     </EmbeddedResource>

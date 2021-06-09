@@ -20,5 +20,26 @@ namespace NationalFootballChampionshipManagement
 
             this.formFather = f;
         }
+
+        private void addEditColumn()
+        {
+            /*
+            
+             */
+
+            //
+            // Code
+            //
+        }
+
+        private void btnAddNewCompetiton_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formAddCompetition(this.formFather));
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formHome());
+        }
     }
 }

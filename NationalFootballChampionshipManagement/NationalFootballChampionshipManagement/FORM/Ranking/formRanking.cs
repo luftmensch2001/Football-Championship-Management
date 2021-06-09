@@ -12,9 +12,12 @@ namespace NationalFootballChampionshipManagement
 {
     public partial class formRanking : Form
     {
-        public formRanking()
+        formMain formFather = null;
+        public formRanking(formMain f)
         {
             InitializeComponent();
+
+            this.formFather = f;
 
             addColumnsToDatagridviews();
         }
@@ -147,6 +150,11 @@ namespace NationalFootballChampionshipManagement
             newCol.Width = 10;
 
             this.dgvRanking.Columns.Add(newCol);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formHome());
         }
     }
 }

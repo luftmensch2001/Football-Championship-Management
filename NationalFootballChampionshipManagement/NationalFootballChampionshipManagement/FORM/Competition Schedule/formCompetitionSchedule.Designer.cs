@@ -522,6 +522,7 @@
             this.btnAddNewCompetiton.Size = new System.Drawing.Size(173, 45);
             this.btnAddNewCompetiton.TabIndex = 0;
             this.btnAddNewCompetiton.Text = "Thêm trận đấu mới";
+            this.btnAddNewCompetiton.Click += new System.EventHandler(this.btnAddNewCompetiton_Click);
             // 
             // panel6
             // 
@@ -741,6 +742,7 @@
             this.btnClose.Size = new System.Drawing.Size(43, 70);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // formCompetitionSchedule
             // 

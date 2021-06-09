@@ -31,6 +31,11 @@ namespace NationalFootballChampionshipManagement
             btn.UseColumnTextForButtonValue = true;
             this.dgvResult.Columns.Add(btn);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formHome());
+        }
     }
 
     
