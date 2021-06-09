@@ -12,9 +12,17 @@ namespace NationalFootballChampionshipManagement
 {
     public partial class formScoresTools : Form
     {
-        public formScoresTools()
+        formMain formFather = null;
+
+        public formScoresTools(formMain f)
         {
             InitializeComponent();
+            this.formFather = f;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formHome());
         }
     }
 }

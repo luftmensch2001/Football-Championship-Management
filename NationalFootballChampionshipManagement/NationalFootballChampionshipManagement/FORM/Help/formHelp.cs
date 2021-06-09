@@ -12,11 +12,18 @@ namespace NationalFootballChampionshipManagement
 {
     public partial class formHelp : Form
     {
-        public formHelp()
+        formMain formFather = null;
+
+        public formHelp(formMain f)
         {
+            this.formFather = f;
+
             InitializeComponent();
         }
 
-        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formHome());
+        }
     }
 }

@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.tbTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAddTeam = new Guna.UI2.WinForms.Guna2Button();
             this.iconButton10 = new FontAwesome.Sharp.IconButton();
             this.iconButton9 = new FontAwesome.Sharp.IconButton();
             this.iconButton8 = new FontAwesome.Sharp.IconButton();
@@ -69,7 +71,7 @@
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.pnlTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -94,6 +96,23 @@
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(874, 70);
             this.pnlTitle.TabIndex = 0;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 35;
+            this.btnClose.Location = new System.Drawing.Point(0, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(43, 70);
+            this.btnClose.TabIndex = 3;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // tbTitle
             // 
@@ -128,6 +147,7 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
+            this.panel1.Controls.Add(this.btnAddTeam);
             this.panel1.Controls.Add(this.iconButton10);
             this.panel1.Controls.Add(this.iconButton9);
             this.panel1.Controls.Add(this.iconButton8);
@@ -144,6 +164,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(209, 591);
             this.panel1.TabIndex = 1;
+            // 
+            // btnAddTeam
+            // 
+            this.btnAddTeam.AutoRoundedCorners = true;
+            this.btnAddTeam.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAddTeam.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnAddTeam.BorderRadius = 21;
+            this.btnAddTeam.BorderThickness = 2;
+            this.btnAddTeam.CheckedState.Parent = this.btnAddTeam;
+            this.btnAddTeam.CustomImages.Parent = this.btnAddTeam;
+            this.btnAddTeam.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnAddTeam.FillColor = System.Drawing.Color.Transparent;
+            this.btnAddTeam.Font = new System.Drawing.Font("Segoe UI Semibold", 12.25F, System.Drawing.FontStyle.Bold);
+            this.btnAddTeam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnAddTeam.HoverState.Parent = this.btnAddTeam;
+            this.btnAddTeam.Location = new System.Drawing.Point(0, 546);
+            this.btnAddTeam.Name = "btnAddTeam";
+            this.btnAddTeam.ShadowDecoration.Parent = this.btnAddTeam;
+            this.btnAddTeam.Size = new System.Drawing.Size(209, 45);
+            this.btnAddTeam.TabIndex = 11;
+            this.btnAddTeam.Text = "Thêm đội bóng mới";
+            this.btnAddTeam.Click += new System.EventHandler(this.btnAddTeam_Click);
             // 
             // iconButton10
             // 
@@ -479,21 +521,21 @@
             // 
             // dgvPlayerList
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPlayerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlayerList.BackgroundColor = System.Drawing.Color.White;
             this.dgvPlayerList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPlayerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPlayerList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvPlayerList.ColumnHeadersHeight = 35;
             this.dgvPlayerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSTT,
@@ -501,14 +543,14 @@
             this.colBirthday,
             this.colTypeOfPlayer,
             this.colNote});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvPlayerList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPlayerList.EnableHeadersVisualStyles = false;
             this.dgvPlayerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -569,6 +611,7 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.btnAddNewPlayer);
+            this.panel10.Controls.Add(this.btnEdit);
             this.panel10.Controls.Add(this.guna2TextBox5);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
@@ -588,9 +631,9 @@
             this.btnAddNewPlayer.IconColor = System.Drawing.Color.White;
             this.btnAddNewPlayer.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddNewPlayer.IconSize = 25;
-            this.btnAddNewPlayer.Location = new System.Drawing.Point(469, 0);
+            this.btnAddNewPlayer.Location = new System.Drawing.Point(267, 0);
             this.btnAddNewPlayer.Name = "btnAddNewPlayer";
-            this.btnAddNewPlayer.Size = new System.Drawing.Size(192, 30);
+            this.btnAddNewPlayer.Size = new System.Drawing.Size(180, 30);
             this.btnAddNewPlayer.TabIndex = 1;
             this.btnAddNewPlayer.Text = "Thêm cầu thủ mới";
             this.btnAddNewPlayer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -623,7 +666,7 @@
             this.guna2TextBox5.SelectedText = "";
             this.guna2TextBox5.SelectionStart = 17;
             this.guna2TextBox5.ShadowDecoration.Parent = this.guna2TextBox5;
-            this.guna2TextBox5.Size = new System.Drawing.Size(378, 30);
+            this.guna2TextBox5.Size = new System.Drawing.Size(237, 30);
             this.guna2TextBox5.TabIndex = 0;
             // 
             // panel8
@@ -794,21 +837,27 @@
             this.tbName.Size = new System.Drawing.Size(661, 40);
             this.tbName.TabIndex = 0;
             // 
-            // btnClose
+            // btnEdit
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 35;
-            this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(43, 70);
-            this.btnClose.TabIndex = 3;
-            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnEdit.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnEdit.IconColor = System.Drawing.Color.White;
+            this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnEdit.IconSize = 25;
+            this.btnEdit.Location = new System.Drawing.Point(447, 0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(214, 30);
+            this.btnEdit.TabIndex = 2;
+            this.btnEdit.Text = "Sửa thông tin đội bóng";
+            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEdit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // formTeam
             // 
@@ -881,5 +930,7 @@
         private FontAwesome.Sharp.IconButton btnAddNewPlayer;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
         private FontAwesome.Sharp.IconButton btnClose;
+        private Guna.UI2.WinForms.Guna2Button btnAddTeam;
+        private FontAwesome.Sharp.IconButton btnEdit;
     }
 }

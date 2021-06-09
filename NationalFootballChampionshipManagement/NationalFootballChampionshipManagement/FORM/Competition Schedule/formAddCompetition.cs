@@ -10,19 +10,20 @@ using System.Windows.Forms;
 
 namespace NationalFootballChampionshipManagement
 {
-    public partial class formRankingTools : Form
+    public partial class formAddCompetition : Form
     {
         formMain formFather = null;
-        public formRankingTools(formMain f)
-        {
-            InitializeComponent();
 
+        public formAddCompetition(formMain f)
+        {
             this.formFather = f;
+
+            InitializeComponent();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.formFather.openChildForm(new formHome());
+            this.formFather.openChildForm(new formCompetitionSchedule(this.formFather));
         }
     }
 }

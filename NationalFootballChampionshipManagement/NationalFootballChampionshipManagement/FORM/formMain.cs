@@ -131,7 +131,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnRankingChart_Click(object sender, EventArgs e)
         {
-            openChildForm(new formRanking());
+            openChildForm(new formRanking(this));
             hideSubMenu();
             highlightButton(btnRankingChart);
         }
@@ -156,7 +156,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            openChildForm(new formHelp());
+            openChildForm(new formHelp(this));
             hideSubMenu();
             highlightButton(this.btnHelp);
         }
@@ -181,13 +181,13 @@ namespace NationalFootballChampionshipManagement
 
         private void btnScoresTools_Click(object sender, EventArgs e)
         {
-            openChildForm(new formScoresTools());
+            openChildForm(new formScoresTools(this));
             highlightButton(this.btnScoresTools);
         }
 
         private void btnRankingTools_Click(object sender, EventArgs e)
         {
-            openChildForm(new formRankingTools());
+            openChildForm(new formRankingTools(this));
             highlightButton(this.btnRankingTools);
         }
 
