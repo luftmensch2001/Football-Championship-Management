@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panelDown = new System.Windows.Forms.Panel();
-            this.tbCopyrights = new System.Windows.Forms.TextBox();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnContactToDevelopers = new FontAwesome.Sharp.IconButton();
@@ -40,7 +39,8 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.tbTitle = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lTitle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelDown.SuspendLayout();
             this.pnlFill.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -51,24 +51,12 @@
             // panelDown
             // 
             this.panelDown.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
-            this.panelDown.Controls.Add(this.tbCopyrights);
+            this.panelDown.Controls.Add(this.label1);
             this.panelDown.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelDown.Location = new System.Drawing.Point(0, 485);
             this.panelDown.Name = "panelDown";
             this.panelDown.Size = new System.Drawing.Size(858, 137);
             this.panelDown.TabIndex = 0;
-            // 
-            // tbCopyrights
-            // 
-            this.tbCopyrights.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
-            this.tbCopyrights.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbCopyrights.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.tbCopyrights.ForeColor = System.Drawing.Color.White;
-            this.tbCopyrights.Location = new System.Drawing.Point(0, 65);
-            this.tbCopyrights.Name = "tbCopyrights";
-            this.tbCopyrights.Size = new System.Drawing.Size(320, 19);
-            this.tbCopyrights.TabIndex = 0;
-            this.tbCopyrights.Text = "@Bản quyền thuộc về 814 Dev Team";
             // 
             // pnlFill
             // 
@@ -191,8 +179,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.panel1.Controls.Add(this.lTitle);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.tbTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -216,36 +204,29 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // tbTitle
+            // lTitle
             // 
-            this.tbTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.tbTitle.BorderThickness = 0;
-            this.tbTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTitle.DefaultText = "Trợ giúp";
-            this.tbTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTitle.DisabledState.Parent = this.tbTitle;
-            this.tbTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.tbTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTitle.FocusedState.Parent = this.tbTitle;
-            this.tbTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTitle.ForeColor = System.Drawing.Color.White;
-            this.tbTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTitle.HoverState.Parent = this.tbTitle;
-            this.tbTitle.Location = new System.Drawing.Point(0, 0);
-            this.tbTitle.Margin = new System.Windows.Forms.Padding(9, 10, 9, 10);
-            this.tbTitle.Name = "tbTitle";
-            this.tbTitle.PasswordChar = '\0';
-            this.tbTitle.PlaceholderText = "";
-            this.tbTitle.SelectedText = "";
-            this.tbTitle.SelectionStart = 8;
-            this.tbTitle.ShadowDecoration.Parent = this.tbTitle;
-            this.tbTitle.Size = new System.Drawing.Size(858, 70);
-            this.tbTitle.TabIndex = 0;
-            this.tbTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(815, 70);
+            this.lTitle.TabIndex = 7;
+            this.lTitle.Text = "Trợ giúp";
+            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(287, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "@Bản quyền thuộc về 814 Dev Team";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // formHelp
             // 
@@ -270,17 +251,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panelDown;
-        private System.Windows.Forms.TextBox tbCopyrights;
         private System.Windows.Forms.Panel pnlFill;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox tbTitle;
         private FontAwesome.Sharp.IconButton btnContactToDevelopers;
         private FontAwesome.Sharp.IconButton btnError;
         private FontAwesome.Sharp.IconButton btnHowToUse;
         private System.Windows.Forms.Panel panel5;
         private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Label lTitle;
+        private System.Windows.Forms.Label label1;
     }
 }
