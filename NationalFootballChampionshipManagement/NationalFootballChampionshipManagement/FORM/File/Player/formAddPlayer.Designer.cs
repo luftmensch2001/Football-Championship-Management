@@ -43,22 +43,22 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.tbCLB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbBirthday = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbTypeOfPlayer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbNationlity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbGender = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.tbNoteTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbUploadNewImage = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pnlPlayerAvatar = new System.Windows.Forms.Panel();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lTitle = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -81,7 +81,7 @@
             // 
             this.cbGender.BackColor = System.Drawing.Color.Transparent;
             this.cbGender.BorderThickness = 0;
-            this.cbGender.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cbGender.Dock = System.Windows.Forms.DockStyle.Left;
             this.cbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGender.FocusedColor = System.Drawing.Color.Empty;
@@ -115,7 +115,7 @@
             // 
             this.guna2TextBox1.BorderThickness = 0;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DefaultText = "Việt Nam";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -134,6 +134,7 @@
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "Quốc tịch";
             this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.SelectionStart = 8;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Size = new System.Drawing.Size(337, 54);
             this.guna2TextBox1.TabIndex = 3;
@@ -310,188 +311,20 @@
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
             // 
-            // tbCLB
-            // 
-            this.tbCLB.BorderThickness = 0;
-            this.tbCLB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCLB.DefaultText = "Câu lạc bộ:";
-            this.tbCLB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbCLB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbCLB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCLB.DisabledState.Parent = this.tbCLB;
-            this.tbCLB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbCLB.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbCLB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCLB.FocusedState.Parent = this.tbCLB;
-            this.tbCLB.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbCLB.ForeColor = System.Drawing.Color.Black;
-            this.tbCLB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbCLB.HoverState.Parent = this.tbCLB;
-            this.tbCLB.Location = new System.Drawing.Point(0, 216);
-            this.tbCLB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbCLB.Name = "tbCLB";
-            this.tbCLB.PasswordChar = '\0';
-            this.tbCLB.PlaceholderText = "";
-            this.tbCLB.SelectedText = "";
-            this.tbCLB.SelectionStart = 11;
-            this.tbCLB.ShadowDecoration.Parent = this.tbCLB;
-            this.tbCLB.Size = new System.Drawing.Size(158, 54);
-            this.tbCLB.TabIndex = 4;
-            // 
-            // tbBirthday
-            // 
-            this.tbBirthday.BorderThickness = 0;
-            this.tbBirthday.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbBirthday.DefaultText = "Ngày sinh: ";
-            this.tbBirthday.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbBirthday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbBirthday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbBirthday.DisabledState.Parent = this.tbBirthday;
-            this.tbBirthday.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbBirthday.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbBirthday.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBirthday.FocusedState.Parent = this.tbBirthday;
-            this.tbBirthday.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbBirthday.ForeColor = System.Drawing.Color.Black;
-            this.tbBirthday.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbBirthday.HoverState.Parent = this.tbBirthday;
-            this.tbBirthday.Location = new System.Drawing.Point(0, 162);
-            this.tbBirthday.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbBirthday.Name = "tbBirthday";
-            this.tbBirthday.PasswordChar = '\0';
-            this.tbBirthday.PlaceholderText = "";
-            this.tbBirthday.SelectedText = "";
-            this.tbBirthday.SelectionStart = 11;
-            this.tbBirthday.ShadowDecoration.Parent = this.tbBirthday;
-            this.tbBirthday.Size = new System.Drawing.Size(158, 54);
-            this.tbBirthday.TabIndex = 3;
-            // 
-            // tbTypeOfPlayer
-            // 
-            this.tbTypeOfPlayer.BorderThickness = 0;
-            this.tbTypeOfPlayer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTypeOfPlayer.DefaultText = "Loại cầu thủ:";
-            this.tbTypeOfPlayer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbTypeOfPlayer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbTypeOfPlayer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTypeOfPlayer.DisabledState.Parent = this.tbTypeOfPlayer;
-            this.tbTypeOfPlayer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTypeOfPlayer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbTypeOfPlayer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTypeOfPlayer.FocusedState.Parent = this.tbTypeOfPlayer;
-            this.tbTypeOfPlayer.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbTypeOfPlayer.ForeColor = System.Drawing.Color.Black;
-            this.tbTypeOfPlayer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTypeOfPlayer.HoverState.Parent = this.tbTypeOfPlayer;
-            this.tbTypeOfPlayer.Location = new System.Drawing.Point(0, 108);
-            this.tbTypeOfPlayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbTypeOfPlayer.Name = "tbTypeOfPlayer";
-            this.tbTypeOfPlayer.PasswordChar = '\0';
-            this.tbTypeOfPlayer.PlaceholderText = "";
-            this.tbTypeOfPlayer.SelectedText = "";
-            this.tbTypeOfPlayer.SelectionStart = 13;
-            this.tbTypeOfPlayer.ShadowDecoration.Parent = this.tbTypeOfPlayer;
-            this.tbTypeOfPlayer.Size = new System.Drawing.Size(158, 54);
-            this.tbTypeOfPlayer.TabIndex = 2;
-            // 
-            // tbNationlity
-            // 
-            this.tbNationlity.BorderThickness = 0;
-            this.tbNationlity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNationlity.DefaultText = "Quốc tịch: ";
-            this.tbNationlity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbNationlity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbNationlity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbNationlity.DisabledState.Parent = this.tbNationlity;
-            this.tbNationlity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbNationlity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbNationlity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNationlity.FocusedState.Parent = this.tbNationlity;
-            this.tbNationlity.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbNationlity.ForeColor = System.Drawing.Color.Black;
-            this.tbNationlity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNationlity.HoverState.Parent = this.tbNationlity;
-            this.tbNationlity.Location = new System.Drawing.Point(0, 54);
-            this.tbNationlity.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbNationlity.Name = "tbNationlity";
-            this.tbNationlity.PasswordChar = '\0';
-            this.tbNationlity.PlaceholderText = "";
-            this.tbNationlity.SelectedText = "";
-            this.tbNationlity.SelectionStart = 11;
-            this.tbNationlity.ShadowDecoration.Parent = this.tbNationlity;
-            this.tbNationlity.Size = new System.Drawing.Size(158, 54);
-            this.tbNationlity.TabIndex = 1;
-            // 
-            // tbGender
-            // 
-            this.tbGender.BorderThickness = 0;
-            this.tbGender.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbGender.DefaultText = "Giới tính: ";
-            this.tbGender.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbGender.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbGender.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbGender.DisabledState.Parent = this.tbGender;
-            this.tbGender.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbGender.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbGender.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbGender.FocusedState.Parent = this.tbGender;
-            this.tbGender.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbGender.ForeColor = System.Drawing.Color.Black;
-            this.tbGender.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbGender.HoverState.Parent = this.tbGender;
-            this.tbGender.Location = new System.Drawing.Point(0, 0);
-            this.tbGender.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbGender.Name = "tbGender";
-            this.tbGender.PasswordChar = '\0';
-            this.tbGender.PlaceholderText = "";
-            this.tbGender.SelectedText = "";
-            this.tbGender.SelectionStart = 11;
-            this.tbGender.ShadowDecoration.Parent = this.tbGender;
-            this.tbGender.Size = new System.Drawing.Size(158, 54);
-            this.tbGender.TabIndex = 0;
-            // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.tbNoteTitle);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Controls.Add(this.tbCLB);
-            this.panel4.Controls.Add(this.tbBirthday);
-            this.panel4.Controls.Add(this.tbTypeOfPlayer);
-            this.panel4.Controls.Add(this.tbNationlity);
-            this.panel4.Controls.Add(this.tbGender);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(30, 161);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(158, 500);
             this.panel4.TabIndex = 12;
-            // 
-            // tbNoteTitle
-            // 
-            this.tbNoteTitle.BorderThickness = 0;
-            this.tbNoteTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNoteTitle.DefaultText = "Ghi chú: ";
-            this.tbNoteTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbNoteTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbNoteTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbNoteTitle.DisabledState.Parent = this.tbNoteTitle;
-            this.tbNoteTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbNoteTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tbNoteTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNoteTitle.FocusedState.Parent = this.tbNoteTitle;
-            this.tbNoteTitle.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.tbNoteTitle.ForeColor = System.Drawing.Color.Black;
-            this.tbNoteTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNoteTitle.HoverState.Parent = this.tbNoteTitle;
-            this.tbNoteTitle.Location = new System.Drawing.Point(0, 270);
-            this.tbNoteTitle.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbNoteTitle.Name = "tbNoteTitle";
-            this.tbNoteTitle.PasswordChar = '\0';
-            this.tbNoteTitle.PlaceholderText = "";
-            this.tbNoteTitle.SelectedText = "";
-            this.tbNoteTitle.SelectionStart = 9;
-            this.tbNoteTitle.ShadowDecoration.Parent = this.tbNoteTitle;
-            this.tbNoteTitle.Size = new System.Drawing.Size(158, 54);
-            this.tbNoteTitle.TabIndex = 6;
             // 
             // tbUploadNewImage
             // 
@@ -569,36 +402,6 @@
             this.panel2.Size = new System.Drawing.Size(874, 10);
             this.panel2.TabIndex = 8;
             // 
-            // tbTitle
-            // 
-            this.tbTitle.BorderThickness = 0;
-            this.tbTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTitle.DefaultText = "Thêm cầu thủ mới";
-            this.tbTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTitle.DisabledState.Parent = this.tbTitle;
-            this.tbTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.tbTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTitle.FocusedState.Parent = this.tbTitle;
-            this.tbTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
-            this.tbTitle.ForeColor = System.Drawing.Color.White;
-            this.tbTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTitle.HoverState.Parent = this.tbTitle;
-            this.tbTitle.Location = new System.Drawing.Point(43, 0);
-            this.tbTitle.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.tbTitle.Name = "tbTitle";
-            this.tbTitle.PasswordChar = '\0';
-            this.tbTitle.PlaceholderText = "";
-            this.tbTitle.SelectedText = "";
-            this.tbTitle.SelectionStart = 16;
-            this.tbTitle.ShadowDecoration.Parent = this.tbTitle;
-            this.tbTitle.Size = new System.Drawing.Size(831, 70);
-            this.tbTitle.TabIndex = 1;
-            this.tbTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
@@ -619,13 +422,91 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.panel1.Controls.Add(this.tbTitle);
+            this.panel1.Controls.Add(this.lTitle);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(874, 70);
             this.panel1.TabIndex = 7;
+            // 
+            // lTitle
+            // 
+            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(831, 70);
+            this.lTitle.TabIndex = 7;
+            this.lTitle.Text = "Thêm cầu thủ mới";
+            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 54);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Giới tính:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label2.Location = new System.Drawing.Point(0, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 54);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Quốc tịch:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label3.Location = new System.Drawing.Point(0, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 54);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Loại cầu thủ:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label4.Location = new System.Drawing.Point(0, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 54);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Ngày sinh:";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label5.Location = new System.Drawing.Point(0, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 54);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Câu lạc bộ:";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.label6.Location = new System.Drawing.Point(0, 270);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 54);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "Ghi chú:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // formAddPlayer
             // 
@@ -670,11 +551,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton btnAdd;
-        private Guna.UI2.WinForms.Guna2TextBox tbCLB;
-        private Guna.UI2.WinForms.Guna2TextBox tbBirthday;
-        private Guna.UI2.WinForms.Guna2TextBox tbTypeOfPlayer;
-        private Guna.UI2.WinForms.Guna2TextBox tbNationlity;
-        private Guna.UI2.WinForms.Guna2TextBox tbGender;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox tbUploadNewImage;
         private System.Windows.Forms.Panel panel11;
@@ -682,12 +558,17 @@
         private Guna.UI2.WinForms.Guna2TextBox tbName;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2TextBox tbTitle;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox tbNoteTitle;
         private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2ComboBox cbCLB;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label lTitle;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

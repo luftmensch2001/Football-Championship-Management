@@ -13,18 +13,33 @@ namespace NationalFootballChampionshipManagement
     public partial class formPlayerList : Form
     {
         formMain formFather = null;
+        bool addPlayerToTeam = false;
 
-        public formPlayerList()
-        {
-            InitializeComponent();
-        }
-
-        public formPlayerList(formMain f)
+        public formPlayerList(formMain f, bool addPlayerToTeam = false)
         {
             InitializeComponent();
             this.formFather = f;
 
+            this.addPlayerToTeam = addPlayerToTeam;
+
+            if (this.addPlayerToTeam == true)
+            {
+                changeForAddPlayer();
+            }
+
             addExampleRow();
+        }
+
+        private void changeForAddPlayer()
+        {
+            this.lTitle.Text = "Thêm cầu thủ";
+            this.btnSave.Text = "Thêm";
+
+            DataGridViewCheckBoxColumn ckbx = new DataGridViewCheckBoxColumn();
+            ckbx.HeaderText = "Chọn";
+            ckbx.ValueType = typeof(bool);
+            ckbx.Name = "ckbx";
+            this.dgvPlayerList.Columns.Add(ckbx);
         }
 
         private void addExampleRow()
@@ -91,7 +106,14 @@ namespace NationalFootballChampionshipManagement
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.formFather.openChildForm(new formHome());
+            if (this.addPlayerToTeam == false)
+            {
+                this.formFather.openChildForm(new formHome());
+            }
+            else
+            {
+                this.formFather.openChildForm(new formTeam(this.formFather));
+            }    
         }
     }
 }

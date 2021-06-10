@@ -30,33 +30,34 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.tbTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.nudWin = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.tbWin = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.nudEqual = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.tbEqual = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.nudLose = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.tbLose = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.lTitle = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.guna2NumericUpDown2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.guna2NumericUpDown3 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWin)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudEqual)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLose)).BeginInit();
             this.panel5.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.panel1.Controls.Add(this.lTitle);
             this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.tbTitle);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -80,229 +81,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // tbTitle
-            // 
-            this.tbTitle.BorderThickness = 0;
-            this.tbTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTitle.DefaultText = "Quy định về điểm số";
-            this.tbTitle.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbTitle.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTitle.DisabledState.Parent = this.tbTitle;
-            this.tbTitle.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbTitle.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.tbTitle.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTitle.FocusedState.Parent = this.tbTitle;
-            this.tbTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
-            this.tbTitle.ForeColor = System.Drawing.Color.White;
-            this.tbTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbTitle.HoverState.Parent = this.tbTitle;
-            this.tbTitle.Location = new System.Drawing.Point(0, 0);
-            this.tbTitle.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
-            this.tbTitle.Name = "tbTitle";
-            this.tbTitle.PasswordChar = '\0';
-            this.tbTitle.PlaceholderText = "";
-            this.tbTitle.SelectedText = "";
-            this.tbTitle.SelectionStart = 19;
-            this.tbTitle.ShadowDecoration.Parent = this.tbTitle;
-            this.tbTitle.Size = new System.Drawing.Size(874, 70);
-            this.tbTitle.TabIndex = 2;
-            this.tbTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.nudWin);
-            this.panel2.Controls.Add(this.tbWin);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 70);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(874, 40);
-            this.panel2.TabIndex = 1;
-            // 
-            // nudWin
-            // 
-            this.nudWin.BackColor = System.Drawing.Color.Transparent;
-            this.nudWin.BorderThickness = 0;
-            this.nudWin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudWin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nudWin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nudWin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nudWin.DisabledState.Parent = this.nudWin;
-            this.nudWin.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nudWin.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nudWin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.nudWin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nudWin.FocusedState.Parent = this.nudWin;
-            this.nudWin.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.nudWin.ForeColor = System.Drawing.Color.Black;
-            this.nudWin.Location = new System.Drawing.Point(80, 0);
-            this.nudWin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nudWin.Name = "nudWin";
-            this.nudWin.ShadowDecoration.Parent = this.nudWin;
-            this.nudWin.Size = new System.Drawing.Size(76, 40);
-            this.nudWin.TabIndex = 5;
-            this.nudWin.Value = new decimal(new int[] {
-            3,
-            0,
-            0,
-            0});
-            // 
-            // tbWin
-            // 
-            this.tbWin.BorderThickness = 0;
-            this.tbWin.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbWin.DefaultText = "Thắng:";
-            this.tbWin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbWin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbWin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbWin.DisabledState.Parent = this.tbWin;
-            this.tbWin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbWin.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tbWin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbWin.FocusedState.Parent = this.tbWin;
-            this.tbWin.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.tbWin.ForeColor = System.Drawing.Color.Black;
-            this.tbWin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbWin.HoverState.Parent = this.tbWin;
-            this.tbWin.Location = new System.Drawing.Point(0, 0);
-            this.tbWin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbWin.Name = "tbWin";
-            this.tbWin.PasswordChar = '\0';
-            this.tbWin.PlaceholderText = "";
-            this.tbWin.SelectedText = "";
-            this.tbWin.SelectionStart = 6;
-            this.tbWin.ShadowDecoration.Parent = this.tbWin;
-            this.tbWin.Size = new System.Drawing.Size(80, 40);
-            this.tbWin.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.nudEqual);
-            this.panel3.Controls.Add(this.tbEqual);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 110);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(874, 40);
-            this.panel3.TabIndex = 2;
-            // 
-            // nudEqual
-            // 
-            this.nudEqual.BackColor = System.Drawing.Color.Transparent;
-            this.nudEqual.BorderThickness = 0;
-            this.nudEqual.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudEqual.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nudEqual.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nudEqual.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nudEqual.DisabledState.Parent = this.nudEqual;
-            this.nudEqual.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nudEqual.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nudEqual.Dock = System.Windows.Forms.DockStyle.Left;
-            this.nudEqual.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nudEqual.FocusedState.Parent = this.nudEqual;
-            this.nudEqual.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.nudEqual.ForeColor = System.Drawing.Color.Black;
-            this.nudEqual.Location = new System.Drawing.Point(80, 0);
-            this.nudEqual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nudEqual.Name = "nudEqual";
-            this.nudEqual.ShadowDecoration.Parent = this.nudEqual;
-            this.nudEqual.Size = new System.Drawing.Size(76, 40);
-            this.nudEqual.TabIndex = 6;
-            this.nudEqual.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // tbEqual
-            // 
-            this.tbEqual.BorderThickness = 0;
-            this.tbEqual.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEqual.DefaultText = "Hòa:";
-            this.tbEqual.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbEqual.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbEqual.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbEqual.DisabledState.Parent = this.tbEqual;
-            this.tbEqual.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbEqual.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tbEqual.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEqual.FocusedState.Parent = this.tbEqual;
-            this.tbEqual.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.tbEqual.ForeColor = System.Drawing.Color.Black;
-            this.tbEqual.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEqual.HoverState.Parent = this.tbEqual;
-            this.tbEqual.Location = new System.Drawing.Point(0, 0);
-            this.tbEqual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbEqual.Name = "tbEqual";
-            this.tbEqual.PasswordChar = '\0';
-            this.tbEqual.PlaceholderText = "";
-            this.tbEqual.SelectedText = "";
-            this.tbEqual.SelectionStart = 4;
-            this.tbEqual.ShadowDecoration.Parent = this.tbEqual;
-            this.tbEqual.Size = new System.Drawing.Size(80, 40);
-            this.tbEqual.TabIndex = 5;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.nudLose);
-            this.panel4.Controls.Add(this.tbLose);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 150);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(874, 40);
-            this.panel4.TabIndex = 3;
-            // 
-            // nudLose
-            // 
-            this.nudLose.BackColor = System.Drawing.Color.Transparent;
-            this.nudLose.BorderThickness = 0;
-            this.nudLose.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nudLose.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nudLose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nudLose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nudLose.DisabledState.Parent = this.nudLose;
-            this.nudLose.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nudLose.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nudLose.Dock = System.Windows.Forms.DockStyle.Left;
-            this.nudLose.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nudLose.FocusedState.Parent = this.nudLose;
-            this.nudLose.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.nudLose.ForeColor = System.Drawing.Color.Black;
-            this.nudLose.Location = new System.Drawing.Point(80, 0);
-            this.nudLose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.nudLose.Name = "nudLose";
-            this.nudLose.ShadowDecoration.Parent = this.nudLose;
-            this.nudLose.Size = new System.Drawing.Size(76, 40);
-            this.nudLose.TabIndex = 6;
-            // 
-            // tbLose
-            // 
-            this.tbLose.BorderThickness = 0;
-            this.tbLose.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbLose.DefaultText = "Thua:";
-            this.tbLose.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbLose.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbLose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbLose.DisabledState.Parent = this.tbLose;
-            this.tbLose.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbLose.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tbLose.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbLose.FocusedState.Parent = this.tbLose;
-            this.tbLose.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.tbLose.ForeColor = System.Drawing.Color.Black;
-            this.tbLose.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbLose.HoverState.Parent = this.tbLose;
-            this.tbLose.Location = new System.Drawing.Point(0, 0);
-            this.tbLose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbLose.Name = "tbLose";
-            this.tbLose.PasswordChar = '\0';
-            this.tbLose.PlaceholderText = "";
-            this.tbLose.SelectedText = "";
-            this.tbLose.SelectionStart = 5;
-            this.tbLose.ShadowDecoration.Parent = this.tbLose;
-            this.tbLose.Size = new System.Drawing.Size(80, 40);
-            this.tbLose.TabIndex = 5;
-            // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
@@ -317,21 +95,183 @@
             this.btnSave.IconSize = 28;
             this.btnSave.Location = new System.Drawing.Point(0, 0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(156, 40);
+            this.btnSave.Size = new System.Drawing.Size(167, 42);
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Lưu";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             // 
+            // lTitle
+            // 
+            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(831, 70);
+            this.lTitle.TabIndex = 8;
+            this.lTitle.Text = "Quy định về điểm số";
+            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 70);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(251, 591);
+            this.panel2.TabIndex = 7;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.guna2NumericUpDown1);
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(251, 70);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(623, 42);
+            this.panel3.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.guna2NumericUpDown2);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(251, 112);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(623, 42);
+            this.panel4.TabIndex = 9;
+            // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.btnSave);
+            this.panel5.Controls.Add(this.guna2NumericUpDown3);
+            this.panel5.Controls.Add(this.label3);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 190);
+            this.panel5.Location = new System.Drawing.Point(251, 154);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(874, 40);
-            this.panel5.TabIndex = 4;
+            this.panel5.Size = new System.Drawing.Size(623, 42);
+            this.panel5.TabIndex = 10;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnSave);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(251, 196);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(623, 42);
+            this.panel6.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 42);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Thắng:";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 42);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Hòa:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 42);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Thua:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2NumericUpDown1
+            // 
+            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.BorderThickness = 0;
+            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2NumericUpDown1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2NumericUpDown1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2NumericUpDown1.DisabledState.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.guna2NumericUpDown1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.guna2NumericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2NumericUpDown1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.Black;
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(65, 0);
+            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(102, 42);
+            this.guna2NumericUpDown1.TabIndex = 7;
+            this.guna2NumericUpDown1.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // guna2NumericUpDown2
+            // 
+            this.guna2NumericUpDown2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown2.BorderThickness = 0;
+            this.guna2NumericUpDown2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2NumericUpDown2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2NumericUpDown2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2NumericUpDown2.DisabledState.Parent = this.guna2NumericUpDown2;
+            this.guna2NumericUpDown2.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.guna2NumericUpDown2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.guna2NumericUpDown2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2NumericUpDown2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2NumericUpDown2.FocusedState.Parent = this.guna2NumericUpDown2;
+            this.guna2NumericUpDown2.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.guna2NumericUpDown2.ForeColor = System.Drawing.Color.Black;
+            this.guna2NumericUpDown2.Location = new System.Drawing.Point(65, 0);
+            this.guna2NumericUpDown2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2NumericUpDown2.Name = "guna2NumericUpDown2";
+            this.guna2NumericUpDown2.ShadowDecoration.Parent = this.guna2NumericUpDown2;
+            this.guna2NumericUpDown2.Size = new System.Drawing.Size(102, 42);
+            this.guna2NumericUpDown2.TabIndex = 8;
+            this.guna2NumericUpDown2.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // guna2NumericUpDown3
+            // 
+            this.guna2NumericUpDown3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown3.BorderThickness = 0;
+            this.guna2NumericUpDown3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2NumericUpDown3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2NumericUpDown3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2NumericUpDown3.DisabledState.Parent = this.guna2NumericUpDown3;
+            this.guna2NumericUpDown3.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.guna2NumericUpDown3.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.guna2NumericUpDown3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2NumericUpDown3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2NumericUpDown3.FocusedState.Parent = this.guna2NumericUpDown3;
+            this.guna2NumericUpDown3.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.guna2NumericUpDown3.ForeColor = System.Drawing.Color.Black;
+            this.guna2NumericUpDown3.Location = new System.Drawing.Point(65, 0);
+            this.guna2NumericUpDown3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2NumericUpDown3.Name = "guna2NumericUpDown3";
+            this.guna2NumericUpDown3.ShadowDecoration.Parent = this.guna2NumericUpDown3;
+            this.guna2NumericUpDown3.Size = new System.Drawing.Size(102, 42);
+            this.guna2NumericUpDown3.TabIndex = 8;
             // 
             // formScoresTools
             // 
@@ -339,6 +279,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(874, 661);
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -348,13 +289,13 @@
             this.Name = "formScoresTools";
             this.Text = "formScoresTools";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudWin)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudEqual)).EndInit();
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudLose)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -362,18 +303,19 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox tbTitle;
+        private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private FontAwesome.Sharp.IconButton btnSave;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudWin;
-        private Guna.UI2.WinForms.Guna2TextBox tbWin;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudEqual;
-        private Guna.UI2.WinForms.Guna2TextBox tbEqual;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudLose;
-        private Guna.UI2.WinForms.Guna2TextBox tbLose;
         private System.Windows.Forms.Panel panel5;
-        private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Panel panel6;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown2;
+        private System.Windows.Forms.Label label2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown3;
+        private System.Windows.Forms.Label label3;
     }
 }
