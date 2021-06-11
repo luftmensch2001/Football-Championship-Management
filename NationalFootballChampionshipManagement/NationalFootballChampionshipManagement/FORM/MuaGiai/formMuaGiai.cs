@@ -10,26 +10,20 @@ using System.Windows.Forms;
 
 namespace NationalFootballChampionshipManagement
 {
-    public partial class formResultHistory : Form
+    public partial class formMuaGiai : Form
     {
         formMain formFather = null;
 
-        public formResultHistory(formMain f)
+        public formMuaGiai(formMain f)
         {
-            InitializeComponent();
-
             this.formFather = f;
-            addInformationColumn();
+
+            InitializeComponent();
         }
 
-        private void addInformationColumn()
+        private void btnAddNewTournaments_Click(object sender, EventArgs e)
         {
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.HeaderText = "Thông tin chi tiết";
-            btn.Name = "btnInformation";
-            btn.Text = "Thông tin chi tiết";
-            btn.UseColumnTextForButtonValue = true;
-            this.dgvResult.Columns.Add(btn);
+            this.formFather.openChildForm(new formAddMuaGiai(this.formFather));
         }
 
         private void btnClose_Click(object sender, EventArgs e)

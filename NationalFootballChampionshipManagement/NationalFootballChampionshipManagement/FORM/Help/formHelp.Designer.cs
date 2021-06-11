@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelDown = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnContactToDevelopers = new FontAwesome.Sharp.IconButton();
@@ -38,9 +39,8 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.lTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panelDown.SuspendLayout();
             this.pnlFill.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -57,6 +57,18 @@
             this.panelDown.Name = "panelDown";
             this.panelDown.Size = new System.Drawing.Size(858, 137);
             this.panelDown.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 58);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(287, 20);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "@Bản quyền thuộc về 814 Dev Team";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pnlFill
             // 
@@ -86,6 +98,7 @@
             // btnContactToDevelopers
             // 
             this.btnContactToDevelopers.BackColor = System.Drawing.Color.Transparent;
+            this.btnContactToDevelopers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContactToDevelopers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnContactToDevelopers.FlatAppearance.BorderSize = 0;
             this.btnContactToDevelopers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -108,6 +121,7 @@
             // btnError
             // 
             this.btnError.BackColor = System.Drawing.Color.Transparent;
+            this.btnError.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnError.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnError.FlatAppearance.BorderSize = 0;
             this.btnError.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -130,6 +144,7 @@
             // btnHowToUse
             // 
             this.btnHowToUse.BackColor = System.Drawing.Color.Transparent;
+            this.btnHowToUse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHowToUse.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHowToUse.FlatAppearance.BorderSize = 0;
             this.btnHowToUse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -187,9 +202,22 @@
             this.panel1.Size = new System.Drawing.Size(858, 70);
             this.panel1.TabIndex = 0;
             // 
+            // lTitle
+            // 
+            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(815, 70);
+            this.lTitle.TabIndex = 7;
+            this.lTitle.Text = "Trợ giúp";
+            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -203,30 +231,6 @@
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // lTitle
-            // 
-            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(43, 0);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(815, 70);
-            this.lTitle.TabIndex = 7;
-            this.lTitle.Text = "Trợ giúp";
-            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(3, 58);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(287, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "@Bản quyền thuộc về 814 Dev Team";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // formHelp
             // 

@@ -40,7 +40,7 @@ namespace NationalFootballChampionshipManagement
             // Lưu ý: các cầu thủ đã có clb rồi cần hỏi lại một lần nữa có chắc chắc là thêm vào đội này hay không, nếu thêm nhớ xóa cầu thủ đó khỏi clb cũ
             // 
 
-            this.formFather.openChildForm(new formPlayerList(this.formFather, true));
+            this.formFather.openChildForm(new formPlayerList(this.formFather));
         }
 
         private void btnAddTeam_Click(object sender, EventArgs e)
@@ -58,7 +58,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.formFather.openChildForm(new formHome());
+            this.formFather.openChildForm(new formHome(this.formFather));
         }
     }
 }

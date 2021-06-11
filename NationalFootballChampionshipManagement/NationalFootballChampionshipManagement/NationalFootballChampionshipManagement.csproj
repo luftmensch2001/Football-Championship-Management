@@ -58,6 +58,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="FORM\MuaGiai\formAddMuaGiai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\MuaGiai\formAddMuaGiai.Designer.cs">
+      <DependentUpon>formAddMuaGiai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\MuaGiai\formMuaGiai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\MuaGiai\formMuaGiai.Designer.cs">
+      <DependentUpon>formMuaGiai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORM\File\Team\formAddNewTeam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,12 +123,6 @@
     </Compile>
     <Compile Include="FORM\Result\formDetailsResult.Designer.cs">
       <DependentUpon>formDetailsResult.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORM\Result\formRecordResult.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORM\Result\formRecordResult.Designer.cs">
-      <DependentUpon>formRecordResult.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\Result\formResultHistory.cs">
       <SubType>Form</SubType>
@@ -174,6 +180,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORM\MuaGiai\formAddMuaGiai.resx">
+      <DependentUpon>formAddMuaGiai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\MuaGiai\formMuaGiai.resx">
+      <DependentUpon>formMuaGiai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\File\Team\formAddNewTeam.resx">
       <DependentUpon>formAddNewTeam.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,9 +212,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\Result\formDetailsResult.resx">
       <DependentUpon>formDetailsResult.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORM\Result\formRecordResult.resx">
-      <DependentUpon>formRecordResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\Result\formResultHistory.resx">
       <DependentUpon>formResultHistory.cs</DependentUpon>

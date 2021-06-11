@@ -20,5 +20,10 @@ namespace NationalFootballChampionshipManagement
 
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formTeam(this.formFather));
+        }
     }
 }

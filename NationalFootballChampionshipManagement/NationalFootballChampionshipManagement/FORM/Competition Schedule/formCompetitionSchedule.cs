@@ -39,7 +39,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.formFather.openChildForm(new formHome());
+            this.formFather.openChildForm(new formHome(this.formFather));
         }
     }
 }

@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTitle = new System.Windows.Forms.Panel();
+            this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlFill = new System.Windows.Forms.Panel();
@@ -46,9 +47,6 @@
             this.colCoefficient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colScores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col5History = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lTitle = new System.Windows.Forms.Label();
             this.pnlTitle.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlFill.SuspendLayout();
@@ -66,9 +64,22 @@
             this.pnlTitle.Size = new System.Drawing.Size(842, 70);
             this.pnlTitle.TabIndex = 0;
             // 
+            // lTitle
+            // 
+            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(799, 70);
+            this.lTitle.TabIndex = 7;
+            this.lTitle.Text = "Bảng xếp hạng";
+            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -86,8 +97,6 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.pnlFill);
-            this.panel4.Controls.Add(this.panel2);
-            this.panel4.Controls.Add(this.panel1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 70);
             this.panel4.Name = "panel4";
@@ -98,9 +107,9 @@
             // 
             this.pnlFill.Controls.Add(this.dgvRanking);
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlFill.Location = new System.Drawing.Point(25, 0);
+            this.pnlFill.Location = new System.Drawing.Point(0, 0);
             this.pnlFill.Name = "pnlFill";
-            this.pnlFill.Size = new System.Drawing.Size(792, 409);
+            this.pnlFill.Size = new System.Drawing.Size(842, 409);
             this.pnlFill.TabIndex = 3;
             // 
             // dgvRanking
@@ -147,7 +156,7 @@
             this.dgvRanking.Name = "dgvRanking";
             this.dgvRanking.RowHeadersVisible = false;
             this.dgvRanking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRanking.Size = new System.Drawing.Size(792, 409);
+            this.dgvRanking.Size = new System.Drawing.Size(842, 409);
             this.dgvRanking.TabIndex = 0;
             this.dgvRanking.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvRanking.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -242,34 +251,6 @@
             this.col5History.Name = "col5History";
             this.col5History.ReadOnly = true;
             // 
-            // panel2
-            // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(817, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(25, 409);
-            this.panel2.TabIndex = 2;
-            // 
-            // panel1
-            // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(25, 409);
-            this.panel1.TabIndex = 1;
-            // 
-            // lTitle
-            // 
-            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(43, 0);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(799, 70);
-            this.lTitle.TabIndex = 7;
-            this.lTitle.Text = "Bảng xếp hạng";
-            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // formRanking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -295,8 +276,6 @@
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel pnlFill;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2DataGridView dgvRanking;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCLB;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMatches;
