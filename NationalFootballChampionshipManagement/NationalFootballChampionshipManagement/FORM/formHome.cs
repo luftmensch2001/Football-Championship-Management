@@ -12,9 +12,14 @@ namespace NationalFootballChampionshipManagement
 {
     public partial class formHome : Form
     {
-        public formHome()
+        formMain formFather = null;
+
+        public formHome(formMain f)
         {
             InitializeComponent();
+
+            this.formFather = f;
+            this.formFather.resetButtonColor();
 
             timerNow.Start();
         }

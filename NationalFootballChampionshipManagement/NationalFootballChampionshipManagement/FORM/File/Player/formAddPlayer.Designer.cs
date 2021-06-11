@@ -304,6 +304,7 @@
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -345,10 +346,16 @@
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 14F);
+<<<<<<< Updated upstream
             this.label6.Location = new System.Drawing.Point(0, 330);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(211, 66);
+=======
+            this.label6.Location = new System.Drawing.Point(0, 270);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 54);
+>>>>>>> Stashed changes
             this.label6.TabIndex = 11;
             this.label6.Text = "Ghi chú:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -357,10 +364,16 @@
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 14F);
+<<<<<<< Updated upstream
             this.label5.Location = new System.Drawing.Point(0, 264);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(211, 66);
+=======
+            this.label5.Location = new System.Drawing.Point(0, 216);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(158, 54);
+>>>>>>> Stashed changes
             this.label5.TabIndex = 10;
             this.label5.Text = "Câu lạc bộ:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -369,10 +382,16 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 14F);
+<<<<<<< Updated upstream
             this.label4.Location = new System.Drawing.Point(0, 198);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(211, 66);
+=======
+            this.label4.Location = new System.Drawing.Point(0, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(158, 54);
+>>>>>>> Stashed changes
             this.label4.TabIndex = 9;
             this.label4.Text = "Ngày sinh:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -381,10 +400,16 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14F);
+<<<<<<< Updated upstream
             this.label3.Location = new System.Drawing.Point(0, 132);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(211, 66);
+=======
+            this.label3.Location = new System.Drawing.Point(0, 108);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(158, 54);
+>>>>>>> Stashed changes
             this.label3.TabIndex = 8;
             this.label3.Text = "Loại cầu thủ:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,10 +418,16 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14F);
+<<<<<<< Updated upstream
             this.label2.Location = new System.Drawing.Point(0, 66);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(211, 66);
+=======
+            this.label2.Location = new System.Drawing.Point(0, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(158, 54);
+>>>>>>> Stashed changes
             this.label2.TabIndex = 7;
             this.label2.Text = "Quốc tịch:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -406,9 +437,14 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.label1.Location = new System.Drawing.Point(0, 0);
+<<<<<<< Updated upstream
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 66);
+=======
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 54);
+>>>>>>> Stashed changes
             this.label1.TabIndex = 6;
             this.label1.Text = "Giới tính:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -497,6 +533,7 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;

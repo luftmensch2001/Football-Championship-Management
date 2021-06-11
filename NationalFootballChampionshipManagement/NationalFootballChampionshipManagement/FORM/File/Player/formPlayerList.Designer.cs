@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnAddPlayer = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,7 +54,6 @@
             this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.lTitle = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -75,9 +75,22 @@
             this.panel1.Size = new System.Drawing.Size(858, 70);
             this.panel1.TabIndex = 0;
             // 
+            // lTitle
+            // 
+            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
+            this.lTitle.ForeColor = System.Drawing.Color.White;
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Name = "lTitle";
+            this.lTitle.Size = new System.Drawing.Size(815, 70);
+            this.lTitle.TabIndex = 7;
+            this.lTitle.Text = "Danh sách cầu thủ";
+            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -95,6 +108,7 @@
             // btnAddPlayer
             // 
             this.btnAddPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(128)))), ((int)(((byte)(190)))));
+            this.btnAddPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddPlayer.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnAddPlayer.FlatAppearance.BorderSize = 0;
             this.btnAddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -363,18 +377,6 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
-            // 
-            // lTitle
-            // 
-            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(43, 0);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(815, 70);
-            this.lTitle.TabIndex = 7;
-            this.lTitle.Text = "Danh sách cầu thủ";
-            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formPlayerList
             // 

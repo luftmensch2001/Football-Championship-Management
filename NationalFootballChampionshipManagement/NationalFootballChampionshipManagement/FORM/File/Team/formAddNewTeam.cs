@@ -22,6 +22,7 @@ namespace NationalFootballChampionshipManagement
             InitializeComponent();
         }
 
+<<<<<<< Updated upstream
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -39,6 +40,11 @@ namespace NationalFootballChampionshipManagement
         {
             // Quay lại formTeam
             this.Close();
+=======
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formTeam(this.formFather));
+>>>>>>> Stashed changes
         }
     }
 }

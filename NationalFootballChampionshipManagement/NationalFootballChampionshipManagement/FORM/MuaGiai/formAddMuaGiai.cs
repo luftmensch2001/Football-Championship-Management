@@ -10,11 +10,10 @@ using System.Windows.Forms;
 
 namespace NationalFootballChampionshipManagement
 {
-    public partial class formHelp : Form
+    public partial class formAddMuaGiai : Form
     {
         formMain formFather = null;
-
-        public formHelp(formMain f)
+        public formAddMuaGiai(formMain f)
         {
             this.formFather = f;
 
@@ -23,7 +22,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.formFather.openChildForm(new formHome(this.formFather));
+            this.formFather.openChildForm(new formMuaGiai(this.formFather));
         }
     }
 }
