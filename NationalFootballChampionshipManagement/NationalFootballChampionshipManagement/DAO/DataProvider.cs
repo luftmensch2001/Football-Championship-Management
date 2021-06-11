@@ -12,6 +12,14 @@ namespace NationalFootballChampionshipManagement.DAO
     {
         private string connectionSTR = "Data Source=.\\sqlexpress;Initial Catalog=NFCM;Integrated Security=True";
 
+        private static DataProvider instance;
+
+        public static DataProvider Instance
+        {
+            get { if (instance == null) instance = new DataProvider(); return instance; }
+            set => instance = value;
+        }
+
         public DataTable ExecuteQuery(string query, object[] parameter = null)
         {
             DataTable data = new DataTable();

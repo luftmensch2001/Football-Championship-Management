@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NationalFootballChampionshipManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,25 @@ namespace NationalFootballChampionshipManagement
             this.formFather = f;
 
             InitializeComponent();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                TeamDAO.Instance.AddTeam(tbTeamName.Text, tbCoachName.Text, tbHost.Text);
+                MessageBox.Show("Thêm đội bóng thành công!", "Thành công");
+            }
+            catch
+            {
+                MessageBox.Show("Thêm đội bóng thất bại!", "Lỗi");
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            // Quay lại formTeam
+            this.Close();
         }
     }
 }

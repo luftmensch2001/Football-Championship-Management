@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\TeamDAO.cs" />
+    <Compile Include="DTO\Team.cs" />
     <Compile Include="FORM\File\Team\formAddNewTeam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -276,5 +278,6 @@
   <ItemGroup>
     <None Include="Resources\Team 02 Avatar Example.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
