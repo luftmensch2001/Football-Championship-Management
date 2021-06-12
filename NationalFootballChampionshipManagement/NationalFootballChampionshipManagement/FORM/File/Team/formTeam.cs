@@ -25,13 +25,13 @@ namespace NationalFootballChampionshipManagement
 
             this.formFather = f;
 
-            addInformationColumn();
-
             lastButton = iconButton1;
 
             iconButton1.Hide();
 
             LoadTeam();
+
+            dgvPlayerList.RowTemplate.Height = 30;
         }
 
         void AddButton(Team team)
@@ -73,16 +73,20 @@ namespace NationalFootballChampionshipManagement
             string teamName = ((sender as Button).Tag as Team).TeamName;
             string coachName = ((sender as Button).Tag as Team).CoachName;
             string hostName = ((sender as Button).Tag as Team).HostName;
+            
             tbTeam.Text = teamName;
             tbSanNha.Text = hostName;
             tbHLV.Text = coachName;
+
+            dgvPlayerList.DataSource = PlayerDAO.Instance.GetPlayerListByIDDB(teamID);
+            addInformationColumn();
         }
         private void addInformationColumn()
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.HeaderText = "Thông tin chi tiết";
+            btn.HeaderText = "";
             btn.Name = "btnInformation";
-            btn.Text = "Thông tin chi tiết";
+            btn.Text = "Chỉnh sửa";
             btn.UseColumnTextForButtonValue = true;
             this.dgvPlayerList.Columns.Add(btn);
         }

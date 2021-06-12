@@ -41,3 +41,17 @@ BEGIN
 END
 
 GO
+
+-- Get Player List by IDDB
+
+CREATE PROC USP_GetPlayerListByIDDB
+@iddb INT
+AS
+BEGIN
+	SELECT IDCT as [Số thứ tự], Ten as [Họ tên], GioiTinh as [Giới tính], 
+	QuocTich as [Quốc tịch], NgaySinh as [Ngày sinh], GhiChu as [Ghi chú]
+	FROM CauThu
+	WHERE IDDB = @iddb
+END
+
+GO

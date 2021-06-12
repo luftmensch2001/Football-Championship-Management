@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
@@ -46,11 +46,6 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.dgvPlayerList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNamePlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBirthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNote = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
@@ -277,36 +272,30 @@
             // 
             // dgvPlayerList
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvPlayerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlayerList.BackgroundColor = System.Drawing.Color.White;
             this.dgvPlayerList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPlayerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPlayerList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvPlayerList.ColumnHeadersHeight = 35;
-            this.dgvPlayerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colSTT,
-            this.colNamePlayer,
-            this.colBirthday,
-            this.colTypeOfPlayer,
-            this.colNote});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvPlayerList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPlayerList.EnableHeadersVisualStyles = false;
             this.dgvPlayerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -340,36 +329,6 @@
             this.dgvPlayerList.ThemeStyle.RowsStyle.Height = 22;
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // colSTT
-            // 
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.MinimumWidth = 6;
-            this.colSTT.Name = "colSTT";
-            // 
-            // colNamePlayer
-            // 
-            this.colNamePlayer.HeaderText = "Cầu thủ";
-            this.colNamePlayer.MinimumWidth = 6;
-            this.colNamePlayer.Name = "colNamePlayer";
-            // 
-            // colBirthday
-            // 
-            this.colBirthday.HeaderText = "Ngày sinh";
-            this.colBirthday.MinimumWidth = 6;
-            this.colBirthday.Name = "colBirthday";
-            // 
-            // colTypeOfPlayer
-            // 
-            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
-            this.colTypeOfPlayer.MinimumWidth = 6;
-            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
-            // 
-            // colNote
-            // 
-            this.colNote.HeaderText = "Ghi chú";
-            this.colNote.MinimumWidth = 6;
-            this.colNote.Name = "colNote";
             // 
             // panel10
             // 
@@ -434,7 +393,7 @@
             // 
             this.tbHLV.BorderThickness = 0;
             this.tbHLV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHLV.DefaultText = "Kiatisak";
+            this.tbHLV.DefaultText = "";
             this.tbHLV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbHLV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbHLV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -453,7 +412,6 @@
             this.tbHLV.PasswordChar = '\0';
             this.tbHLV.PlaceholderText = "";
             this.tbHLV.SelectedText = "";
-            this.tbHLV.SelectionStart = 8;
             this.tbHLV.ShadowDecoration.Parent = this.tbHLV;
             this.tbHLV.Size = new System.Drawing.Size(356, 31);
             this.tbHLV.TabIndex = 3;
@@ -485,7 +443,7 @@
             // 
             this.tbSanNha.BorderThickness = 0;
             this.tbSanNha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSanNha.DefaultText = "Mỹ Đình";
+            this.tbSanNha.DefaultText = "";
             this.tbSanNha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbSanNha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbSanNha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -504,7 +462,6 @@
             this.tbSanNha.PasswordChar = '\0';
             this.tbSanNha.PlaceholderText = "";
             this.tbSanNha.SelectedText = "";
-            this.tbSanNha.SelectionStart = 7;
             this.tbSanNha.ShadowDecoration.Parent = this.tbSanNha;
             this.tbSanNha.Size = new System.Drawing.Size(356, 31);
             this.tbSanNha.TabIndex = 2;
@@ -540,7 +497,7 @@
             this.tbTeam.Name = "tbTeam";
             this.tbTeam.Size = new System.Drawing.Size(881, 49);
             this.tbTeam.TabIndex = 2;
-            this.tbTeam.Text = "Team 01";
+            this.tbTeam.Text = "Vui lòng chọn đội bóng";
             this.tbTeam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnAddPlayer
@@ -608,11 +565,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel9;
         private Guna.UI2.WinForms.Guna2DataGridView dgvPlayerList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNamePlayer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colBirthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeOfPlayer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNote;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;

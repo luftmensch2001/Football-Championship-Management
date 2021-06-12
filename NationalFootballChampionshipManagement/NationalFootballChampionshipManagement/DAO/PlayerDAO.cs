@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,12 @@ namespace NationalFootballChampionshipManagement.DAO
                  + name + "', N'" + gender + "', N'" + nationality + "', '" + idLCT.ToString()
                  + "', '" + dob.ToString("MM/dd/yyyy") + "', '" + idTeam.ToString() + "', N'" + notes + "')";
             DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable GetPlayerListByIDDB(int iddb)
+        {
+            string query = "EXEC USP_GetPlayerListByIDDB @iddb =" + iddb.ToString();
+            return DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }
