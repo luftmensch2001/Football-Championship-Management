@@ -20,3 +20,14 @@ CREATE PROC USP_GetPlayerTypeList
 AS SELECT * FROM LoaiCauThu
 
 GO
+
+-- Get Team List By IDMG
+
+CREATE PROC USP_GetTeamListByIDMG
+@idmg INT
+AS
+BEGIN
+	SELECT * FROM DSDoiBong WHERE IDMG = @idmg
+END
+
+GO

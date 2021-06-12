@@ -28,8 +28,9 @@ namespace NationalFootballChampionshipManagement.DAO
         public List<Team> LoadTeamList()
         {
             List<Team> teamList = new List<Team>();
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetTeamList");
+            DataTable data = DataProvider.Instance.ExecuteQuery("EXEC USP_GetTeamListByIDMG @idmg = " + idmg.ToString());
 
             foreach (DataRow item in data.Rows)
             {
