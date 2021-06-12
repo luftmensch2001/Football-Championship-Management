@@ -36,6 +36,7 @@ namespace NationalFootballChampionshipManagement
             dgvPlayerList.RowTemplate.Height = 30;
         }
 
+
         void AddButton(Team team)
         {
             FontAwesome.Sharp.IconButton mybtn = new FontAwesome.Sharp.IconButton();
@@ -81,6 +82,12 @@ namespace NationalFootballChampionshipManagement
             tbHLV.Text = coachName;
 
             dgvPlayerList.DataSource = PlayerDAO.Instance.GetPlayerListByIDDB(teamID);
+            for (int i=0; i<dgvPlayerList.Rows.Count - 1; i++)
+            {
+                dgvPlayerList.Rows[i].Cells[1].Value = i+1;
+            }
+
+            dgvPlayerList.Columns["btnInformation"].DisplayIndex = 6;
         }
         private void addInformationColumn()
         {
