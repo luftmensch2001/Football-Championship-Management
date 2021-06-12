@@ -92,13 +92,10 @@ CREATE TABLE CauThu
 )
 GO
 
-<<<<<<< Updated upstream
 ALTER TABLE CauThu
 ADD IDDB INT
 GO
-=======
 
->>>>>>> Stashed changes
 
 CREATE TABLE DSDoiBong
 (
@@ -115,21 +112,10 @@ ALTER TABLE DSDoiBong
 ADD SanNha NVARCHAR(50)
 GO
 
-AlTER TABLE DSDoiBong
-ADD IDMG INT
-GO
-
-<<<<<<< Updated upstream
-=======
-ALTER TABLE CauThu 
-ADD IDDB INT
-GO
-
 ALTER TABLE CauThu 
 ADD CONSTRAINT FK_CT_IDDB FOREIGN KEY(IDDB) REFERENCES DSDoiBong(IDDB)
 GO
 
->>>>>>> Stashed changes
 CREATE TABLE LichThiDau
 (
 	IDMG INT,

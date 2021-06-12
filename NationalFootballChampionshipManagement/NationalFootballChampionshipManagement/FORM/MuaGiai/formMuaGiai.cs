@@ -26,6 +26,7 @@ namespace NationalFootballChampionshipManagement
 
         void LoadMuaGiai()
         {
+            lbNowTournament.Text = LeagueDAO.Instance.GetCurrLeagueName();
             string query = "SELECT * FROM MuaGiai";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             cbLeague.DataSource = DataProvider.Instance.ExecuteQuery(query);
@@ -48,6 +49,7 @@ namespace NationalFootballChampionshipManagement
             try
             {
                 LeagueDAO.Instance.ChangeLeagueByID(Int32.Parse(cbLeague.SelectedValue.ToString()));
+                lbNowTournament.Text = LeagueDAO.Instance.GetCurrLeagueName();
                 MessageBox.Show("Chuyển mùa giải thành công", "Thành công");
             }
             catch

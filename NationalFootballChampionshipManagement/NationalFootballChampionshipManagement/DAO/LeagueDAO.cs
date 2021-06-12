@@ -51,6 +51,15 @@ namespace NationalFootballChampionshipManagement.DAO
                 return (int) data.Rows[0]["IDMG"];
             }
 
+            public string GetCurrLeagueName()
+            {
+                string query = "SELECT TenMG FROM MuaGiai WHERE MuaGiaiHienTai = 1";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+                if (data.Rows.Count == 0) return "No League Selected";
+                return data.Rows[0]["TenMG"].ToString();
+            }
+
         }
     }
 
