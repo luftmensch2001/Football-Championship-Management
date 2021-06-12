@@ -115,6 +115,10 @@ ALTER TABLE DSDoiBong
 ADD SanNha NVARCHAR(50)
 GO
 
+AlTER TABLE DSDoiBong
+ADD IDMG INT
+GO
+
 <<<<<<< Updated upstream
 =======
 ALTER TABLE CauThu 

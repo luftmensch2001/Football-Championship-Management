@@ -38,7 +38,7 @@
             this.btnAddTeam = new Guna.UI2.WinForms.Guna2Button();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbTeamList = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -61,7 +61,7 @@
             this.tbSanNha = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.tbTeam = new System.Windows.Forms.Label();
             this.pnlTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,7 +83,7 @@
             this.pnlTitle.Controls.Add(this.btnClose);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTitle.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(1165, 86);
             this.pnlTitle.TabIndex = 0;
@@ -113,7 +113,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 3;
@@ -128,7 +128,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 86);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(279, 728);
             this.panel1.TabIndex = 1;
@@ -149,7 +149,7 @@
             this.btnAddTeam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
             this.btnAddTeam.HoverState.Parent = this.btnAddTeam;
             this.btnAddTeam.Location = new System.Drawing.Point(0, 673);
-            this.btnAddTeam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddTeam.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddTeam.Name = "btnAddTeam";
             this.btnAddTeam.ShadowDecoration.Parent = this.btnAddTeam;
             this.btnAddTeam.Size = new System.Drawing.Size(279, 55);
@@ -171,7 +171,7 @@
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 35;
             this.iconButton1.Location = new System.Drawing.Point(0, 58);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(279, 49);
             this.iconButton1.TabIndex = 1;
@@ -182,27 +182,27 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbTeamList);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(279, 58);
             this.panel2.TabIndex = 0;
             // 
-            // label1
+            // lbTeamList
             // 
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(128)))), ((int)(((byte)(190)))));
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(279, 58);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Danh sách đội bóng";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbTeamList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(128)))), ((int)(((byte)(190)))));
+            this.lbTeamList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbTeamList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lbTeamList.ForeColor = System.Drawing.Color.White;
+            this.lbTeamList.Location = new System.Drawing.Point(0, 0);
+            this.lbTeamList.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTeamList.Name = "lbTeamList";
+            this.lbTeamList.Size = new System.Drawing.Size(279, 58);
+            this.lbTeamList.TabIndex = 0;
+            this.lbTeamList.Text = "Danh sách đội bóng";
+            this.lbTeamList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
@@ -210,7 +210,7 @@
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(279, 86);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(886, 58);
             this.panel3.TabIndex = 2;
@@ -234,7 +234,7 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(91)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(279, 144);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(5, 670);
             this.panel4.TabIndex = 3;
@@ -248,7 +248,7 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(284, 144);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(881, 670);
             this.panel5.TabIndex = 4;
@@ -259,7 +259,7 @@
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 111);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(881, 559);
             this.panel9.TabIndex = 3;
@@ -269,7 +269,7 @@
             this.panel11.Controls.Add(this.dgvPlayerList);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel11.Location = new System.Drawing.Point(0, 37);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(881, 522);
             this.panel11.TabIndex = 2;
@@ -310,7 +310,7 @@
             this.dgvPlayerList.EnableHeadersVisualStyles = false;
             this.dgvPlayerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPlayerList.Location = new System.Drawing.Point(0, 0);
-            this.dgvPlayerList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvPlayerList.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPlayerList.Name = "dgvPlayerList";
             this.dgvPlayerList.RowHeadersVisible = false;
             this.dgvPlayerList.RowHeadersWidth = 51;
@@ -376,7 +376,7 @@
             this.panel10.Controls.Add(this.btnEdit);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(881, 37);
             this.panel10.TabIndex = 1;
@@ -407,7 +407,7 @@
             this.btnEdit.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEdit.IconSize = 25;
             this.btnEdit.Location = new System.Drawing.Point(596, 0);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(285, 37);
             this.btnEdit.TabIndex = 2;
@@ -423,7 +423,7 @@
             this.panel8.Controls.Add(this.label4);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 80);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(881, 31);
             this.panel8.TabIndex = 2;
@@ -474,7 +474,7 @@
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 49);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(881, 31);
             this.panel7.TabIndex = 1;
@@ -521,25 +521,25 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label6);
+            this.panel6.Controls.Add(this.tbTeam);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(881, 49);
             this.panel6.TabIndex = 0;
             // 
-            // label6
+            // tbTeam
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 16.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(881, 49);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Team 01";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.tbTeam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbTeam.Font = new System.Drawing.Font("Segoe UI", 16.25F, System.Drawing.FontStyle.Bold);
+            this.tbTeam.Location = new System.Drawing.Point(0, 0);
+            this.tbTeam.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.tbTeam.Name = "tbTeam";
+            this.tbTeam.Size = new System.Drawing.Size(881, 49);
+            this.tbTeam.TabIndex = 2;
+            this.tbTeam.Text = "Team 01";
+            this.tbTeam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // formTeam
             // 
@@ -553,7 +553,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formTeam";
             this.Text = "formTeam";
             this.pnlTitle.ResumeLayout(false);
@@ -597,13 +597,13 @@
         private Guna.UI2.WinForms.Guna2Button btnAddTeam;
         private FontAwesome.Sharp.IconButton btnEdit;
         private System.Windows.Forms.Label lTitle;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbTeamList;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox tbHLV;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox tbSanNha;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label tbTeam;
     }
 }

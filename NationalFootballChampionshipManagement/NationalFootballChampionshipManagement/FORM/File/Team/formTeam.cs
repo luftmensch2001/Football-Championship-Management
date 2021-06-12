@@ -1,4 +1,6 @@
-﻿using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
+﻿using NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +17,8 @@ namespace NationalFootballChampionshipManagement
     {
         formMain formFather = null;
 
+        Button lastButton = null;
+
         public formTeam(formMain f)
         {
             InitializeComponent();
@@ -22,8 +26,57 @@ namespace NationalFootballChampionshipManagement
             this.formFather = f;
 
             addInformationColumn();
+
+            lastButton = iconButton1;
+
+            iconButton1.Hide();
+
+            LoadTeam();
         }
 
+        void AddButton(Team team)
+        {
+            FontAwesome.Sharp.IconButton mybtn = new FontAwesome.Sharp.IconButton();
+            mybtn.BackColor = Color.FromArgb(11, 130, 142);
+            mybtn.Text = team.TeamName;
+            mybtn.Height = 50;
+            mybtn.Width = panel1.Width;
+            if (lastButton == iconButton1)
+                mybtn.Top = lbTeamList.Location.Y + lbTeamList.Height + 6;
+            else
+                mybtn.Top = lastButton.Location.Y + lastButton.Height;
+            mybtn.IconChar = FontAwesome.Sharp.IconChar.Newspaper;
+            mybtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            mybtn.ForeColor = Color.White;
+            mybtn.Font = lastButton.Font;
+            mybtn.IconColor = Color.White;
+            mybtn.IconSize = 35;
+            mybtn.Click += Mybtn_Click;
+            mybtn.Tag = team;
+            lastButton = mybtn;
+            this.panel1.Controls.Add(mybtn);
+        }
+
+        void LoadTeam()
+        {
+            List<Team> teamList = TeamDAO.Instance.LoadTeamList();
+
+            foreach (Team item in teamList)
+            {
+                AddButton(item);
+            }
+        }
+
+        private void Mybtn_Click(object sender, EventArgs e)
+        {
+            int teamID = ((sender as Button).Tag as Team).ID;
+            string teamName = ((sender as Button).Tag as Team).TeamName;
+            string coachName = ((sender as Button).Tag as Team).CoachName;
+            string hostName = ((sender as Button).Tag as Team).HostName;
+            tbTeam.Text = teamName;
+            tbSanNha.Text = hostName;
+            tbHLV.Text = coachName;
+        }
         private void addInformationColumn()
         {
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();

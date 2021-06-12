@@ -1,4 +1,5 @@
-﻿using NationalFootballChampionshipManagement.DTO;
+﻿using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -19,7 +20,8 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public void AddTeam(string name, string coach, string host)
         {
-            string query = "INSERT INTO DSDoiBong (TenDB, TenHLV, SanNha) VALUES(N'" + name + "',N'" + coach + "',N'" + host + "')";
+            string idmg = LeagueDAO.Instance.GetCurrIDMG().ToString();
+            string query = "INSERT INTO DSDoiBong (TenDB, TenHLV, SanNha, IDMG) VALUES(N'" + name + "',N'" + coach + "',N'" + host + "'," + idmg + ")";
             DataProvider.Instance.ExecuteQuery(query);
         }
 

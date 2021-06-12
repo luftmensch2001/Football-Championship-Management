@@ -50,6 +50,7 @@ namespace NationalFootballChampionshipManagement.DAO
                 if (data.Rows.Count == 0) return -1;
                 return (int) data.Rows[0]["IDMG"];
             }
+
         }
     }
 
