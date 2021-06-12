@@ -114,5 +114,12 @@ namespace NationalFootballChampionshipManagement
         {
             this.formFather.openChildForm(new formHome(this.formFather));
         }
+
+        private void btnAddPlayer_Click(object sender, EventArgs e)
+        {
+            this.formFather.openChildForm(new formAddPlayer(this.formFather));
+
+            this.Close();
+        }
     }
 }

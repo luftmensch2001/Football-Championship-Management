@@ -62,6 +62,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbTeam = new System.Windows.Forms.Label();
+            this.btnAddPlayer = new FontAwesome.Sharp.IconButton();
             this.pnlTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -372,6 +373,7 @@
             // 
             // panel10
             // 
+            this.panel10.Controls.Add(this.btnAddPlayer);
             this.panel10.Controls.Add(this.label5);
             this.panel10.Controls.Add(this.btnEdit);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
@@ -541,6 +543,29 @@
             this.tbTeam.Text = "Team 01";
             this.tbTeam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnAddPlayer
+            // 
+            this.btnAddPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(128)))), ((int)(((byte)(190)))));
+            this.btnAddPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPlayer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddPlayer.FlatAppearance.BorderSize = 0;
+            this.btnAddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnAddPlayer.ForeColor = System.Drawing.Color.White;
+            this.btnAddPlayer.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddPlayer.IconColor = System.Drawing.Color.White;
+            this.btnAddPlayer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPlayer.IconSize = 35;
+            this.btnAddPlayer.Location = new System.Drawing.Point(352, 0);
+            this.btnAddPlayer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddPlayer.Name = "btnAddPlayer";
+            this.btnAddPlayer.Size = new System.Drawing.Size(244, 37);
+            this.btnAddPlayer.TabIndex = 4;
+            this.btnAddPlayer.Text = "Thêm cầu thủ mới";
+            this.btnAddPlayer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddPlayer.UseVisualStyleBackColor = false;
+            this.btnAddPlayer.Click += new System.EventHandler(this.btnAddPlayer_Click);
+            // 
             // formTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -605,5 +630,6 @@
         private Guna.UI2.WinForms.Guna2TextBox tbSanNha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label tbTeam;
+        private FontAwesome.Sharp.IconButton btnAddPlayer;
     }
 }

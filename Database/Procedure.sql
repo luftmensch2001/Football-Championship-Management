@@ -31,3 +31,13 @@ BEGIN
 END
 
 GO
+
+-- Get player type by IDMG
+CREATE PROC USP_GetPlayerTypeByIDMG
+@idmg INT
+AS
+BEGIN
+	SELECT * FROM LoaiCauThu WHERE IDMG = @idmg
+END
+
+GO
