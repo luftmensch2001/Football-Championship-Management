@@ -31,6 +31,8 @@ namespace NationalFootballChampionshipManagement
 
             LoadTeam();
 
+            addInformationColumn();
+
             dgvPlayerList.RowTemplate.Height = 30;
         }
 
@@ -79,7 +81,6 @@ namespace NationalFootballChampionshipManagement
             tbHLV.Text = coachName;
 
             dgvPlayerList.DataSource = PlayerDAO.Instance.GetPlayerListByIDDB(teamID);
-            addInformationColumn();
         }
         private void addInformationColumn()
         {
