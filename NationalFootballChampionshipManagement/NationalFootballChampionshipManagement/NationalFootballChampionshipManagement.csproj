@@ -58,6 +58,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\LeagueDAO.cs" />
+    <Compile Include="DAO\PlayerDAO.cs" />
+    <Compile Include="DAO\PlayerTypeDAO.cs" />
+    <Compile Include="DAO\TeamDAO.cs" />
+    <Compile Include="DTO\Player.cs" />
+    <Compile Include="DTO\PlayerType.cs" />
+    <Compile Include="DTO\Team.cs" />
     <Compile Include="FORM\MuaGiai\formAddMuaGiai.cs">
       <SubType>Form</SubType>
     </Compile>

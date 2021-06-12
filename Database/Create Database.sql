@@ -83,7 +83,7 @@ CREATE TABLE CauThu
 	IDCT INT IDENTITY(1,1) PRIMARY KEY,
 	IDLCT INT,
 	Ten NVARCHAR(50),
-	GioiTinh BIT,
+	GioiTinh NVARCHAR(30),
 	QuocTich NVARCHAR(50),
 	NgaySinh SMALLDATETIME,
 	GhiChu NVARCHAR(1000),
@@ -92,7 +92,13 @@ CREATE TABLE CauThu
 )
 GO
 
+<<<<<<< Updated upstream
+ALTER TABLE CauThu
+ADD IDDB INT
+GO
+=======
 
+>>>>>>> Stashed changes
 
 CREATE TABLE DSDoiBong
 (
@@ -109,6 +115,8 @@ ALTER TABLE DSDoiBong
 ADD SanNha NVARCHAR(50)
 GO
 
+<<<<<<< Updated upstream
+=======
 ALTER TABLE CauThu 
 ADD IDDB INT
 GO
@@ -117,6 +125,7 @@ ALTER TABLE CauThu
 ADD CONSTRAINT FK_CT_IDDB FOREIGN KEY(IDDB) REFERENCES DSDoiBong(IDDB)
 GO
 
+>>>>>>> Stashed changes
 CREATE TABLE LichThiDau
 (
 	IDMG INT,
