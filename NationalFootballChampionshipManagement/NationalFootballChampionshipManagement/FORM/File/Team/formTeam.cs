@@ -19,6 +19,8 @@ namespace NationalFootballChampionshipManagement
 
         Button lastButton = null;
 
+        Team curTeam = null; // Team hien tai dang show
+
         public formTeam(formMain f)
         {
             InitializeComponent();
@@ -72,14 +74,15 @@ namespace NationalFootballChampionshipManagement
 
         private void Mybtn_Click(object sender, EventArgs e)
         {
-            int teamID = ((sender as Button).Tag as Team).ID;
-            string teamName = ((sender as Button).Tag as Team).TeamName;
-            string coachName = ((sender as Button).Tag as Team).CoachName;
-            string hostName = ((sender as Button).Tag as Team).HostName;
+            this.curTeam = (sender as Button).Tag as Team;
+            int teamID = this.curTeam.ID;
+            string teamName = this.curTeam.TeamName;
+            string coachName = this.curTeam.CoachName;
+            string hostName = this.curTeam.HostName;
             
             tbTeam.Text = teamName;
-            tbSanNha.Text = hostName;
-            tbHLV.Text = coachName;
+            lbSanNha.Text = hostName;
+            lbHLV.Text = coachName;
 
             dgvPlayerList.DataSource = PlayerDAO.Instance.GetPlayerListByIDDB(teamID);
             for (int i=0; i<dgvPlayerList.Rows.Count - 1; i++)
@@ -101,11 +104,6 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAddNewPlayer_Click(object sender, EventArgs e)
         {
-            // Lúc này mở thêm 1 cột checkbox ở cột cuối cùng của Datagridview, rồi click chọn cầu thủ được add.
-            // Đồng thời đổi chữ Lưu thành chữ "Thêm"
-            // Lưu ý: các cầu thủ đã có clb rồi cần hỏi lại một lần nữa có chắc chắc là thêm vào đội này hay không, nếu thêm nhớ xóa cầu thủ đó khỏi clb cũ
-            // 
-
             this.formFather.openChildForm(new formPlayerList(this.formFather));
         }
 
@@ -118,8 +116,12 @@ namespace NationalFootballChampionshipManagement
         {
             // Mở form thêm đội bóng mới lên và đôi button "Thêm" thành button "Lưu", 
             // và đổi tiêu đề thành "THay đổi thông tin đội bóng"
-
-            this.formFather.openChildForm(new formAddNewTeam(this.formFather));
+            if (curTeam == null)
+            {
+                MessageBox.Show("Vui lòng chọn đội bóng");
+                return;
+            }
+            this.formFather.openChildForm(new formAddNewTeam(this.formFather, curTeam));
         }
 
         private void btnClose_Click(object sender, EventArgs e)

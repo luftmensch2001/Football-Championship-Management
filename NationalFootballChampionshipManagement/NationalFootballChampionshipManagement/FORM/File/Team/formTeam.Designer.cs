@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
@@ -47,17 +47,17 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.dgvPlayerList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.btnAddPlayer = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEdit = new FontAwesome.Sharp.IconButton();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tbHLV = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tbSanNha = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbTeam = new System.Windows.Forms.Label();
-            this.btnAddPlayer = new FontAwesome.Sharp.IconButton();
+            this.lbSanNha = new System.Windows.Forms.Label();
+            this.lbHLV = new System.Windows.Forms.Label();
             this.pnlTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -272,30 +272,30 @@
             // 
             // dgvPlayerList
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPlayerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlayerList.BackgroundColor = System.Drawing.Color.White;
             this.dgvPlayerList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPlayerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPlayerList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPlayerList.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPlayerList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPlayerList.EnableHeadersVisualStyles = false;
             this.dgvPlayerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -342,6 +342,29 @@
             this.panel10.Size = new System.Drawing.Size(881, 37);
             this.panel10.TabIndex = 1;
             // 
+            // btnAddPlayer
+            // 
+            this.btnAddPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(128)))), ((int)(((byte)(190)))));
+            this.btnAddPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPlayer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddPlayer.FlatAppearance.BorderSize = 0;
+            this.btnAddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.btnAddPlayer.ForeColor = System.Drawing.Color.White;
+            this.btnAddPlayer.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnAddPlayer.IconColor = System.Drawing.Color.White;
+            this.btnAddPlayer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPlayer.IconSize = 35;
+            this.btnAddPlayer.Location = new System.Drawing.Point(352, 0);
+            this.btnAddPlayer.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddPlayer.Name = "btnAddPlayer";
+            this.btnAddPlayer.Size = new System.Drawing.Size(244, 37);
+            this.btnAddPlayer.TabIndex = 4;
+            this.btnAddPlayer.Text = "Thêm cầu thủ mới";
+            this.btnAddPlayer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddPlayer.UseVisualStyleBackColor = false;
+            this.btnAddPlayer.Click += new System.EventHandler(this.btnAddPlayer_Click);
+            // 
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Left;
@@ -380,7 +403,7 @@
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.tbHLV);
+            this.panel8.Controls.Add(this.lbHLV);
             this.panel8.Controls.Add(this.label4);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 80);
@@ -388,33 +411,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(881, 31);
             this.panel8.TabIndex = 2;
-            // 
-            // tbHLV
-            // 
-            this.tbHLV.BorderThickness = 0;
-            this.tbHLV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHLV.DefaultText = "";
-            this.tbHLV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbHLV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbHLV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbHLV.DisabledState.Parent = this.tbHLV;
-            this.tbHLV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbHLV.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tbHLV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbHLV.FocusedState.Parent = this.tbHLV;
-            this.tbHLV.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tbHLV.ForeColor = System.Drawing.Color.Black;
-            this.tbHLV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbHLV.HoverState.Parent = this.tbHLV;
-            this.tbHLV.Location = new System.Drawing.Point(236, 0);
-            this.tbHLV.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.tbHLV.Name = "tbHLV";
-            this.tbHLV.PasswordChar = '\0';
-            this.tbHLV.PlaceholderText = "";
-            this.tbHLV.SelectedText = "";
-            this.tbHLV.ShadowDecoration.Parent = this.tbHLV;
-            this.tbHLV.Size = new System.Drawing.Size(356, 31);
-            this.tbHLV.TabIndex = 3;
             // 
             // label4
             // 
@@ -430,7 +426,7 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.tbSanNha);
+            this.panel7.Controls.Add(this.lbSanNha);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 49);
@@ -438,33 +434,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(881, 31);
             this.panel7.TabIndex = 1;
-            // 
-            // tbSanNha
-            // 
-            this.tbSanNha.BorderThickness = 0;
-            this.tbSanNha.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbSanNha.DefaultText = "";
-            this.tbSanNha.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbSanNha.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbSanNha.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSanNha.DisabledState.Parent = this.tbSanNha;
-            this.tbSanNha.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbSanNha.Dock = System.Windows.Forms.DockStyle.Left;
-            this.tbSanNha.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSanNha.FocusedState.Parent = this.tbSanNha;
-            this.tbSanNha.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.tbSanNha.ForeColor = System.Drawing.Color.Black;
-            this.tbSanNha.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbSanNha.HoverState.Parent = this.tbSanNha;
-            this.tbSanNha.Location = new System.Drawing.Point(108, 0);
-            this.tbSanNha.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.tbSanNha.Name = "tbSanNha";
-            this.tbSanNha.PasswordChar = '\0';
-            this.tbSanNha.PlaceholderText = "";
-            this.tbSanNha.SelectedText = "";
-            this.tbSanNha.ShadowDecoration.Parent = this.tbSanNha;
-            this.tbSanNha.Size = new System.Drawing.Size(356, 31);
-            this.tbSanNha.TabIndex = 2;
             // 
             // label3
             // 
@@ -500,28 +469,23 @@
             this.tbTeam.Text = "Vui lòng chọn đội bóng";
             this.tbTeam.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnAddPlayer
+            // lbSanNha
             // 
-            this.btnAddPlayer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(128)))), ((int)(((byte)(190)))));
-            this.btnAddPlayer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddPlayer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnAddPlayer.FlatAppearance.BorderSize = 0;
-            this.btnAddPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.btnAddPlayer.ForeColor = System.Drawing.Color.White;
-            this.btnAddPlayer.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnAddPlayer.IconColor = System.Drawing.Color.White;
-            this.btnAddPlayer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddPlayer.IconSize = 35;
-            this.btnAddPlayer.Location = new System.Drawing.Point(352, 0);
-            this.btnAddPlayer.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAddPlayer.Name = "btnAddPlayer";
-            this.btnAddPlayer.Size = new System.Drawing.Size(244, 37);
-            this.btnAddPlayer.TabIndex = 4;
-            this.btnAddPlayer.Text = "Thêm cầu thủ mới";
-            this.btnAddPlayer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddPlayer.UseVisualStyleBackColor = false;
-            this.btnAddPlayer.Click += new System.EventHandler(this.btnAddPlayer_Click);
+            this.lbSanNha.AutoSize = true;
+            this.lbSanNha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSanNha.Location = new System.Drawing.Point(172, 3);
+            this.lbSanNha.Name = "lbSanNha";
+            this.lbSanNha.Size = new System.Drawing.Size(0, 25);
+            this.lbSanNha.TabIndex = 2;
+            // 
+            // lbHLV
+            // 
+            this.lbHLV.AutoSize = true;
+            this.lbHLV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHLV.Location = new System.Drawing.Point(243, 4);
+            this.lbHLV.Name = "lbHLV";
+            this.lbHLV.Size = new System.Drawing.Size(0, 25);
+            this.lbHLV.TabIndex = 3;
             // 
             // formTeam
             // 
@@ -548,7 +512,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayerList)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -577,11 +543,11 @@
         private System.Windows.Forms.Label lbTeamList;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox tbHLV;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox tbSanNha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label tbTeam;
         private FontAwesome.Sharp.IconButton btnAddPlayer;
+        private System.Windows.Forms.Label lbHLV;
+        private System.Windows.Forms.Label lbSanNha;
     }
 }

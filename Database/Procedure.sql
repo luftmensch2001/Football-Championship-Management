@@ -55,3 +55,20 @@ BEGIN
 END
 
 GO
+
+-- Change Team Information by IDDB
+
+CREATE PROC USP_ChangeTeamInforByIDDB
+@iddb INT,
+@name NVARCHAR(50),
+@coach NVARCHAR(50),
+@host NVARCHAR(50)
+AS
+BEGIN
+	UPDATE DSDoiBong
+	SET TenDB = @name,
+		TenHLV = @coach,
+		SanNha = @host
+	WHERE IDDB = @iddb
+END
+GO

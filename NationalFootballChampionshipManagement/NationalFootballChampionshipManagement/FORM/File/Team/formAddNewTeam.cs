@@ -1,4 +1,5 @@
 ﻿using NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,11 +16,25 @@ namespace NationalFootballChampionshipManagement
     {
         formMain formFather = null;
 
+        Team team;
+
         public formAddNewTeam(formMain f)
         {
             this.formFather = f;
 
             InitializeComponent();
+        }
+
+        public formAddNewTeam(formMain f, Team team)
+        {
+            this.formFather = f;
+            this.team = team;
+            InitializeComponent();
+            btnAdd.Text = "Lưu";
+            lTitle.Text = "SỬA THÔNG TIN ĐỘI BÓNG";
+            tbTeamName.Text = team.TeamName;
+            tbCoachName.Text = team.CoachName;
+            tbHost.Text = team.HostName;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -29,15 +44,26 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
-            {
-                TeamDAO.Instance.AddTeam(tbTeamName.Text, tbCoachName.Text, tbHost.Text);
-                MessageBox.Show("Thêm đội bóng thành công!", "Thành công");
-            }
-            catch
-            {
-                MessageBox.Show("Thêm đội bóng thất bại!", "Lỗi");
-            }
+            if (btnAdd.Text == "Thêm")
+                try
+                {
+                    TeamDAO.Instance.AddTeam(tbTeamName.Text, tbCoachName.Text, tbHost.Text);
+                    MessageBox.Show("Thêm đội bóng thành công!", "Thành công");
+                }
+                catch
+                {
+                    MessageBox.Show("Thêm đội bóng thất bại!", "Lỗi");
+                }
+            else 
+                try
+                {
+                    TeamDAO.Instance.ChangeInforByIDDB(tbTeamName.Text, tbCoachName.Text, tbHost.Text, team.ID);
+                    MessageBox.Show("Sửa thông tin thành công!", "Thành công");
+                }
+                catch
+                {
+                    MessageBox.Show("Sửa thông tin thất bại!", "Lỗi");
+                }
         }
     }
 }

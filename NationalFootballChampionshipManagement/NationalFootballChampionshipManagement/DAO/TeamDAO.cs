@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NationalFootballChampionshipManagement.DAO
 {
@@ -22,6 +23,16 @@ namespace NationalFootballChampionshipManagement.DAO
         {
             string idmg = LeagueDAO.Instance.GetCurrIDMG().ToString();
             string query = "INSERT INTO DSDoiBong (TenDB, TenHLV, SanNha, IDMG) VALUES(N'" + name + "',N'" + coach + "',N'" + host + "'," + idmg + ")";
+            DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public void ChangeInforByIDDB(string name, string coach, string host, int IDDB)
+        {
+            string query = "EXEC USP_ChangeTeamInforByIDDB";
+            query += " @iddb = " + IDDB.ToString();
+            query += ", @name = N'" + name + "'";
+            query += ", @coach = N'" + coach + "'";
+            query += ", @host = N'" + host + "'";
             DataProvider.Instance.ExecuteQuery(query);
         }
 
