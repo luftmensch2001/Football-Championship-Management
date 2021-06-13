@@ -47,5 +47,28 @@ namespace NationalFootballChampionshipManagement.DAO
             string query = "EXEC USP_GetPlayerListByIDDB @iddb =" + iddb.ToString();
             return DataProvider.Instance.ExecuteQuery(query);
         }
+
+        public Player GetPlayerByIDCT(int idct)
+        {
+            string query = "SELECT * FROM CauThu WHERE IDCT = " + idct.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            return new Player(data.Rows[0]);
+        }
+
+        public int DeletePlayerByID(int idct)
+        {
+            try
+            {
+                string query = "DELETE FROM CauThu WHERE IDCT = " + idct.ToString();
+                DataProvider.Instance.ExecuteQuery(query);
+                MessageBox.Show("Xoá cầu thủ thành công", "Thành công");
+                return 1;
+            }
+            catch
+            {
+                MessageBox.Show("Xoá cầu thủ thất bại", "Lỗi");
+                return 0;
+            }
+        }
     }
 }

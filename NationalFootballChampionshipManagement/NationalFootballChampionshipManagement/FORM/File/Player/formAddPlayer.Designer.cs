@@ -59,6 +59,7 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -328,6 +329,7 @@
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.btnDelete);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
@@ -539,6 +541,31 @@
             this.lTitle.Text = "Thêm cầu thủ mới";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnDelete.IconColor = System.Drawing.Color.White;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 30;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(0, 518);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(211, 49);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Xoá";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // formAddPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -602,5 +629,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton btnDelete;
     }
 }

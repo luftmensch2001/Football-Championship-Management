@@ -21,6 +21,8 @@ namespace NationalFootballChampionshipManagement
 
         Team curTeam = null; // Team hien tai dang show
 
+        List<int> IDCT = new List<int>();
+
         public formTeam(formMain f)
         {
             InitializeComponent();
@@ -84,9 +86,12 @@ namespace NationalFootballChampionshipManagement
             lbSanNha.Text = hostName;
             lbHLV.Text = coachName;
 
+            IDCT.Clear();
+
             dgvPlayerList.DataSource = PlayerDAO.Instance.GetPlayerListByIDDB(teamID);
             for (int i=0; i<dgvPlayerList.Rows.Count - 1; i++)
             {
+                IDCT.Add(Int32.Parse(dgvPlayerList.Rows[i].Cells[1].Value.ToString()));
                 dgvPlayerList.Rows[i].Cells[1].Value = i+1;
             }
 
@@ -100,8 +105,15 @@ namespace NationalFootballChampionshipManagement
             btn.Text = "Chỉnh sửa";
             btn.UseColumnTextForButtonValue = true;
             this.dgvPlayerList.Columns.Add(btn);
+            dgvPlayerList.CellClick +=
+                new DataGridViewCellEventHandler(dgvPlayerList_CellClick);
         }
 
+        void dgvPlayerList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || e.RowIndex >= dgvPlayerList.Rows.Count - 1 ||  e.ColumnIndex != 0) return;
+            this.formFather.openChildForm(new formAddPlayer(this.formFather, IDCT[e.RowIndex]));
+        }
         private void btnAddNewPlayer_Click(object sender, EventArgs e)
         {
             this.formFather.openChildForm(new formPlayerList(this.formFather));

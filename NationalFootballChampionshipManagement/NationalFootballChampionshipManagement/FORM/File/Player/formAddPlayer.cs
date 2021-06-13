@@ -17,6 +17,8 @@ namespace NationalFootballChampionshipManagement
     {
         formMain formFather = null;
 
+        Player player = null;
+
         public formAddPlayer()
         {
             InitializeComponent();
@@ -27,6 +29,23 @@ namespace NationalFootballChampionshipManagement
             this.formFather = f;
             InitializeComponent();
             LoadCombobox();
+            btnDelete.Hide();
+        }
+
+        public formAddPlayer(formMain f, int idct)
+        {
+            this.formFather = f;
+            InitializeComponent();
+            LoadCombobox();
+            lTitle.Text = "Sửa thông tin cầu thủ";
+            btnAdd.Text = "Lưu";
+            player = PlayerDAO.Instance.GetPlayerByIDCT(idct);
+            tbName.Text = player.PlayName;
+            tbNationality.Text = player.Nationlity;
+            dtpBirthday.Value = player.DayOfBirth;
+            cbGender.SelectedIndex = player.Gender == "Nam" ? 0 : 1;
+            cbCLB.Enabled = false;
+            tbNote.Text = player.Notes;
         }
 
         void LoadCombobox()
@@ -49,7 +68,7 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.formFather.openChildForm(new formPlayerList(this.formFather));
+            this.formFather.openChildForm(new formTeam(this.formFather));
 
             this.Close();
         }
@@ -80,6 +99,15 @@ namespace NationalFootballChampionshipManagement
             catch
             {
                 MessageBox.Show("Thêm cầu thủ thất bại! Vui lòng kiểm tra lại thông tin", "Lỗi");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (PlayerDAO.Instance.DeletePlayerByID(player.ID) == 1) // xoa thanh cong
+            {
+                this.formFather.openChildForm(new formTeam(this.formFather));
+                this.Close();
             }
         }
     }

@@ -16,6 +16,7 @@ namespace NationalFootballChampionshipManagement.DTO
         string nationlity;
         DateTime dayOfBirth;
         string notes;
+        int iDDB;
 
         public int ID { get => iD; set => iD = value; }
         public int IDLCT { get => iDLCT; set => iDLCT = value; }
@@ -24,6 +25,7 @@ namespace NationalFootballChampionshipManagement.DTO
         public string Nationlity { get => nationlity; set => nationlity = value; }
         public DateTime DayOfBirth { get => dayOfBirth; set => dayOfBirth = value; }
         public string Notes { get => notes; set => notes = value; }
+        public int IDDB { get => iDDB; set => iDDB = value; }
 
         public Player(int id, int idlct, string playName, string gender, string nationlity, DateTime dayOfBirth, string notes)
         {
@@ -45,6 +47,7 @@ namespace NationalFootballChampionshipManagement.DTO
             this.Nationlity = row["QuocTich"].ToString();
             this.DayOfBirth = DateTime.Parse(row["NgaySinh"].ToString());
             this.Notes = row["GhiChu"].ToString();
+            this.IDDB = (int)row["IDDB"];
         }
     }
 }
