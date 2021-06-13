@@ -24,7 +24,7 @@ namespace NationalFootballChampionshipManagement.DAO
         public void AddTeam(string name, string coach, string host)
         {
             int idmg = LeagueDAO.Instance.GetCurrIDMG();
-            string query = "INSERT INTO DSDoiBong (TenDB, TenHLV, SanNha, IDMG) VALUES(N'" + name + "',N'" + coach + "',N'" + host + "'," + idmg.ToString() + ")";
+            string query = "INSERT INTO DoiBong (TenDB, TenHLV, SanNha, IDMG) VALUES(N'" + name + "',N'" + coach + "',N'" + host + "'," + idmg.ToString() + ")";
             DataProvider.Instance.ExecuteQuery(query);
         }
 

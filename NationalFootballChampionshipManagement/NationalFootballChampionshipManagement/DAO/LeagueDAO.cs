@@ -68,7 +68,11 @@ namespace NationalFootballChampionshipManagement.DAO
                 if (data.Rows.Count == 0) return "No League Selected";
                 return data.Rows[0]["TenMG"].ToString();
             }
-
+            public DataTable GetLeagueList()
+            {
+                string query = "SELECT * FROM MuaGiai WHERE MuaGiaiHienTai = 0";
+                return DataProvider.Instance.ExecuteQuery(query);
+            }
         }
     }
 

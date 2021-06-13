@@ -78,27 +78,57 @@ namespace NationalFootballChampionshipManagement
             try
             {
                 string nameCT = tbName.Text;
+                while (nameCT != "" && nameCT[0] == ' ')
+                    nameCT = nameCT.Remove(0, 1);
+                while (nameCT != "" && nameCT[nameCT.Length - 1] == ' ') 
+                    nameCT = nameCT.Remove(nameCT.Length - 1, 1);
+                // chuan hoa ten
                 string genderCT = cbGender.SelectedItem.ToString();
+
                 string nationalityCT = tbNationality.Text;
+                while (nationalityCT != "" && nationalityCT[0] == ' ')
+                    nationalityCT = nationalityCT.Remove(0, 1);
+                while (nationalityCT != "" && nationalityCT[nationalityCT.Length - 1] == ' ')
+                    nationalityCT = nationalityCT.Remove(nationalityCT.Length - 1, 1);
+
                 int idLCT = (int)cbTypeOfPlayer.SelectedValue;
                 DateTime dob = dtpBirthday.Value;
                 int idDB = (int)cbCLB.SelectedValue;
                 string notes = tbNote.Text;
 
-                Rules rules = RulesDAO.Instance.GetRules();
-
-                if (TeamDAO.Instance.GetCountPlayer(idDB) >= rules.SLTD)
+                if (nameCT == "" || nationalityCT == "")
                 {
-                    MessageBox.Show("Đội bóng đã đạt số lượng cầu thủ tối đa", "Lỗi");
+                    MessageBox.Show("Vui lòng nhập đẩy đủ thông tin", "Lỗi");
                     return;
                 }
 
-                int status = PlayerDAO.Instance.AddPlayer(nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes);
-                if (status == 1) MessageBox.Show("Thêm cầu thủ thành công!", "Thành công");
+                if (btnAdd.Text == "Thêm")
+                {
+                    Rules rules = RulesDAO.Instance.GetRules();                 
+
+                    if (TeamDAO.Instance.GetCountPlayer(idDB) >= rules.SLTD)
+                    {
+                        MessageBox.Show("Đội bóng đã đạt số lượng cầu thủ tối đa", "Lỗi");
+                        return;
+                    }
+
+                    int status = PlayerDAO.Instance.AddPlayer(nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes);
+                    if (status == 1) MessageBox.Show("Thêm cầu thủ thành công!", "Thành công");
+                } 
+                else
+                {
+                    int status = PlayerDAO.Instance.UpdatePlayer(player.ID, nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes);
+                    if (status == 1) MessageBox.Show("Cập nhật thành công!", "Thành công");
+                }
+
+                
             }
             catch
             {
-                MessageBox.Show("Thêm cầu thủ thất bại! Vui lòng kiểm tra lại thông tin", "Lỗi");
+                if (btnAdd.Text == "Thêm")
+                    MessageBox.Show("Thêm cầu thủ thất bại! Vui lòng kiểm tra lại thông tin", "Lỗi");
+                else
+                    MessageBox.Show("Cập nhật thất bại! Vui lòng kiểm tra lại thông tin", "Lỗi");
             }
         }
 

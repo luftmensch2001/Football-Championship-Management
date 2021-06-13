@@ -27,9 +27,7 @@ namespace NationalFootballChampionshipManagement
         void LoadMuaGiai()
         {
             lbNowTournament.Text = LeagueDAO.Instance.GetCurrLeagueName();
-            string query = "SELECT * FROM MuaGiai";
-            DataTable data = DataProvider.Instance.ExecuteQuery(query);
-            cbLeague.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            cbLeague.DataSource = LeagueDAO.Instance.GetLeagueList();
             cbLeague.DisplayMember = "TenMG";
             cbLeague.ValueMember = "IDMG";
         }

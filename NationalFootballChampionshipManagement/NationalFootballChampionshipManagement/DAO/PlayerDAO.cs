@@ -42,6 +42,33 @@ namespace NationalFootballChampionshipManagement.DAO
             return 1; //them cau thu thanh cong
         }
 
+        public int UpdatePlayer(int idct, string name, string gender, string nationality, int idLCT, DateTime dob, int idTeam, string notes)
+        {
+            Rules rules = RulesDAO.Instance.GetRules();
+            if (CalculateAge(dob) < rules.TuoiTT || CalculateAge(dob) > rules.TuoiTD)
+            {
+                MessageBox.Show("Tuổi cầu thủ phải nằm trong khoảng từ " + rules.TuoiTT.ToString() + " đến " + rules.TuoiTD.ToString(), "Lỗi");
+                return 0; // cap nhat that bai
+            }
+
+            string query = "EXEC USP_UpdatePlayerInfor ";
+            name = "N'" + name + "'";
+            gender = "N'" + gender + "'";
+            nationality = "N'" + nationality + "'";
+            notes = "N'" + notes + "'"; // convert to Nvarchar
+            string strDob = "N'" + dob.ToString("MM/dd/yyyy") + "'";
+
+            query += "@idct = " + idct.ToString();
+            query += ", @name = " + name;
+            query += ", @gender = " + gender;
+            query += ", @nationality = " + nationality;
+            query += ", @dob = " + strDob;
+            query += ", @note = " + notes;
+
+            DataProvider.Instance.ExecuteQuery(query);
+            return 1; //cap nhat thanh cong
+        }
+
         public DataTable GetPlayerListByIDDB(int iddb)
         {
             string query = "EXEC USP_GetPlayerListByIDDB @iddb =" + iddb.ToString();

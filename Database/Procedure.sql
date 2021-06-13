@@ -1,16 +1,10 @@
 ﻿USE NFCM
 GO
 
--- Mô tả
-CREATE PROCEDURE /*Name*/
-/*
 
-*/
-GO
-
--- Get table DSDoiBong
+-- Get table DoiBong
 CREATE PROC USP_GetTeamList
-AS SELECT * FROM DSDoiBong
+AS SELECT * FROM DoiBong
 
 GO
 
@@ -27,7 +21,7 @@ CREATE PROC USP_GetTeamListByIDMG
 @idmg INT
 AS
 BEGIN
-	SELECT * FROM DSDoiBong WHERE IDMG = @idmg
+	SELECT * FROM DoiBong WHERE IDMG = @idmg
 END
 
 GO
@@ -65,7 +59,7 @@ CREATE PROC USP_ChangeTeamInforByIDDB
 @host NVARCHAR(50)
 AS
 BEGIN
-	UPDATE DSDoiBong
+	UPDATE DoiBong
 	SET TenDB = @name,
 		TenHLV = @coach,
 		SanNha = @host
@@ -102,7 +96,24 @@ CREATE PROC USP_CountOfTeam
 AS
 BEGIN
 	SELECT COUNT(IDDB) AS SL 
-	FROM DSDoiBong
+	FROM DoiBong
 	WHERE IDMG = @idmg
+END
+GO
+
+-- Update player information
+
+CREATE PROC USP_UpdatePlayerInfor
+@idct INT,
+@name NVARCHAR(50),
+@gender NVARCHAR(30),
+@nationality NVARCHAR(50),
+@dob SMALLDATETIME,
+@note NVARCHAR(1000)
+AS 
+BEGIN
+	UPDATE CauThu
+	SET Ten = @name, GioiTinh = @gender, NgaySinh = @dob, QuocTich = @nationality, GhiChu = @note
+	WHERE IDCT = @idct
 END
 GO
