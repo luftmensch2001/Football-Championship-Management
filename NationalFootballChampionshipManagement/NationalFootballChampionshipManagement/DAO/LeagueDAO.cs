@@ -32,6 +32,15 @@ namespace NationalFootballChampionshipManagement.DAO
                      "VALUES(N'" + name + "'," + year.ToString() + ", 0)";
 
                 DataProvider.Instance.ExecuteQuery(query);
+
+                // Them quy dinh cho giai dau
+
+                query = "SELECT TOP 1 IDMG FROM MuaGiai ORDER BY IDMG DESC";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+                int idmg = (int) data.Rows[0]["IDMG"];
+
+                query = "INSERT INTO QuyDinh(IDMG, SLDB, SLVD) VALUES(" + idmg.ToString() + ",16, 30)";
+                DataProvider.Instance.ExecuteQuery(query);
             }
 
             public void ChangeLeagueByID(int idmg)

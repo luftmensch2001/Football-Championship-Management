@@ -109,6 +109,12 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAddTeam_Click(object sender, EventArgs e)
         {
+            Rules rules = RulesDAO.Instance.GetRules();
+            if (TeamDAO.Instance.GetCountTeam() >= rules.SLDB)
+            {
+                MessageBox.Show("Số lượng đội bóng đã đạt tối đa", "Lỗi");
+                return;
+            }
             this.formFather.openChildForm(new formAddNewTeam(this.formFather));
         }
 

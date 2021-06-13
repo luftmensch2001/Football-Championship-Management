@@ -1,5 +1,6 @@
 ﻿using NationalFootballChampionshipManagement.DAO;
 using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,8 +65,17 @@ namespace NationalFootballChampionshipManagement
                 DateTime dob = dtpBirthday.Value;
                 int idDB = (int)cbCLB.SelectedValue;
                 string notes = tbNote.Text;
-                PlayerDAO.Instance.AddPlayer(nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes);
-                MessageBox.Show("Thêm cầu thủ thành công!", "Thành công");
+
+                Rules rules = RulesDAO.Instance.GetRules();
+
+                if (TeamDAO.Instance.GetCountPlayer(idDB) >= rules.SLTD)
+                {
+                    MessageBox.Show("Đội bóng đã đạt số lượng cầu thủ tối đa", "Lỗi");
+                    return;
+                }
+
+                int status = PlayerDAO.Instance.AddPlayer(nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes);
+                if (status == 1) MessageBox.Show("Thêm cầu thủ thành công!", "Thành công");
             }
             catch
             {

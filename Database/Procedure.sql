@@ -72,3 +72,37 @@ BEGIN
 	WHERE IDDB = @iddb
 END
 GO
+
+  -- Get Rules By IDMG
+
+CREATE PROC USP_GetRules_By_IDMG
+@idmg INT
+AS
+BEGIN
+	SELECT * FROM QuyDinh WHERE IDMG = @idmg
+END
+GO
+
+-- Count of Player By IDDB
+
+CREATE PROC USP_CountOfPlayer
+@iddb INT
+AS
+BEGIN
+	SELECT COUNT(IDCT) AS SL 
+	FROM CauThu
+	WHERE IDDB = @iddb
+END
+GO
+
+-- Count of Team By IDMG
+
+CREATE PROC USP_CountOfTeam
+@idmg INT
+AS
+BEGIN
+	SELECT COUNT(IDDB) AS SL 
+	FROM DSDoiBong
+	WHERE IDMG = @idmg
+END
+GO

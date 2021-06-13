@@ -61,7 +61,9 @@
     <Compile Include="DAO\LeagueDAO.cs" />
     <Compile Include="DAO\PlayerDAO.cs" />
     <Compile Include="DAO\PlayerTypeDAO.cs" />
+    <Compile Include="DAO\RulesDAO.cs" />
     <Compile Include="DAO\TeamDAO.cs" />
+    <Compile Include="DTO\Rules.cs" />
     <Compile Include="DTO\Player.cs" />
     <Compile Include="DTO\PlayerType.cs" />
     <Compile Include="DTO\Team.cs" />

@@ -201,3 +201,5 @@ INSERT INTO MuaGiai(TenMG, Nam, MuaGiaiHienTai)
 VALUES (N'Mùa giải 2021', 2021, 1)
 GO
 
+INSERT INTO QuyDinh(IDMG, SLDB, SLVD)
+VALUES (1, 16, 30)

@@ -1,9 +1,11 @@
-﻿using System;
+﻿using NationalFootballChampionshipManagement.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NationalFootballChampionshipManagement.DAO
 {
@@ -15,14 +17,29 @@ namespace NationalFootballChampionshipManagement.DAO
             get { if (instance == null) instance = new PlayerDAO(); return instance; }
             set => instance = value;
         }
-
-        public void AddPlayer(string name, string gender, string nationality, int idLCT, DateTime dob, int idTeam, string notes)
+        private static int CalculateAge(DateTime dateOfBirth)
         {
+            int age = 0;
+            age = DateTime.Now.Year - dateOfBirth.Year;
+            if (DateTime.Now.DayOfYear < dateOfBirth.DayOfYear)
+                age = age - 1;
+
+            return age;
+        }
+        public int AddPlayer(string name, string gender, string nationality, int idLCT, DateTime dob, int idTeam, string notes)
+        {
+            Rules rules = RulesDAO.Instance.GetRules();
+            if (CalculateAge(dob) < rules.TuoiTT || CalculateAge(dob) > rules.TuoiTD)
+            {
+                MessageBox.Show("Tuổi cầu thủ phải nằm trong khoảng từ " + rules.TuoiTT.ToString() + " đến " + rules.TuoiTD.ToString(), "Lỗi");
+                return 0; // them cau thu that bai
+            }
             string query =
                  "INSERT INTO CauThu(Ten, GioiTinh, QuocTich, IDLCT, NgaySinh, IDDB, GhiChu) VALUES(N'"
                  + name + "', N'" + gender + "', N'" + nationality + "', '" + idLCT.ToString()
                  + "', '" + dob.ToString("MM/dd/yyyy") + "', '" + idTeam.ToString() + "', N'" + notes + "')";
             DataProvider.Instance.ExecuteQuery(query);
+            return 1; //them cau thu thanh cong
         }
 
         public DataTable GetPlayerListByIDDB(int iddb)

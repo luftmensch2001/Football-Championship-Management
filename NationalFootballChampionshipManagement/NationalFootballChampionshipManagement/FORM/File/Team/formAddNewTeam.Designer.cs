@@ -62,7 +62,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 86);
             this.panel1.TabIndex = 0;
@@ -92,7 +92,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 6;
@@ -104,7 +104,7 @@
             this.panel3.Controls.Add(this.btnAdd);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 762);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1165, 52);
             this.panel3.TabIndex = 3;
@@ -123,7 +123,7 @@
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 30;
             this.btnAdd.Location = new System.Drawing.Point(964, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(201, 52);
             this.btnAdd.TabIndex = 0;
@@ -139,7 +139,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(764, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(401, 676);
             this.panel2.TabIndex = 4;
@@ -150,7 +150,7 @@
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(401, 649);
             this.panel5.TabIndex = 1;
@@ -160,7 +160,7 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 649);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(401, 27);
             this.panel4.TabIndex = 0;
@@ -186,7 +186,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.panel6.Location = new System.Drawing.Point(0, 86);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(764, 50);
             this.panel6.TabIndex = 5;
@@ -195,7 +195,7 @@
             // 
             this.tbTeamName.BorderThickness = 0;
             this.tbTeamName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbTeamName.DefaultText = "Team 01";
+            this.tbTeamName.DefaultText = "";
             this.tbTeamName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbTeamName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbTeamName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -214,7 +214,6 @@
             this.tbTeamName.PasswordChar = '\0';
             this.tbTeamName.PlaceholderText = "";
             this.tbTeamName.SelectedText = "";
-            this.tbTeamName.SelectionStart = 7;
             this.tbTeamName.ShadowDecoration.Parent = this.tbTeamName;
             this.tbTeamName.Size = new System.Drawing.Size(495, 50);
             this.tbTeamName.TabIndex = 1;
@@ -238,7 +237,7 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.panel7.Location = new System.Drawing.Point(0, 136);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(764, 50);
             this.panel7.TabIndex = 6;
@@ -247,7 +246,7 @@
             // 
             this.tbCoachName.BorderThickness = 0;
             this.tbCoachName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbCoachName.DefaultText = "abc";
+            this.tbCoachName.DefaultText = "";
             this.tbCoachName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbCoachName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbCoachName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -266,7 +265,6 @@
             this.tbCoachName.PasswordChar = '\0';
             this.tbCoachName.PlaceholderText = "";
             this.tbCoachName.SelectedText = "";
-            this.tbCoachName.SelectionStart = 3;
             this.tbCoachName.ShadowDecoration.Parent = this.tbCoachName;
             this.tbCoachName.Size = new System.Drawing.Size(495, 50);
             this.tbCoachName.TabIndex = 1;
@@ -290,7 +288,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.panel8.Location = new System.Drawing.Point(0, 186);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(764, 50);
             this.panel8.TabIndex = 7;
@@ -299,7 +297,7 @@
             // 
             this.tbHost.BorderThickness = 0;
             this.tbHost.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbHost.DefaultText = "abcxyz";
+            this.tbHost.DefaultText = "";
             this.tbHost.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbHost.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbHost.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -318,7 +316,6 @@
             this.tbHost.PasswordChar = '\0';
             this.tbHost.PlaceholderText = "";
             this.tbHost.SelectedText = "";
-            this.tbHost.SelectionStart = 6;
             this.tbHost.ShadowDecoration.Parent = this.tbHost;
             this.tbHost.Size = new System.Drawing.Size(495, 50);
             this.tbHost.TabIndex = 1;
@@ -348,7 +345,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formAddNewTeam";
             this.Text = "formAddNewTeam";
             this.panel1.ResumeLayout(false);
