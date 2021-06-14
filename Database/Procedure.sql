@@ -8,13 +8,6 @@ AS SELECT * FROM DoiBong
 
 GO
 
--- Get player type list
-
-CREATE PROC USP_GetPlayerTypeList
-AS SELECT * FROM LoaiCauThu
-
-GO
-
 -- Get Team List By IDMG
 
 CREATE PROC USP_GetTeamListByIDMG

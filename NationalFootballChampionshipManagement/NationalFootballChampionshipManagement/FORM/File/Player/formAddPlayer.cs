@@ -58,10 +58,6 @@ namespace NationalFootballChampionshipManagement
 
             //ComboBox CLB
 
-            // string query = "USP_GetTeamListByIDMG " + idmg.ToString();
-
-            //cbCLB.DataSource = DataProvider.Instance.ExecuteQuery(query);
-
             cbCLB.DataSource = TeamDAO.Instance.LoadTeamListToDataTable();
             cbCLB.DisplayMember = "TenDB";
             cbCLB.ValueMember = "IDDB";
