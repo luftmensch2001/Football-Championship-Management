@@ -71,6 +71,11 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (cbCLB.SelectedValue == null || cbTypeOfPlayer.SelectedValue == null)
+            {
+                MessageBox.Show("Vui lòng nhập đẩy đủ thông tin", "Lỗi");
+                return;
+            }
             try
             {
                 string nameCT = tbName.Text;

@@ -26,13 +26,5 @@ namespace NationalFootballChampionshipManagement.DTO
             this.sLTD = sltd;
             this.iD = id;
         }
-
-        public PlayerType(DataRow row)
-        {
-            this.typeName = row["TenLCT"].ToString();
-            this.iDMG = (int)row["IDMG"];
-            this.sLTD = (int)row["SLTD"];
-            this.iD = (int)row["IDLCT"];
-        }
     }
 }

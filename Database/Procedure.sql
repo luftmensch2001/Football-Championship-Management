@@ -9,7 +9,6 @@ AS SELECT * FROM DoiBong
 GO
 
 -- Get Team List By IDMG
-
 CREATE PROC USP_GetTeamListByIDMG
 @idmg INT
 AS
@@ -17,15 +16,6 @@ BEGIN
 	SELECT * FROM DoiBong WHERE IDMG = @idmg
 END
 
-GO
-
--- Get player type by IDMG
-CREATE PROC USP_GetPlayerTypeByIDMG
-@idmg INT
-AS
-BEGIN
-	SELECT * FROM LoaiCauThu WHERE IDMG = @idmg
-END
 
 GO
 
@@ -113,7 +103,7 @@ END
 GO
 
 -- Get count of players have idlct in team, except this idct   
-CREATE PROC USP_GetCountPlayerByIDLCT
+CREATE PROC USP_GetCountPlayerByIDLCT 
 @idLCT INT,
 @idDB INT,
 @idCT INT

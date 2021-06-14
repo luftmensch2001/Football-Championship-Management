@@ -44,6 +44,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnChange_Click(object sender, EventArgs e)
         {
+            if (cbLeague.SelectedValue == null) return;
             try
             {
                 LeagueDAO.Instance.ChangeLeagueByID(Int32.Parse(cbLeague.SelectedValue.ToString()));

@@ -42,13 +42,27 @@ namespace NationalFootballChampionshipManagement
             this.formFather.openChildForm(new formTeam(this.formFather));
         }
 
+        bool isSpace(string str)
+        {
+            while (str != "" && str[0] == ' ')
+                str = str.Remove(0, 1);
+            while (str != "" && str[str.Length - 1] == ' ')
+                str = str.Remove(str.Length - 1, 1);
+            return (str == "");
+        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (isSpace(tbTeamName.Text) || isSpace(tbCoachName.Text) || isSpace(tbHost.Text))
+            {
+                MessageBox.Show("Thông tin không được là khoảng trắng", "Lỗi");
+                return;
+            }    
             if (btnAdd.Text == "Thêm")
                 try
                 {
                     TeamDAO.Instance.AddTeam(tbTeamName.Text, tbCoachName.Text, tbHost.Text);
                     MessageBox.Show("Thêm đội bóng thành công!", "Thành công");
+                    this.formFather.openChildForm(new formTeam(this.formFather));
                 }
                 catch
                 {
@@ -59,6 +73,7 @@ namespace NationalFootballChampionshipManagement
                 {
                     TeamDAO.Instance.ChangeInforByIDDB(tbTeamName.Text, tbCoachName.Text, tbHost.Text, team.ID);
                     MessageBox.Show("Sửa thông tin thành công!", "Thành công");
+                    this.formFather.openChildForm(new formTeam(this.formFather));
                 }
                 catch
                 {
