@@ -130,3 +130,16 @@ BEGIN
 	FROM CauThu
 	WHERE IDLCT = @idLCT AND IDCT <> @idCT AND IDDB = @idDB
 END
+
+--Get player type list by IDMG
+CREATE PROC USP_GetPlayerTypeListByIDMG
+@idmg INT
+AS
+BEGIN
+	SELECT 
+		IDLCT AS [Số thứ tự],
+		TenLCT AS [Tên loại cầu thủ],
+		SLTD AS [Số lượng tối đa]
+	FROM LoaiCauThu
+	WHERE IDMG = @idmg
+END

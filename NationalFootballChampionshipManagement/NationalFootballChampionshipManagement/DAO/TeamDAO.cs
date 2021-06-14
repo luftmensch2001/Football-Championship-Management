@@ -68,5 +68,11 @@ namespace NationalFootballChampionshipManagement.DAO
 
             return teamList;
         }
+
+        public DataTable LoadTeamListToDataTable()
+        {
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+            return DataProvider.Instance.ExecuteQuery("EXEC USP_GetTeamListByIDMG @idmg = " + idmg.ToString());
+        }
     }
 }

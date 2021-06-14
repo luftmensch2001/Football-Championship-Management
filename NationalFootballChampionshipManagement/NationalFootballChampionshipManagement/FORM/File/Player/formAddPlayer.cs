@@ -51,18 +51,18 @@ namespace NationalFootballChampionshipManagement
         void LoadCombobox()
         {
             // ComboBox PlayerType
-            int idmg = LeagueDAO.Instance.GetCurrIDMG();
-            string query = "USP_GetPlayerTypeByIDMG " + idmg.ToString() ;
 
-            cbTypeOfPlayer.DataSource = DataProvider.Instance.ExecuteQuery(query);
-            cbTypeOfPlayer.DisplayMember = "TenLCT";
-            cbTypeOfPlayer.ValueMember = "IDLCT";
+            cbTypeOfPlayer.DataSource = PlayerTypeDAO.Instance.GetPlayerTypeList();
+            cbTypeOfPlayer.DisplayMember = "Tên loại cầu thủ";
+            cbTypeOfPlayer.ValueMember = "Số thứ tự";
 
             //ComboBox CLB
 
-            query = "USP_GetTeamListByIDMG " + idmg.ToString();
+            // string query = "USP_GetTeamListByIDMG " + idmg.ToString();
 
-            cbCLB.DataSource = DataProvider.Instance.ExecuteQuery(query);
+            //cbCLB.DataSource = DataProvider.Instance.ExecuteQuery(query);
+
+            cbCLB.DataSource = TeamDAO.Instance.LoadTeamListToDataTable();
             cbCLB.DisplayMember = "TenDB";
             cbCLB.ValueMember = "IDDB";
         }

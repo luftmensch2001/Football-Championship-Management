@@ -1,4 +1,5 @@
-﻿using NationalFootballChampionshipManagement.DTO;
+﻿using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -54,6 +55,22 @@ namespace NationalFootballChampionshipManagement.DAO
         {
             string query = "INSERT INTO LoaiCauThu(TenLCT, SLTD, idmg) VALUES(N'" + name + "', " + sltd.ToString() + ", " + idmg.ToString() +")";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable GetPlayerTypeList()
+        {
+            int IDMG = LeagueDAO.Instance.GetCurrIDMG();
+            string query = "EXEC USP_GetPlayerTypeListByIDMG @idmg = " + IDMG.ToString();
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public void DeleteByID(int idlct)
+        {
+            string query = "DELETE FROM CauThu WHERE IDLCT = " + idlct.ToString();
+            DataProvider.Instance.ExecuteQuery(query);
+
+            query = "DELETE FROM LoaiCauThu WHERE IDLCT = " + idlct.ToString();
+            DataProvider.Instance.ExecuteQuery(query);
         }
     }
 }
