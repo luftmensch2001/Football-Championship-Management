@@ -96,6 +96,17 @@ namespace NationalFootballChampionshipManagement
                 int idDB = (int)cbCLB.SelectedValue;
                 string notes = tbNote.Text;
 
+                int idct = player == null ? 0 : player.ID;
+
+                int countOfThisPlayerType = PlayerTypeDAO.Instance.GetCountPlayerByIDLCT(idct, idLCT, idDB);
+                // Dem xem trong team da co bao nhieu cau thu loai nay, khong tinh ban than
+                int maxCount = PlayerTypeDAO.Instance.GetMax(idLCT);
+                if (countOfThisPlayerType >= maxCount)
+                {
+                    MessageBox.Show("Số lượng loại cầu thủ này trong đội bóng đã đạt tối đa", "Lỗi");
+                    return;
+                }
+
                 if (nameCT == "" || nationalityCT == "")
                 {
                     MessageBox.Show("Vui lòng nhập đẩy đủ thông tin", "Lỗi");

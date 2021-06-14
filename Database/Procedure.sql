@@ -118,3 +118,15 @@ BEGIN
 	WHERE IDCT = @idct
 END
 GO
+
+-- Get count of players have idlct in team, except this idct   
+CREATE PROC USP_GetCountPlayerByIDLCT
+@idLCT INT,
+@idDB INT,
+@idCT INT
+AS
+BEGIN
+	SELECT COUNT(IDCT) AS SL
+	FROM CauThu
+	WHERE IDLCT = @idLCT AND IDCT <> @idCT AND IDDB = @idDB
+END

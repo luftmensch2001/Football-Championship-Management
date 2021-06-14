@@ -33,7 +33,7 @@ namespace NationalFootballChampionshipManagement.DAO
 
                 DataProvider.Instance.ExecuteQuery(query);
 
-                // Them quy dinh cho giai dau
+                // Tu dong them quy dinh cho giai dau
 
                 query = "SELECT TOP 1 IDMG FROM MuaGiai ORDER BY IDMG DESC";
                 DataTable data = DataProvider.Instance.ExecuteQuery(query);
