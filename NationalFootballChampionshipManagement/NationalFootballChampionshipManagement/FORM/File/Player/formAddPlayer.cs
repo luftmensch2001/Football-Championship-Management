@@ -134,6 +134,11 @@ namespace NationalFootballChampionshipManagement
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá cầu thủ này không ?","Xác nhận", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
             if (PlayerDAO.Instance.DeletePlayerByID(player.ID) == 1) // xoa thanh cong
             {
                 this.formFather.openChildForm(new formTeam(this.formFather));

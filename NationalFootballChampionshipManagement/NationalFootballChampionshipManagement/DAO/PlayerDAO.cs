@@ -64,6 +64,7 @@ namespace NationalFootballChampionshipManagement.DAO
             query += ", @nationality = " + nationality;
             query += ", @dob = " + strDob;
             query += ", @note = " + notes;
+            query += ",@idLCT = " + idLCT.ToString();
 
             DataProvider.Instance.ExecuteQuery(query);
             return 1; //cap nhat thanh cong

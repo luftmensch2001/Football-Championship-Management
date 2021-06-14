@@ -109,11 +109,12 @@ CREATE PROC USP_UpdatePlayerInfor
 @gender NVARCHAR(30),
 @nationality NVARCHAR(50),
 @dob SMALLDATETIME,
-@note NVARCHAR(1000)
+@note NVARCHAR(1000),
+@idLCT INT
 AS 
 BEGIN
 	UPDATE CauThu
-	SET Ten = @name, GioiTinh = @gender, NgaySinh = @dob, QuocTich = @nationality, GhiChu = @note
+	SET Ten = @name, GioiTinh = @gender, NgaySinh = @dob, QuocTich = @nationality, GhiChu = @note, IDLCT = @idLCT
 	WHERE IDCT = @idct
 END
 GO
