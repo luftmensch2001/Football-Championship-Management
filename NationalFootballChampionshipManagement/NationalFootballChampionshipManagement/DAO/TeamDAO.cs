@@ -83,5 +83,21 @@ namespace NationalFootballChampionshipManagement.DAO
             int idmg = LeagueDAO.Instance.GetCurrIDMG();
             return DataProvider.Instance.ExecuteQuery("EXEC USP_GetTeamListByIDMG @idmg = " + idmg.ToString());
         }
+        public List<Team> LoadValidTeam() // Load team du thanh vien
+        {
+            List<Team> teams = LoadTeamList();
+            int minimumPlayer = RulesDAO.Instance.GetRules().SLTT; // so cau thu toi thieu
+
+            for (int i=0; i<teams.Count; i++)
+            {
+                if (GetCountPlayer(teams[i].ID) < minimumPlayer)
+                {
+                    teams.RemoveAt(i);
+                    i--;
+                }
+            }
+
+            return teams;
+        }
     }
 }

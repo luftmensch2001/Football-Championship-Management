@@ -114,6 +114,8 @@ BEGIN
 	WHERE IDLCT = @idLCT AND IDCT <> @idCT AND IDDB = @idDB
 END
 
+GO
+
 --Get player type list by IDMG
 CREATE PROC USP_GetPlayerTypeListByIDMG
 @idmg INT
@@ -126,3 +128,20 @@ BEGIN
 	FROM LoaiCauThu
 	WHERE IDMG = @idmg
 END
+
+GO
+
+-- Insert a match
+CREATE PROC USP_InsertMatch
+@idmg INT,
+@vongdau INT,
+@id1 INT,
+@id2 INT,
+@stadium NVARCHAR(50)
+AS
+BEGIN
+	INSERT INTO TranDau(IDMG, VongDau, Doi1, Doi2, SanVanDong) 
+	VALUES (@idmg, @vongdau, @id1, @id2 ,@stadium)
+END
+
+GO
