@@ -36,7 +36,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.tbTeamName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -46,13 +45,17 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.tbHost = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbTeamImage = new System.Windows.Forms.PictureBox();
+            this.btnUpload = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTeamImage)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -146,38 +149,24 @@
             // 
             // panel5
             // 
-            this.panel5.BackgroundImage = global::NationalFootballChampionshipManagement.Properties.Resources.Team_01_Avatar_Example;
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel5.Controls.Add(this.pbTeamImage);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(401, 649);
+            this.panel5.Size = new System.Drawing.Size(401, 634);
             this.panel5.TabIndex = 1;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.btnUpload);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 649);
+            this.panel4.Location = new System.Drawing.Point(0, 634);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(401, 27);
+            this.panel4.Size = new System.Drawing.Size(401, 42);
             this.panel4.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(401, 27);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tải ảnh lên";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
             // 
@@ -332,6 +321,39 @@
             this.label4.Text = "Sân nhà:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pbTeamImage
+            // 
+            this.pbTeamImage.Location = new System.Drawing.Point(3, 32);
+            this.pbTeamImage.Name = "pbTeamImage";
+            this.pbTeamImage.Size = new System.Drawing.Size(391, 490);
+            this.pbTeamImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTeamImage.TabIndex = 0;
+            this.pbTeamImage.TabStop = false;
+            // 
+            // btnUpload
+            // 
+            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpload.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUpload.FlatAppearance.BorderSize = 0;
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnUpload.IconColor = System.Drawing.Color.White;
+            this.btnUpload.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpload.IconSize = 30;
+            this.btnUpload.Location = new System.Drawing.Point(200, 0);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(201, 42);
+            this.btnUpload.TabIndex = 1;
+            this.btnUpload.Text = "Tải ảnh lên";
+            this.btnUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpload.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
             // formAddNewTeam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -351,10 +373,12 @@
             this.panel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTeamImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,7 +392,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2TextBox tbTeamName;
         private System.Windows.Forms.Label label2;
@@ -379,5 +402,7 @@
         private Guna.UI2.WinForms.Guna2TextBox tbHost;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lTitle;
+        private System.Windows.Forms.PictureBox pbTeamImage;
+        private FontAwesome.Sharp.IconButton btnUpload;
     }
 }

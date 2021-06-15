@@ -35,6 +35,7 @@ namespace NationalFootballChampionshipManagement
             tbTeamName.Text = team.TeamName;
             tbCoachName.Text = team.CoachName;
             tbHost.Text = team.HostName;
+            pbTeamImage.Image = team.Image;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -56,11 +57,17 @@ namespace NationalFootballChampionshipManagement
             {
                 MessageBox.Show("Thông tin không được là khoảng trắng", "Lỗi");
                 return;
-            }    
+            }
+            if (pbTeamImage.Image == null)
+            {
+                MessageBox.Show("Vui lòng thêm hình ảnh", "Lỗi");
+                return;
+            }
+
             if (btnAdd.Text == "Thêm")
                 try
                 {
-                    TeamDAO.Instance.AddTeam(tbTeamName.Text, tbCoachName.Text, tbHost.Text);
+                    TeamDAO.Instance.AddTeam(tbTeamName.Text, tbCoachName.Text, tbHost.Text, pbTeamImage.Image);
                     MessageBox.Show("Thêm đội bóng thành công!", "Thành công");
                     this.formFather.openChildForm(new formTeam(this.formFather));
                 }
@@ -71,13 +78,29 @@ namespace NationalFootballChampionshipManagement
             else 
                 try
                 {
-                    TeamDAO.Instance.ChangeInforByIDDB(tbTeamName.Text, tbCoachName.Text, tbHost.Text, team.ID);
+                    TeamDAO.Instance.ChangeInforByIDDB(tbTeamName.Text, tbCoachName.Text, tbHost.Text, team.ID, pbTeamImage.Image);
                     MessageBox.Show("Sửa thông tin thành công!", "Thành công");
                     this.formFather.openChildForm(new formTeam(this.formFather));
                 }
                 catch
                 {
                     MessageBox.Show("Sửa thông tin thất bại!", "Lỗi");
+                }
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "Image files(*.jpg;*.jpeg;*.png)|*.jpg|*.jpeg|*.png", Multiselect = false };
+            openFileDialog.ShowDialog();
+            string path = openFileDialog.FileName;
+            if (path != "")
+                try
+                {
+                    pbTeamImage.Image = Image.FromFile(path);
+                }
+                catch
+                {
+                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi");
                 }
         }
     }
