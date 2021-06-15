@@ -18,7 +18,6 @@ namespace NationalFootballChampionshipManagement
         formMain formFather = null;
 
         Player player = null;
-
         public formAddPlayer()
         {
             InitializeComponent();
@@ -30,6 +29,7 @@ namespace NationalFootballChampionshipManagement
             InitializeComponent();
             LoadCombobox();
             btnDelete.Hide();
+            pbPlayerImage.SizeMode = PictureBoxSizeMode.StretchImage;
         }
 
         public formAddPlayer(formMain f, int idct)
@@ -46,6 +46,8 @@ namespace NationalFootballChampionshipManagement
             cbGender.SelectedIndex = player.Gender == "Nam" ? 0 : 1;
             cbCLB.Enabled = false;
             tbNote.Text = player.Notes;
+            pbPlayerImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbPlayerImage.Image = PlayerDAO.Instance.GetImageByIDCT(idct);
         }
 
         void LoadCombobox()
@@ -116,6 +118,12 @@ namespace NationalFootballChampionshipManagement
 
                 if (btnAdd.Text == "Thêm")
                 {
+                    if (pbPlayerImage.Image == null)
+                    {
+                        MessageBox.Show("Vui lòng thêm hình ảnh", "Lỗi");
+                        return;
+                    } 
+                        
                     Rules rules = RulesDAO.Instance.GetRules();                 
 
                     if (TeamDAO.Instance.GetCountPlayer(idDB) >= rules.SLTD)
@@ -124,13 +132,23 @@ namespace NationalFootballChampionshipManagement
                         return;
                     }
 
-                    int status = PlayerDAO.Instance.AddPlayer(nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes);
-                    if (status == 1) MessageBox.Show("Thêm cầu thủ thành công!", "Thành công");
+                    int status = PlayerDAO.Instance.AddPlayer(nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes, pbPlayerImage.Image);
+                    if (status == 1)
+                    {
+                        MessageBox.Show("Thêm cầu thủ thành công!", "Thành công");
+                        this.formFather.openChildForm(new formTeam(this.formFather));
+                        this.Close();
+                    }
                 } 
                 else
                 {
-                    int status = PlayerDAO.Instance.UpdatePlayer(player.ID, nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes);
-                    if (status == 1) MessageBox.Show("Cập nhật thành công!", "Thành công");
+                    int status = PlayerDAO.Instance.UpdatePlayer(player.ID, nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes, pbPlayerImage.Image);
+                    if (status == 1)
+                    {
+                        MessageBox.Show("Cập nhật thành công!", "Thành công");
+                        this.formFather.openChildForm(new formTeam(this.formFather));
+                        this.Close();
+                    }
                 }
 
                 
@@ -156,6 +174,22 @@ namespace NationalFootballChampionshipManagement
                 this.formFather.openChildForm(new formTeam(this.formFather));
                 this.Close();
             }
+        }
+
+        private void btnLoadImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter="Image files(*.jpg;*.jpeg;*.png)|*.jpg|*.jpeg|*.png", Multiselect = false };
+            openFileDialog.ShowDialog();
+            string path = openFileDialog.FileName;
+            if (path != "")
+                try
+                {
+                    pbPlayerImage.Image = Image.FromFile(path);
+                }
+                catch
+                {
+                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi");
+                }
         }
     }
 }

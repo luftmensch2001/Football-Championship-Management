@@ -44,29 +44,30 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tbUploadNewImage = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pnlPlayerAvatar = new System.Windows.Forms.Panel();
+            this.btnLoadImage = new FontAwesome.Sharp.IconButton();
+            this.pbPlayerImage = new System.Windows.Forms.PictureBox();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
-            this.btnDelete = new FontAwesome.Sharp.IconButton();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.pnlPlayerAvatar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayerImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -344,6 +345,31 @@
             this.panel4.Size = new System.Drawing.Size(211, 616);
             this.panel4.TabIndex = 12;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnDelete.IconColor = System.Drawing.Color.White;
+            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDelete.IconSize = 30;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.Location = new System.Drawing.Point(0, 518);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(211, 49);
+            this.btnDelete.TabIndex = 12;
+            this.btnDelete.Text = "Xoá";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
@@ -416,23 +442,8 @@
             this.label1.Text = "Giới tính:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tbUploadNewImage
-            // 
-            this.tbUploadNewImage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUploadNewImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbUploadNewImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUploadNewImage.ForeColor = System.Drawing.Color.Red;
-            this.tbUploadNewImage.Location = new System.Drawing.Point(0, 0);
-            this.tbUploadNewImage.Margin = new System.Windows.Forms.Padding(4);
-            this.tbUploadNewImage.Name = "tbUploadNewImage";
-            this.tbUploadNewImage.Size = new System.Drawing.Size(436, 17);
-            this.tbUploadNewImage.TabIndex = 0;
-            this.tbUploadNewImage.Text = "Tải ảnh lên";
-            this.tbUploadNewImage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.tbUploadNewImage);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(0, 588);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
@@ -444,6 +455,8 @@
             // 
             this.pnlPlayerAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlPlayerAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlPlayerAvatar.Controls.Add(this.btnLoadImage);
+            this.pnlPlayerAvatar.Controls.Add(this.pbPlayerImage);
             this.pnlPlayerAvatar.Controls.Add(this.panel11);
             this.pnlPlayerAvatar.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPlayerAvatar.Location = new System.Drawing.Point(727, 198);
@@ -451,6 +464,38 @@
             this.pnlPlayerAvatar.Name = "pnlPlayerAvatar";
             this.pnlPlayerAvatar.Size = new System.Drawing.Size(438, 616);
             this.pnlPlayerAvatar.TabIndex = 11;
+            // 
+            // btnLoadImage
+            // 
+            this.btnLoadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnLoadImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadImage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLoadImage.FlatAppearance.BorderSize = 0;
+            this.btnLoadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLoadImage.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnLoadImage.ForeColor = System.Drawing.Color.White;
+            this.btnLoadImage.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnLoadImage.IconColor = System.Drawing.Color.White;
+            this.btnLoadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnLoadImage.IconSize = 30;
+            this.btnLoadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLoadImage.Location = new System.Drawing.Point(0, 539);
+            this.btnLoadImage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoadImage.Name = "btnLoadImage";
+            this.btnLoadImage.Size = new System.Drawing.Size(436, 49);
+            this.btnLoadImage.TabIndex = 6;
+            this.btnLoadImage.Text = "Tải ảnh lên";
+            this.btnLoadImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLoadImage.UseVisualStyleBackColor = false;
+            this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
+            // 
+            // pbPlayerImage
+            // 
+            this.pbPlayerImage.Location = new System.Drawing.Point(21, 45);
+            this.pbPlayerImage.Name = "pbPlayerImage";
+            this.pbPlayerImage.Size = new System.Drawing.Size(394, 467);
+            this.pbPlayerImage.TabIndex = 1;
+            this.pbPlayerImage.TabStop = false;
             // 
             // tbName
             // 
@@ -541,31 +586,6 @@
             this.lTitle.Text = "Thêm cầu thủ mới";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnDelete.IconColor = System.Drawing.Color.White;
-            this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDelete.IconSize = 30;
-            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(0, 518);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(211, 49);
-            this.btnDelete.TabIndex = 12;
-            this.btnDelete.Text = "Xoá";
-            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // formAddPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -588,9 +608,8 @@
             this.panel5.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.pnlPlayerAvatar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbPlayerImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -611,7 +630,6 @@
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton btnAdd;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox tbUploadNewImage;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel pnlPlayerAvatar;
         private Guna.UI2.WinForms.Guna2TextBox tbName;
@@ -630,5 +648,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnLoadImage;
+        private System.Windows.Forms.PictureBox pbPlayerImage;
     }
 }

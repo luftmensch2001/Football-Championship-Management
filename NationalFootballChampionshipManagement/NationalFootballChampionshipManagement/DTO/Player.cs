@@ -1,9 +1,12 @@
-﻿using System;
+﻿using NationalFootballChampionshipManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace NationalFootballChampionshipManagement.DTO
 {
@@ -17,6 +20,7 @@ namespace NationalFootballChampionshipManagement.DTO
         DateTime dayOfBirth;
         string notes;
         int iDDB;
+        Image img;
 
         public int ID { get => iD; set => iD = value; }
         public int IDLCT { get => iDLCT; set => iDLCT = value; }
@@ -26,6 +30,7 @@ namespace NationalFootballChampionshipManagement.DTO
         public DateTime DayOfBirth { get => dayOfBirth; set => dayOfBirth = value; }
         public string Notes { get => notes; set => notes = value; }
         public int IDDB { get => iDDB; set => iDDB = value; }
+        public Image Img { get => img; set => img = value; }
 
         public Player(int id, int idlct, string playName, string gender, string nationlity, DateTime dayOfBirth, string notes)
         {
@@ -48,6 +53,7 @@ namespace NationalFootballChampionshipManagement.DTO
             this.DayOfBirth = DateTime.Parse(row["NgaySinh"].ToString());
             this.Notes = row["GhiChu"].ToString();
             this.IDDB = (int)row["IDDB"];
+            this.Img = ImageProcessing.Instance.ByteToImg((byte[])row["HinhAnh"]);
         }
     }
 }

@@ -2,10 +2,12 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace NationalFootballChampionshipManagement.DAO
 {
@@ -26,7 +28,7 @@ namespace NationalFootballChampionshipManagement.DAO
 
             return age;
         }
-        public int AddPlayer(string name, string gender, string nationality, int idLCT, DateTime dob, int idTeam, string notes)
+        public int AddPlayer(string name, string gender, string nationality, int idLCT, DateTime dob, int idTeam, string notes, Image img)
         {
             Rules rules = RulesDAO.Instance.GetRules();
             if (CalculateAge(dob) < rules.TuoiTT || CalculateAge(dob) > rules.TuoiTD)
@@ -34,15 +36,24 @@ namespace NationalFootballChampionshipManagement.DAO
                 MessageBox.Show("Tuổi cầu thủ phải nằm trong khoảng từ " + rules.TuoiTT.ToString() + " đến " + rules.TuoiTD.ToString(), "Lỗi");
                 return 0; // them cau thu that bai
             }
+
+            byte[] byteArr = ImageProcessing.Instance.convertImgToByte(img);
+
             string query =
                  "INSERT INTO CauThu(Ten, GioiTinh, QuocTich, IDLCT, NgaySinh, IDDB, GhiChu) VALUES(N'"
                  + name + "', N'" + gender + "', N'" + nationality + "', '" + idLCT.ToString()
                  + "', '" + dob.ToString("MM/dd/yyyy") + "', '" + idTeam.ToString() + "', N'" + notes + "')";
+
             DataProvider.Instance.ExecuteQuery(query);
+
+            // insert image
+            query = "UPDATE CauThu SET HinhAnh = @img WHERE IDCT = (SELECT MAX(IDCT) FROM CauThu)";
+            DataProvider.Instance.ExecuteQuery(query, new object[] { byteArr });
+
             return 1; //them cau thu thanh cong
         }
 
-        public int UpdatePlayer(int idct, string name, string gender, string nationality, int idLCT, DateTime dob, int idTeam, string notes)
+        public int UpdatePlayer(int idct, string name, string gender, string nationality, int idLCT, DateTime dob, int idTeam, string notes, Image img)
         {
             Rules rules = RulesDAO.Instance.GetRules();
             if (CalculateAge(dob) < rules.TuoiTT || CalculateAge(dob) > rules.TuoiTD)
@@ -67,6 +78,12 @@ namespace NationalFootballChampionshipManagement.DAO
             query += ",@idLCT = " + idLCT.ToString();
 
             DataProvider.Instance.ExecuteQuery(query);
+
+            // cap nhat hinh anh
+            byte[] byteArr = ImageProcessing.Instance.convertImgToByte(img);
+            query = "UPDATE CauThu SET HinhAnh = @img WHERE IDCT = @idct";
+            DataProvider.Instance.ExecuteQuery(query, new object[] { byteArr, idct });
+
             return 1; //cap nhat thanh cong
         }
 
@@ -97,6 +114,12 @@ namespace NationalFootballChampionshipManagement.DAO
                 MessageBox.Show("Xoá cầu thủ thất bại", "Lỗi");
                 return 0;
             }
+        }
+
+        public Image GetImageByIDCT(int idct)
+        {
+            Player p = GetPlayerByIDCT(idct);
+            return p.Img;
         }
     }
 }
