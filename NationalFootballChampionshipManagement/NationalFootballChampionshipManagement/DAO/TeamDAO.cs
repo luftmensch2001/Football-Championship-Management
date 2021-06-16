@@ -99,5 +99,14 @@ namespace NationalFootballChampionshipManagement.DAO
 
             return teams;
         }
+
+        public string GetTeamNameByID(int idTeam)
+        {
+            string query = "SELECT TenDB FROM DoiBong WHERE IDDB = " + idTeam.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            if (data.Rows.Count == 0) return "Unknown";
+            return data.Rows[0]["TenDB"].ToString();
+        }
     }
 }

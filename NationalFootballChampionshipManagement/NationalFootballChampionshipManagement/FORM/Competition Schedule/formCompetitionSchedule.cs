@@ -16,12 +16,62 @@ namespace NationalFootballChampionshipManagement
     {
         formMain formFather = null;
 
+        List<int> listIDTranDau = new List<int>();
         public formCompetitionSchedule(formMain f)
         {
             InitializeComponent();
 
             this.formFather = f;
+
+            LoadRadioButton();
+
+            LoadDgv(MatchDAO.Instance.GetAllMatches());
         }
+
+        void LoadRadioButton()
+        {
+            RadioButton radio = new RadioButton();
+            RadioButton lastButton = radio;
+            radio.Text = "Tất cả";
+            radio.Tag = null;
+            radio.Checked = true;
+            flpRound.Controls.Add(radio);
+            int roundCount = MatchDAO.Instance.GetRoundCount();
+            for (int i=1; i<=roundCount; i++)
+            {
+                radio = new RadioButton();
+                radio.Text = "Vòng " + i.ToString();
+                radio.Top = lastButton.Location.Y + 30;
+                radio.Height = 30;
+                lastButton = radio;
+                flpRound.Controls.Add(radio);
+            }
+        }
+
+        void LoadDgv(DataTable data)
+        {
+            dgvSchedule.ReadOnly = true;
+            dgvSchedule.DataSource = data;
+            dgvSchedule.RowTemplate.Height = 30;
+            // Luu lai danh sach ID Tran dau 
+            listIDTranDau.Clear();
+
+            for (int i = 0; i < dgvSchedule.Rows.Count - 1; i++)
+            {
+                listIDTranDau.Add(Int32.Parse(dgvSchedule.Rows[i].Cells[0].Value.ToString()));
+                dgvSchedule.Rows[i].Cells[0].Value = i + 1;
+                   
+                // Chuyen tu ID team -> ten 
+                int IDteam = Int32.Parse(dgvSchedule.Rows[i].Cells[2].Value.ToString());
+                dgvSchedule.Rows[i].Cells[4].Value = TeamDAO.Instance.GetTeamNameByID(IDteam);
+                IDteam = Int32.Parse(dgvSchedule.Rows[i].Cells[3].Value.ToString());              
+                dgvSchedule.Rows[i].Cells[5].Value = TeamDAO.Instance.GetTeamNameByID(IDteam);
+            }
+
+            dgvSchedule.Columns[2].Visible = false;
+            dgvSchedule.Columns[3].Visible = false;
+        }
+
 
         private void btnAddNewCompetiton_Click(object sender, EventArgs e)
         {

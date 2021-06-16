@@ -145,3 +145,25 @@ BEGIN
 END
 
 GO
+
+-- Get All Matches
+
+CREATE PROC USP_GetAllMatches 
+@idmg INT
+AS
+BEGIN
+	SELECT 
+		IDTranDau as [Số thứ tự],
+		VongDau as [Vòng đấu],
+		Doi1 as [ID1],
+		Doi2 as [ID2],
+		SanVanDong as [Đội 1],
+		SanVanDong as [Đội 2],
+		SanVanDong as [Sân vận động],
+		CONVERT(VARCHAR(10),  ThoiGian, 103) AS [Ngày],
+		CONVERT(VARCHAR(5),  ThoiGian, 108) AS [Giờ]
+	FROM TranDau
+	WHERE IDMG = @idmg
+END
+
+GO
