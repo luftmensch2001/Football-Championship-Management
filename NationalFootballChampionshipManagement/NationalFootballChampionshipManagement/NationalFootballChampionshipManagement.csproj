@@ -66,6 +66,7 @@
     <Compile Include="DAO\RulesDAO.cs" />
     <Compile Include="DAO\ScheduleDAO.cs" />
     <Compile Include="DAO\TeamDAO.cs" />
+    <Compile Include="DTO\Matches.cs" />
     <Compile Include="DTO\Rules.cs" />
     <Compile Include="DTO\Player.cs" />
     <Compile Include="DTO\PlayerType.cs" />
@@ -88,11 +89,11 @@
     <Compile Include="FORM\File\Team\formAddNewTeam.Designer.cs">
       <DependentUpon>formAddNewTeam.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\Competition Schedule\formAddCompetition.cs">
+    <Compile Include="FORM\Competition Schedule\formChangeTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\Competition Schedule\formAddCompetition.Designer.cs">
-      <DependentUpon>formAddCompetition.cs</DependentUpon>
+    <Compile Include="FORM\Competition Schedule\formChangeTime.Designer.cs">
+      <DependentUpon>formChangeTime.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\File\Player\formPlayerInformation.cs">
       <SubType>Form</SubType>
@@ -201,8 +202,8 @@
     <EmbeddedResource Include="FORM\File\Team\formAddNewTeam.resx">
       <DependentUpon>formAddNewTeam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\Competition Schedule\formAddCompetition.resx">
-      <DependentUpon>formAddCompetition.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\Competition Schedule\formChangeTime.resx">
+      <DependentUpon>formChangeTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\File\Player\formPlayerInformation.resx">
       <DependentUpon>formPlayerInformation.cs</DependentUpon>

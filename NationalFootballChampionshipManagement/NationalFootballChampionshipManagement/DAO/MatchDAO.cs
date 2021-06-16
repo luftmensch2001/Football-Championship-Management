@@ -40,7 +40,8 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public int GetRoundCount()
         {
-            string query = "SELECT TOP 1 VongDau FROM TranDau ORDER BY VongDau DESC";
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+            string query = "SELECT TOP 1 VongDau FROM TranDau WHERE IDMG = " + idmg.ToString() + " ORDER BY VongDau DESC";
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count == 0) return 0;
             return (int)data.Rows[0]["VongDau"];
@@ -49,6 +50,19 @@ namespace NationalFootballChampionshipManagement.DAO
         {
             string query = "EXEC USP_GetAllMatches @idmg = " + LeagueDAO.Instance.GetCurrIDMG().ToString();
             return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public DataTable GetMatchesByVongDau(int vongDau)
+        {
+            string query = "EXEC USP_GetMatchesByVongDau @idmg = " + LeagueDAO.Instance.GetCurrIDMG().ToString();
+            query += ", @vongDau = " + vongDau.ToString();
+            return DataProvider.Instance.ExecuteQuery(query);
+        }
+
+        public void UpdateTime(int idTranDau, string timeString)
+        {
+            string query = "UPDATE TranDau SET ThoiGian = " + timeString + "WHERE IDTranDau = " + idTranDau.ToString();
+            DataProvider.Instance.ExecuteNonQuery(query);
         }
     }
 }

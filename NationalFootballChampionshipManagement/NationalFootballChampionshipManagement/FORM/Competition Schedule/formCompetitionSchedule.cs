@@ -17,6 +17,8 @@ namespace NationalFootballChampionshipManagement
         formMain formFather = null;
 
         List<int> listIDTranDau = new List<int>();
+
+        int selectedRow = -1;
         public formCompetitionSchedule(formMain f)
         {
             InitializeComponent();
@@ -26,26 +28,67 @@ namespace NationalFootballChampionshipManagement
             LoadRadioButton();
 
             LoadDgv(MatchDAO.Instance.GetAllMatches());
+
+            dgvSchedule.CellClick +=
+                new DataGridViewCellEventHandler(dgvSchedule_CellClick);
+        }
+
+        void dgvSchedule_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.selectedRow = e.RowIndex;
         }
 
         void LoadRadioButton()
         {
-            RadioButton radio = new RadioButton();
-            RadioButton lastButton = radio;
-            radio.Text = "Tất cả";
-            radio.Tag = null;
-            radio.Checked = true;
-            flpRound.Controls.Add(radio);
+            flpRound.Controls.Clear();
+            RadioButton radio;
+            RadioButton lastButton = null;
+
             int roundCount = MatchDAO.Instance.GetRoundCount();
-            for (int i=1; i<=roundCount; i++)
+            if (roundCount > 0)
+            {
+                btnAutoCreate.Enabled = false;
+            }
+            else
+            {
+                btnCancelSchedule.Enabled = false;
+            }
+            for (int i=0; i<=roundCount; i++)
             {
                 radio = new RadioButton();
-                radio.Text = "Vòng " + i.ToString();
-                radio.Top = lastButton.Location.Y + 30;
+                if (lastButton == null)
+                {
+                    radio.Text = "Tất cả";
+                    radio.Checked = true;
+                }
+                else
+                {
+                    radio.Text = "Vòng " + i.ToString();
+                    radio.Top = lastButton.Location.Y + 30; 
+                }
                 radio.Height = 30;
+                radio.Tag = new int();
+                radio.Tag = i;
+                radio.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
                 lastButton = radio;
                 flpRound.Controls.Add(radio);
             }
+        }
+
+        private void radioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radio = sender as RadioButton;
+
+            if (radio.Checked == true)
+            {
+                if ((int)radio.Tag == 0)
+                    LoadDgv(MatchDAO.Instance.GetAllMatches());
+                else
+                    LoadDgv(MatchDAO.Instance.GetMatchesByVongDau((int)radio.Tag));
+
+                lbRound.Text = (int)radio.Tag == 0 ? "Tất cả" : radio.Tag.ToString();
+            }
+            
         }
 
         void LoadDgv(DataTable data)
@@ -53,7 +96,8 @@ namespace NationalFootballChampionshipManagement
             dgvSchedule.ReadOnly = true;
             dgvSchedule.DataSource = data;
             dgvSchedule.RowTemplate.Height = 30;
-            // Luu lai danh sach ID Tran dau 
+            dgvSchedule.AllowUserToResizeRows = false;
+            // Luu lai danh sach ID Tran dau de chinh sua
             listIDTranDau.Clear();
 
             for (int i = 0; i < dgvSchedule.Rows.Count - 1; i++)
@@ -84,6 +128,9 @@ namespace NationalFootballChampionshipManagement
             try
             {
                 ScheduleDAO.Instance.GenerateNewSchedule();
+                LoadDgv(MatchDAO.Instance.GetAllMatches());
+                LoadRadioButton();
+                btnCancelSchedule.Enabled = true;
                 MessageBox.Show("Tạo lịch thi đấu thành công. Hãy tuỳ chỉnh thời gian cho các trận đấu!", "Thành công");
             } 
             catch
@@ -107,13 +154,26 @@ namespace NationalFootballChampionshipManagement
             try
             {
                 // xoa tat ca tran dau va cac bang co khoa lien quan, hien tai t moi chi xoa bang tran dau
-                ScheduleDAO.Instance.CancelSchedule();     
+                ScheduleDAO.Instance.CancelSchedule();
+                LoadDgv(MatchDAO.Instance.GetAllMatches());
+                LoadRadioButton();
+                btnAutoCreate.Enabled = true;
                 MessageBox.Show("Huỷ lịch thi đấu thành công", "Thành công");
             }
             catch
             {
                 MessageBox.Show("Huỷ thi đấu thất bại", "Lỗi");
             }
+        }
+
+        private void btnChangeTime_Click(object sender, EventArgs e)
+        {
+            if (selectedRow < 0 || selectedRow >= dgvSchedule.Rows.Count-1)
+            {
+                MessageBox.Show("Vui lòng chọn trận đấu");
+                return;
+            }
+            this.formFather.openChildForm(new formChangeTime(this.formFather, listIDTranDau[selectedRow]));
         }
     }
 }

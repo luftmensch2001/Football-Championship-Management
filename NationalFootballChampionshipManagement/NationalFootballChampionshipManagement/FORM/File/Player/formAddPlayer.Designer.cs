@@ -209,6 +209,7 @@
             // dtpBirthday
             // 
             this.dtpBirthday.CheckedState.Parent = this.dtpBirthday;
+            this.dtpBirthday.CustomFormat = "MM/dd/yyyy";
             this.dtpBirthday.Dock = System.Windows.Forms.DockStyle.Top;
             this.dtpBirthday.FillColor = System.Drawing.Color.White;
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;

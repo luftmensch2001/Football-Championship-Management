@@ -50,7 +50,8 @@ namespace NationalFootballChampionshipManagement.DTO
             this.PlayName = row["Ten"].ToString();
             this.Gender = row["GioiTinh"].ToString();
             this.Nationlity = row["QuocTich"].ToString();
-            this.DayOfBirth = DateTime.Parse(row["NgaySinh"].ToString());
+            //this.DayOfBirth = DateTime.Parse(row["NgaySinh"].ToString());
+            this.DayOfBirth = (DateTime)row["NgaySinh"];
             this.Notes = row["GhiChu"].ToString();
             this.IDDB = (int)row["IDDB"];
             this.Img = ImageProcessing.Instance.ByteToImg((byte[])row["HinhAnh"]);
