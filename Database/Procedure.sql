@@ -190,3 +190,118 @@ BEGIN
 END
 
 GO
+
+-- ResultMatch--------------------------------------------------------------------------------------------
+Alter proc USP_LoadResultMatch
+AS
+BEGIN
+	SELECT DISTINCT * FROM 
+	(
+		SELECT KetQuaThiDau.IDTranDau, TranDau.VongDau,TranDau.Doi1 AS IDDOI1,TranDau.Doi2 AS IDDOI2,KQDoi1,KQDoi2,
+		TranDau.SanVanDong, TranDau.ThoiGian
+		FROM KetQuaThiDau JOIN TranDau 
+			ON KetQuaThiDau.IDTranDau=TranDau.IDTranDau
+	) AS KETQUA 
+	JOIN (
+		SELECT Doi.TenDB AS TENDOI1, Doi.IDDB 
+		FROM TranDau JOIN	(Select IDDB,tenDB,hinhanh as HinhAnhDoi1
+								from DoiBong) Doi
+					 ON Doi.IDDB = TranDau.Doi1
+	) DOI1 ON KetQua.IDDOI1 = DOI1.IDDB
+	JOIN (
+		SELECT Doi.TenDB AS TENDOI2, Doi.IDDB 
+		FROM TranDau JOIN	(Select IDDB,tenDB,Hinhanh as HinhAnhDoi2
+								from DoiBong) Doi
+					 ON Doi.IDDB = TranDau.Doi2
+	) DOI2 ON KetQua.IDDOI2 = DOI2.IDDB
+END
+GO
+
+Alter PROC USP_GetNewIdTranDau
+@MuaGiai int
+AS
+BEGIN
+	SELECT TOP(1) IDTRANDAU
+	FROM TRANDAU
+	where idmg = @MuaGiai
+	ORDER BY IDTRANDAU DESC	
+END
+GO
+
+
+
+-- Goal ------------------------------------------------------------------------------------------------------
+
+CREATE PROC USP_LOADGOALS
+@IDTRANDAU INT 
+AS
+BEGIN
+	SELECT * FROM BANTHANG 
+	WHERE IDTranDau = @IDTRANDAU
+END
+GO
+
+
+ALTER PROC USP_UPDATEGOAL 
+@IDBANTHANG INT ,@IDCAUTHU INT,@IDLOAIBANTHANG INT,@THOIDIEM NVARCHAR(10)
+AS BEGIN
+	UPDATE BANTHANG
+	SET IDCT=@IDCAUTHU, IDLBT = @IDLOAIBANTHANG,ThoiDiem = @THOIDIEM
+	WHERE IDBT = @IDBANTHANG
+END
+GO
+
+CREATE PROC USP_DELETEGOAL
+@IDBANTHANG INT
+AS
+BEGIN
+	DELETE BANTHANG
+	WHERE IDBT = @IDBANTHANG
+END
+GO
+
+--- Bổ xung team -----------------------------------------------
+CREATE PROC USP_GetTeamListByIDMGAndIDDoiBong
+@idmg INT,
+@idDoiBong INT
+AS
+BEGIN
+	SELECT * FROM DoiBong 
+	WHERE IDMG = @idmg AND IdDb = @idDoiBong
+END
+GO
+
+
+
+--- Bổ xung Player ---------------------------------------------
+
+CREATE PROC USP_GetListPlayerByIDDB
+@IDDB int
+AS
+BEGIN
+	SELECT * FROM CauThu
+	WHERE CauThu.IDDB = @IDDB
+END
+GO
+
+CREATE PROC USP_GetListIdAndNamePlayerByIDDB
+@IDDB int
+AS
+BEGIN
+	SELECT IDCT,CauThu.Ten 
+	FROM CauThu
+	WHERE CauThu.IDDB = @IDDB
+END
+GO
+
+
+ALTER PROC USP_GetListPlayerExceptImage
+@iddb int
+AS
+BEGIN
+	SELECT IDCT, CauThu.Ten, CauThu.IDDB, CauThu.IDLCT, CauThu.TONGBANTHANG
+	FROM CauThu
+	where IDDB = @iddb
+	ORDER BY IDDB
+END
+GO

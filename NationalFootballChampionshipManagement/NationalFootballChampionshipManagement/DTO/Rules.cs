@@ -16,6 +16,7 @@ namespace NationalFootballChampionshipManagement.DTO
         int tuoiTD;
         int sLTT;
         int sLTD;
+        string timeGoalsMax;
 
         public int IDMG { get => iDMG; set => iDMG = value; }
         public int SLDB { get => sLDB; set => sLDB = value; }
@@ -24,7 +25,12 @@ namespace NationalFootballChampionshipManagement.DTO
         public int TuoiTD { get => tuoiTD; set => tuoiTD = value; }
         public int SLTT { get => sLTT; set => sLTT = value; }
         public int SLTD { get => sLTD; set => sLTD = value; }
+        public String TimeGoalMax { get => timeGoalsMax; set => timeGoalsMax = value; }
+        
+        public Rules()
+        {
 
+        }
         public Rules(DataRow row)
         {
             this.IDMG = (int)row["IDMG"];
@@ -34,6 +40,7 @@ namespace NationalFootballChampionshipManagement.DTO
             this.TuoiTD = (int)row["TuoiTD"];
             this.SLTT = (int)row["SLTT"];
             this.SLTD = (int)row["SLTD"];
+            this.timeGoalsMax = row["TGGBTD"].ToString();
         }
     }
 }

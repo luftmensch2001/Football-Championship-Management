@@ -57,5 +57,25 @@ namespace NationalFootballChampionshipManagement.DAO
             query = "DELETE FROM LoaiCauThu WHERE IDLCT = " + idlct.ToString();
             DataProvider.Instance.ExecuteQuery(query);
         }
+        public string GetNameByID(int id)
+        {
+            string query = "SELECT Tenlct FROM LoaiCauThu WHERE IDLCT = " + id.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+            if (data.Rows.Count == 0) return "Unknown";
+            return data.Rows[0]["TenLCT"].ToString();
+        }
+        public List<PlayerType> GetPlayerTypes()
+        {
+            List<PlayerType> playerTypes = new List<PlayerType>();
+            DataTable dataTable = GetPlayerTypeList();
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                PlayerType playerType = new PlayerType(row[1].ToString(), idmg, (int)row[2], (int)row[0]);
+                playerTypes.Add(playerType);
+            }    
+            return playerTypes;
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,6 +24,7 @@ namespace NationalFootballChampionshipManagement
             InitializeComponent();
 
             LoadDgvPlayerType();
+            LoadListGoalType();
         }
 
         void LoadDgvPlayerType()
@@ -82,7 +84,18 @@ namespace NationalFootballChampionshipManagement
 
                 MessageBox.Show("Xoá thất bại", "Lỗi");
             }
-            
+        }
+
+        List<GoalType> listGoalType = new List<GoalType>();
+        void LoadListGoalType()
+        {
+            listGoalType = GoalTypeDAO.Instance.GetListGoalType();
+            int i= 1;
+            foreach (GoalType goalType in listGoalType)
+            {
+                guna2DataGridView2.Rows.Add(i,goalType.Name);
+                i++;
+            }    
         }
     }
 }

@@ -155,6 +155,7 @@ namespace NationalFootballChampionshipManagement
             {
                 // xoa tat ca tran dau va cac bang co khoa lien quan, hien tai t moi chi xoa bang tran dau
                 ScheduleDAO.Instance.CancelSchedule();
+                ResultMatchDAO.Instance.DeleteAllResultMatch();
                 LoadDgv(MatchDAO.Instance.GetAllMatches());
                 LoadRadioButton();
                 btnAutoCreate.Enabled = true;

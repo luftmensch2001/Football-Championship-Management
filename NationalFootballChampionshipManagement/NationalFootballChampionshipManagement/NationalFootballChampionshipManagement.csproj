@@ -39,6 +39,9 @@
     <Reference Include="Guna.UI2">
       <HintPath>E:\Bin\PcWonderland.com_Guna_UI_Framework_Ultimate_2\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="OpenHtmlToPdf, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenHtmlToPdf.1.12.0.0\lib\net45\OpenHtmlToPdf.dll</HintPath>
@@ -58,19 +61,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\GoalDAO.cs" />
+    <Compile Include="DAO\GoalTypeDAO.cs" />
     <Compile Include="DAO\ImageProcessing.cs" />
     <Compile Include="DAO\LeagueDAO.cs" />
     <Compile Include="DAO\MatchDAO.cs" />
     <Compile Include="DAO\PlayerDAO.cs" />
     <Compile Include="DAO\PlayerTypeDAO.cs" />
+    <Compile Include="DAO\ResultMatchDAO.cs" />
     <Compile Include="DAO\RulesDAO.cs" />
     <Compile Include="DAO\ScheduleDAO.cs" />
     <Compile Include="DAO\TeamDAO.cs" />
+    <Compile Include="DTO\Goal.cs" />
+    <Compile Include="DTO\GoalType.cs" />
     <Compile Include="DTO\Matches.cs" />
+    <Compile Include="DTO\ResultMatch.cs" />
     <Compile Include="DTO\Rules.cs" />
     <Compile Include="DTO\Player.cs" />
     <Compile Include="DTO\PlayerType.cs" />
     <Compile Include="DTO\Team.cs" />
+    <Compile Include="ExportToPdf.cs" />
     <Compile Include="FORM\MuaGiai\formAddMuaGiai.cs">
       <SubType>Form</SubType>
     </Compile>

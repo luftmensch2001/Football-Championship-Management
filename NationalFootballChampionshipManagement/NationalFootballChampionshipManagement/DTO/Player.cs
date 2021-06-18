@@ -20,6 +20,7 @@ namespace NationalFootballChampionshipManagement.DTO
         DateTime dayOfBirth;
         string notes;
         int iDDB;
+        int countGoal;
         Image img;
 
         public int ID { get => iD; set => iD = value; }
@@ -31,6 +32,8 @@ namespace NationalFootballChampionshipManagement.DTO
         public string Notes { get => notes; set => notes = value; }
         public int IDDB { get => iDDB; set => iDDB = value; }
         public Image Img { get => img; set => img = value; }
+
+        public int CountGoal { get => countGoal; set => countGoal = value; }
 
         public Player(int id, int idlct, string playName, string gender, string nationlity, DateTime dayOfBirth, string notes)
         {
@@ -45,7 +48,7 @@ namespace NationalFootballChampionshipManagement.DTO
 
         public Player(DataRow row)
         {
-            this.ID = (int)row["IDCT"];
+            this.ID = (int)row["idct"];
             this.IDLCT = (int)row["IDLCT"];
             this.PlayName = row["Ten"].ToString();
             this.Gender = row["GioiTinh"].ToString();
@@ -55,6 +58,19 @@ namespace NationalFootballChampionshipManagement.DTO
             this.Notes = row["GhiChu"].ToString();
             this.IDDB = (int)row["IDDB"];
             this.Img = ImageProcessing.Instance.ByteToImg((byte[])row["HinhAnh"]);
+        }
+        public Player(int id, string name)
+        {
+            this.ID = id;
+            this.playName = name;
+        }
+        public Player(int id, string name, int iddb, int idLCT, int countGoal )
+        {
+            this.ID = id;
+            this.playName = name;
+            this.iDDB = iddb;
+            this.IDLCT = idLCT;
+            this.countGoal = countGoal;
         }
     }
 }

@@ -92,6 +92,49 @@ namespace NationalFootballChampionshipManagement.DAO
             string query = "EXEC USP_GetPlayerListByIDDB @iddb =" + iddb.ToString();
             return DataProvider.Instance.ExecuteQuery(query);
         }
+        public List<Player> GetListPlayerByIDDB(int iddb)
+        {
+            List<Player> players = new List<Player>();
+            string query = "EXEC USP_GetListPlayerByIDDB @iddb =" + iddb.ToString();
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Player player= new Player(row);
+                players.Add(player);
+            }
+            return players;
+        }
+        public List<Player> GetListIdAndNamePlayerByIDDB(int iddb)
+        {
+            List<Player> players = new List<Player>();
+            string query = "EXEC USP_GetListIdAndNamePlayerByIDDB @iddb =" + iddb.ToString();
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Player player = new Player((int) row[0],row[1].ToString());
+                players.Add(player);
+            }
+            return players;
+        }
+        public List<Player> GetListPlayerExceptImage(int iddb)
+        {
+            List<Player> players = new List<Player>();
+            string query = "EXEC USP_GetListPlayerExceptImage @iddb =" + iddb.ToString() ;
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Player player = new Player((int)row[0], row[1].ToString(),(int)row[2], (int)row[3], (int)row[4]);
+                players.Add(player);
+            }
+            return players;
+        }
+        public void SetCountGoal(int id,int count)
+        {
+            string query = "Update CauThu   " +
+                            "Set TONGBANTHANG = " + count.ToString() +
+                             "Where idct = " + id.ToString();
+            DataProvider.Instance.ExecuteQuery(query);
+        }
 
         public Player GetPlayerByIDCT(int idct)
         {

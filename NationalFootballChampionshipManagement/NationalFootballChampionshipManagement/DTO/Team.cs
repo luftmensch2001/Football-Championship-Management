@@ -43,6 +43,14 @@ namespace NationalFootballChampionshipManagement.DTO
             this.IDMG = (int)row["IDMG"];
             this.Image = ImageProcessing.Instance.ByteToImg((byte[])row["HinhAnh"]);
         }
+        public Team(int id,string name)
+        {
+            this.iD = id;
+            this.TeamName = name;
+        }
+        public Team()
+        {
 
+        }
     }
 }

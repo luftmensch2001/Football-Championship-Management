@@ -30,11 +30,17 @@ namespace NationalFootballChampionshipManagement.DAO
             query += ", @id2 = " + team2.ID.ToString();
             query += ", @stadium = N'" + team1.HostName + "'";
             DataProvider.Instance.ExecuteNonQuery(query);
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("EXEC USP_GetNewIdTranDau @MuaGiai =" + idmg.ToString());
+            int newIDTranDau = (int)data.Rows[0][0];
+            MessageBox.Show(newIDTranDau.ToString());
+            ResultMatchDAO.Instance.AddMatch(newIDTranDau);
         }
 
         public void DeleteAllMatches()
         {
             string query = "DELETE FROM TranDau";
+            ResultMatchDAO.Instance.DeleteAllResultMatch();
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 

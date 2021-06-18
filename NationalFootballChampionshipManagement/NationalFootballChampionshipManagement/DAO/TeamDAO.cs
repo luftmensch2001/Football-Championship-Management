@@ -77,7 +77,6 @@ namespace NationalFootballChampionshipManagement.DAO
 
             return teamList;
         }
-
         public DataTable LoadTeamListToDataTable()
         {
             int idmg = LeagueDAO.Instance.GetCurrIDMG();
@@ -117,5 +116,19 @@ namespace NationalFootballChampionshipManagement.DAO
             if (data.Rows.Count == 0) return null;
             return new Team(data.Rows[0]);
         }
+        public List<Team> GetNameAndIdTeam()
+        {
+            List<Team> teams = new List<Team>();
+
+            string query = "SELECT TenDb,iddb FROM DoiBong where idmg =" + idmg.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow dataRow in data.Rows)
+            {
+                Team team =new Team((int)dataRow[1],dataRow[0].ToString());
+                teams.Add(team);
+            }
+            return teams;
+        }
+        
     }
 }
