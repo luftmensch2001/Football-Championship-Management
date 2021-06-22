@@ -31,14 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbNameOfPlayerType = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.nudNumber = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.nudMaxNumber = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
+            this.btnAddPlayerType = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.lTitle = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxNumber)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -83,7 +83,7 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.tbName);
+            this.panel2.Controls.Add(this.tbNameOfPlayerType);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 70);
@@ -91,6 +91,7 @@
             this.panel2.Size = new System.Drawing.Size(858, 35);
             this.panel2.TabIndex = 1;
             // 
+<<<<<<< Updated upstream
             // tbName
             // 
             this.tbName.BorderThickness = 0;
@@ -117,6 +118,34 @@
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(683, 35);
             this.tbName.TabIndex = 1;
+=======
+            // tbNameOfPlayerType
+            // 
+            this.tbNameOfPlayerType.BorderThickness = 0;
+            this.tbNameOfPlayerType.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNameOfPlayerType.DefaultText = "";
+            this.tbNameOfPlayerType.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbNameOfPlayerType.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbNameOfPlayerType.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNameOfPlayerType.DisabledState.Parent = this.tbNameOfPlayerType;
+            this.tbNameOfPlayerType.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNameOfPlayerType.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tbNameOfPlayerType.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNameOfPlayerType.FocusedState.Parent = this.tbNameOfPlayerType;
+            this.tbNameOfPlayerType.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbNameOfPlayerType.ForeColor = System.Drawing.Color.Black;
+            this.tbNameOfPlayerType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNameOfPlayerType.HoverState.Parent = this.tbNameOfPlayerType;
+            this.tbNameOfPlayerType.Location = new System.Drawing.Point(233, 0);
+            this.tbNameOfPlayerType.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbNameOfPlayerType.Name = "tbNameOfPlayerType";
+            this.tbNameOfPlayerType.PasswordChar = '\0';
+            this.tbNameOfPlayerType.PlaceholderText = "Cầu thủ nhập tịch, .etc..";
+            this.tbNameOfPlayerType.SelectedText = "";
+            this.tbNameOfPlayerType.ShadowDecoration.Parent = this.tbNameOfPlayerType;
+            this.tbNameOfPlayerType.Size = new System.Drawing.Size(911, 43);
+            this.tbNameOfPlayerType.TabIndex = 1;
+>>>>>>> Stashed changes
             // 
             // panel4
             // 
@@ -129,7 +158,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.nudNumber);
+            this.panel3.Controls.Add(this.nudMaxNumber);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 105);
@@ -137,6 +166,7 @@
             this.panel3.Size = new System.Drawing.Size(858, 35);
             this.panel3.TabIndex = 2;
             // 
+<<<<<<< Updated upstream
             // nudNumber
             // 
             this.nudNumber.BackColor = System.Drawing.Color.Transparent;
@@ -158,6 +188,30 @@
             this.nudNumber.ShadowDecoration.Parent = this.nudNumber;
             this.nudNumber.Size = new System.Drawing.Size(118, 35);
             this.nudNumber.TabIndex = 2;
+=======
+            // nudMaxNumber
+            // 
+            this.nudMaxNumber.BackColor = System.Drawing.Color.Transparent;
+            this.nudMaxNumber.BorderThickness = 0;
+            this.nudMaxNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nudMaxNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nudMaxNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nudMaxNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nudMaxNumber.DisabledState.Parent = this.nudMaxNumber;
+            this.nudMaxNumber.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.nudMaxNumber.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.nudMaxNumber.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nudMaxNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nudMaxNumber.FocusedState.Parent = this.nudMaxNumber;
+            this.nudMaxNumber.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudMaxNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.nudMaxNumber.Location = new System.Drawing.Point(233, 0);
+            this.nudMaxNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.nudMaxNumber.Name = "nudMaxNumber";
+            this.nudMaxNumber.ShadowDecoration.Parent = this.nudMaxNumber;
+            this.nudMaxNumber.Size = new System.Drawing.Size(157, 43);
+            this.nudMaxNumber.TabIndex = 2;
+>>>>>>> Stashed changes
             // 
             // panel5
             // 
@@ -179,13 +233,14 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.btnAdd);
+            this.panel7.Controls.Add(this.btnAddPlayerType);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(175, 35);
             this.panel7.TabIndex = 1;
             // 
+<<<<<<< Updated upstream
             // btnAdd
             // 
             this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
@@ -206,6 +261,31 @@
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdd.UseVisualStyleBackColor = false;
+=======
+            // btnAddPlayerType
+            // 
+            this.btnAddPlayerType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnAddPlayerType.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddPlayerType.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnAddPlayerType.FlatAppearance.BorderSize = 0;
+            this.btnAddPlayerType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPlayerType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnAddPlayerType.ForeColor = System.Drawing.Color.White;
+            this.btnAddPlayerType.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.btnAddPlayerType.IconColor = System.Drawing.Color.White;
+            this.btnAddPlayerType.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPlayerType.IconSize = 25;
+            this.btnAddPlayerType.Location = new System.Drawing.Point(0, 0);
+            this.btnAddPlayerType.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddPlayerType.Name = "btnAddPlayerType";
+            this.btnAddPlayerType.Size = new System.Drawing.Size(233, 43);
+            this.btnAddPlayerType.TabIndex = 1;
+            this.btnAddPlayerType.Text = "Thêm";
+            this.btnAddPlayerType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddPlayerType.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddPlayerType.UseVisualStyleBackColor = false;
+            this.btnAddPlayerType.Click += new System.EventHandler(this.btnAddPlayerType_Click);
+>>>>>>> Stashed changes
             // 
             // iconButton1
             // 
@@ -271,7 +351,7 @@
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudMaxNumber)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -284,15 +364,15 @@
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Panel panel2;
-        private Guna.UI2.WinForms.Guna2TextBox tbName;
+        private Guna.UI2.WinForms.Guna2TextBox tbNameOfPlayerType;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudNumber;
+        private Guna.UI2.WinForms.Guna2NumericUpDown nudMaxNumber;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton iconButton1;
-        private FontAwesome.Sharp.IconButton btnAdd;
+        private FontAwesome.Sharp.IconButton btnAddPlayerType;
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

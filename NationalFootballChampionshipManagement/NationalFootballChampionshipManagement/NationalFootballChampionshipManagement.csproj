@@ -58,6 +58,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
+<<<<<<< Updated upstream
+=======
+    <Compile Include="DAO\GoalDAO.cs" />
+    <Compile Include="DAO\GoalTypeDAO.cs" />
+    <Compile Include="DAO\ImageProcessing.cs" />
+    <Compile Include="DAO\LeagueDAO.cs" />
+    <Compile Include="DAO\MatchDAO.cs" />
+    <Compile Include="DAO\PlayerDAO.cs" />
+    <Compile Include="DAO\PlayerTypeDAO.cs" />
+    <Compile Include="DAO\PriorityRankDAO.cs" />
+    <Compile Include="DAO\ResultMatchDAO.cs" />
+    <Compile Include="DAO\RulesDAO.cs" />
+    <Compile Include="DAO\ScheduleDAO.cs" />
+    <Compile Include="DAO\ScoreDAO.cs" />
+    <Compile Include="DAO\TeamDAO.cs" />
+    <Compile Include="DTO\Goal.cs" />
+    <Compile Include="DTO\GoalType.cs" />
+    <Compile Include="DTO\Matches.cs" />
+    <Compile Include="DTO\PriorityRank.cs" />
+    <Compile Include="DTO\ResultMatch.cs" />
+    <Compile Include="DTO\Rules.cs" />
+    <Compile Include="DTO\Player.cs" />
+    <Compile Include="DTO\PlayerType.cs" />
+    <Compile Include="DTO\Score.cs" />
+    <Compile Include="DTO\Team.cs" />
+    <Compile Include="DTO\TeamScoreDetails.cs" />
+    <Compile Include="ExportToPdf.cs" />
+    <Compile Include="FORM\MuaGiai\formAddMuaGiai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\MuaGiai\formAddMuaGiai.Designer.cs">
+      <DependentUpon>formAddMuaGiai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FORM\MuaGiai\formMuaGiai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORM\MuaGiai\formMuaGiai.Designer.cs">
+      <DependentUpon>formMuaGiai.cs</DependentUpon>
+    </Compile>
+>>>>>>> Stashed changes
     <Compile Include="FORM\File\Team\formAddNewTeam.cs">
       <SubType>Form</SubType>
     </Compile>

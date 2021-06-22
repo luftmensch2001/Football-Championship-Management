@@ -123,6 +123,7 @@ CREATE TABLE LoaiBanThang
 (
 	IDLBT INT IDENTITY(1,1) PRIMARY KEY,
 	TenLBT NVARCHAR(50),
+	IDMG INT
 )
 GO
 
@@ -145,7 +146,8 @@ CREATE TABLE QuyDinhDiemSo
 (
 	THANG INT DEFAULT 3,
 	HOA INT DEFAULT 1,
-	THUA INT DEFAULT 0
+	THUA INT DEFAULT 0.
+	IDMG INT
 )
 GO
 
@@ -153,7 +155,64 @@ CREATE TABLE QuyDinhXepHang
 (
 	IDXH INT IDENTITY(1,1) PRIMARY KEY,
 	Ten NVARCHAR(100),
-	ThuTuUuTien INT
+	ThuTuUuTien INT,
+	IDMG INT
 )
 GO
 
+<<<<<<< Updated upstream
+=======
+ -- INSERT DATA TO DEBUG
+INSERT INTO MuaGiai(TenMG, Nam, MuaGiaiHienTai)
+VALUES (N'Mùa giải 2021', 2021, 1)
+GO
+
+INSERT INTO QuyDinh(IDMG, SLDB, SLVD)
+VALUES (1, 16, 30)
+
+ INSERT INTO LoaiCauThu(TenLCT, IDMG, SLTD)
+  VALUES(N'Cầu thủ trong nước', 1, 45),
+		(N'Cầu thủ nước ngoài', 1, 3)
+
+
+INSERT INTO LoaiBanThang(TenLBT)
+VALUES (N'Đánh đầu'),(N'Đá phạt')
+
+
+ALTER TABLE QUYDINH
+ADD TGGBTD varchar(10)
+
+Update QUYDINH
+Set TGGBTD = 100
+Where IDMG=1 
+
+
+Update CauThu
+Set TONGBANTHANG=0
+go
+
+Update QuyDinh
+Set QuyDinh.TGGBTD = '90:00'
+
+-- QuyDinhDiemSo 
+
+insert into QuyDinhDiemSo(THANG, HOA, THUA, IDMG) 
+values (3, 1, 0, 1)
+
+ -- QuyDinhXepHang Default
+
+insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+values (N'Điểm', 1, 1)
+
+insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+values (N'Hiệu số bàn thắng', 2, 1)
+
+insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+values (N'Tổng số bàn thắng', 3, 1)
+
+insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+values (N'Tổng số trận thắng', 4, 1)
+
+insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+values (N'Hiệu số đối đầu ', 5, 1)
+>>>>>>> Stashed changes
