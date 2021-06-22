@@ -4,10 +4,6 @@ GO
 -- Mô tả
 CREATE PROCEDURE /*Name*/
 /*
-<<<<<<< Updated upstream
-
-*/
-=======
 */
 
 -- Get table DoiBong
@@ -413,5 +409,4 @@ CREATE PROC USP_UpdatePriorityRankList_By_ThuTuUuTien
 	SET Ten = @Ten
 	WHERE IDMG = @idmg AND ThuTuUuTien = @ThuTuUuTien
 END
->>>>>>> Stashed changes
 GO

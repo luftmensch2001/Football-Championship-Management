@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,26 +15,17 @@ namespace NationalFootballChampionshipManagement
     public partial class formChampionshipTools : Form
     {
         formMain formFather = null;
-<<<<<<< Updated upstream
-
-=======
         List<int> listIDLCT = new List<int>();
         List<GoalType> listGoalType = new List<GoalType>();
         int SelectedIDLCT = 0;
         Rules rules = null;
         int selectedGoalTypeRow = -1;
         int selectedPlayerTypeRow = -1;
->>>>>>> Stashed changes
         public formChampionshipTools(formMain f)
         {
             this.formFather = f;
 
             InitializeComponent();
-<<<<<<< Updated upstream
-        }
-
-        private void btnAddTypeOfPlayer_Click(object sender, EventArgs e)
-=======
             LoadRules();
             LoadDgvPlayerType();
             LoadDgvGoalType();
@@ -80,7 +73,6 @@ namespace NationalFootballChampionshipManagement
             this.SelectedIDLCT = listIDLCT[e.RowIndex];
         }
         private void dgvGoalType_CellClick(object sender, DataGridViewCellEventArgs e)
->>>>>>> Stashed changes
         {
             selectedGoalTypeRow = e.RowIndex;
         }
@@ -90,12 +82,6 @@ namespace NationalFootballChampionshipManagement
 
             this.Close();
         }
-<<<<<<< Updated upstream
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.formFather.openChildForm(new formHome());
-=======
         private void btnRemoveTypeOfPlayer_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Tất cả cầu thủ thuộc loại này cũng bị xoá. Bạn có chắc muốn xoá loại cầu thủ này không ?", "Xác nhận", MessageBoxButtons.YesNo);
@@ -202,7 +188,6 @@ namespace NationalFootballChampionshipManagement
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.formFather.openChildForm(new formHome(this.formFather));
->>>>>>> Stashed changes
         }
     }
 }

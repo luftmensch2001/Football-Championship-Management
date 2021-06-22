@@ -19,7 +19,7 @@ namespace NationalFootballChampionshipManagement
             customizeDesing();
             //activeFullScreenMode();
 
-            openChildForm(new formHome());
+            openChildForm(new formHome(this));
         }
 
         private void activeFullScreenMode()
@@ -30,15 +30,12 @@ namespace NationalFootballChampionshipManagement
         }
         private void customizeDesing()
         {
-            this.pnlSubResultMenu.Visible = false;
             this.pnlSubFileMenu.Visible = false;
             this.pnlSubToolsMenu.Visible = false;
         }
 
         private void hideSubMenu()
         {
-            if (this.pnlSubResultMenu.Visible == true)
-                this.pnlSubResultMenu.Visible = false;
             if (this.pnlSubFileMenu.Visible == true)
                 this.pnlSubFileMenu.Visible = false;
             if (this.pnlSubToolsMenu.Visible == true)
@@ -56,7 +53,7 @@ namespace NationalFootballChampionshipManagement
                 subMenu.Visible = false;
         }
 
-        private void resetButtonColor()
+        public void resetButtonColor()
         {
 
             this.btnCompetitionSchedule.BackColor = Color.Transparent;
@@ -66,14 +63,6 @@ namespace NationalFootballChampionshipManagement
             this.btnResult.BackColor = Color.Transparent;
             this.btnResult.ForeColor = Color.FromArgb(89, 113, 121);
             this.btnResult.IconColor = Color.FromArgb(89, 113, 121);
-
-            this.btnRecordResult.BackColor = Color.Transparent;
-            this.btnRecordResult.ForeColor = Color.FromArgb(89, 113, 121);
-            this.btnRecordResult.IconColor = Color.FromArgb(89, 113, 121);
-
-            this.btnResultHistory.BackColor = Color.Transparent;
-            this.btnResultHistory.ForeColor = Color.FromArgb(89, 113, 121);
-            this.btnResultHistory.IconColor = Color.FromArgb(89, 113, 121);
 
             this.btnRankingChart.BackColor = Color.Transparent;
             this.btnRankingChart.ForeColor = Color.FromArgb(89, 113, 121);
@@ -110,6 +99,10 @@ namespace NationalFootballChampionshipManagement
             this.btnHelp.BackColor = Color.Transparent;
             this.btnHelp.ForeColor = Color.FromArgb(89, 113, 121);
             this.btnHelp.IconColor = Color.FromArgb(89, 113, 121);
+
+            this.btnTournaments.BackColor = Color.Transparent;
+            this.btnTournaments.ForeColor = Color.FromArgb(89, 113, 121);
+            this.btnTournaments.IconColor = Color.FromArgb(89, 113, 121);
         }
 
         private void highlightButton(FontAwesome.Sharp.IconButton btn)
@@ -152,13 +145,6 @@ namespace NationalFootballChampionshipManagement
             //..
             showSubMenu(this.pnlSubToolsMenu);
             highlightButton(this.btnTools);
-        }
-
-        private void btnHelp_Click(object sender, EventArgs e)
-        {
-            openChildForm(new formHelp(this));
-            hideSubMenu();
-            highlightButton(this.btnHelp);
         }
 
         private void btnTeamFile_Click(object sender, EventArgs e)
@@ -211,22 +197,21 @@ namespace NationalFootballChampionshipManagement
 
         private void btnResult_Click(object sender, EventArgs e)
         {
-            showSubMenu(this.pnlSubResultMenu);
+            openChildForm(new formResultHistory(this));
             highlightButton(this.btnResult);
         }
 
-        private void btnRecordResult_Click(object sender, EventArgs e)
+        private void btnTournaments_Click(object sender, EventArgs e)
         {
-            openChildForm(new formRecordResult(this));
-            highlightButton(this.btnRecordResult);
+            highlightButton(this.btnTournaments);
+            openChildForm(new formMuaGiai(this));
         }
 
-        private void btnResultHistory_Click(object sender, EventArgs e)
+        private void btnHelp_Click(object sender, EventArgs e)
         {
-            openChildForm(new formResultHistory(this));
-            highlightButton(this.btnResultHistory);
+            openChildForm(new formHelp(this));
+            hideSubMenu();
+            highlightButton(this.btnHelp);
         }
-
-        
     }
 }

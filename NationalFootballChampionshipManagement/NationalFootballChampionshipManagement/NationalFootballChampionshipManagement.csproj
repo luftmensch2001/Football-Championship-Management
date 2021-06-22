@@ -39,6 +39,9 @@
     <Reference Include="Guna.UI2">
       <HintPath>E:\Bin\PcWonderland.com_Guna_UI_Framework_Ultimate_2\PcWonderland.com_Guna_UI_Framework_Ultimate_2\Guna UI Framework Ultimate v2.0.0.1 Lib-Master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="OpenHtmlToPdf, Version=1.12.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenHtmlToPdf.1.12.0.0\lib\net45\OpenHtmlToPdf.dll</HintPath>
@@ -58,8 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
-<<<<<<< Updated upstream
-=======
     <Compile Include="DAO\GoalDAO.cs" />
     <Compile Include="DAO\GoalTypeDAO.cs" />
     <Compile Include="DAO\ImageProcessing.cs" />
@@ -97,18 +98,17 @@
     <Compile Include="FORM\MuaGiai\formMuaGiai.Designer.cs">
       <DependentUpon>formMuaGiai.cs</DependentUpon>
     </Compile>
->>>>>>> Stashed changes
     <Compile Include="FORM\File\Team\formAddNewTeam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FORM\File\Team\formAddNewTeam.Designer.cs">
       <DependentUpon>formAddNewTeam.cs</DependentUpon>
     </Compile>
-    <Compile Include="FORM\Competition Schedule\formAddCompetition.cs">
+    <Compile Include="FORM\Competition Schedule\formChangeTime.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FORM\Competition Schedule\formAddCompetition.Designer.cs">
-      <DependentUpon>formAddCompetition.cs</DependentUpon>
+    <Compile Include="FORM\Competition Schedule\formChangeTime.Designer.cs">
+      <DependentUpon>formChangeTime.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\File\Player\formPlayerInformation.cs">
       <SubType>Form</SubType>
@@ -151,12 +151,6 @@
     </Compile>
     <Compile Include="FORM\Result\formDetailsResult.Designer.cs">
       <DependentUpon>formDetailsResult.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FORM\Result\formRecordResult.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FORM\Result\formRecordResult.Designer.cs">
-      <DependentUpon>formRecordResult.cs</DependentUpon>
     </Compile>
     <Compile Include="FORM\Result\formResultHistory.cs">
       <SubType>Form</SubType>
@@ -214,11 +208,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FORM\MuaGiai\formAddMuaGiai.resx">
+      <DependentUpon>formAddMuaGiai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM\MuaGiai\formMuaGiai.resx">
+      <DependentUpon>formMuaGiai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FORM\File\Team\formAddNewTeam.resx">
       <DependentUpon>formAddNewTeam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FORM\Competition Schedule\formAddCompetition.resx">
-      <DependentUpon>formAddCompetition.cs</DependentUpon>
+    <EmbeddedResource Include="FORM\Competition Schedule\formChangeTime.resx">
+      <DependentUpon>formChangeTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\File\Player\formPlayerInformation.resx">
       <DependentUpon>formPlayerInformation.cs</DependentUpon>
@@ -240,9 +240,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\Result\formDetailsResult.resx">
       <DependentUpon>formDetailsResult.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FORM\Result\formRecordResult.resx">
-      <DependentUpon>formRecordResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORM\Result\formResultHistory.resx">
       <DependentUpon>formResultHistory.cs</DependentUpon>

@@ -29,19 +29,15 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbNameOfGoal = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-<<<<<<< Updated upstream
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.lTitle = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-=======
             this.btnAddGoal = new FontAwesome.Sharp.IconButton();
->>>>>>> Stashed changes
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -61,8 +57,6 @@
             this.panel1.Size = new System.Drawing.Size(1165, 86);
             this.panel1.TabIndex = 0;
             // 
-<<<<<<< Updated upstream
-=======
             // lTitle
             // 
             this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -76,10 +70,10 @@
             this.lTitle.Text = "Thêm loại bàn thắng mới";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
->>>>>>> Stashed changes
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -142,8 +136,6 @@
             this.panel3.Size = new System.Drawing.Size(201, 43);
             this.panel3.TabIndex = 0;
             // 
-<<<<<<< Updated upstream
-=======
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -156,7 +148,6 @@
             this.label1.Text = "Loại bàn thắng:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
->>>>>>> Stashed changes
             // panel4
             // 
             this.panel4.Controls.Add(this.panel5);
@@ -177,28 +168,6 @@
             this.panel5.Size = new System.Drawing.Size(197, 42);
             this.panel5.TabIndex = 0;
             // 
-<<<<<<< Updated upstream
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
-            this.btnAdd.IconColor = System.Drawing.Color.White;
-            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.IconSize = 25;
-            this.btnAdd.Location = new System.Drawing.Point(0, 0);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(148, 34);
-            this.btnAdd.TabIndex = 0;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = false;
-=======
             // btnAddGoal
             // 
             this.btnAddGoal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
@@ -222,30 +191,6 @@
             this.btnAddGoal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddGoal.UseVisualStyleBackColor = false;
             this.btnAddGoal.Click += new System.EventHandler(this.btnAddGoal_Click);
->>>>>>> Stashed changes
-            // 
-            // lTitle
-            // 
-            this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
-            this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(43, 0);
-            this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(831, 70);
-            this.lTitle.TabIndex = 8;
-            this.lTitle.Text = "Thêm loại bàn thắng mới";
-            this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 35);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Loại bàn thắng:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // formAddTypeOfGoal
             // 

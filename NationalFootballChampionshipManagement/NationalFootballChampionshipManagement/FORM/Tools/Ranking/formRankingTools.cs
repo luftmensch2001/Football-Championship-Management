@@ -75,7 +75,7 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            this.formFather.openChildForm(new formHome());
+            this.formFather.openChildForm(new formHome(this.formFather));
         }
         private void btnSave_Click(object sender, EventArgs e)
         {

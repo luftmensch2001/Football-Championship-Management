@@ -1,11 +1,7 @@
-<<<<<<< Updated upstream
-﻿using System;
-=======
 ﻿using NationalFootballChampionshipManagement.DAO;
 using NationalFootballChampionshipManagement.DTO;
 using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
 using System;
->>>>>>> Stashed changes
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,8 +31,6 @@ namespace NationalFootballChampionshipManagement
 
             this.Close();
         }
-<<<<<<< Updated upstream
-=======
 
         private void btnAddPlayerType_Click(object sender, EventArgs e)
         {
@@ -80,6 +74,5 @@ namespace NationalFootballChampionshipManagement
                 MessageBox.Show("Thêm loại cầu thủ thất bại", "Lỗi");
             }
         }
->>>>>>> Stashed changes
     }
 }
