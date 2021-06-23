@@ -65,7 +65,7 @@ namespace NationalFootballChampionshipManagement
         }
         private void dgvResult_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 5 && e.RowIndex<dgvResult.Rows.Count-1)
+            if (e.ColumnIndex == 5 && e.RowIndex<dgvResult.Rows.Count)
             {
                 if (dgvResult.Rows.Count == 0 || e.RowIndex==-1) return;
                 int index = (int)dgvResult.Rows[e.RowIndex].Cells[0].Value - 1;
@@ -125,7 +125,11 @@ namespace NationalFootballChampionshipManagement
         }
         public void LoadRound()
         {
-            int soVongDau = 6;
+            int soVongDau = TeamDAO.Instance.GetCountTeam();
+            if (soVongDau % 2 == 0)
+                soVongDau = (soVongDau -1) * 2;
+            else
+                soVongDau = soVongDau * 2;
             for (int i = 1; i <= soVongDau; i++)
             {
                 checkedListBox1.Items.Add("Vòng " + i.ToString());

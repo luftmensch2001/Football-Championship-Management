@@ -28,19 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.nbTeam2 = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.nbTeam1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbTenDoi2 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -76,7 +74,9 @@
             this.btAdd = new System.Windows.Forms.Button();
             this.btSave = new FontAwesome.Sharp.IconButton();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.nbMinute = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.tbSTT = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbbTypeGoal = new System.Windows.Forms.ComboBox();
@@ -85,14 +85,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbbNameTeam = new System.Windows.Forms.ComboBox();
             this.lbNameOfPlayer = new System.Windows.Forms.Label();
-            this.nbMinute = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label5 = new System.Windows.Forms.Label();
-            this.nbSecond = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
+            this.nbTeam1 = new System.Windows.Forms.Label();
+            this.nbTeam2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nbTeam2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbTeam1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -108,7 +104,6 @@
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbMinute)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSecond)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -154,9 +149,9 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.guna2TextBox1);
             this.panel2.Controls.Add(this.nbTeam2);
             this.panel2.Controls.Add(this.nbTeam1);
+            this.panel2.Controls.Add(this.guna2TextBox1);
             this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
@@ -185,7 +180,7 @@
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(399, 75);
+            this.guna2TextBox1.Location = new System.Drawing.Point(331, 75);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
@@ -193,57 +188,9 @@
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.SelectionStart = 1;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(74, 48);
+            this.guna2TextBox1.Size = new System.Drawing.Size(212, 48);
             this.guna2TextBox1.TabIndex = 8;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // nbTeam2
-            // 
-            this.nbTeam2.BackColor = System.Drawing.Color.Transparent;
-            this.nbTeam2.BorderThickness = 0;
-            this.nbTeam2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nbTeam2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nbTeam2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nbTeam2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nbTeam2.DisabledState.Parent = this.nbTeam2;
-            this.nbTeam2.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nbTeam2.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nbTeam2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.nbTeam2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nbTeam2.FocusedState.Parent = this.nbTeam2;
-            this.nbTeam2.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.nbTeam2.ForeColor = System.Drawing.Color.Black;
-            this.nbTeam2.Location = new System.Drawing.Point(473, 75);
-            this.nbTeam2.Margin = new System.Windows.Forms.Padding(4);
-            this.nbTeam2.Name = "nbTeam2";
-            this.nbTeam2.ShadowDecoration.Parent = this.nbTeam2;
-            this.nbTeam2.Size = new System.Drawing.Size(70, 48);
-            this.nbTeam2.TabIndex = 7;
-            this.nbTeam2.UpDownButtonFillColor = System.Drawing.Color.White;
-            // 
-            // nbTeam1
-            // 
-            this.nbTeam1.BackColor = System.Drawing.Color.Transparent;
-            this.nbTeam1.BorderThickness = 0;
-            this.nbTeam1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nbTeam1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nbTeam1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nbTeam1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nbTeam1.DisabledState.Parent = this.nbTeam1;
-            this.nbTeam1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nbTeam1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nbTeam1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.nbTeam1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nbTeam1.FocusedState.Parent = this.nbTeam1;
-            this.nbTeam1.Font = new System.Drawing.Font("Segoe UI", 20F);
-            this.nbTeam1.ForeColor = System.Drawing.Color.Black;
-            this.nbTeam1.Location = new System.Drawing.Point(331, 75);
-            this.nbTeam1.Margin = new System.Windows.Forms.Padding(4);
-            this.nbTeam1.Name = "nbTeam1";
-            this.nbTeam1.ShadowDecoration.Parent = this.nbTeam1;
-            this.nbTeam1.Size = new System.Drawing.Size(68, 48);
-            this.nbTeam1.TabIndex = 6;
-            this.nbTeam1.UpDownButtonFillColor = System.Drawing.Color.White;
             // 
             // panel8
             // 
@@ -413,39 +360,40 @@
             // 
             // dgvGoalTeam2
             // 
+            this.dgvGoalTeam2.AllowUserToAddRows = false;
             this.dgvGoalTeam2.AllowUserToDeleteRows = false;
             this.dgvGoalTeam2.AllowUserToResizeColumns = false;
             this.dgvGoalTeam2.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvGoalTeam2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvGoalTeam2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvGoalTeam2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvGoalTeam2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGoalTeam2.BackgroundColor = System.Drawing.Color.White;
             this.dgvGoalTeam2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGoalTeam2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvGoalTeam2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGoalTeam2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGoalTeam2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvGoalTeam2.ColumnHeadersHeight = 35;
             this.dgvGoalTeam2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGoalTeam2.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGoalTeam2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvGoalTeam2.EnableHeadersVisualStyles = false;
             this.dgvGoalTeam2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGoalTeam2.Location = new System.Drawing.Point(0, 0);
@@ -515,38 +463,39 @@
             // 
             // dgvGoalTeam1
             // 
+            this.dgvGoalTeam1.AllowUserToAddRows = false;
             this.dgvGoalTeam1.AllowUserToDeleteRows = false;
             this.dgvGoalTeam1.AllowUserToResizeColumns = false;
             this.dgvGoalTeam1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvGoalTeam1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvGoalTeam1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvGoalTeam1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvGoalTeam1.BackgroundColor = System.Drawing.Color.White;
             this.dgvGoalTeam1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGoalTeam1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvGoalTeam1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGoalTeam1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGoalTeam1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvGoalTeam1.ColumnHeadersHeight = 35;
             this.dgvGoalTeam1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.STT,
             this.colName,
             this.colType,
             this.colTime});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGoalTeam1.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGoalTeam1.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvGoalTeam1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGoalTeam1.EnableHeadersVisualStyles = false;
             this.dgvGoalTeam1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -702,10 +651,8 @@
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.Controls.Add(this.nbMinute);
-            this.panel13.Controls.Add(this.nbSecond);
             this.panel13.Controls.Add(this.tbSTT);
             this.panel13.Controls.Add(this.label5);
-            this.panel13.Controls.Add(this.label6);
             this.panel13.Controls.Add(this.label4);
             this.panel13.Controls.Add(this.label3);
             this.panel13.Controls.Add(this.cbbTypeGoal);
@@ -720,6 +667,29 @@
             this.panel13.Size = new System.Drawing.Size(874, 100);
             this.panel13.TabIndex = 4;
             // 
+            // nbMinute
+            // 
+            this.nbMinute.BackColor = System.Drawing.Color.Transparent;
+            this.nbMinute.BorderThickness = 0;
+            this.nbMinute.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nbMinute.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nbMinute.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nbMinute.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nbMinute.DisabledState.Parent = this.nbMinute;
+            this.nbMinute.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.nbMinute.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.nbMinute.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nbMinute.FocusedState.Parent = this.nbMinute;
+            this.nbMinute.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbMinute.ForeColor = System.Drawing.Color.Black;
+            this.nbMinute.Location = new System.Drawing.Point(330, 59);
+            this.nbMinute.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.nbMinute.Name = "nbMinute";
+            this.nbMinute.ShadowDecoration.Parent = this.nbMinute;
+            this.nbMinute.Size = new System.Drawing.Size(35, 16);
+            this.nbMinute.TabIndex = 9;
+            this.nbMinute.UpDownButtonFillColor = System.Drawing.Color.White;
+            // 
             // tbSTT
             // 
             this.tbSTT.Enabled = false;
@@ -728,6 +698,16 @@
             this.tbSTT.Size = new System.Drawing.Size(30, 20);
             this.tbSTT.TabIndex = 9;
             this.tbSTT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tbSTT.TextChanged += new System.EventHandler(this.tbSTT_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(369, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Phút";
             // 
             // label4
             // 
@@ -786,7 +766,6 @@
             // cbbNameTeam
             // 
             this.cbbNameTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbbNameTeam.Enabled = false;
             this.cbbNameTeam.FormattingEnabled = true;
             this.cbbNameTeam.Location = new System.Drawing.Point(99, 30);
             this.cbbNameTeam.Name = "cbbNameTeam";
@@ -803,70 +782,27 @@
             this.lbNameOfPlayer.TabIndex = 0;
             this.lbNameOfPlayer.Text = "Đội bóng";
             // 
-            // nbMinute
+            // nbTeam1
             // 
-            this.nbMinute.BackColor = System.Drawing.Color.Transparent;
-            this.nbMinute.BorderThickness = 0;
-            this.nbMinute.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nbMinute.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nbMinute.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nbMinute.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nbMinute.DisabledState.Parent = this.nbMinute;
-            this.nbMinute.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nbMinute.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nbMinute.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nbMinute.FocusedState.Parent = this.nbMinute;
-            this.nbMinute.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbMinute.ForeColor = System.Drawing.Color.Black;
-            this.nbMinute.Location = new System.Drawing.Point(330, 59);
-            this.nbMinute.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.nbMinute.Name = "nbMinute";
-            this.nbMinute.ShadowDecoration.Parent = this.nbMinute;
-            this.nbMinute.Size = new System.Drawing.Size(35, 16);
-            this.nbMinute.TabIndex = 9;
-            this.nbMinute.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.nbTeam1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nbTeam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbTeam1.Location = new System.Drawing.Point(331, 75);
+            this.nbTeam1.Name = "nbTeam1";
+            this.nbTeam1.Size = new System.Drawing.Size(70, 48);
+            this.nbTeam1.TabIndex = 9;
+            this.nbTeam1.Text = "0";
+            this.nbTeam1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // nbTeam2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(369, 59);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(29, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Phút";
-            // 
-            // nbSecond
-            // 
-            this.nbSecond.BackColor = System.Drawing.Color.Transparent;
-            this.nbSecond.BorderThickness = 0;
-            this.nbSecond.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.nbSecond.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.nbSecond.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.nbSecond.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.nbSecond.DisabledState.Parent = this.nbSecond;
-            this.nbSecond.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
-            this.nbSecond.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
-            this.nbSecond.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nbSecond.FocusedState.Parent = this.nbSecond;
-            this.nbSecond.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbSecond.ForeColor = System.Drawing.Color.Black;
-            this.nbSecond.Location = new System.Drawing.Point(397, 58);
-            this.nbSecond.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            this.nbSecond.Name = "nbSecond";
-            this.nbSecond.ShadowDecoration.Parent = this.nbSecond;
-            this.nbSecond.Size = new System.Drawing.Size(35, 16);
-            this.nbSecond.TabIndex = 11;
-            this.nbSecond.UpDownButtonFillColor = System.Drawing.Color.White;
-            this.nbSecond.ValueChanged += new System.EventHandler(this.nbSecond_ValueChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(436, 58);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(28, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Giây";
+            this.nbTeam2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nbTeam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbTeam2.Location = new System.Drawing.Point(473, 75);
+            this.nbTeam2.Name = "nbTeam2";
+            this.nbTeam2.Size = new System.Drawing.Size(70, 48);
+            this.nbTeam2.TabIndex = 10;
+            this.nbTeam2.Text = "0";
+            this.nbTeam2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formDetailsResult
             // 
@@ -884,8 +820,6 @@
             this.Text = "formDetailsResult";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.nbTeam2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbTeam1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -906,7 +840,6 @@
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbMinute)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nbSecond)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -921,9 +854,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel5;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nbTeam1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nbTeam2;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel11;
         private Guna.UI2.WinForms.Guna2DataGridView dgvGoalTeam2;
@@ -965,8 +896,8 @@
         private System.Windows.Forms.Button btFix;
         private System.Windows.Forms.TextBox tbSTT;
         private Guna.UI2.WinForms.Guna2NumericUpDown nbMinute;
-        private Guna.UI2.WinForms.Guna2NumericUpDown nbSecond;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label nbTeam2;
+        private System.Windows.Forms.Label nbTeam1;
     }
 }

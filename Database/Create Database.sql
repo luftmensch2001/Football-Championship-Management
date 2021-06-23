@@ -198,7 +198,7 @@ CREATE TABLE QuyDinhDiemSo
 (
 	THANG INT DEFAULT 3,
 	HOA INT DEFAULT 1,
-	THUA INT DEFAULT 0.
+	THUA INT DEFAULT 0,
 	IDMG INT
 )
 GO
@@ -219,49 +219,52 @@ GO
 
 INSERT INTO QuyDinh(IDMG, SLDB, SLVD)
 VALUES (1, 16, 30)
+Go
 
  INSERT INTO LoaiCauThu(TenLCT, IDMG, SLTD)
   VALUES(N'Cầu thủ trong nước', 1, 45),
 		(N'Cầu thủ nước ngoài', 1, 3)
-
+Go
 
 INSERT INTO LoaiBanThang(TenLBT)
 VALUES (N'Đánh đầu'),(N'Đá phạt')
-
+Go
 
 ALTER TABLE QUYDINH
 ADD TGGBTD varchar(10)
+Go
 
 Update QUYDINH
-Set TGGBTD = 100
+Set TGGBTD = 90
 Where IDMG=1 
-
+Go
 
 Update CauThu
 Set TONGBANTHANG=0
 go
 
-Update QuyDinh
-Set QuyDinh.TGGBTD = '90:00'
-
 -- QuyDinhDiemSo 
 
 insert into QuyDinhDiemSo(THANG, HOA, THUA, IDMG) 
 values (3, 1, 0, 1)
-
+Go
  -- QuyDinhXepHang Default
 
 insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
 values (N'Điểm', 1, 1)
+GO
 
 insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
 values (N'Hiệu số bàn thắng', 2, 1)
+Go
 
 insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
 values (N'Tổng số bàn thắng', 3, 1)
+Go
 
 insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
 values (N'Tổng số trận thắng', 4, 1)
+Go
 
 insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
 values (N'Hiệu số đối đầu ', 5, 1)

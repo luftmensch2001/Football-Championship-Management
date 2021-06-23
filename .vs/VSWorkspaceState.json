@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\NationalFootballChampionshipManagement",
+    "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement",
+    "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM",
+    "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM\\Tools",
+    "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM\\Tools\\Championship"
   ],
   "PreviewInSolutionExplorer": false
 }
