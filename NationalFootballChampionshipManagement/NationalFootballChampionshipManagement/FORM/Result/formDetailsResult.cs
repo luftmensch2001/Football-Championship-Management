@@ -14,7 +14,7 @@ namespace NationalFootballChampionshipManagement
 {
     public partial class formDetailsResult : Form
     {
-        bool isChanged = false;
+        public bool isChanged = false;
         formMain formFather = null;
         int idTranDau;
         Team Team1 = new Team();
@@ -205,13 +205,13 @@ namespace NationalFootballChampionshipManagement
                 if (cbbNameTeam.SelectedIndex == 0)
                 {
                     Goal goal = new Goal(idTranDau, listPlayerTeam1[cbbNameTeam.SelectedIndex].ID, Team1.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
-                    dgvGoalTeam1.Rows.Add(dgvGoalTeam1.Rows.Count, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
+                    dgvGoalTeam1.Rows.Add(dgvGoalTeam1.Rows.Count+1, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
                     listGoal.Add(goal);
                 }
                 else
                 {
                     Goal goal = new Goal(idTranDau, listPlayerTeam2[cbbNameTeam.SelectedIndex].ID, Team2.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
-                    dgvGoalTeam2.Rows.Add(dgvGoalTeam2.Rows.Count, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
+                    dgvGoalTeam2.Rows.Add(dgvGoalTeam2.Rows.Count+1, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
                     listGoal.Add(goal);
                 }
                 Reset();
@@ -289,7 +289,7 @@ namespace NationalFootballChampionshipManagement
                     dgvGoalTeam1.Rows[rowIndex].Cells[3].Value = listGoal[Int32.Parse(tbSTT.Text)-1].IdThoiDiem;
                 }else
                 { 
-                    int rowIndex = dgvGoalTeam1.CurrentCell.RowIndex;
+                    int rowIndex = dgvGoalTeam2.CurrentCell.RowIndex;
                     listGoal[Int32.Parse(tbSTT.Text) - 1] = new Goal(idTranDau, listPlayerTeam2[cbbNameTeam.SelectedIndex].ID, Team2.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString(), listGoal[Int32.Parse(tbSTT.Text) - 1].IdBanThang);
                     DataGridViewRow row = new DataGridViewRow();
                     dgvGoalTeam2.Rows[rowIndex].Cells[1].Value = cbbNamePlayer.SelectedItem.ToString();
@@ -370,7 +370,7 @@ namespace NationalFootballChampionshipManagement
         {
             foreach (DataGridViewRow dtr in dataGridView.Rows)
             {
-                if (dtr.Index<dataGridView.Rows.Count)
+                if (dtr.Index<=dataGridView.Rows.Count)
                     dtr.Cells[0].Value = dtr.Index + 1;
             }
         }

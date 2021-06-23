@@ -4,8 +4,10 @@
     "\\NationalFootballChampionshipManagement",
     "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement",
     "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM",
+    "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM\\Result",
     "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM\\Tools",
     "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM\\Tools\\Championship"
   ],
+  "SelectedNode": "\\NationalFootballChampionshipManagement\\NationalFootballChampionshipManagement\\FORM\\Result\\formResultHistory.cs",
   "PreviewInSolutionExplorer": false
 }
