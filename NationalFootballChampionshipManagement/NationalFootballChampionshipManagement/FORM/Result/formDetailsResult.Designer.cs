@@ -38,6 +38,8 @@
             this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.nbTeam2 = new System.Windows.Forms.Label();
+            this.nbTeam1 = new System.Windows.Forms.Label();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbTenDoi2 = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbbNameTeam = new System.Windows.Forms.ComboBox();
             this.lbNameOfPlayer = new System.Windows.Forms.Label();
-            this.nbTeam1 = new System.Windows.Forms.Label();
-            this.nbTeam2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -163,6 +163,28 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(874, 200);
             this.panel2.TabIndex = 1;
+            // 
+            // nbTeam2
+            // 
+            this.nbTeam2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.nbTeam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbTeam2.Location = new System.Drawing.Point(473, 75);
+            this.nbTeam2.Name = "nbTeam2";
+            this.nbTeam2.Size = new System.Drawing.Size(70, 48);
+            this.nbTeam2.TabIndex = 10;
+            this.nbTeam2.Text = "0";
+            this.nbTeam2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // nbTeam1
+            // 
+            this.nbTeam1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.nbTeam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nbTeam1.Location = new System.Drawing.Point(331, 75);
+            this.nbTeam1.Name = "nbTeam1";
+            this.nbTeam1.Size = new System.Drawing.Size(70, 48);
+            this.nbTeam1.TabIndex = 9;
+            this.nbTeam1.Text = "0";
+            this.nbTeam1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2TextBox1
             // 
@@ -684,11 +706,21 @@
             this.nbMinute.ForeColor = System.Drawing.Color.Black;
             this.nbMinute.Location = new System.Drawing.Point(330, 59);
             this.nbMinute.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.nbMinute.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.nbMinute.Name = "nbMinute";
             this.nbMinute.ShadowDecoration.Parent = this.nbMinute;
             this.nbMinute.Size = new System.Drawing.Size(35, 16);
             this.nbMinute.TabIndex = 9;
             this.nbMinute.UpDownButtonFillColor = System.Drawing.Color.White;
+            this.nbMinute.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // tbSTT
             // 
@@ -781,28 +813,6 @@
             this.lbNameOfPlayer.Size = new System.Drawing.Size(50, 13);
             this.lbNameOfPlayer.TabIndex = 0;
             this.lbNameOfPlayer.Text = "Đội bóng";
-            // 
-            // nbTeam1
-            // 
-            this.nbTeam1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.nbTeam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbTeam1.Location = new System.Drawing.Point(331, 75);
-            this.nbTeam1.Name = "nbTeam1";
-            this.nbTeam1.Size = new System.Drawing.Size(70, 48);
-            this.nbTeam1.TabIndex = 9;
-            this.nbTeam1.Text = "0";
-            this.nbTeam1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // nbTeam2
-            // 
-            this.nbTeam2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.nbTeam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nbTeam2.Location = new System.Drawing.Point(473, 75);
-            this.nbTeam2.Name = "nbTeam2";
-            this.nbTeam2.Size = new System.Drawing.Size(70, 48);
-            this.nbTeam2.TabIndex = 10;
-            this.nbTeam2.Text = "0";
-            this.nbTeam2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formDetailsResult
             // 
