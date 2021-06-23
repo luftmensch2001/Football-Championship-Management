@@ -185,7 +185,7 @@
             this.btnAddGoal.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddGoal.Name = "btnAddGoal";
             this.btnAddGoal.Size = new System.Drawing.Size(197, 42);
-            this.btnAddGoal.TabIndex = 0;
+            this.btnAddGoal.TabIndex = 2;
             this.btnAddGoal.Text = "Thêm";
             this.btnAddGoal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddGoal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

@@ -40,31 +40,15 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public void AddNewType(string name, int sltd, int idmg)
         {
-            try
-            {
                 string query = "INSERT INTO LoaiCauThu(TenLCT, SLTD, idmg) VALUES(N'" + name + "', " + sltd.ToString() + ", " + idmg.ToString() + ")";
                 DataProvider.Instance.ExecuteQuery(query);
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi thêm loại cầu thủ", "Lỗi");
-            }
         }
 
         public DataTable GetListPlayerType()
         {
-            try
-            {
                 int IDMG = LeagueDAO.Instance.GetCurrIDMG();
                 string query = "EXEC USP_GetPlayerTypeListByIDMG @idmg = " + IDMG.ToString();
                 return DataProvider.Instance.ExecuteQuery(query);
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi tải danh sách loại cầu thủ", "Lỗi");
-                DataTable d = new DataTable();
-                return d;
-            }
         }
 
         public void DeleteByID(int idlct)
@@ -85,8 +69,6 @@ namespace NationalFootballChampionshipManagement.DAO
         }
         public List<PlayerType> GetPlayerTypes()
         {
-            try
-            {
                 List<PlayerType> playerTypes = new List<PlayerType>();
                 DataTable dataTable = GetListPlayerType();
                 int idmg = LeagueDAO.Instance.GetCurrIDMG();
@@ -96,13 +78,6 @@ namespace NationalFootballChampionshipManagement.DAO
                     playerTypes.Add(playerType);
                 }
                 return playerTypes;
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi tải danh sách loại cầu thủ", "Lỗi");
-                List<PlayerType> playerTypes = new List<PlayerType>();
-                return playerTypes;
-            }
         }
     }
 }

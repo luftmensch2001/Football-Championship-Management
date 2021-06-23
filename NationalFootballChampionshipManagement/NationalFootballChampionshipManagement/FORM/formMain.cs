@@ -20,6 +20,7 @@ namespace NationalFootballChampionshipManagement
             //activeFullScreenMode();
 
             openChildForm(new formHome(this));
+            
         }
 
         private void activeFullScreenMode()

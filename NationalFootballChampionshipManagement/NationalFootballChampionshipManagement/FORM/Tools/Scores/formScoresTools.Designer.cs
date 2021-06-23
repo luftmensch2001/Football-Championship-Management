@@ -33,13 +33,13 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.nudWinScore = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lWin = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.nudDrawScore = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lDraw = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.nudLoseScore = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lLose = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
@@ -59,7 +59,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 86);
             this.panel1.TabIndex = 0;
@@ -89,7 +89,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 3;
@@ -99,10 +99,10 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.nudWinScore);
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.lWin);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 86);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1165, 52);
             this.panel3.TabIndex = 8;
@@ -135,25 +135,25 @@
             0,
             0});
             // 
-            // label1
+            // lWin
             // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 52);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Thắng:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lWin.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lWin.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.lWin.Location = new System.Drawing.Point(0, 0);
+            this.lWin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lWin.Name = "lWin";
+            this.lWin.Size = new System.Drawing.Size(87, 52);
+            this.lWin.TabIndex = 6;
+            this.lWin.Text = "Thắng:";
+            this.lWin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.nudDrawScore);
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lDraw);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 138);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1165, 52);
             this.panel4.TabIndex = 9;
@@ -186,25 +186,25 @@
             0,
             0});
             // 
-            // label2
+            // lDraw
             // 
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 52);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Hòa:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lDraw.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lDraw.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.lDraw.Location = new System.Drawing.Point(0, 0);
+            this.lDraw.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lDraw.Name = "lDraw";
+            this.lDraw.Size = new System.Drawing.Size(87, 52);
+            this.lDraw.TabIndex = 7;
+            this.lDraw.Text = "Hòa:";
+            this.lDraw.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.nudLoseScore);
-            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.lLose);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 190);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1165, 52);
             this.panel5.TabIndex = 10;
@@ -232,24 +232,24 @@
             this.nudLoseScore.Size = new System.Drawing.Size(136, 52);
             this.nudLoseScore.TabIndex = 8;
             // 
-            // label3
+            // lLose
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 13F);
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 52);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Thua:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lLose.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lLose.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.lLose.Location = new System.Drawing.Point(0, 0);
+            this.lLose.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lLose.Name = "lLose";
+            this.lLose.Size = new System.Drawing.Size(87, 52);
+            this.lLose.TabIndex = 7;
+            this.lLose.Text = "Thua:";
+            this.lLose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.btnSave);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 242);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1165, 52);
             this.panel6.TabIndex = 11;
@@ -268,7 +268,7 @@
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 28;
             this.btnSave.Location = new System.Drawing.Point(0, 0);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(223, 52);
             this.btnSave.TabIndex = 1;
@@ -290,7 +290,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formScoresTools";
             this.Text = "formScoresTools";
             this.panel1.ResumeLayout(false);
@@ -316,10 +316,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudWinScore;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lWin;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudDrawScore;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lDraw;
         private Guna.UI2.WinForms.Guna2NumericUpDown nudLoseScore;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lLose;
     }
 }

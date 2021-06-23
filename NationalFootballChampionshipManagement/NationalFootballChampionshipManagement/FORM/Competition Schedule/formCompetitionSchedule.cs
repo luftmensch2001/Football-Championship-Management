@@ -48,6 +48,7 @@ namespace NationalFootballChampionshipManagement
             if (roundCount > 0)
             {
                 btnAutoCreate.Enabled = false;
+                
             }
             else
             {

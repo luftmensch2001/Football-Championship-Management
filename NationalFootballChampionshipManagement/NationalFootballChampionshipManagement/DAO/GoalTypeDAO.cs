@@ -35,29 +35,15 @@ namespace NationalFootballChampionshipManagement.DAO
         }
         public void AddNewGoalType(string name)
         {
-            try
-            {
                 int idmg = LeagueDAO.Instance.GetCurrIDMG();
                 string query = "INSERT INTO LoaiBanThang(TenLBT, idmg) VALUES(N'" + name + "', " + idmg.ToString() + ")";
                 DataProvider.Instance.ExecuteQuery(query);
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi thêm loại bài thắng", "Lỗi");
-            }
         }
         public void DeleteGoalTypeByName(string name)
         {
-            try
-            {
                 int idmg = LeagueDAO.Instance.GetCurrIDMG();
                 string query = "DELETE FROM LoaiBanThang WHERE TenLBT = N'" + name + "' AND IDMG =" + idmg;
                 DataProvider.Instance.ExecuteQuery(query);
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi xoá loại bài thắng", "Lỗi");
-            }
         }
 
     }

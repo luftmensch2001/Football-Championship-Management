@@ -22,8 +22,6 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public List<PriorityRank> GetListPriorityRank()
         {
-            try
-            {
                 List<PriorityRank> PriorityRankList = new List<PriorityRank>();
                 int idmg = LeagueDAO.Instance.GetCurrIDMG();
 
@@ -36,30 +34,16 @@ namespace NationalFootballChampionshipManagement.DAO
                 }
 
                 return PriorityRankList;
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi tải danh sách điều kiện ưu tiên xếp hạng", "Lỗi");
-                List<PriorityRank> priorityRanks = new List<PriorityRank>();
-                return priorityRanks;
-            }
         }
 
         public void UpdateListPriorityRankByThuTuUuTien(string Ten, int ThuTuUuTien)
         {
-            try
-            {
                 int idmg = LeagueDAO.Instance.GetCurrIDMG();
                 string query = "EXEC USP_UpdatePriorityRankList_By_ThuTuUuTien";
                 query += " @idmg = " + idmg;
                 query += ", @Ten = N'" + Ten + "'";
                 query += ", @ThuTuUuTien = " + ThuTuUuTien.ToString();
                 DataProvider.Instance.ExecuteQuery(query);
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi cập nhật thứ tự điều kiện ưu tiên xếp hạng", "Lỗi");
-            }
         }
     }
 }

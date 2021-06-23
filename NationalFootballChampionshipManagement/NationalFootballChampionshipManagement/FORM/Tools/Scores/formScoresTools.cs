@@ -24,10 +24,17 @@ namespace NationalFootballChampionshipManagement
         }
         void LoadScoreRule()
         {
-            score = ScoreDAO.Instance.GetScoreRule();
-            nudWinScore.Value = score.THANG;
-            nudDrawScore.Value = score.HOA;
-            nudLoseScore.Value = score.THUA;
+            try
+            {
+                score = ScoreDAO.Instance.GetScoreRule();
+                nudWinScore.Value = score.THANG;
+                nudDrawScore.Value = score.HOA;
+                nudLoseScore.Value = score.THUA;
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu", "Lỗi");
+            }
 
         }
         private void btnClose_Click(object sender, EventArgs e)

@@ -100,11 +100,13 @@ namespace NationalFootballChampionshipManagement
         }
         void LoadRanking()
         {
-            var column = dgvRanking.Columns[0];
+            var column = dgvRanking.Columns[1];
             column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            int stt = 1;
             foreach (TeamScoreDetails item in listTeamScoreDetails)
             {
                 dgvRanking.Rows.Add(
+                    stt,
                     item.Name,
                     item.M,
                     item.W,
@@ -115,6 +117,7 @@ namespace NationalFootballChampionshipManagement
                     item.GD,
                     item.Pts,
                     item.FLM);
+                stt++;
             }
         }
         int CheckCondition(string condition, TeamScoreDetails team1, TeamScoreDetails team2)

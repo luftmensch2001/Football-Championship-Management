@@ -250,7 +250,7 @@
             this.btnAddPlayerType.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddPlayerType.Name = "btnAddPlayerType";
             this.btnAddPlayerType.Size = new System.Drawing.Size(233, 43);
-            this.btnAddPlayerType.TabIndex = 1;
+            this.btnAddPlayerType.TabIndex = 3;
             this.btnAddPlayerType.Text = "Thêm";
             this.btnAddPlayerType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddPlayerType.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

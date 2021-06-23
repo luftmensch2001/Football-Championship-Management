@@ -21,26 +21,15 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public Rules GetRules()
         {
-            try
-            {
                 int idmg = LeagueDAO.Instance.GetCurrIDMG();
                 string query = "EXEC USP_GetRules_By_IDMG @idmg = " + idmg.ToString();
                 DataTable data = DataProvider.Instance.ExecuteQuery(query);
                 Rules rules = new Rules(data.Rows[0]);
                 return rules;
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi tải quy định mùa giải", "Lỗi");
-                Rules rules = new Rules();
-                return rules;
-            }
         }
 
         public void UpdateRules(string sldb, string tuoitt, string tuoitd, string sltt, string sltd, string timegoalsmax)
         {
-            try
-            {
                 int idmg = LeagueDAO.Instance.GetCurrIDMG(); // Lay id mua giai hien tai
                 string query = "EXEC USP_UpdateRules_By_IDMG ";
                 query += "@idmg = " + idmg;
@@ -51,11 +40,6 @@ namespace NationalFootballChampionshipManagement.DAO
                 query += ", @SLTD = " + sltd;
                 query += ", @TGGBTD = " + timegoalsmax;
                 DataProvider.Instance.ExecuteNonQuery(query);
-            }
-            catch
-            {
-                MessageBox.Show("Có lỗi khi cập nhật quy định mùa giải", "Lỗi");
-            }
         }
     }
 }

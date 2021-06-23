@@ -27,18 +27,25 @@ namespace NationalFootballChampionshipManagement
 
         void LoadListPriorityRank()
         {
-            listPriorityRank = PriorityRankDAO.Instance.GetListPriorityRank();
-
-            int cnt = listPriorityRank.Count;
-            int stt = 1;
-            for (int i = 0; i < cnt; i++)
+            try
             {
-                foreach (PriorityRank priorityRank in listPriorityRank)
-                    if (priorityRank.Rank == stt)
-                    {
-                        dgvRankingRule.Rows.Add(priorityRank.Name, stt);
-                        stt++;
-                    }
+                listPriorityRank = PriorityRankDAO.Instance.GetListPriorityRank();
+
+                int cnt = listPriorityRank.Count;
+                int stt = 1;
+                for (int i = 0; i < cnt; i++)
+                {
+                    foreach (PriorityRank priorityRank in listPriorityRank)
+                        if (priorityRank.Rank == stt)
+                        {
+                            dgvRankingRule.Rows.Add(priorityRank.Name, stt);
+                            stt++;
+                        }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi khi tải dữ liệu", "Lỗi");
             }
         }
         private void dgvRankingRule_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -21,11 +21,20 @@ namespace NationalFootballChampionshipManagement
         Rules rules = null;
         int selectedGoalTypeRow = -1;
         int selectedPlayerTypeRow = -1;
+        int roundCount;
         public formChampionshipTools(formMain f)
         {
             this.formFather = f;
 
             InitializeComponent();
+            try
+            {
+                roundCount = MatchDAO.Instance.GetRoundCount();
+            }
+            catch
+            {
+                roundCount = -1;
+            }
             LoadRules();
             LoadDgvPlayerType();
             LoadDgvGoalType();
@@ -34,37 +43,58 @@ namespace NationalFootballChampionshipManagement
 
         void LoadRules()
         {
-            rules = RulesDAO.Instance.GetRules();
+            try
+            {
+                rules = RulesDAO.Instance.GetRules();
 
-            nudNumberOfTeams.Value = rules.SLDB;
-            nudTimeGoalsMax.Value = Int32.Parse(rules.TimeGoalMax);
-            nudMinAge.Value = rules.TuoiTT;
-            nudMaxAge.Value = rules.TuoiTD;
-            nudMinPlayer.Value = rules.SLTT;
-            nudMaxPlayer.Value = rules.SLTD;
+                nudNumberOfTeams.Value = rules.SLDB;
+                nudTimeGoalsMax.Value = Int32.Parse(rules.TimeGoalMax);
+                nudMinAge.Value = rules.TuoiTT;
+                nudMaxAge.Value = rules.TuoiTD;
+                nudMinPlayer.Value = rules.SLTT;
+                nudMaxPlayer.Value = rules.SLTD;
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi khi tải quy định", "Lỗi");
+            }
         }
         void LoadDgvPlayerType()
         {
-            dgvPlayerType.DataSource = PlayerTypeDAO.Instance.GetListPlayerType();
-            dgvPlayerType.ReadOnly = true;
-            dgvPlayerType.RowTemplate.Height = 30;
-            listIDLCT.Clear();
-            for (int i = 0; i < dgvPlayerType.Rows.Count - 1; i++)
+            try
             {
-                listIDLCT.Add(Int32.Parse(dgvPlayerType.Rows[i].Cells[0].Value.ToString()));
-                dgvPlayerType.Rows[i].Cells[0].Value = i + 1;
+                dgvPlayerType.DataSource = PlayerTypeDAO.Instance.GetListPlayerType();
+                dgvPlayerType.ReadOnly = true;
+                dgvPlayerType.RowTemplate.Height = 30;
+                listIDLCT.Clear();
+                for (int i = 0; i < dgvPlayerType.Rows.Count - 1; i++)
+                {
+                    listIDLCT.Add(Int32.Parse(dgvPlayerType.Rows[i].Cells[0].Value.ToString()));
+                    dgvPlayerType.Rows[i].Cells[0].Value = i + 1;
+                }
+                dgvPlayerType.CellClick +=
+                    new DataGridViewCellEventHandler(dgvPlayerType_CellClick);
             }
-            dgvPlayerType.CellClick +=
-                new DataGridViewCellEventHandler(dgvPlayerType_CellClick);
+            catch
+            {
+                MessageBox.Show("Lỗi khi tải danh sách loại cầu thủ", "Lỗi");
+            }
         }
         void LoadDgvGoalType()
         {
-            listGoalType = GoalTypeDAO.Instance.GetListGoalType();
-            int i = 1;
-            foreach (GoalType goalType in listGoalType)
+            try
             {
-                dgvGoalType.Rows.Add(i, goalType.Name);
-                i++;
+                listGoalType = GoalTypeDAO.Instance.GetListGoalType();
+                int i = 1;
+                foreach (GoalType goalType in listGoalType)
+                {
+                    dgvGoalType.Rows.Add(i, goalType.Name);
+                    i++;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi khi tải danh sách loại bàn thắng", "Lỗi");
             }
         }
         private void dgvPlayerType_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -78,12 +108,34 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnAddTypeOfPlayer_Click(object sender, EventArgs e)
         {
+            // kiểm tra mùa giải
+            if (roundCount == -1)
+            {
+                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
+                return;
+            }
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
+                return;
+            }
             this.formFather.openChildForm(new formAddTypeOfPlayer(this.formFather));
 
             this.Close();
         }
         private void btnRemoveTypeOfPlayer_Click(object sender, EventArgs e)
         {
+            // kiểm tra mùa giải
+            if (roundCount == -1)
+            {
+                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
+                return;
+            }
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
+                return;
+            }
             DialogResult dialogResult = MessageBox.Show("Tất cả cầu thủ thuộc loại này cũng bị xoá. Bạn có chắc muốn xoá loại cầu thủ này không ?", "Xác nhận", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
@@ -93,23 +145,47 @@ namespace NationalFootballChampionshipManagement
             try
             {
                 PlayerTypeDAO.Instance.DeleteByID(SelectedIDLCT);
-                MessageBox.Show("Xoá thành công", "Thành công");
+                MessageBox.Show("Xoá loại cầu thủ thành công", "Thành công");
                 LoadDgvPlayerType();
             }
             catch
             {
 
-                MessageBox.Show("Xoá thất bại", "Lỗi");
+                MessageBox.Show("Xoá loại cầu thủ thất bại", "Lỗi");
             }
         }
         private void btnAddTypeOfGoal_Click(object sender, EventArgs e)
         {
+            // kiểm tra mùa giải
+            if (roundCount == -1)
+            {
+                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
+                return;
+            }
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
+                return;
+            }
             this.formFather.openChildForm(new formAddTypeOfGoal(this.formFather));
 
             this.Close();
         }
         private void btnRemoveTypeOfGoal_Click(object sender, EventArgs e)
         {
+            // kiểm tra mùa giải
+            if (roundCount == -1)
+            {
+                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
+                return;
+            }    
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
+                return;
+            }
+
+            //thực hiện
             if (selectedGoalTypeRow < 0 || selectedGoalTypeRow >= dgvGoalType.Rows.Count)
             {
                 MessageBox.Show("Vui lòng chọn loại bàn thắng cần xoá", "Lỗi");
@@ -133,6 +209,17 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
+            // kiểm tra mùa giải
+            if (roundCount == -1)
+            {
+                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
+                return;
+            }
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
+                return;
+            }
             //Check logic
 
             //NumberOfTeams
