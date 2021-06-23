@@ -204,13 +204,13 @@ namespace NationalFootballChampionshipManagement
             {
                 if (cbbNameTeam.SelectedIndex == 0)
                 {
-                    Goal goal = new Goal(idTranDau, listPlayerTeam1[cbbNameTeam.SelectedIndex].ID, Team1.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
+                    Goal goal = new Goal(idTranDau, listPlayerTeam1[cbbNamePlayer.SelectedIndex].ID, Team1.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
                     dgvGoalTeam1.Rows.Add(dgvGoalTeam1.Rows.Count+1, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
                     listGoal.Add(goal);
                 }
                 else
                 {
-                    Goal goal = new Goal(idTranDau, listPlayerTeam2[cbbNameTeam.SelectedIndex].ID, Team2.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
+                    Goal goal = new Goal(idTranDau, listPlayerTeam2[cbbNamePlayer.SelectedIndex].ID, Team2.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
                     dgvGoalTeam2.Rows.Add(dgvGoalTeam2.Rows.Count+1, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
                     listGoal.Add(goal);
                 }
