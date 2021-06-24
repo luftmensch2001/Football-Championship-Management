@@ -154,7 +154,7 @@ namespace NationalFootballChampionshipManagement
             {
                 cbbTypeGoal.Items.Add(type.Name);
             }
-            nbMinute.Value = 0;
+            nbMinute.Value = 1;
         }
         int GetIndexPlayer(string name)
         {
