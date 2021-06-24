@@ -57,6 +57,7 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public int GetCountTeam()
         {
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
             string query = "EXEC USP_CountOfTeam @idmg = " + this.idmg.ToString();
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count == 0) return 0;
@@ -119,6 +120,7 @@ namespace NationalFootballChampionshipManagement.DAO
         public List<Team> GetNameAndIdTeam()
         {
             List<Team> teams = new List<Team>();
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
 
             string query = "SELECT TenDb,iddb FROM DoiBong where idmg =" + idmg.ToString();
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
