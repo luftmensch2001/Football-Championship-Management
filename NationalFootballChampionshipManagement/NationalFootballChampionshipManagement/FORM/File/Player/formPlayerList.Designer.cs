@@ -54,18 +54,16 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tbNamePlayer = new System.Windows.Forms.TextBox();
-            this.btSearch = new System.Windows.Forms.Button();
+            this.btSearch = new FontAwesome.Sharp.IconButton();
+            this.tbNamePlayer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -81,8 +79,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.panel1.Controls.Add(this.btSearch);
-            this.panel1.Controls.Add(this.tbNamePlayer);
             this.panel1.Controls.Add(this.lTitle);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -363,8 +359,8 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.panel7.Controls.Add(this.iconButton1);
-            this.panel7.Controls.Add(this.guna2TextBox1);
+            this.panel7.Controls.Add(this.btSearch);
+            this.panel7.Controls.Add(this.tbNamePlayer);
             this.panel7.Controls.Add(this.panel15);
             this.panel7.Controls.Add(this.panel14);
             this.panel7.Controls.Add(this.panel13);
@@ -375,24 +371,81 @@
             this.panel7.Size = new System.Drawing.Size(200, 49);
             this.panel7.TabIndex = 4;
             // 
-            // tbNamePlayer
-            // 
-            this.tbNamePlayer.Location = new System.Drawing.Point(740, 44);
-            this.tbNamePlayer.Name = "tbNamePlayer";
-            this.tbNamePlayer.Size = new System.Drawing.Size(100, 20);
-            this.tbNamePlayer.TabIndex = 2;
-            // 
             // btSearch
             // 
-            this.btSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.btSearch.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btSearch.FlatAppearance.BorderSize = 0;
             this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSearch.Location = new System.Drawing.Point(674, 44);
+            this.btSearch.ForeColor = System.Drawing.Color.Coral;
+            this.btSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.btSearch.IconColor = System.Drawing.Color.Black;
+            this.btSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btSearch.IconSize = 25;
+            this.btSearch.Location = new System.Drawing.Point(156, 7);
             this.btSearch.Name = "btSearch";
-            this.btSearch.Size = new System.Drawing.Size(49, 23);
-            this.btSearch.TabIndex = 3;
-            this.btSearch.Text = "Tìm";
+            this.btSearch.Size = new System.Drawing.Size(39, 35);
+            this.btSearch.TabIndex = 5;
+            this.btSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btSearch.UseVisualStyleBackColor = false;
             this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // tbNamePlayer
+            // 
+            this.tbNamePlayer.AutoRoundedCorners = true;
+            this.tbNamePlayer.BorderRadius = 16;
+            this.tbNamePlayer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNamePlayer.DefaultText = "";
+            this.tbNamePlayer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbNamePlayer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbNamePlayer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNamePlayer.DisabledState.Parent = this.tbNamePlayer;
+            this.tbNamePlayer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNamePlayer.Dock = System.Windows.Forms.DockStyle.Left;
+            this.tbNamePlayer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNamePlayer.FocusedState.Parent = this.tbNamePlayer;
+            this.tbNamePlayer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNamePlayer.HoverState.Parent = this.tbNamePlayer;
+            this.tbNamePlayer.Location = new System.Drawing.Point(5, 7);
+            this.tbNamePlayer.Name = "tbNamePlayer";
+            this.tbNamePlayer.PasswordChar = '\0';
+            this.tbNamePlayer.PlaceholderText = "Nguyễn Văn A";
+            this.tbNamePlayer.SelectedText = "";
+            this.tbNamePlayer.ShadowDecoration.Parent = this.tbNamePlayer;
+            this.tbNamePlayer.Size = new System.Drawing.Size(145, 35);
+            this.tbNamePlayer.TabIndex = 4;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(195, 7);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(5, 35);
+            this.panel15.TabIndex = 3;
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 7);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(5, 35);
+            this.panel14.TabIndex = 2;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 42);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 7);
+            this.panel13.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 7);
+            this.panel12.TabIndex = 0;
             // 
             // label4
             // 
@@ -450,81 +503,6 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(200, 7);
-            this.panel12.TabIndex = 0;
-            // 
-            // panel13
-            // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel13.Location = new System.Drawing.Point(0, 42);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(200, 7);
-            this.panel13.TabIndex = 1;
-            // 
-            // panel14
-            // 
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(0, 7);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(5, 35);
-            this.panel14.TabIndex = 2;
-            // 
-            // panel15
-            // 
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel15.Location = new System.Drawing.Point(195, 7);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(5, 35);
-            this.panel15.TabIndex = 3;
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.BorderRadius = 16;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Location = new System.Drawing.Point(5, 7);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "Nguyễn Văn A";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(145, 35);
-            this.guna2TextBox1.TabIndex = 4;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.Coral;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(156, 7);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(39, 35);
-            this.iconButton1.TabIndex = 5;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // formPlayerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,7 +515,6 @@
             this.Name = "formPlayerList";
             this.Text = "formPlayerList";
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayerList)).EndInit();
@@ -567,8 +544,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox tbNamePlayer;
-        private System.Windows.Forms.Button btSearch;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.CheckedListBox clbTeam;
         private System.Windows.Forms.Panel panel9;
@@ -582,8 +557,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTeam;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTypeOfPlayer;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfGoals;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private FontAwesome.Sharp.IconButton btSearch;
+        private Guna.UI2.WinForms.Guna2TextBox tbNamePlayer;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel13;

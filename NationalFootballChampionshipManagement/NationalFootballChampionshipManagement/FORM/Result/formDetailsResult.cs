@@ -19,6 +19,9 @@ namespace NationalFootballChampionshipManagement
         int idTranDau;
         Team Team1 = new Team();
         Team Team2 = new Team();
+
+
+        
         List<Player> listPlayerTeam1 = new List<Player>();
         List<Player> listPlayerTeam2 = new List<Player>();
         List<Goal> listGoal = new List<Goal>();
@@ -36,10 +39,10 @@ namespace NationalFootballChampionshipManagement
             InitializeComponent();
             formFather = form;
             this.idTranDau = idTranDau;
-            lbVongDau.Text = " Vòng : " + vongDau.ToString();
+            lbVongDau.Text = vongDau.ToString();
             nbTeam1.Text = Math.Max(kqDoi1, 0).ToString();
             nbTeam2.Text = Math.Max(kqDoi2, 0).ToString();
-            lbSan.Text = "Sân: " + san;
+            lbSan.Text = san;
 
             Team1 = TeamDAO.Instance.GetTeamInforByID(idDoi1);
             Team2 = TeamDAO.Instance.GetTeamInforByID(idDoi2);
