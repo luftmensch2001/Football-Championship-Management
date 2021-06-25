@@ -37,6 +37,11 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dgvPlayerList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -55,11 +60,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -75,6 +81,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.panel1.Controls.Add(this.btSearch);
+            this.panel1.Controls.Add(this.tbNamePlayer);
             this.panel1.Controls.Add(this.lTitle);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -203,6 +211,32 @@
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // colSTT
+            // 
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.Name = "colSTT";
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Cầu thủ";
+            this.colName.Name = "colName";
+            // 
+            // colTeam
+            // 
+            this.colTeam.HeaderText = "Đội";
+            this.colTeam.Name = "colTeam";
+            // 
+            // colTypeOfPlayer
+            // 
+            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
+            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
+            // 
+            // colNumberOfGoals
+            // 
+            this.colNumberOfGoals.HeaderText = "Tổng số bàn thắng";
+            this.colNumberOfGoals.Name = "colNumberOfGoals";
+            this.colNumberOfGoals.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.DarkGray;
@@ -329,8 +363,12 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
-            this.panel7.Controls.Add(this.tbNamePlayer);
-            this.panel7.Controls.Add(this.btSearch);
+            this.panel7.Controls.Add(this.iconButton1);
+            this.panel7.Controls.Add(this.guna2TextBox1);
+            this.panel7.Controls.Add(this.panel15);
+            this.panel7.Controls.Add(this.panel14);
+            this.panel7.Controls.Add(this.panel13);
+            this.panel7.Controls.Add(this.panel12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 70);
             this.panel7.Name = "panel7";
@@ -339,7 +377,7 @@
             // 
             // tbNamePlayer
             // 
-            this.tbNamePlayer.Location = new System.Drawing.Point(64, 19);
+            this.tbNamePlayer.Location = new System.Drawing.Point(740, 44);
             this.tbNamePlayer.Name = "tbNamePlayer";
             this.tbNamePlayer.Size = new System.Drawing.Size(100, 20);
             this.tbNamePlayer.TabIndex = 2;
@@ -348,7 +386,7 @@
             // 
             this.btSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
             this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSearch.Location = new System.Drawing.Point(6, 16);
+            this.btSearch.Location = new System.Drawing.Point(674, 44);
             this.btSearch.Name = "btSearch";
             this.btSearch.Size = new System.Drawing.Size(49, 23);
             this.btSearch.TabIndex = 3;
@@ -412,31 +450,80 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // colSTT
+            // panel12
             // 
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.Name = "colSTT";
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 7);
+            this.panel12.TabIndex = 0;
             // 
-            // colName
+            // panel13
             // 
-            this.colName.HeaderText = "Cầu thủ";
-            this.colName.Name = "colName";
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 42);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 7);
+            this.panel13.TabIndex = 1;
             // 
-            // colTeam
+            // panel14
             // 
-            this.colTeam.HeaderText = "Đội";
-            this.colTeam.Name = "colTeam";
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 7);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(5, 35);
+            this.panel14.TabIndex = 2;
             // 
-            // colTypeOfPlayer
+            // panel15
             // 
-            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
-            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(195, 7);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(5, 35);
+            this.panel15.TabIndex = 3;
             // 
-            // colNumberOfGoals
+            // guna2TextBox1
             // 
-            this.colNumberOfGoals.HeaderText = "Tổng số bàn thắng";
-            this.colNumberOfGoals.Name = "colNumberOfGoals";
-            this.colNumberOfGoals.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2TextBox1.AutoRoundedCorners = true;
+            this.guna2TextBox1.BorderRadius = 16;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(5, 7);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "Nguyễn Văn A";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(145, 35);
+            this.guna2TextBox1.TabIndex = 4;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.Coral;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(156, 7);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(39, 35);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // formPlayerList
             // 
@@ -450,6 +537,7 @@
             this.Name = "formPlayerList";
             this.Text = "formPlayerList";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayerList)).EndInit();
@@ -458,7 +546,6 @@
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -495,5 +582,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTeam;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTypeOfPlayer;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfGoals;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
     }
 }

@@ -42,6 +42,7 @@ namespace NationalFootballChampionshipManagement
                             stt++;
                         }
                 }
+		dgvRankingRule.ClearSelection();
             }
             catch
             {
