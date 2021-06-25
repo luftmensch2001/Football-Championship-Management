@@ -22,6 +22,8 @@ namespace NationalFootballChampionshipManagement
         List<Player> listPlayerTeam1 = new List<Player>();
         List<Player> listPlayerTeam2 = new List<Player>();
         List<Goal> listGoal = new List<Goal>();
+        List<Goal> listGoal1 = new List<Goal>();
+        List<Goal> listGoal2 = new List<Goal>();
         List<GoalType> listGoalType = new List<GoalType>();
 
         List<int> listIDGoalDelete = new List<int>();
@@ -82,9 +84,11 @@ namespace NationalFootballChampionshipManagement
                 if (goal.IdDoiBong == Team1.ID)
                 {
                     dgvGoalTeam1.Rows.Add(dgvGoalTeam1.Rows.Count,TenCauThuTeam1(goal.IdCauThu), TenLoaiBanThang(goal.IdLoaiBanThang),goal.IdThoiDiem);
+                    listGoal1.Add(goal);
                 }else
                 {
                     dgvGoalTeam2.Rows.Add(dgvGoalTeam2.Rows.Count, TenCauThuTeam2(goal.IdCauThu), TenLoaiBanThang(goal.IdLoaiBanThang), goal.IdThoiDiem);
+                    listGoal2.Add(goal);
                 }
             }
         }
@@ -206,13 +210,13 @@ namespace NationalFootballChampionshipManagement
                 {
                     Goal goal = new Goal(idTranDau, listPlayerTeam1[cbbNamePlayer.SelectedIndex].ID, Team1.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
                     dgvGoalTeam1.Rows.Add(dgvGoalTeam1.Rows.Count+1, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
-                    listGoal.Add(goal);
+                    listGoal1.Add(goal);
                 }
                 else
                 {
                     Goal goal = new Goal(idTranDau, listPlayerTeam2[cbbNamePlayer.SelectedIndex].ID, Team2.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString());
                     dgvGoalTeam2.Rows.Add(dgvGoalTeam2.Rows.Count+1, cbbNamePlayer.SelectedItem.ToString(), cbbTypeGoal.SelectedItem.ToString(), goal.IdThoiDiem);
-                    listGoal.Add(goal);
+                    listGoal2.Add(goal);
                 }
                 Reset();
                 EditGoalNumber();
@@ -227,22 +231,10 @@ namespace NationalFootballChampionshipManagement
             {
                 if (cbbNameTeam.SelectedIndex == 0)
                 {
-
                     int rowIndex = dgvGoalTeam1.CurrentCell.RowIndex;
-                    int index = 0;
-                    foreach (Goal goal in listGoal)
-                    {
-                        if (goal.IdDoiBong == Team1.ID)
-                            index++;
-                        if ((int) dgvGoalTeam1.Rows[rowIndex].Cells[0].Value == index)
-                        {
-                            if (goal.IdBanThang != -1)
-                                listIDGoalDelete.Add(goal.IdBanThang);
-                            listGoal.Remove(goal);
-                            break;
-                        }
-                    }    
-
+                    int index =Int32.Parse(dgvGoalTeam1.Rows[rowIndex].Cells[0].Value.ToString()) - 1;
+                    if (listGoal1[index].IdBanThang != -1)
+                        listIDGoalDelete.Add(listGoal1[index].IdBanThang);
                     dgvGoalTeam1.Rows.RemoveAt(rowIndex);
                     Reset();
                     AutoId(dgvGoalTeam1);
@@ -250,20 +242,9 @@ namespace NationalFootballChampionshipManagement
                 else
                 {
                     int rowIndex = dgvGoalTeam2.CurrentCell.RowIndex;
-                    int index = 0;
-                    foreach (Goal goal in listGoal)
-                    {
-                        if (goal.IdDoiBong == Team2.ID)
-                            index++;
-                        if ((int)dgvGoalTeam2.Rows[rowIndex].Cells[0].Value == index)
-                        {
-                            if (goal.IdBanThang != -1) 
-                                listIDGoalDelete.Add(goal.IdBanThang);
-                            listGoal.Remove(goal);
-                            break;
-                        }
-                    }
-
+                    int index = Int32.Parse(dgvGoalTeam2.Rows[rowIndex].Cells[0].Value.ToString()) - 1;
+                    if (listGoal2[index].IdBanThang != -1)
+                        listIDGoalDelete.Add(listGoal2[index].IdBanThang);
                     dgvGoalTeam2.Rows.RemoveAt(rowIndex);
                     Reset();
                     AutoId(dgvGoalTeam2);
@@ -282,19 +263,21 @@ namespace NationalFootballChampionshipManagement
                 if (cbbNameTeam.SelectedIndex == 0)
                 {
                     int rowIndex = dgvGoalTeam1.CurrentCell.RowIndex;
-                    listGoal[ Int32.Parse(tbSTT.Text)-1] = new Goal(idTranDau, listPlayerTeam1[cbbNameTeam.SelectedIndex].ID, Team1.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString(), listGoal[Int32.Parse(tbSTT.Text)-1].IdBanThang);
+                    int index = Int32.Parse(tbSTT.Text) - 1;
+                    listGoal1[ index] = new Goal(idTranDau, listPlayerTeam1[cbbNamePlayer.SelectedIndex].ID, Team1.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString(), listGoal1[index].IdBanThang);
                     DataGridViewRow row = new DataGridViewRow();
                     dgvGoalTeam1.Rows[rowIndex].Cells[1].Value = cbbNamePlayer.SelectedItem.ToString();
                     dgvGoalTeam1.Rows[rowIndex].Cells[2].Value = cbbTypeGoal.SelectedItem.ToString();
-                    dgvGoalTeam1.Rows[rowIndex].Cells[3].Value = listGoal[Int32.Parse(tbSTT.Text)-1].IdThoiDiem;
+                    dgvGoalTeam1.Rows[rowIndex].Cells[3].Value = listGoal1[Int32.Parse(tbSTT.Text)-1].IdThoiDiem;
                 }else
                 { 
                     int rowIndex = dgvGoalTeam2.CurrentCell.RowIndex;
-                    listGoal[Int32.Parse(tbSTT.Text) - 1] = new Goal(idTranDau, listPlayerTeam2[cbbNameTeam.SelectedIndex].ID, Team2.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString(), listGoal[Int32.Parse(tbSTT.Text) - 1].IdBanThang);
+                    int index = Int32.Parse(tbSTT.Text) - 1;
+                    listGoal2[index] = new Goal(idTranDau, listPlayerTeam2[cbbNamePlayer.SelectedIndex].ID, Team2.ID, listGoalType[cbbTypeGoal.SelectedIndex].ID, nbMinute.Value.ToString(), listGoal2[index].IdBanThang);
                     DataGridViewRow row = new DataGridViewRow();
                     dgvGoalTeam2.Rows[rowIndex].Cells[1].Value = cbbNamePlayer.SelectedItem.ToString();
                     dgvGoalTeam2.Rows[rowIndex].Cells[2].Value = cbbTypeGoal.SelectedItem.ToString();
-                    dgvGoalTeam2.Rows[rowIndex].Cells[3].Value = listGoal[Int32.Parse(tbSTT.Text) - 1].IdThoiDiem;
+                    dgvGoalTeam2.Rows[rowIndex].Cells[3].Value = listGoal2[Int32.Parse(tbSTT.Text) - 1].IdThoiDiem;
                 }
                 MessageBox.Show("Sửa bàn thắng thành công");
                 EditGoalNumber();
@@ -313,7 +296,7 @@ namespace NationalFootballChampionshipManagement
         bool Save()
         {
             ResultMatchDAO.Instance.SetKQ(idTranDau,Int32.Parse(nbTeam1.Text), Int32.Parse(nbTeam2.Text));
-            foreach (Goal goal in listGoal)
+            foreach (Goal goal in listGoal1)
             {
                 if (goal.IdBanThang == -1)
                 { 
@@ -322,6 +305,17 @@ namespace NationalFootballChampionshipManagement
                 }
                 else
                     if (goal.IdBanThang!=-2)
+                    GoalDAO.Instance.UpdateGoal(goal.IdBanThang, goal.IdCauThu, goal.IdLoaiBanThang, goal.IdThoiDiem);
+            }
+            foreach (Goal goal in listGoal2)
+            {
+                if (goal.IdBanThang == -1)
+                {
+                    GoalDAO.Instance.AddGoal(idTranDau, goal.IdDoiBong, goal.IdCauThu, goal.IdLoaiBanThang, goal.IdThoiDiem.ToString());
+                    goal.IdBanThang = -2;
+                }
+                else
+                    if (goal.IdBanThang != -2)
                     GoalDAO.Instance.UpdateGoal(goal.IdBanThang, goal.IdCauThu, goal.IdLoaiBanThang, goal.IdThoiDiem);
             }
             foreach (int id in listIDGoalDelete)

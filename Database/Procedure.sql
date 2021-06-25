@@ -5,7 +5,7 @@ GO
 --CREATE PROCEDURE /*Name*/
 /*
 */
---Go
+
 -- Get table DoiBong
 CREATE PROC USP_GetTeamList
 AS SELECT * FROM DoiBong
@@ -159,7 +159,7 @@ BEGIN
 		CONVERT(VARCHAR(5),  ThoiGian, 108) AS [Giờ]
 	FROM TranDau
 	WHERE IDMG = @idmg
-	--ORDER BY
+	ORDER BY ThoiGian
 END
 
 GO

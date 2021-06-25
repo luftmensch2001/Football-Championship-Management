@@ -40,8 +40,8 @@ namespace NationalFootballChampionshipManagement.DAO
         {
             List<ResultMatch> listResultMatch = new List<ResultMatch>();
             string query = "EXEC USP_LoadResultMatchByName";
-            query += ", @Ten = N'" + team1 + "'";
-            query += ", @ThuTuUuTien = N'" + team2 + "'";
+            query += " @TENDOI1 = N'" + team1 + "'";
+            query += ", @TENDOI2 = N'" + team2 + "'";
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in dataTable.Rows)
             {

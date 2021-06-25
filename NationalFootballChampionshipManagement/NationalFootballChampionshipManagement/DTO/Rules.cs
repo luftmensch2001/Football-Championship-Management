@@ -35,7 +35,6 @@ namespace NationalFootballChampionshipManagement.DTO
         {
             this.IDMG = (int)row["IDMG"];
             this.SLDB = (int)row["SLDB"];
-            this.SLVD = (int)row["SLVD"];
             this.TuoiTT = (int)row["TuoiTT"];
             this.TuoiTD = (int)row["TuoiTD"];
             this.SLTT = (int)row["SLTT"];

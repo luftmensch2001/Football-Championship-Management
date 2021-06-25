@@ -21,7 +21,8 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public List<GoalType> GetListGoalType()
         {
-            string query = "Select * From LoaiBanThang";
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+            string query = "Select * From LoaiBanThang Where IDMG = " + idmg;
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
 
             List<GoalType> goalTypes = new List<GoalType>();

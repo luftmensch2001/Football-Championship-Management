@@ -26,29 +26,34 @@ CREATE TABLE MuaGiai
 	IDMG INT IDENTITY(1,1) PRIMARY KEY,
 	TenMG NVARCHAR(50),
 	Nam INT,
+	MuaGiaiHienTai BIT
 )
 GO
 
-ALTER TABLE MuaGiai
-ADD MuaGiaiHienTai BIT
-GO
 
 CREATE TABLE QuyDinh
 (
 	IDMG INT,
 	SLDB INT,
-	SLVD INT,
 	TuoiTT INT,
-	TuoiTD INT
+	TuoiTD INT,
+	SLTT INT,
+	SLTD INT,
+	TGGBTD varchar(10)
 )
 GO
+-- Set mac dinh cho quy dinh
 
 ALTER TABLE QuyDinh
-ADD SLTT INT
+ADD CONSTRAINT DF_QD_SLDB DEFAULT(16) FOR SLDB
 GO
 
 ALTER TABLE QuyDinh
-ADD SLTD INT
+ADD CONSTRAINT DF_QD_TuoiTT DEFAULT(16) FOR TuoiTT
+GO
+
+ALTER TABLE QuyDinh
+ADD CONSTRAINT DF_QD_TuoiTD DEFAULT(40) FOR TuoiTD
 GO
 
 ALTER TABLE QuyDinh
@@ -60,12 +65,9 @@ ADD CONSTRAINT DF_QD_SLTD DEFAULT(25) FOR SLTD
 GO
 
 ALTER TABLE QuyDinh
-ADD CONSTRAINT DF_QD_TuoiTT DEFAULT(16) FOR TuoiTT
+ADD CONSTRAINT DF_QD_TGGBTD DEFAULT('90') FOR TGGBTD
 GO
-
-ALTER TABLE QuyDinh
-ADD CONSTRAINT DF_QD_TuoiTD DEFAULT(40) FOR TuoiTD
-GO
+ ----
 
 CREATE TABLE LoaiCauThu
 (
@@ -217,54 +219,29 @@ INSERT INTO MuaGiai(TenMG, Nam, MuaGiaiHienTai)
 VALUES (N'Mùa giải 2021', 2021, 1)
 GO
 
-INSERT INTO QuyDinh(IDMG, SLDB, SLVD)
-VALUES (1, 16, 30)
-Go
+-- QuyDinh
 
- INSERT INTO LoaiCauThu(TenLCT, IDMG, SLTD)
-  VALUES(N'Cầu thủ trong nước', 1, 45),
-		(N'Cầu thủ nước ngoài', 1, 3)
-Go
-
-INSERT INTO LoaiBanThang(TenLBT)
-VALUES (N'Đánh đầu'),(N'Đá phạt')
-Go
-
-ALTER TABLE QUYDINH
-ADD TGGBTD varchar(10)
-Go
-
-Update QUYDINH
-Set TGGBTD = 90
-Where IDMG=1 
-Go
-
-Update CauThu
-Set TONGBANTHANG=0
-go
+INSERT INTO QuyDinh(IDMG)
+VALUES (1)
 
 -- QuyDinhDiemSo 
 
-insert into QuyDinhDiemSo(THANG, HOA, THUA, IDMG) 
-values (3, 1, 0, 1)
-Go
+INSERT INTO QuyDinhDiemSo(IDMG) 
+VALUES (1)
+
  -- QuyDinhXepHang Default
 
-insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-values (N'Điểm', 1, 1)
-GO
+INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+VALUES (N'Điểm', 1, 1)
 
-insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-values (N'Hiệu số bàn thắng', 2, 1)
-Go
+INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+VALUES (N'Hiệu số đối đầu', 2, 1)
 
-insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-values (N'Tổng số bàn thắng', 3, 1)
-Go
+INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+VALUES (N'Hiệu số bàn thắng', 3, 1)
 
-insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-values (N'Tổng số trận thắng', 4, 1)
-Go
+INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+VALUES (N'Tổng số bàn thắng', 4, 1)
 
-insert into QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-values (N'Hiệu số đối đầu ', 5, 1)
+INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
+VALUES (N'Tổng số trận thắng', 5, 1)
