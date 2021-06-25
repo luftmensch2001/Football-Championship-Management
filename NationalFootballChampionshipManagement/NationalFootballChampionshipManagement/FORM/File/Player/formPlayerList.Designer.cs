@@ -33,7 +33,19 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new FontAwesome.Sharp.IconButton();
+<<<<<<< Updated upstream
             this.btnAddPlayer = new FontAwesome.Sharp.IconButton();
+=======
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.dgvPlayerList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+>>>>>>> Stashed changes
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -41,6 +53,7 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+<<<<<<< Updated upstream
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -54,6 +67,20 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.lTitle = new System.Windows.Forms.Label();
+=======
+            this.tbNamePlayer = new System.Windows.Forms.TextBox();
+            this.btSearch = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+>>>>>>> Stashed changes
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -67,6 +94,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.panel1.Controls.Add(this.btSearch);
+            this.panel1.Controls.Add(this.tbNamePlayer);
             this.panel1.Controls.Add(this.lTitle);
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -309,6 +338,8 @@
             this.dgvPlayerList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlayerList_CellClick);
             // 
             // colSTT
+<<<<<<< Updated upstream
+=======
             // 
             this.colSTT.HeaderText = "STT";
             this.colSTT.Name = "colSTT";
@@ -330,8 +361,171 @@
             // 
             // colNumberOfGoals
             // 
+            this.colNumberOfGoals.HeaderText = "Tổng số bàn thắng";
+            this.colNumberOfGoals.Name = "colNumberOfGoals";
+            this.colNumberOfGoals.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.DarkGray;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(438, 394);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 31);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Loại cầu thủ";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel6);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(658, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(200, 514);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.panel6.Controls.Add(this.clbLCT);
+            this.panel6.Controls.Add(this.panel8);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(0, 317);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 197);
+            this.panel6.TabIndex = 2;
+            // 
+            // clbLCT
+            // 
+            this.clbLCT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.clbLCT.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.clbLCT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.clbLCT.FormattingEnabled = true;
+            this.clbLCT.Location = new System.Drawing.Point(43, 36);
+            this.clbLCT.Name = "clbLCT";
+            this.clbLCT.Size = new System.Drawing.Size(157, 161);
+            this.clbLCT.TabIndex = 5;
+            this.clbLCT.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clbLCT_ItemCheck);
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 36);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(43, 161);
+            this.panel8.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.DarkGray;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(200, 36);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Loại cầu thủ";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.panel5.Controls.Add(this.clbTeam);
+            this.panel5.Controls.Add(this.panel9);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 155);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(200, 162);
+            this.panel5.TabIndex = 1;
+            // 
+            // clbTeam
+>>>>>>> Stashed changes
+            // 
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.Name = "colSTT";
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Cầu thủ";
+            this.colName.Name = "colName";
+            // 
+            // colTeam
+            // 
+            this.colTeam.HeaderText = "Đội";
+            this.colTeam.Name = "colTeam";
+            // 
+            // colTypeOfPlayer
+            // 
+            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
+            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
+            // 
+            // colNumberOfGoals
+            // 
+<<<<<<< Updated upstream
             this.colNumberOfGoals.HeaderText = "Số bàn thắng";
             this.colNumberOfGoals.Name = "colNumberOfGoals";
+=======
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.panel7.Controls.Add(this.iconButton1);
+            this.panel7.Controls.Add(this.guna2TextBox1);
+            this.panel7.Controls.Add(this.panel15);
+            this.panel7.Controls.Add(this.panel14);
+            this.panel7.Controls.Add(this.panel13);
+            this.panel7.Controls.Add(this.panel12);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 70);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 49);
+            this.panel7.TabIndex = 4;
+            // 
+            // tbNamePlayer
+            // 
+            this.tbNamePlayer.Location = new System.Drawing.Point(740, 44);
+            this.tbNamePlayer.Name = "tbNamePlayer";
+            this.tbNamePlayer.Size = new System.Drawing.Size(100, 20);
+            this.tbNamePlayer.TabIndex = 2;
+            // 
+            // btSearch
+            // 
+            this.btSearch.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSearch.Location = new System.Drawing.Point(674, 44);
+            this.btSearch.Name = "btSearch";
+            this.btSearch.Size = new System.Drawing.Size(49, 23);
+            this.btSearch.TabIndex = 3;
+            this.btSearch.Text = "Tìm";
+            this.btSearch.UseVisualStyleBackColor = false;
+            this.btSearch.Click += new System.EventHandler(this.btSearch_Click);
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.DarkGray;
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(0, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(200, 35);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Tên cầu thủ";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(200, 35);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Bảng Tra cứu";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+>>>>>>> Stashed changes
             // 
             // panel2
             // 
@@ -363,6 +557,7 @@
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
+<<<<<<< Updated upstream
             // 
             // lTitle
             // 
@@ -375,6 +570,84 @@
             this.lTitle.TabIndex = 7;
             this.lTitle.Text = "Danh sách cầu thủ";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+=======
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 7);
+            this.panel12.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 42);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(200, 7);
+            this.panel13.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(0, 7);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(5, 35);
+            this.panel14.TabIndex = 2;
+            // 
+            // panel15
+            // 
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel15.Location = new System.Drawing.Point(195, 7);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(5, 35);
+            this.panel15.TabIndex = 3;
+            // 
+            // guna2TextBox1
+            // 
+            this.guna2TextBox1.AutoRoundedCorners = true;
+            this.guna2TextBox1.BorderRadius = 16;
+            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox1.DefaultText = "";
+            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.DisabledState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Location = new System.Drawing.Point(5, 7);
+            this.guna2TextBox1.Name = "guna2TextBox1";
+            this.guna2TextBox1.PasswordChar = '\0';
+            this.guna2TextBox1.PlaceholderText = "Nguyễn Văn A";
+            this.guna2TextBox1.SelectedText = "";
+            this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
+            this.guna2TextBox1.Size = new System.Drawing.Size(145, 35);
+            this.guna2TextBox1.TabIndex = 4;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(246)))), ((int)(((byte)(248)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.Color.Coral;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(156, 7);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(39, 35);
+            this.iconButton1.TabIndex = 5;
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.UseVisualStyleBackColor = false;
+>>>>>>> Stashed changes
             // 
             // formPlayerList
             // 
@@ -389,12 +662,24 @@
             this.Name = "formPlayerList";
             this.Text = "formPlayerList";
             this.panel1.ResumeLayout(false);
+<<<<<<< Updated upstream
             this.panel3.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPlayerList)).EndInit();
+=======
+            this.panel1.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPlayerList)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+>>>>>>> Stashed changes
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -420,10 +705,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTeam;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTypeOfPlayer;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfGoals;
+<<<<<<< Updated upstream
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label lTitle;
+=======
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+>>>>>>> Stashed changes
     }
 }

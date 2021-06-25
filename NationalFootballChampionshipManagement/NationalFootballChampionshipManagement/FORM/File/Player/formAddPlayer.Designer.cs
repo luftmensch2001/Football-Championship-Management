@@ -30,22 +30,23 @@
         {
             this.panel6 = new System.Windows.Forms.Panel();
             this.cbGender = new Guna.UI2.WinForms.Guna2ComboBox();
+<<<<<<< Updated upstream
             this.panel9 = new System.Windows.Forms.Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
+=======
+            this.tbNationality = new Guna.UI2.WinForms.Guna2TextBox();
+>>>>>>> Stashed changes
             this.cbTypeOfPlayer = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.tbNote = new Guna.UI2.WinForms.Guna2TextBox();
             this.dtpBirthday = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.panel10 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel13 = new System.Windows.Forms.Panel();
             this.cbCLB = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.tbUploadNewImage = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlPlayerAvatar = new System.Windows.Forms.Panel();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -53,6 +54,7 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -61,12 +63,22 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel8.SuspendLayout();
             this.panel10.SuspendLayout();
+=======
+            this.tbNote = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+>>>>>>> Stashed changes
             this.panel5.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.pnlPlayerAvatar.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -103,6 +115,7 @@
             this.cbGender.TabIndex = 0;
             this.cbGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
+<<<<<<< Updated upstream
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
@@ -139,15 +152,36 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(337, 54);
             this.guna2TextBox1.TabIndex = 3;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+=======
+            // tbNationality
             // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.cbGender);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 10);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(337, 44);
-            this.panel8.TabIndex = 2;
+            this.tbNationality.BorderThickness = 0;
+            this.tbNationality.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNationality.DefaultText = "Việt Nam";
+            this.tbNationality.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbNationality.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbNationality.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNationality.DisabledState.Parent = this.tbNationality;
+            this.tbNationality.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNationality.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbNationality.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNationality.FocusedState.Parent = this.tbNationality;
+            this.tbNationality.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.tbNationality.ForeColor = System.Drawing.Color.Black;
+            this.tbNationality.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNationality.HoverState.Parent = this.tbNationality;
+            this.tbNationality.Location = new System.Drawing.Point(0, 54);
+            this.tbNationality.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbNationality.Name = "tbNationality";
+            this.tbNationality.PasswordChar = '\0';
+            this.tbNationality.PlaceholderText = "Quốc tịch";
+            this.tbNationality.SelectedText = "";
+            this.tbNationality.SelectionStart = 8;
+            this.tbNationality.ShadowDecoration.Parent = this.tbNationality;
+            this.tbNationality.Size = new System.Drawing.Size(337, 54);
+            this.tbNationality.TabIndex = 3;
+            this.tbNationality.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+>>>>>>> Stashed changes
             // 
             // cbTypeOfPlayer
             // 
@@ -171,34 +205,6 @@
             this.cbTypeOfPlayer.TabIndex = 1;
             this.cbTypeOfPlayer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // tbNote
-            // 
-            this.tbNote.BorderThickness = 0;
-            this.tbNote.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbNote.DefaultText = "";
-            this.tbNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbNote.DisabledState.Parent = this.tbNote;
-            this.tbNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbNote.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNote.FocusedState.Parent = this.tbNote;
-            this.tbNote.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tbNote.ForeColor = System.Drawing.Color.Black;
-            this.tbNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbNote.HoverState.Parent = this.tbNote;
-            this.tbNote.Location = new System.Drawing.Point(0, 0);
-            this.tbNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.tbNote.Multiline = true;
-            this.tbNote.Name = "tbNote";
-            this.tbNote.PasswordChar = '\0';
-            this.tbNote.PlaceholderText = "Ghi chú về cầu thủ đó";
-            this.tbNote.SelectedText = "";
-            this.tbNote.ShadowDecoration.Parent = this.tbNote;
-            this.tbNote.Size = new System.Drawing.Size(337, 236);
-            this.tbNote.TabIndex = 7;
-            // 
             // dtpBirthday
             // 
             this.dtpBirthday.CheckedState.Parent = this.dtpBirthday;
@@ -214,15 +220,6 @@
             this.dtpBirthday.Size = new System.Drawing.Size(337, 54);
             this.dtpBirthday.TabIndex = 6;
             this.dtpBirthday.Value = new System.DateTime(2021, 6, 7, 15, 23, 56, 230);
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.cbTypeOfPlayer);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 120);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(337, 42);
-            this.panel10.TabIndex = 5;
             // 
             // panel5
             // 
@@ -241,15 +238,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(357, 500);
             this.panel5.TabIndex = 13;
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.tbNote);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(0, 264);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(337, 236);
-            this.panel13.TabIndex = 10;
             // 
             // cbCLB
             // 
@@ -272,14 +260,6 @@
             this.cbCLB.Size = new System.Drawing.Size(337, 36);
             this.cbCLB.TabIndex = 9;
             this.cbCLB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 216);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(337, 12);
-            this.panel12.TabIndex = 8;
             // 
             // panel7
             // 
@@ -348,10 +328,27 @@
             this.panel11.Size = new System.Drawing.Size(327, 21);
             this.panel11.TabIndex = 0;
             // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(327, 21);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Tải ảnh lên";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pnlPlayerAvatar
             // 
             this.pnlPlayerAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlPlayerAvatar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+<<<<<<< Updated upstream
+=======
+            this.pnlPlayerAvatar.Controls.Add(this.btnLoadImage);
+            this.pnlPlayerAvatar.Controls.Add(this.pbPlayerImage);
+>>>>>>> Stashed changes
             this.pnlPlayerAvatar.Controls.Add(this.panel11);
             this.pnlPlayerAvatar.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPlayerAvatar.Location = new System.Drawing.Point(545, 161);
@@ -442,6 +439,7 @@
             this.lTitle.Text = "Thêm cầu thủ mới";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+<<<<<<< Updated upstream
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -507,6 +505,76 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "Ghi chú:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+=======
+            // tbNote
+            // 
+            this.tbNote.BorderThickness = 0;
+            this.tbNote.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbNote.DefaultText = "";
+            this.tbNote.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbNote.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbNote.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNote.DisabledState.Parent = this.tbNote;
+            this.tbNote.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbNote.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNote.FocusedState.Parent = this.tbNote;
+            this.tbNote.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.tbNote.ForeColor = System.Drawing.Color.Black;
+            this.tbNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbNote.HoverState.Parent = this.tbNote;
+            this.tbNote.Location = new System.Drawing.Point(0, 39);
+            this.tbNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tbNote.Multiline = true;
+            this.tbNote.Name = "tbNote";
+            this.tbNote.PasswordChar = '\0';
+            this.tbNote.PlaceholderText = "Ghi chú về cầu thủ đó";
+            this.tbNote.SelectedText = "";
+            this.tbNote.ShadowDecoration.Parent = this.tbNote;
+            this.tbNote.Size = new System.Drawing.Size(337, 197);
+            this.tbNote.TabIndex = 7;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.tbNote);
+            this.panel13.Location = new System.Drawing.Point(0, 273);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(337, 227);
+            this.panel13.TabIndex = 10;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.cbGender);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 10);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(337, 44);
+            this.panel8.TabIndex = 2;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 108);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(337, 12);
+            this.panel9.TabIndex = 4;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.cbTypeOfPlayer);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 120);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(337, 42);
+            this.panel10.TabIndex = 5;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 216);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(337, 12);
+            this.panel12.TabIndex = 8;
+>>>>>>> Stashed changes
             // 
             // formAddPlayer
             // 
@@ -524,15 +592,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "formAddPlayer";
             this.Text = "formAddPlayer";
-            this.panel8.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.pnlPlayerAvatar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -541,13 +609,15 @@
 
         private System.Windows.Forms.Panel panel6;
         private Guna.UI2.WinForms.Guna2ComboBox cbGender;
+<<<<<<< Updated upstream
         private System.Windows.Forms.Panel panel9;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.Panel panel8;
+=======
+        private Guna.UI2.WinForms.Guna2TextBox tbNationality;
+>>>>>>> Stashed changes
         private Guna.UI2.WinForms.Guna2ComboBox cbTypeOfPlayer;
-        private Guna.UI2.WinForms.Guna2TextBox tbNote;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthday;
-        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private FontAwesome.Sharp.IconButton btnAdd;
@@ -560,9 +630,7 @@
         private System.Windows.Forms.Panel panel2;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2ComboBox cbCLB;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -570,5 +638,18 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+<<<<<<< Updated upstream
+=======
+        private FontAwesome.Sharp.IconButton btnDelete;
+        private FontAwesome.Sharp.IconButton btnLoadImage;
+        private System.Windows.Forms.PictureBox pbPlayerImage;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel13;
+        private Guna.UI2.WinForms.Guna2TextBox tbNote;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+>>>>>>> Stashed changes
     }
 }
