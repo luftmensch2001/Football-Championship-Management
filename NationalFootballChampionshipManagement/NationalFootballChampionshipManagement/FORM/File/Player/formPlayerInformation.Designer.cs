@@ -36,7 +36,6 @@
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlPlayerAvatar = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.tbUploadNewImage = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -60,6 +59,8 @@
             this.cbGender = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.tbUploadNewImage = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlPlayerAvatar.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -159,6 +160,7 @@
             // 
             this.pnlPlayerAvatar.BackgroundImage = global::NationalFootballChampionshipManagement.Properties.Resources.PlayerAvatarExample;
             this.pnlPlayerAvatar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlPlayerAvatar.Controls.Add(this.tbUploadNewImage);
             this.pnlPlayerAvatar.Controls.Add(this.panel11);
             this.pnlPlayerAvatar.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPlayerAvatar.Location = new System.Drawing.Point(545, 161);
@@ -168,25 +170,12 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.tbUploadNewImage);
+            this.panel11.Controls.Add(this.label7);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(0, 479);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(329, 21);
             this.panel11.TabIndex = 0;
-            // 
-            // tbUploadNewImage
-            // 
-            this.tbUploadNewImage.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbUploadNewImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbUploadNewImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbUploadNewImage.ForeColor = System.Drawing.Color.Red;
-            this.tbUploadNewImage.Location = new System.Drawing.Point(0, 0);
-            this.tbUploadNewImage.Name = "tbUploadNewImage";
-            this.tbUploadNewImage.Size = new System.Drawing.Size(329, 14);
-            this.tbUploadNewImage.TabIndex = 0;
-            this.tbUploadNewImage.Text = "Tải ảnh lên";
-            this.tbUploadNewImage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // panel4
             // 
@@ -539,6 +528,30 @@
             this.panel6.Size = new System.Drawing.Size(20, 500);
             this.panel6.TabIndex = 0;
             // 
+            // tbUploadNewImage
+            // 
+            this.tbUploadNewImage.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUploadNewImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUploadNewImage.ForeColor = System.Drawing.Color.Red;
+            this.tbUploadNewImage.Location = new System.Drawing.Point(-20, 446);
+            this.tbUploadNewImage.Name = "tbUploadNewImage";
+            this.tbUploadNewImage.Size = new System.Drawing.Size(329, 14);
+            this.tbUploadNewImage.TabIndex = 0;
+            this.tbUploadNewImage.Text = "Tải ảnh lên (Cũ - Sai)";
+            this.tbUploadNewImage.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Red;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(329, 21);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Tải ảnh lên";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // formPlayerInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -557,8 +570,8 @@
             this.Text = "formPlayerInformation";
             this.panel1.ResumeLayout(false);
             this.pnlPlayerAvatar.ResumeLayout(false);
+            this.pnlPlayerAvatar.PerformLayout();
             this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -590,7 +603,6 @@
         private System.Windows.Forms.Panel panel6;
         private FontAwesome.Sharp.IconButton btnEdit;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox tbUploadNewImage;
         private FontAwesome.Sharp.IconButton btnDelete;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel13;
@@ -602,5 +614,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbUploadNewImage;
+        private System.Windows.Forms.Label label7;
     }
 }

@@ -49,7 +49,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lbSan = new System.Windows.Forms.Label();
             this.dateTimeMatch = new System.Windows.Forms.DateTimePicker();
-            this.lbThoiGian = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lbVongDau = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -71,7 +70,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
             this.btFix = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
             this.btDelete = new System.Windows.Forms.Button();
             this.btAdd = new System.Windows.Forms.Button();
             this.btSave = new FontAwesome.Sharp.IconButton();
@@ -87,6 +85,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbbNameTeam = new System.Windows.Forms.ComboBox();
             this.lbNameOfPlayer = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
+            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -101,9 +109,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoalTeam1)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbMinute)).BeginInit();
+            this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
+            this.panel18.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -226,13 +236,14 @@
             // 
             // lbTenDoi2
             // 
-            this.lbTenDoi2.AutoSize = true;
+            this.lbTenDoi2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTenDoi2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenDoi2.Location = new System.Drawing.Point(47, 19);
+            this.lbTenDoi2.Location = new System.Drawing.Point(0, 0);
             this.lbTenDoi2.Name = "lbTenDoi2";
-            this.lbTenDoi2.Size = new System.Drawing.Size(102, 25);
+            this.lbTenDoi2.Size = new System.Drawing.Size(162, 46);
             this.lbTenDoi2.TabIndex = 0;
             this.lbTenDoi2.Text = "Ten doi 2";
+            this.lbTenDoi2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel7
             // 
@@ -246,20 +257,19 @@
             // 
             // lbTenDoi1
             // 
-            this.lbTenDoi1.AutoSize = true;
+            this.lbTenDoi1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTenDoi1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenDoi1.Location = new System.Drawing.Point(32, 19);
+            this.lbTenDoi1.Location = new System.Drawing.Point(0, 0);
             this.lbTenDoi1.Name = "lbTenDoi1";
-            this.lbTenDoi1.Size = new System.Drawing.Size(93, 25);
+            this.lbTenDoi1.Size = new System.Drawing.Size(162, 46);
             this.lbTenDoi1.TabIndex = 0;
             this.lbTenDoi1.Text = "TenDoi1";
+            this.lbTenDoi1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.panel4);
-            this.panel6.Controls.Add(this.dateTimeMatch);
-            this.panel6.Controls.Add(this.lbThoiGian);
-            this.panel6.Controls.Add(this.panel3);
+            this.panel6.Controls.Add(this.panel17);
+            this.panel6.Controls.Add(this.panel16);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel6.Location = new System.Drawing.Point(167, 123);
             this.panel6.Name = "panel6";
@@ -269,67 +279,54 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.guna2TextBox2);
             this.panel4.Controls.Add(this.lbSan);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(265, 0);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(268, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(275, 44);
+            this.panel4.Size = new System.Drawing.Size(275, 46);
             this.panel4.TabIndex = 8;
             // 
             // lbSan
             // 
-            this.lbSan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbSan.AutoSize = true;
+            this.lbSan.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbSan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSan.Location = new System.Drawing.Point(3, 11);
+            this.lbSan.Location = new System.Drawing.Point(0, 0);
             this.lbSan.Name = "lbSan";
-            this.lbSan.Size = new System.Drawing.Size(46, 20);
+            this.lbSan.Size = new System.Drawing.Size(46, 44);
             this.lbSan.TabIndex = 0;
             this.lbSan.Text = "Sân: ";
+            this.lbSan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // dateTimeMatch
             // 
             this.dateTimeMatch.Enabled = false;
-            this.dateTimeMatch.Location = new System.Drawing.Point(164, 49);
+            this.dateTimeMatch.Location = new System.Drawing.Point(391, 6);
             this.dateTimeMatch.Name = "dateTimeMatch";
-            this.dateTimeMatch.Size = new System.Drawing.Size(233, 20);
+            this.dateTimeMatch.Size = new System.Drawing.Size(143, 20);
             this.dateTimeMatch.TabIndex = 6;
-            // 
-            // lbThoiGian
-            // 
-            this.lbThoiGian.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbThoiGian.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbThoiGian.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.lbThoiGian.Location = new System.Drawing.Point(0, 44);
-            this.lbThoiGian.Name = "lbThoiGian";
-            this.lbThoiGian.Size = new System.Drawing.Size(540, 33);
-            this.lbThoiGian.TabIndex = 3;
-            this.lbThoiGian.Text = "Ngày:";
-            this.lbThoiGian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.guna2NumericUpDown1);
             this.panel3.Controls.Add(this.lbVongDau);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(268, 44);
+            this.panel3.Size = new System.Drawing.Size(268, 46);
             this.panel3.TabIndex = 7;
             // 
             // lbVongDau
             // 
-            this.lbVongDau.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbVongDau.AutoSize = true;
+            this.lbVongDau.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbVongDau.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbVongDau.Location = new System.Drawing.Point(2, 11);
+            this.lbVongDau.Location = new System.Drawing.Point(0, 0);
             this.lbVongDau.Name = "lbVongDau";
-            this.lbVongDau.Size = new System.Drawing.Size(50, 18);
+            this.lbVongDau.Size = new System.Drawing.Size(73, 44);
             this.lbVongDau.TabIndex = 0;
             this.lbVongDau.Text = "Vòng: ";
+            this.lbVongDau.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
@@ -373,6 +370,7 @@
             // panel11
             // 
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel11.Controls.Add(this.panel18);
             this.panel11.Controls.Add(this.dgvGoalTeam2);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel11.Location = new System.Drawing.Point(440, 0);
@@ -580,9 +578,9 @@
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.panel15);
+            this.panel12.Controls.Add(this.iconButton2);
             this.panel12.Controls.Add(this.panel14);
-            this.panel12.Controls.Add(this.btAdd);
+            this.panel12.Controls.Add(this.iconButton1);
             this.panel12.Controls.Add(this.btSave);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel12.Location = new System.Drawing.Point(0, 625);
@@ -593,8 +591,7 @@
             // panel15
             // 
             this.panel15.Controls.Add(this.btFix);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel15.Location = new System.Drawing.Point(209, 0);
+            this.panel15.Location = new System.Drawing.Point(229, 119);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(122, 36);
             this.panel15.TabIndex = 5;
@@ -612,21 +609,11 @@
             this.btFix.UseVisualStyleBackColor = false;
             this.btFix.Click += new System.EventHandler(this.btFix_Click);
             // 
-            // panel14
-            // 
-            this.panel14.Controls.Add(this.btDelete);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(75, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(134, 36);
-            this.panel14.TabIndex = 4;
-            // 
             // btDelete
             // 
             this.btDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btDelete.Dock = System.Windows.Forms.DockStyle.Right;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btDelete.Location = new System.Drawing.Point(40, 0);
+            this.btDelete.Location = new System.Drawing.Point(129, 116);
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(94, 36);
             this.btDelete.TabIndex = 2;
@@ -637,9 +624,8 @@
             // btAdd
             // 
             this.btAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btAdd.Dock = System.Windows.Forms.DockStyle.Left;
             this.btAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAdd.Location = new System.Drawing.Point(0, 0);
+            this.btAdd.Location = new System.Drawing.Point(34, 116);
             this.btAdd.Name = "btAdd";
             this.btAdd.Size = new System.Drawing.Size(75, 36);
             this.btAdd.TabIndex = 1;
@@ -672,17 +658,6 @@
             // panel13
             // 
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel13.Controls.Add(this.nbMinute);
-            this.panel13.Controls.Add(this.tbSTT);
-            this.panel13.Controls.Add(this.label5);
-            this.panel13.Controls.Add(this.label4);
-            this.panel13.Controls.Add(this.label3);
-            this.panel13.Controls.Add(this.cbbTypeGoal);
-            this.panel13.Controls.Add(this.label2);
-            this.panel13.Controls.Add(this.cbbNamePlayer);
-            this.panel13.Controls.Add(this.label1);
-            this.panel13.Controls.Add(this.cbbNameTeam);
-            this.panel13.Controls.Add(this.lbNameOfPlayer);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel13.Location = new System.Drawing.Point(0, 525);
             this.panel13.Name = "panel13";
@@ -704,7 +679,7 @@
             this.nbMinute.FocusedState.Parent = this.nbMinute;
             this.nbMinute.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nbMinute.ForeColor = System.Drawing.Color.Black;
-            this.nbMinute.Location = new System.Drawing.Point(330, 59);
+            this.nbMinute.Location = new System.Drawing.Point(330, 66);
             this.nbMinute.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.nbMinute.Minimum = new decimal(new int[] {
             1,
@@ -713,7 +688,7 @@
             0});
             this.nbMinute.Name = "nbMinute";
             this.nbMinute.ShadowDecoration.Parent = this.nbMinute;
-            this.nbMinute.Size = new System.Drawing.Size(35, 16);
+            this.nbMinute.Size = new System.Drawing.Size(10, 16);
             this.nbMinute.TabIndex = 9;
             this.nbMinute.UpDownButtonFillColor = System.Drawing.Color.White;
             this.nbMinute.Value = new decimal(new int[] {
@@ -725,9 +700,9 @@
             // tbSTT
             // 
             this.tbSTT.Enabled = false;
-            this.tbSTT.Location = new System.Drawing.Point(99, 4);
+            this.tbSTT.Location = new System.Drawing.Point(99, 11);
             this.tbSTT.Name = "tbSTT";
-            this.tbSTT.Size = new System.Drawing.Size(30, 20);
+            this.tbSTT.Size = new System.Drawing.Size(10, 20);
             this.tbSTT.TabIndex = 9;
             this.tbSTT.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.tbSTT.TextChanged += new System.EventHandler(this.tbSTT_TextChanged);
@@ -735,7 +710,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(369, 59);
+            this.label5.Location = new System.Drawing.Point(369, 66);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(29, 13);
             this.label5.TabIndex = 10;
@@ -744,7 +719,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 4);
+            this.label4.Location = new System.Drawing.Point(6, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(28, 13);
             this.label4.TabIndex = 8;
@@ -753,7 +728,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(226, 63);
+            this.label3.Location = new System.Drawing.Point(226, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 13);
             this.label3.TabIndex = 6;
@@ -763,15 +738,15 @@
             // 
             this.cbbTypeGoal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbTypeGoal.FormattingEnabled = true;
-            this.cbbTypeGoal.Location = new System.Drawing.Point(330, 32);
+            this.cbbTypeGoal.Location = new System.Drawing.Point(330, 39);
             this.cbbTypeGoal.Name = "cbbTypeGoal";
-            this.cbbTypeGoal.Size = new System.Drawing.Size(121, 21);
+            this.cbbTypeGoal.Size = new System.Drawing.Size(69, 21);
             this.cbbTypeGoal.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(226, 40);
+            this.label2.Location = new System.Drawing.Point(226, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(78, 13);
             this.label2.TabIndex = 4;
@@ -781,15 +756,15 @@
             // 
             this.cbbNamePlayer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNamePlayer.FormattingEnabled = true;
-            this.cbbNamePlayer.Location = new System.Drawing.Point(99, 58);
+            this.cbbNamePlayer.Location = new System.Drawing.Point(99, 65);
             this.cbbNamePlayer.Name = "cbbNamePlayer";
-            this.cbbNamePlayer.Size = new System.Drawing.Size(121, 21);
+            this.cbbNamePlayer.Size = new System.Drawing.Size(69, 21);
             this.cbbNamePlayer.TabIndex = 3;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 66);
+            this.label1.Location = new System.Drawing.Point(3, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 2;
@@ -799,20 +774,190 @@
             // 
             this.cbbNameTeam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbNameTeam.FormattingEnabled = true;
-            this.cbbNameTeam.Location = new System.Drawing.Point(99, 30);
+            this.cbbNameTeam.Location = new System.Drawing.Point(99, 37);
             this.cbbNameTeam.Name = "cbbNameTeam";
-            this.cbbNameTeam.Size = new System.Drawing.Size(121, 21);
+            this.cbbNameTeam.Size = new System.Drawing.Size(69, 21);
             this.cbbNameTeam.TabIndex = 1;
             this.cbbNameTeam.SelectedIndexChanged += new System.EventHandler(this.cbbNameTeam_SelectedIndexChanged);
             // 
             // lbNameOfPlayer
             // 
             this.lbNameOfPlayer.AutoSize = true;
-            this.lbNameOfPlayer.Location = new System.Drawing.Point(3, 35);
+            this.lbNameOfPlayer.Location = new System.Drawing.Point(3, 42);
             this.lbNameOfPlayer.Name = "lbNameOfPlayer";
             this.lbNameOfPlayer.Size = new System.Drawing.Size(50, 13);
             this.lbNameOfPlayer.TabIndex = 0;
             this.lbNameOfPlayer.Text = "Đội bóng";
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.guna2DateTimePicker1);
+            this.panel16.Controls.Add(this.label6);
+            this.panel16.Controls.Add(this.dateTimeMatch);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel16.Location = new System.Drawing.Point(0, 46);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(540, 31);
+            this.panel16.TabIndex = 9;
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.BorderThickness = 0;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Location = new System.Drawing.Point(46, 0);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "Sân vận động";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
+            this.guna2TextBox2.Size = new System.Drawing.Size(227, 44);
+            this.guna2TextBox2.TabIndex = 2;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.panel4);
+            this.panel17.Controls.Add(this.panel3);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(540, 46);
+            this.panel17.TabIndex = 10;
+            // 
+            // guna2NumericUpDown1
+            // 
+            this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2NumericUpDown1.BorderThickness = 0;
+            this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2NumericUpDown1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2NumericUpDown1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2NumericUpDown1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2NumericUpDown1.DisabledState.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.DisabledState.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(177)))), ((int)(((byte)(177)))));
+            this.guna2NumericUpDown1.DisabledState.UpDownButtonForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(203)))), ((int)(((byte)(203)))));
+            this.guna2NumericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2NumericUpDown1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2NumericUpDown1.FocusedState.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2NumericUpDown1.ForeColor = System.Drawing.Color.Black;
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(73, 0);
+            this.guna2NumericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
+            this.guna2NumericUpDown1.ShadowDecoration.Parent = this.guna2NumericUpDown1;
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(114, 44);
+            this.guna2NumericUpDown1.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(73, 31);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Thời gian:";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // guna2DateTimePicker1
+            // 
+            this.guna2DateTimePicker1.CheckedState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
+            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.guna2DateTimePicker1.HoverState.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(73, 0);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
+            this.guna2DateTimePicker1.ShadowDecoration.Parent = this.guna2DateTimePicker1;
+            this.guna2DateTimePicker1.Size = new System.Drawing.Size(242, 31);
+            this.guna2DateTimePicker1.TabIndex = 8;
+            this.guna2DateTimePicker1.Value = new System.DateTime(2021, 6, 25, 21, 56, 37, 857);
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.DarkGray;
+            this.panel18.Controls.Add(this.btAdd);
+            this.panel18.Controls.Add(this.btDelete);
+            this.panel18.Controls.Add(this.panel15);
+            this.panel18.Controls.Add(this.nbMinute);
+            this.panel18.Controls.Add(this.cbbNameTeam);
+            this.panel18.Controls.Add(this.tbSTT);
+            this.panel18.Controls.Add(this.lbNameOfPlayer);
+            this.panel18.Controls.Add(this.label5);
+            this.panel18.Controls.Add(this.label1);
+            this.panel18.Controls.Add(this.label4);
+            this.panel18.Controls.Add(this.cbbNamePlayer);
+            this.panel18.Controls.Add(this.label3);
+            this.panel18.Controls.Add(this.label2);
+            this.panel18.Controls.Add(this.cbbTypeGoal);
+            this.panel18.Location = new System.Drawing.Point(3, 56);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(418, 158);
+            this.panel18.TabIndex = 2;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 25;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(99, 36);
+            this.iconButton1.TabIndex = 1;
+            this.iconButton1.Text = "Thêm";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(99, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(28, 36);
+            this.panel14.TabIndex = 2;
+            // 
+            // iconButton2
+            // 
+            this.iconButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.iconButton2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton2.FlatAppearance.BorderSize = 0;
+            this.iconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.iconButton2.ForeColor = System.Drawing.Color.White;
+            this.iconButton2.IconChar = FontAwesome.Sharp.IconChar.Rev;
+            this.iconButton2.IconColor = System.Drawing.Color.White;
+            this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton2.IconSize = 25;
+            this.iconButton2.Location = new System.Drawing.Point(127, 0);
+            this.iconButton2.Name = "iconButton2";
+            this.iconButton2.Size = new System.Drawing.Size(99, 36);
+            this.iconButton2.TabIndex = 3;
+            this.iconButton2.Text = "Thêm";
+            this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton2.UseVisualStyleBackColor = false;
             // 
             // formDetailsResult
             // 
@@ -831,14 +976,10 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoalTeam2)).EndInit();
@@ -846,10 +987,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoalTeam1)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nbMinute)).EndInit();
+            this.panel16.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -898,10 +1041,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lbSan;
-        private System.Windows.Forms.Label lbThoiGian;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lbVongDau;
-        private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Button btFix;
         private System.Windows.Forms.TextBox tbSTT;
@@ -909,5 +1050,15 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label nbTeam2;
         private System.Windows.Forms.Label nbTeam1;
+        private System.Windows.Forms.Panel panel17;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown guna2NumericUpDown1;
+        private System.Windows.Forms.Panel panel16;
+        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel18;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private System.Windows.Forms.Panel panel14;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }
