@@ -10,7 +10,7 @@ namespace NationalFootballChampionshipManagement.DAO
 {
     public class DataProvider
     {
-        private string connectionSTR = "Data Source=.\\sqlexpress;Initial Catalog=NFCM;Integrated Security=True";
+        private string connectionSTR = "Data Source=DESKTOP-77359PP;Initial Catalog=NFCM;Integrated Security=True";
 
         private static DataProvider instance;
 

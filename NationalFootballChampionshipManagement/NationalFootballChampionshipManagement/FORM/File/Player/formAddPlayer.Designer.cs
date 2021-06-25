@@ -52,7 +52,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
             this.pnlPlayerAvatar = new System.Windows.Forms.Panel();
             this.btnLoadImage = new FontAwesome.Sharp.IconButton();
             this.pbPlayerImage = new System.Windows.Forms.PictureBox();
@@ -67,7 +66,6 @@
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.pnlPlayerAvatar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayerImage)).BeginInit();
             this.panel1.SuspendLayout();
@@ -86,7 +84,7 @@
             // 
             this.cbGender.BackColor = System.Drawing.Color.Transparent;
             this.cbGender.BorderThickness = 0;
-            this.cbGender.Dock = System.Windows.Forms.DockStyle.Left;
+            this.cbGender.Dock = System.Windows.Forms.DockStyle.Right;
             this.cbGender.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGender.FocusedColor = System.Drawing.Color.Empty;
@@ -100,7 +98,7 @@
             "Nam",
             "Nữ"});
             this.cbGender.ItemsAppearance.Parent = this.cbGender;
-            this.cbGender.Location = new System.Drawing.Point(0, 0);
+            this.cbGender.Location = new System.Drawing.Point(1, 0);
             this.cbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbGender.Name = "cbGender";
             this.cbGender.ShadowDecoration.Parent = this.cbGender;
@@ -177,6 +175,7 @@
             this.dtpBirthday.ShadowDecoration.Parent = this.dtpBirthday;
             this.dtpBirthday.Size = new System.Drawing.Size(449, 66);
             this.dtpBirthday.TabIndex = 6;
+            this.dtpBirthday.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.dtpBirthday.Value = new System.DateTime(2021, 6, 7, 15, 23, 56, 230);
             // 
             // panel5
@@ -445,26 +444,12 @@
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.label7);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(0, 588);
             this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(436, 26);
             this.panel11.TabIndex = 0;
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(436, 26);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Tải ảnh lên";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlPlayerAvatar
             // 
@@ -489,15 +474,15 @@
             this.btnLoadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoadImage.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnLoadImage.ForeColor = System.Drawing.Color.White;
-            this.btnLoadImage.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
+            this.btnLoadImage.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.btnLoadImage.IconColor = System.Drawing.Color.White;
             this.btnLoadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLoadImage.IconSize = 30;
             this.btnLoadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoadImage.Location = new System.Drawing.Point(0, 539);
+            this.btnLoadImage.Location = new System.Drawing.Point(0, 546);
             this.btnLoadImage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoadImage.Name = "btnLoadImage";
-            this.btnLoadImage.Size = new System.Drawing.Size(436, 49);
+            this.btnLoadImage.Size = new System.Drawing.Size(436, 42);
             this.btnLoadImage.TabIndex = 6;
             this.btnLoadImage.Text = "Tải ảnh lên";
             this.btnLoadImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -624,7 +609,6 @@
             this.panel10.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.pnlPlayerAvatar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPlayerImage)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -661,7 +645,6 @@
         private FontAwesome.Sharp.IconButton btnDelete;
         private FontAwesome.Sharp.IconButton btnLoadImage;
         private System.Windows.Forms.PictureBox pbPlayerImage;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel13;
         private Guna.UI2.WinForms.Guna2TextBox tbNote;
         private System.Windows.Forms.Panel panel12;
