@@ -326,5 +326,18 @@ namespace NationalFootballChampionshipManagement
         {
             this.formFather.openChildForm(new formHome(this.formFather));
         }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dgvRanking.Rows.Count > 0 )
+            {
+                ExportDatagridViewToPDF toPDF = new ExportDatagridViewToPDF(dgvRanking);
+                toPDF.Export("BXH" + LeagueDAO.Instance.GetCurrLeagueName(), "Bảng xếp hạng");
+            }
+            else
+            {
+                MessageBox.Show("Không có thông tin để in");
+            }
+        }
     }
 }
