@@ -36,6 +36,8 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlFill = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPrint = new FontAwesome.Sharp.IconButton();
             this.dgvRanking = new Guna.UI2.WinForms.Guna2DataGridView();
             this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCLB = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,13 +50,11 @@
             this.colCoefficient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colScores = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col5History = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPrint = new FontAwesome.Sharp.IconButton();
             this.pnlTitle.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlFill.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRanking)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRanking)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTitle
@@ -64,8 +64,9 @@
             this.pnlTitle.Controls.Add(this.btnClose);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(874, 70);
+            this.pnlTitle.Size = new System.Drawing.Size(1165, 86);
             this.pnlTitle.TabIndex = 0;
             // 
             // lTitle
@@ -73,9 +74,10 @@
             this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Location = new System.Drawing.Point(57, 0);
+            this.lTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(831, 70);
+            this.lTitle.Size = new System.Drawing.Size(1108, 86);
             this.lTitle.TabIndex = 7;
             this.lTitle.Text = "Bảng xếp hạng";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -92,8 +94,9 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(43, 70);
+            this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -102,9 +105,10 @@
             // 
             this.panel4.Controls.Add(this.pnlFill);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 70);
+            this.panel4.Location = new System.Drawing.Point(0, 86);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(874, 591);
+            this.panel4.Size = new System.Drawing.Size(1165, 728);
             this.panel4.TabIndex = 1;
             // 
             // pnlFill
@@ -113,9 +117,43 @@
             this.pnlFill.Controls.Add(this.dgvRanking);
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Location = new System.Drawing.Point(0, 0);
+            this.pnlFill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlFill.Name = "pnlFill";
-            this.pnlFill.Size = new System.Drawing.Size(874, 591);
+            this.pnlFill.Size = new System.Drawing.Size(1165, 728);
             this.pnlFill.TabIndex = 3;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 679);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1165, 49);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Underline);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnPrint.IconColor = System.Drawing.Color.White;
+            this.btnPrint.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrint.IconSize = 30;
+            this.btnPrint.Location = new System.Drawing.Point(1032, 0);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(133, 49);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.Text = "In";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // dgvRanking
             // 
@@ -161,13 +199,14 @@
             this.dgvRanking.EnableHeadersVisualStyles = false;
             this.dgvRanking.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRanking.Location = new System.Drawing.Point(0, 0);
+            this.dgvRanking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRanking.Name = "dgvRanking";
             this.dgvRanking.ReadOnly = true;
             this.dgvRanking.RowHeadersVisible = false;
             this.dgvRanking.RowHeadersWidth = 51;
             this.dgvRanking.RowTemplate.Height = 30;
             this.dgvRanking.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRanking.Size = new System.Drawing.Size(874, 591);
+            this.dgvRanking.Size = new System.Drawing.Size(1165, 728);
             this.dgvRanking.TabIndex = 0;
             this.dgvRanking.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvRanking.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -279,53 +318,24 @@
             this.col5History.Name = "col5History";
             this.col5History.ReadOnly = true;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.btnPrint);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 551);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 40);
-            this.panel1.TabIndex = 1;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Underline);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.btnPrint.IconColor = System.Drawing.Color.White;
-            this.btnPrint.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrint.IconSize = 30;
-            this.btnPrint.Location = new System.Drawing.Point(774, 0);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(100, 40);
-            this.btnPrint.TabIndex = 0;
-            this.btnPrint.Text = "In";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            // 
             // formRanking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(874, 661);
+            this.ClientSize = new System.Drawing.Size(1165, 814);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formRanking";
             this.Text = "formRanking";
             this.pnlTitle.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.pnlFill.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRanking)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRanking)).EndInit();
             this.ResumeLayout(false);
 
         }

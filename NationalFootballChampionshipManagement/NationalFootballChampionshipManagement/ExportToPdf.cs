@@ -17,14 +17,14 @@ namespace NationalFootballChampionshipManagement
         {
             this.dataGridView = dataGridView;
         }
-        public void Export(string filename)
+        public void Export(string filename, string header)
         {
             //Add Header
-            BaseFont bff = BaseFont.CreateFont(Environment.GetEnvironmentVariable("windir") + @"\\font\times.ttf", BaseFont.IDENTITY_H, true);
+            BaseFont bff = BaseFont.CreateFont(Environment.GetEnvironmentVariable("windir") + @"\\fonts\times.ttf", BaseFont.IDENTITY_H, true);
             Font NormalFont = new iTextSharp.text.Font(bff, 15, Font.NORMAL);
             Paragraph prgHeading = new Paragraph();
             prgHeading.Alignment = Element.ALIGN_CENTER;
-            string strHeader = "danh sách cầu thủ";
+            string strHeader = header;
             prgHeading.Add(new Chunk(strHeader.ToUpper(), NormalFont));
 
 

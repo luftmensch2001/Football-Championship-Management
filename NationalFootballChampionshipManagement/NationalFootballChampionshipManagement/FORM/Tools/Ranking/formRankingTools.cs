@@ -52,7 +52,7 @@ namespace NationalFootballChampionshipManagement
         {
             selectedRowIndex = e.RowIndex;
         }
-        private void btUp_Click(object sender, EventArgs e)
+        private void btnUp_Click(object sender, EventArgs e)
         {
             if (selectedRowIndex < 1 || selectedRowIndex >= dgvRankingRule.Rows.Count)
             {
@@ -66,7 +66,8 @@ namespace NationalFootballChampionshipManagement
             dgvRankingRule.Rows[selectedRowIndex - 1].Selected = true;
             selectedRowIndex--;
         }
-        private void btDown_Click(object sender, EventArgs e)
+
+        private void btnDown_Click(object sender, EventArgs e)
         {
             if (selectedRowIndex < 0 || selectedRowIndex >= dgvRankingRule.Rows.Count - 1)
             {
@@ -103,5 +104,7 @@ namespace NationalFootballChampionshipManagement
                 MessageBox.Show("Có lỗi trong quá trình cập nhật thứ tự \nVui lòng tạo lại giải đấu nếu bị trùng lặp điều kiện", "Lỗi nghiêm trọng");
             }
         }
+
+
     }
 }

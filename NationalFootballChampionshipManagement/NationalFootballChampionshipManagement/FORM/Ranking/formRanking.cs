@@ -32,7 +32,6 @@ namespace NationalFootballChampionshipManagement
 
             this.formFather = f;
 
-            addColumnsToDatagridviews();
             InitListTeam();
             CaculateDetails();
             CaculateRanking();
@@ -128,7 +127,7 @@ namespace NationalFootballChampionshipManagement
                     if (team1.Pts == team2.Pts)
                         return 0;
                     if (team1.Pts < team2.Pts)
-                        return 2;
+                        return 2; 
                     break;
                 case GD:
                     if (team1.GD == team2.GD)
@@ -192,139 +191,23 @@ namespace NationalFootballChampionshipManagement
             }
             return 1;
         }
-        private void addColumnsToDatagridviews()
-        {
-            return;
-            //this.dgvRanking.AutoSize = false;
-
-            this.dgvRanking.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
-
-            // Câu lạc bộ
-            DataGridViewColumn newCol = new DataGridViewColumn();
-            DataGridViewCell cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "Câu lạc bộ";
-            newCol.Name = "colCLB";
-            newCol.Visible = true;
-            newCol.Width = 200;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-
-            // Trận
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "Trận";
-            newCol.Name = "colMatches";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-
-            // Thắng
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "Thắng";
-            newCol.Name = "colWin";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-            // Hòa
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "Hòa";
-            newCol.Name = "colEqual";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-            // Thua
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "Thua";
-            newCol.Name = "colLose";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-            // Số bàn thắng
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "B.Thắng";
-            newCol.Name = "colGoalsFor";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-            // Số bàn thua
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "B.Thua";
-            newCol.Name = "colGoalsAgainst";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-            // Hệ số
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "Hiệu Số";
-            newCol.Name = "colGoalsDifference";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-            // Điểm
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "Điểm";
-            newCol.Name = "colPoints";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-
-            // 5 trận gần nhất
-            newCol = new DataGridViewColumn();
-            cell = new DataGridViewTextBoxCell();
-            newCol.CellTemplate = cell;
-
-            newCol.HeaderText = "5 trận gần nhất";
-            newCol.Name = "colFiveLatestMatches";
-            newCol.Visible = true;
-            newCol.Width = 10;
-
-            this.dgvRanking.Columns.Add(newCol);
-        }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.formFather.openChildForm(new formHome(this.formFather));
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            if (dgvRanking.Rows.Count > 0)
+            {
+                ExportDatagridViewToPDF toPDF = new ExportDatagridViewToPDF(dgvRanking);
+                toPDF.Export("BXH" + LeagueDAO.Instance.GetCurrLeagueName(), "Bảng xếp hạng");
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để in");
+            }
         }
     }
 }

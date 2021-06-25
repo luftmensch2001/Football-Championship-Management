@@ -179,8 +179,15 @@ namespace NationalFootballChampionshipManagement
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            ExportDatagridViewToPDF toPDF = new ExportDatagridViewToPDF(dgvPlayerList);
-            toPDF.Export("ListPlayer");
+            if (dgvPlayerList.Rows.Count > 0)
+            {
+                ExportDatagridViewToPDF toPDF = new ExportDatagridViewToPDF(dgvPlayerList);
+                toPDF.Export("Danh sách cầu thủ", "Danh sách cầu thủ");
+            }
+            else
+            {
+                MessageBox.Show("Không có dữ liệu để in");
+            }
         }
     }
 }
