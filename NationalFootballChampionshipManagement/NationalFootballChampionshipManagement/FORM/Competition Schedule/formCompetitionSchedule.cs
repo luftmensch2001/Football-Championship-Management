@@ -128,7 +128,7 @@ namespace NationalFootballChampionshipManagement
             
             try
             {
-                ScheduleDAO.Instance.GenerateNewSchedule();
+                if (ScheduleDAO.Instance.GenerateNewSchedule() == 0) return;
                 LoadDgv(MatchDAO.Instance.GetAllMatches());
                 LoadRadioButton();
                 btnCancelSchedule.Enabled = true;

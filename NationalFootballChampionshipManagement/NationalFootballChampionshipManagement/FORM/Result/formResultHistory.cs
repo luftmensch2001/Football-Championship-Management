@@ -32,12 +32,12 @@ namespace NationalFootballChampionshipManagement
             this.formFather = f;
             addInformationColumn();
 
-
+            dgvResult.RowTemplate.Height = 30;
+            dgvResult.AllowUserToResizeRows = false;
 
             listResultMatch = ResultMatchDAO.Instance.LoadResultMatch();
 
             listNameTeam = TeamDAO.Instance.GetNameAndIdTeam();
-
 
             GetListTeamName();
             LoadRound();

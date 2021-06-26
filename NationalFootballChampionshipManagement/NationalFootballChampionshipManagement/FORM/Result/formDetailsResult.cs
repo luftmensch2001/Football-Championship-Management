@@ -21,7 +21,7 @@ namespace NationalFootballChampionshipManagement
         Team Team2 = new Team();
 
 
-        
+
         List<Player> listPlayerTeam1 = new List<Player>();
         List<Player> listPlayerTeam2 = new List<Player>();
         List<Goal> listGoal = new List<Goal>();
@@ -206,9 +206,7 @@ namespace NationalFootballChampionshipManagement
         }
         private void btAdd_Click(object sender, EventArgs e)
         {
-            if (cbbNamePlayer.Text == "" || cbbNameTeam.Text == "" || cbbTypeGoal.Text == "" || cbbTypeGoal.Text == "")
-                MessageBox.Show("Vui lòng nhập đủ thông tin", "Lỗi thiếu thông tin");
-            else
+            if (CheckInputInfo())
             {
                 if (cbbNameTeam.SelectedIndex == 0)
                 {
@@ -236,22 +234,40 @@ namespace NationalFootballChampionshipManagement
                 if (cbbNameTeam.SelectedIndex == 0)
                 {
                     int rowIndex = dgvGoalTeam1.CurrentCell.RowIndex;
+                    foreach (DataGridViewRow row in dgvGoalTeam1.Rows)
+                    {
+                        if (Int32.Parse(row.Cells[0].Value.ToString()) > Int32.Parse(dgvGoalTeam1.Rows[rowIndex].Cells[0].Value.ToString()))
+                        {
+                            row.Cells[0].Value = Int32.Parse(row.Cells[0].Value.ToString()) - 1;
+                        }
+                    }
+
                     int index = Int32.Parse(dgvGoalTeam1.Rows[rowIndex].Cells[0].Value.ToString()) - 1;
                     if (listGoal1[index].IdBanThang != -1)
                         listIDGoalDelete.Add(listGoal1[index].IdBanThang);
+                    listGoal1.RemoveAt(index);
                     dgvGoalTeam1.Rows.RemoveAt(rowIndex);
                     Reset();
-                    AutoId(dgvGoalTeam1);
+                    //AutoId(dgvGoalTeam1);
                 }
                 else
                 {
                     int rowIndex = dgvGoalTeam2.CurrentCell.RowIndex;
+                    foreach (DataGridViewRow row in dgvGoalTeam2.Rows)
+                    {
+                        if (Int32.Parse(row.Cells[0].Value.ToString()) > Int32.Parse(dgvGoalTeam2.Rows[rowIndex].Cells[0].Value.ToString()))
+                        {
+                            row.Cells[0].Value = Int32.Parse(row.Cells[0].Value.ToString()) - 1;
+                        }
+                    }
+
                     int index = Int32.Parse(dgvGoalTeam2.Rows[rowIndex].Cells[0].Value.ToString()) - 1;
                     if (listGoal2[index].IdBanThang != -1)
                         listIDGoalDelete.Add(listGoal2[index].IdBanThang);
+                    listGoal2.RemoveAt(index);
                     dgvGoalTeam2.Rows.RemoveAt(rowIndex);
                     Reset();
-                    AutoId(dgvGoalTeam2);
+                    //AutoId(dgvGoalTeam2);
                 }
                 EditGoalNumber();
                 MessageBox.Show("Xóa bàn thắng thành công");
@@ -262,7 +278,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btFix_Click(object sender, EventArgs e)
         {
-            if (tbSTT.Text != "" && !(cbbNamePlayer.Text == "" || cbbNameTeam.Text == "" || cbbTypeGoal.Text == "" || cbbTypeGoal.Text == ""))
+            if (tbSTT.Text != "" && CheckInputInfo())
             {
                 if (cbbNameTeam.SelectedIndex == 0)
                 {
@@ -289,7 +305,30 @@ namespace NationalFootballChampionshipManagement
                 isChanged = true;
             }
         }
-
+        bool CheckInputInfo()
+        {
+            if (cbbNameTeam.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên đội bóng", "Lỗi thiếu thông tin");
+                return false;
+            }
+            if (cbbNamePlayer.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên cầu thủ", "Lỗi thiếu thông tin");
+                return false;
+            }
+            if (cbbTypeGoal.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập loại bàn thắng", "Lỗi thiếu thông tin");
+                return false;
+            }
+            if (nbMinute.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập thời gian ghi bàn", "Lỗi thiếu thông tin");
+                return false;
+            }
+            return true;
+        }
         private void btSave_Click(object sender, EventArgs e)
         {
             if (Save())

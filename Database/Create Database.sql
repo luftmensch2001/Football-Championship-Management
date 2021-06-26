@@ -8,18 +8,6 @@ SET DATEFORMAT DMY
 GO
 
 ------------------------------------------
-CREATE TABLE PhanMem
-(
-	A INT,
-	B INT,
-	C INT,
-	Language INT,
-	X INT,
-	Y INT,
-	Z INT
-)
-GO
-
 
 CREATE TABLE MuaGiai
 (
@@ -214,34 +202,4 @@ CREATE TABLE QuyDinhXepHang
 )
 GO
 
- -- INSERT DATA TO DEBUG
-INSERT INTO MuaGiai(TenMG, Nam, MuaGiaiHienTai)
-VALUES (N'Mùa giải 2021', 2021, 1)
-GO
 
--- QuyDinh
-
-INSERT INTO QuyDinh(IDMG)
-VALUES (1)
-
--- QuyDinhDiemSo 
-
-INSERT INTO QuyDinhDiemSo(IDMG) 
-VALUES (1)
-
- -- QuyDinhXepHang Default
-
-INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-VALUES (N'Điểm', 1, 1)
-
-INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-VALUES (N'Hiệu số đối đầu', 2, 1)
-
-INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-VALUES (N'Hiệu số bàn thắng', 3, 1)
-
-INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-VALUES (N'Tổng số bàn thắng', 4, 1)
-
-INSERT INTO QuyDinhXepHang(Ten, ThuTuUuTien, IDMG)
-VALUES (N'Tổng số trận thắng', 5, 1)

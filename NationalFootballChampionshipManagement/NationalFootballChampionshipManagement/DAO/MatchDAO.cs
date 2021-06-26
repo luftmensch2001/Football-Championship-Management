@@ -33,7 +33,6 @@ namespace NationalFootballChampionshipManagement.DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery("EXEC USP_GetNewIdTranDau @MuaGiai =" + idmg.ToString());
             int newIDTranDau = (int)data.Rows[0][0];
-            MessageBox.Show(newIDTranDau.ToString());
             ResultMatchDAO.Instance.AddMatch(newIDTranDau);
         }
 
