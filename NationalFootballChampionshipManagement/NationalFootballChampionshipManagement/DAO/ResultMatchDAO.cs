@@ -27,8 +27,9 @@ namespace NationalFootballChampionshipManagement.DAO
         }
         public List<ResultMatch> LoadResultMatch()
         {
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
             List<ResultMatch> listResultMatch = new List<ResultMatch>();
-            DataTable dataTable = DataProvider.Instance.ExecuteQuery("EXEC USP_LoadResultMatch");
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery("EXEC USP_LoadResultMatch @idmg ="+ idmg.ToString());
             foreach (DataRow item in dataTable.Rows)
             {
                 ResultMatch resultMatch = new ResultMatch(item);
@@ -58,7 +59,8 @@ namespace NationalFootballChampionshipManagement.DAO
         }
         public void DeleteAllResultMatch()
         {
-            DataProvider.Instance.ExecuteQuery("Delete from KetQuaThiDau");
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+            DataProvider.Instance.ExecuteQuery("Delete from KetQuaThiDau Where IDMG");
         }
     }
 }

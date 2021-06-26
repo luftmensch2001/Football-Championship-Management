@@ -189,7 +189,8 @@ END
 GO
 
 -- ResultMatch--------------------------------------------------------------------------------------------
-CREATE proc USP_LoadResultMatch
+Create proc USP_LoadResultMatch
+@Idmg int 
 AS
 BEGIN
 	SELECT DISTINCT * FROM 
@@ -198,6 +199,7 @@ BEGIN
 		TranDau.SanVanDong, TranDau.ThoiGian
 		FROM KetQuaThiDau JOIN TranDau 
 			ON KetQuaThiDau.IDTranDau=TranDau.IDTranDau
+		Where TranDau.IDMG = @Idmg
 	) AS KETQUA 
 	JOIN (
 		SELECT Doi.TenDB AS TENDOI1, Doi.IDDB 
