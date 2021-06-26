@@ -9,6 +9,7 @@ namespace NationalFootballChampionshipManagement.DAO
     using System;
     using System.Collections.Generic;
     using System.Data;
+    using System.Drawing;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
@@ -25,13 +26,27 @@ namespace NationalFootballChampionshipManagement.DAO
                 set => instance = value;
             }
 
-            public void AddLeague(string name, int year)
+            public void AddLeague(string name, int year, Image img)
             {
+                byte[] byteArr = ImageProcessing.Instance.convertImgToByte(img);
                 string query =
                      "INSERT INTO MuaGiai(TenMG, Nam, MuaGiaiHienTai) " +
                      "VALUES(N'" + name + "'," + year.ToString() + ", 0)";
 
                 DataProvider.Instance.ExecuteQuery(query);
+
+                // them logo
+
+                query = "UPDATE MuaGiai SET Logo = @img WHERE IDMG = (SELECT MAX(IDMG) FROM MuaGiai)";
+                DataProvider.Instance.ExecuteQuery(query, new object[] { byteArr });
+
+                // Neu la mua giai dau tien thi gan la mua giai hien tai
+
+                if (LeagueDAO.Instance.GetCurrIDMG() == -1)
+                {
+                    query = "UPDATE MuaGiai SET MuaGiaiHienTai = 1";
+                    DataProvider.Instance.ExecuteQuery(query);
+                }
 
                 // Tu dong them quy dinh cho giai dau
 
@@ -85,6 +100,15 @@ namespace NationalFootballChampionshipManagement.DAO
 
                 if (data.Rows.Count == 0) return "No League Selected";
                 return data.Rows[0]["TenMG"].ToString();
+            }
+
+            public Image GetCurrLeagueImage()
+            {
+                string query = "SELECT Logo FROM MuaGiai WHERE MuaGiaiHienTai = 1";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+                if (data.Rows.Count == 0) return null;
+                return ImageProcessing.Instance.ByteToImg((byte[])data.Rows[0]["Logo"]); 
             }
             public DataTable GetLeagueList()
             {

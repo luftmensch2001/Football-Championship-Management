@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,7 +21,41 @@ namespace NationalFootballChampionshipManagement
             //activeFullScreenMode();
 
             openChildForm(new formHome(this));
+
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+            if (idmg == -1)
+            {
+                DisableButton();
+                MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy mở mục Mùa Giải và tạo cho mình mùa giải đầu tiên nhé!");
+            }
+            else
+            {
+                LoadLogo();
+            }
             
+        }
+
+        private void DisableButton()
+        {
+            btnCompetitionSchedule.Enabled = false;
+            btnResult.Enabled = false;
+            btnRankingChart.Enabled = false;
+            btnFile.Enabled = false;
+            btnTools.Enabled = false;
+        }
+
+        public void EnableButton()
+        {
+            btnCompetitionSchedule.Enabled = true;
+            btnResult.Enabled = true;
+            btnRankingChart.Enabled = true;
+            btnFile.Enabled = true;
+            btnTools.Enabled = true;
+        }
+
+        public void LoadLogo()
+        {
+            panelChampionshipLogo.BackgroundImage = LeagueDAO.Instance.GetCurrLeagueImage();
         }
 
         private void activeFullScreenMode()

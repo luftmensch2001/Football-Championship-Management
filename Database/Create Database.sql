@@ -26,10 +26,10 @@ CREATE TABLE MuaGiai
 	IDMG INT IDENTITY(1,1) PRIMARY KEY,
 	TenMG NVARCHAR(50),
 	Nam INT,
-	MuaGiaiHienTai BIT
+	MuaGiaiHienTai BIT,
+	Logo IMAGE
 )
 GO
-
 
 CREATE TABLE QuyDinh
 (
