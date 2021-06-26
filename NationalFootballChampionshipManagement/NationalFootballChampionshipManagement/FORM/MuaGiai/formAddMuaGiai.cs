@@ -51,7 +51,7 @@ namespace NationalFootballChampionshipManagement
                 MessageBox.Show("Thêm mùa giải thất bại", "Lỗi");
             }
 
-        }
+}
 
         private void btnLoadImage_Click(object sender, EventArgs e)
         {

@@ -72,5 +72,11 @@ namespace NationalFootballChampionshipManagement.DTO
             this.IDLCT = idLCT;
             this.countGoal = countGoal;
         }
+
+        public Player(int id, DateTime dob)
+        {
+            this.ID = id;
+            this.DayOfBirth = dob;
+        }
     }
 }

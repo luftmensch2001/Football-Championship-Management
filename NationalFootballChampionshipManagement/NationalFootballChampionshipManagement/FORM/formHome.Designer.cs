@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formHome));
             this.lbTimeNow = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.timerNow = new System.Windows.Forms.Timer(this.components);
@@ -42,9 +43,10 @@
             this.lbTimeNow.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbTimeNow.Font = new System.Drawing.Font("Segoe UI", 25F);
             this.lbTimeNow.ForeColor = System.Drawing.Color.White;
-            this.lbTimeNow.Location = new System.Drawing.Point(0, 141);
+            this.lbTimeNow.Location = new System.Drawing.Point(0, 173);
+            this.lbTimeNow.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTimeNow.Name = "lbTimeNow";
-            this.lbTimeNow.Size = new System.Drawing.Size(109, 46);
+            this.lbTimeNow.Size = new System.Drawing.Size(136, 57);
             this.lbTimeNow.TabIndex = 0;
             this.lbTimeNow.Text = "label1";
             // 
@@ -53,9 +55,10 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.lbTimeNow);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 263);
+            this.panel1.Location = new System.Drawing.Point(0, 324);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 187);
+            this.panel1.Size = new System.Drawing.Size(1067, 230);
             this.panel1.TabIndex = 1;
             // 
             // timerNow
@@ -64,14 +67,15 @@
             // 
             // formHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = global::NationalFootballChampionshipManagement.Properties.Resources.Stadium_Background;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formHome";
             this.Text = "formHome";
             this.panel1.ResumeLayout(false);

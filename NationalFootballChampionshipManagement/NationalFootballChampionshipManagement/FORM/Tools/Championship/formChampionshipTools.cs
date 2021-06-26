@@ -35,6 +35,7 @@ namespace NationalFootballChampionshipManagement
                 roundCount = -1;
             }
             LoadRules();
+            lockValue();
             LoadDgvPlayerType();
             LoadDgvGoalType();
             dgvGoalType.ClearSelection();
@@ -107,34 +108,12 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnAddTypeOfPlayer_Click(object sender, EventArgs e)
         {
-            // kiểm tra mùa giải
-            if (roundCount == -1)
-            {
-                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
-                return;
-            }
-            if (roundCount > 0)
-            {
-                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
-                return;
-            }
             this.formFather.openChildForm(new formAddTypeOfPlayer(this.formFather));
 
             this.Close();
         }
         private void btnRemoveTypeOfPlayer_Click(object sender, EventArgs e)
         {
-            // kiểm tra mùa giải
-            if (roundCount == -1)
-            {
-                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
-                return;
-            }
-            if (roundCount > 0)
-            {
-                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
-                return;
-            }
             DialogResult dialogResult = MessageBox.Show("Tất cả cầu thủ thuộc loại này cũng bị xoá. Bạn có chắc muốn xoá loại cầu thủ này không ?", "Xác nhận", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No)
             {
@@ -155,34 +134,12 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnAddTypeOfGoal_Click(object sender, EventArgs e)
         {
-            // kiểm tra mùa giải
-            if (roundCount == -1)
-            {
-                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
-                return;
-            }
-            if (roundCount > 0)
-            {
-                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
-                return;
-            }
             this.formFather.openChildForm(new formAddTypeOfGoal(this.formFather));
 
             this.Close();
         }
         private void btnRemoveTypeOfGoal_Click(object sender, EventArgs e)
         {
-            // kiểm tra mùa giải
-            if (roundCount == -1)
-            {
-                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
-                return;
-            }    
-            if (roundCount > 0)
-            {
-                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
-                return;
-            }
 
             //thực hiện
             if (selectedGoalTypeRow < 0 || selectedGoalTypeRow >= dgvGoalType.Rows.Count)
@@ -208,20 +165,14 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            // kiểm tra mùa giải
-            if (roundCount == -1)
-            {
-                MessageBox.Show("Có lỗi khi tải dữ liệu\nVui lòng thử lại sau", "Lỗi kết nối");
-                return;
-            }
-            if (roundCount > 0)
-            {
-                MessageBox.Show("Không thể thay đổi quy định này khi mùa giải đã bắt đầu");
-                return;
-            }
             //Check logic
 
             //NumberOfTeams
+            if (nudNumberOfTeams.Value < TeamDAO.Instance.GetCountTeam())
+            {
+                MessageBox.Show("Số lượng đội bóng phải lớn hơn số lượng đội đang có", "Lỗi");
+                return;
+            }
             if (nudNumberOfTeams.Value < 2)
             {
                 MessageBox.Show("Số lượng đội bóng phải lớn hơn 1", "Lỗi");
@@ -251,19 +202,45 @@ namespace NationalFootballChampionshipManagement
                 MessageBox.Show("Số lượng cầu thủ tối thiểu không được lớn hơn số lượng cầu thủ tối đa", "Lỗi");
                 return;
             }
-            DialogResult dialogResult = MessageBox.Show("Lưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo);
+
+            DialogResult dialogResult = MessageBox.Show("Chú ý: Sau khi lưu thay đổi, các cầu thủ có tuổi không hợp lệ sẽ bị xoá khỏi danh sách\nLưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No) return;
+
+
+
             //Save to DB
             try
             {
-                    RulesDAO.Instance.UpdateRules(
-                    nudNumberOfTeams.Value.ToString(),
-                    nudMinAge.Value.ToString(),
-                    nudMaxAge.Value.ToString(),
-                    nudMinPlayer.Value.ToString(),
-                    nudMaxAge.Value.ToString(),
-                    nudTimeGoalsMax.Value.ToString()
-                    );
+                //update rules
+                RulesDAO.Instance.UpdateRules(
+                nudNumberOfTeams.Value.ToString(),
+                nudMinAge.Value.ToString(),
+                nudMaxAge.Value.ToString(),
+                nudMinPlayer.Value.ToString(),
+                nudMaxAge.Value.ToString(),
+                nudTimeGoalsMax.Value.ToString()
+                );
+
+                //remove player
+                List<Player> listPlayer = PlayerDAO.Instance.GetListNameAndDoBPlayer();
+                foreach (Player p in listPlayer)
+                {
+                    int age = DateTime.Now.Year - p.DayOfBirth.Year;
+                    if (DateTime.Now.DayOfYear < p.DayOfBirth.DayOfYear)
+                        age = age - 1;
+                    if (age > nudMaxAge.Value || age < nudMinAge.Value)
+                    {
+                        try
+                        {
+                            PlayerDAO.Instance.DeletePlayerByID(p.ID);
+                        }
+                        catch
+                        {
+                            MessageBox.Show("Có lỗi trong quá trình xoá cầu thủ không hợp lệ", "Lỗi");
+                        }
+                    }
+                }
+
                 MessageBox.Show("Cập nhật quy định thành công", "Thành công");
             }
             catch
@@ -274,6 +251,27 @@ namespace NationalFootballChampionshipManagement
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.formFather.openChildForm(new formHome(this.formFather));
+        }
+
+        private void lockValue()
+        {
+            if (roundCount > 0)
+            {
+                nudMaxAge.Enabled = false;
+                nudMinAge.Enabled = false;
+                nudMaxPlayer.Enabled = false;
+                nudMinPlayer.Enabled = false;
+                nudNumberOfTeams.Enabled = false;
+                nudTimeGoalsMax.Enabled = false;
+                btnAddTypeOfGoal.Enabled = false;
+                btnAddTypeOfPlayer.Enabled = false;
+                btnRemoveTypeOfGoal.Enabled = false;
+                btnRemoveTypeOfPlayer.Enabled = false;
+                btnSave.Enabled = false;
+                tbLeagueName.Enabled = false;
+                tbYear.Enabled = false;
+                MessageBox.Show("Không thể thay đổi quy định giải đấu khi mùa giải đã bắt đầu", "Thông báo");
+            }
         }
     }
 }

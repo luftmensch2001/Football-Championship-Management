@@ -1,4 +1,5 @@
 ﻿using NationalFootballChampionshipManagement.DTO;
+using NationalFootballChampionshipManagement.DAO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -163,6 +164,20 @@ namespace NationalFootballChampionshipManagement.DAO
         {
             Player p = GetPlayerByIDCT(idct);
             return p.Img;
+        }
+
+        public List<Player> GetListNameAndDoBPlayer()
+        {
+            int idmg = NationalFootballChampionshipManagement.DAO.LeagueDAO.Instance.GetCurrIDMG();
+            List<Player> players = new List<Player>();
+            string query = "SELECT IDCT, NgaySinh FROM CauThu WHERE @idmg =" + idmg;
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow row in dataTable.Rows)
+            {
+                Player player = new Player((int)row[0], (DateTime)row[4]);
+                players.Add(player);
+            }
+            return players;
         }
     }
 }
