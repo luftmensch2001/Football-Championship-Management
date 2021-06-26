@@ -64,7 +64,7 @@
             this.pnlTitle.Controls.Add(this.btnClose);
             this.pnlTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlTitle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlTitle.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(1165, 86);
             this.pnlTitle.TabIndex = 0;
@@ -94,7 +94,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 1;
@@ -106,7 +106,7 @@
             this.panel4.Controls.Add(this.pnlFill);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(0, 86);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1165, 728);
             this.panel4.TabIndex = 1;
@@ -117,7 +117,7 @@
             this.pnlFill.Controls.Add(this.dgvRanking);
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Location = new System.Drawing.Point(0, 0);
-            this.pnlFill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlFill.Margin = new System.Windows.Forms.Padding(4);
             this.pnlFill.Name = "pnlFill";
             this.pnlFill.Size = new System.Drawing.Size(1165, 728);
             this.pnlFill.TabIndex = 3;
@@ -127,7 +127,7 @@
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 679);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 49);
             this.panel1.TabIndex = 1;
@@ -145,7 +145,7 @@
             this.btnPrint.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPrint.IconSize = 30;
             this.btnPrint.Location = new System.Drawing.Point(1032, 0);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(133, 49);
             this.btnPrint.TabIndex = 0;
@@ -199,7 +199,7 @@
             this.dgvRanking.EnableHeadersVisualStyles = false;
             this.dgvRanking.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRanking.Location = new System.Drawing.Point(0, 0);
-            this.dgvRanking.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvRanking.Margin = new System.Windows.Forms.Padding(4);
             this.dgvRanking.Name = "dgvRanking";
             this.dgvRanking.ReadOnly = true;
             this.dgvRanking.RowHeadersVisible = false;
@@ -328,7 +328,7 @@
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formRanking";
             this.Text = "formRanking";
             this.pnlTitle.ResumeLayout(false);
@@ -348,6 +348,8 @@
         private Guna.UI2.WinForms.Guna2DataGridView dgvRanking;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label lTitle;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton btnPrint;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCLB;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMatches;
@@ -359,7 +361,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colCoefficient;
         private System.Windows.Forms.DataGridViewTextBoxColumn colScores;
         private System.Windows.Forms.DataGridViewTextBoxColumn col5History;
-        private System.Windows.Forms.Panel panel1;
-        private FontAwesome.Sharp.IconButton btnPrint;
     }
 }

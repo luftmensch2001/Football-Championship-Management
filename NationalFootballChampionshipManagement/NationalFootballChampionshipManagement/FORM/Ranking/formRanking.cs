@@ -32,6 +32,9 @@ namespace NationalFootballChampionshipManagement
 
             this.formFather = f;
 
+            dgvRanking.RowTemplate.Height = 40;
+            dgvRanking.AllowUserToResizeRows = false;
+
             addColumnsToDatagridviews();
             InitListTeam();
             CaculateDetails();

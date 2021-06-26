@@ -61,6 +61,7 @@ namespace NationalFootballChampionshipManagement
                 }
                 GoalTypeDAO.Instance.AddNewGoalType(name);
                 MessageBox.Show("Thêm loại bàn thắng thành công", "Thành công");
+                this.formFather.openChildForm(new formChampionshipTools(this.formFather));
             }
             catch
             {

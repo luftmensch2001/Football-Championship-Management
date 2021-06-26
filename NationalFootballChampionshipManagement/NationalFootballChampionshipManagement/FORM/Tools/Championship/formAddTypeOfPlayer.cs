@@ -68,6 +68,7 @@ namespace NationalFootballChampionshipManagement
                 }
                 PlayerTypeDAO.Instance.AddNewType(name, (int)nudMaxNumber.Value, LeagueDAO.Instance.GetCurrIDMG());
                 MessageBox.Show("Thêm loại cầu thủ thành công", "Thành công");
+                this.formFather.openChildForm(new formChampionshipTools(this.formFather));
             }
             catch
             {
