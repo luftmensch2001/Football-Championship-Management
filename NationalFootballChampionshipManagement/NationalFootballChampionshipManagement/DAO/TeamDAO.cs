@@ -58,7 +58,7 @@ namespace NationalFootballChampionshipManagement.DAO
         public int GetCountTeam()
         {
             int idmg = LeagueDAO.Instance.GetCurrIDMG();
-            string query = "EXEC USP_CountOfTeam @idmg = " + this.idmg.ToString();
+            string query = "EXEC USP_CountOfTeam @idmg = " + idmg.ToString();
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             if (data.Rows.Count == 0) return 0;
             return (int)data.Rows[0]["SL"];
