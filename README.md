@@ -3,9 +3,7 @@
 
 ## Mở đầu
 
-Trong thời đại bùng nổ về công nghệ, tất cả các cuộc thi, giải đấu đều được ứng dụng các phần mềm quản lý. Bóng đá cũng không phải ngoại lệ!
-Chúng tôi cung cấp một sản phẩm giúp cho bạn có thể quản lý giải bóng đá, mà ở đây là giải bóng đá vô địch quốc gia
-Mục tiêu của chúng tôi là tạo nên một sản phẩm có giao diện thân thiện, dễ dàng sử dụng, dễ phát triển, dễ sửa nếu gặp lỗi. Hơn hết chúng tôi muốn xóa bỏ những thứ gây phiền toái cho ban quản lý các giải đấu như:
+Trong thời đại bùng nổ về công nghệ, tất cả các cuộc thi, giải đấu đều được ứng dụng các phần mềm quản lý. Bóng đá cũng không phải ngoại lệ! Chúng tôi cung cấp một sản phẩm giúp cho bạn có thể quản lý giải bóng đá, mà ở đây là giải bóng đá vô địch quốc gia. Mục tiêu của chúng tôi là tạo nên một sản phẩm có giao diện thân thiện, dễ dàng sử dụng, dễ phát triển, dễ sửa nếu gặp lỗi. Hơn hết chúng tôi muốn xóa bỏ những thứ gây phiền toái cho ban quản lý các giải đấu như:
 - Hồ sơ các cầu thủ, đội bóng tốn thời gian để tạo mới hay cập nhật
 - Tính toán xếp hạng tốn thời gian
 - Khó khăn và tốn thời gian trong việc lập lịch và ghi nhận kết quả trận đấu
