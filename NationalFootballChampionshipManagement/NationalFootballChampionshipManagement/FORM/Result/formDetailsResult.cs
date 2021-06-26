@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
 
 namespace NationalFootballChampionshipManagement
 {
@@ -337,6 +338,8 @@ namespace NationalFootballChampionshipManagement
             if (Save())
             {
                 isChanged = false;
+                LeagueDAO.Instance.UpdateStatus(2);
+                this.formFather.LoadStatus();
                 MessageBox.Show("Lưu dữ liệu thành công");
             }
         }

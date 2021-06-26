@@ -155,9 +155,16 @@ namespace NationalFootballChampionshipManagement
             DialogResult dialogResult = MessageBox.Show("Dữ liệu về các trận đấu sẽ bị xoá hết. Bạn có chắc không ?", "Xác nhận", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No) return;
 
+            if (LeagueDAO.Instance.GetCurrLeagueStatus() == "Trạng thái: Đã bắt đầu")
+            {
+                MessageBox.Show("Không thể huỷ lịch khi mùa giải đã bắt đầu", "Lỗi");
+                return;
+            }
+
             try
             {
                 // xoa tat ca tran dau va cac bang co khoa lien quan
+
                 ResultMatchDAO.Instance.DeleteAllResultMatch(listIDTranDau);
                 ScheduleDAO.Instance.CancelSchedule();
     

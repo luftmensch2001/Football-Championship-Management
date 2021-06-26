@@ -75,7 +75,7 @@ namespace NationalFootballChampionshipManagement
             mybtn.Tag = team;
             mybtn.TextAlign = ContentAlignment.MiddleLeft;
             mybtn.TextImageRelation = TextImageRelation.ImageBeforeText;
-            mybtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            mybtn.IconChar = FontAwesome.Sharp.IconChar.AddressBook;
             mybtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             lastButton = mybtn;
             this.panel1.Controls.Add(mybtn);
