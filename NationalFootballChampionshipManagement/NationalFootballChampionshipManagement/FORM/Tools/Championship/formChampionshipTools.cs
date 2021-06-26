@@ -67,7 +67,7 @@ namespace NationalFootballChampionshipManagement
                 dgvPlayerType.ReadOnly = true;
                 dgvPlayerType.RowTemplate.Height = 30;
                 listIDLCT.Clear();
-                for (int i = 0; i < dgvPlayerType.Rows.Count - 1; i++)
+                for (int i = 0; i < dgvPlayerType.Rows.Count; i++)
                 {
                     listIDLCT.Add(Int32.Parse(dgvPlayerType.Rows[i].Cells[0].Value.ToString()));
                     dgvPlayerType.Rows[i].Cells[0].Value = i + 1;
@@ -99,7 +99,7 @@ namespace NationalFootballChampionshipManagement
         }
         private void dgvPlayerType_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex < 0 || e.RowIndex >= dgvPlayerType.Rows.Count - 1) return;
+            if (e.RowIndex < 0 || e.RowIndex >= dgvPlayerType.Rows.Count) return;
             this.SelectedIDLCT = listIDLCT[e.RowIndex];
         }
         private void dgvGoalType_CellClick(object sender, DataGridViewCellEventArgs e)
