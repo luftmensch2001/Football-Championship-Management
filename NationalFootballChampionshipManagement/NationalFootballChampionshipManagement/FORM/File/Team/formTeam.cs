@@ -23,6 +23,8 @@ namespace NationalFootballChampionshipManagement
 
         List<int> IDCT = new List<int>();
 
+        int roundCount;
+
         public formTeam(formMain f)
         {
             InitializeComponent();
@@ -38,6 +40,15 @@ namespace NationalFootballChampionshipManagement
             addInformationColumn();
 
             dgvPlayerList.RowTemplate.Height = 30;
+
+            try
+            {
+                roundCount = MatchDAO.Instance.GetRoundCount();
+            }
+            catch
+            {
+                roundCount = -1;
+            }
         }
 
 
@@ -112,6 +123,11 @@ namespace NationalFootballChampionshipManagement
         void dgvPlayerList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0 || e.RowIndex >= dgvPlayerList.Rows.Count - 1 ||  e.ColumnIndex != 0) return;
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể thay đổi thông tin khi mùa giải đã bắt đầu");
+                return;
+            }
             this.formFather.openChildForm(new formAddPlayer(this.formFather, IDCT[e.RowIndex]));
         }
         private void btnAddNewPlayer_Click(object sender, EventArgs e)
@@ -121,6 +137,12 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAddTeam_Click(object sender, EventArgs e)
         {
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể đăng ký thêm khi mùa giải đã bắt đầu");
+                return;
+            }
+
             Rules rules = RulesDAO.Instance.GetRules();
             if (TeamDAO.Instance.GetCountTeam() >= rules.SLDB)
             {
@@ -132,6 +154,11 @@ namespace NationalFootballChampionshipManagement
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể sửa thông tin đăng ký khi mùa giải đã bắt đầu");
+                return;
+            }
             // Mở form thêm đội bóng mới lên và đôi button "Thêm" thành button "Lưu", 
             // và đổi tiêu đề thành "THay đổi thông tin đội bóng"
             if (curTeam == null)
@@ -149,6 +176,12 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAddPlayer_Click(object sender, EventArgs e)
         {
+            if (roundCount > 0)
+            {
+                MessageBox.Show("Không thể đăng ký thêm khi mùa giải đã bắt đầu");
+                return;
+            }
+
             this.formFather.openChildForm(new formAddPlayer(this.formFather));
 
             this.Close();
