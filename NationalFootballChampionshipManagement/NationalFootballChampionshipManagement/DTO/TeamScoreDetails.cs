@@ -13,6 +13,7 @@ namespace NationalFootballChampionshipManagement.DTO
     class TeamScoreDetails
     {
         string name;
+        Image logoTeam;
         int m;
         int w;
         int d;
@@ -32,10 +33,12 @@ namespace NationalFootballChampionshipManagement.DTO
         public int GD { get => gD; set => gD = value; }
         public int Pts { get => pts; set => pts = value; }
         public string FLM { get => fLM; set => fLM = value; }
+        public Image LogoTeam { get => logoTeam; set => logoTeam = value; }
 
-        public TeamScoreDetails(string teamName)
+        public TeamScoreDetails(string teamName, Image logo)
         {
             this.Name = teamName;
+            this.LogoTeam = logo;
             this.M = 0;
             this.W = 0;
             this.D = 0;

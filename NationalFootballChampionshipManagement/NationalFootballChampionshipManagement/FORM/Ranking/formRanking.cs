@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace NationalFootballChampionshipManagement
 {
     public partial class formRanking : Form
@@ -47,11 +48,11 @@ namespace NationalFootballChampionshipManagement
 
         void InitListTeam()
         {
-            listNameTeam = TeamDAO.Instance.GetNameAndIdTeam();
+            listNameTeam = TeamDAO.Instance.GetNameAndLogo();
             int i = 1;
             foreach (Team item in listNameTeam)
             {
-                listTeamScoreDetails.Add(new TeamScoreDetails(item.TeamName));
+                listTeamScoreDetails.Add(new TeamScoreDetails(item.TeamName, item.Image));
                 i++;
             }
         }
@@ -106,7 +107,7 @@ namespace NationalFootballChampionshipManagement
         }
         void LoadRanking()
         {
-            var column = dgvRanking.Columns[1];
+            var column = dgvRanking.Columns[2];
             column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
             int stt = 1;
             
@@ -114,6 +115,7 @@ namespace NationalFootballChampionshipManagement
             {
                 dgvRanking.Rows.Add(
                     stt,
+                    ScaleImage((Bitmap)item.LogoTeam, 40, 40),
                     item.Name,
                     item.M,
                     item.W,
@@ -231,6 +233,22 @@ namespace NationalFootballChampionshipManagement
 
             return imgres;
         }
+        Bitmap ScaleImage(Bitmap bmp, int maxWidth, int maxHeight)
+        {
+            var ratioX = (double)maxWidth / bmp.Width;
+            var ratioY = (double)maxHeight / bmp.Height;
+            var ratio = Math.Min(ratioX, ratioY);
+
+            var newWidth = (int)(bmp.Width * ratio);
+            var newHeight = (int)(bmp.Height * ratio);
+
+            var newImage = new Bitmap(newWidth, newHeight);
+
+            using (var graphics = Graphics.FromImage(newImage))
+                graphics.DrawImage(bmp, 0, 0, newWidth, newHeight);
+
+            return newImage;
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.formFather.openChildForm(new formHome(this.formFather));
@@ -238,10 +256,19 @@ namespace NationalFootballChampionshipManagement
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            if (dgvRanking.Rows.Count > 0 )
+            
+            if (dgvRanking.Rows.Count > 0)
             {
+                
+                float[] w = new float[dgvRanking.Columns.Count];
+                for (int i = 0; i < dgvRanking.Columns.Count; i++)
+                {
+                    w[i] = dgvRanking.Columns[i].Width;
+                    if (i == 1)
+                        w[i] *= 1.5f;
+                }
                 ExportDatagridViewToPDF toPDF = new ExportDatagridViewToPDF(dgvRanking);
-                toPDF.Export("BXH" + LeagueDAO.Instance.GetCurrLeagueName(), "Bảng xếp hạng");
+                toPDF.ExportRanking("BXH " + LeagueDAO.Instance.GetCurrLeagueName(), "Bảng xếp hạng", w, listTeamScoreDetails);
             }
             else
             {

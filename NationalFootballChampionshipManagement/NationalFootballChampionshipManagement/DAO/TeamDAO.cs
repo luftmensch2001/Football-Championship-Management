@@ -131,6 +131,21 @@ namespace NationalFootballChampionshipManagement.DAO
             }
             return teams;
         }
-        
+        public List<Team> GetNameAndLogo()
+        {
+            List<Team> teams = new List<Team>();
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+
+            string query = "SELECT TenDb,HinhAnh FROM DoiBong where idmg =" + idmg.ToString();
+            DataTable data = DataProvider.Instance.ExecuteQuery(query);
+            foreach (DataRow dataRow in data.Rows)
+            {
+                Team team = new Team(dataRow[0].ToString(), (byte[])dataRow[1]);
+                teams.Add(team);
+            }
+            return teams;
+        }
+
+
     }
 }

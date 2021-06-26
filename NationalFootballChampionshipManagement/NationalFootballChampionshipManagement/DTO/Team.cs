@@ -48,6 +48,11 @@ namespace NationalFootballChampionshipManagement.DTO
             this.iD = id;
             this.TeamName = name;
         }
+        public Team(string name, byte[] logo)
+        {
+            this.TeamName = name;
+            this.Image = ImageProcessing.Instance.ByteToImg(logo);
+        }
         public Team()
         {
 
