@@ -50,6 +50,8 @@ namespace NationalFootballChampionshipManagement
                 LeagueDAO.Instance.ChangeLeagueByID(Int32.Parse(cbLeague.SelectedValue.ToString()));
                 lbNowTournament.Text = LeagueDAO.Instance.GetCurrLeagueName();
                 this.formFather.LoadLogo();
+                this.formFather.LoadStatus();
+                this.formFather.openChildForm(new formMuaGiai(this.formFather));
                 MessageBox.Show("Chuyển mùa giải thành công", "Thành công");
             }
             catch
