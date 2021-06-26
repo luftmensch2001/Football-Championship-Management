@@ -49,6 +49,9 @@
             this.btnLoadImage = new FontAwesome.Sharp.IconButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.pbImage = new System.Windows.Forms.PictureBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -60,6 +63,9 @@
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -69,7 +75,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 86);
             this.panel1.TabIndex = 0;
@@ -99,7 +105,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 9;
@@ -112,7 +118,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1165, 43);
             this.panel2.TabIndex = 1;
@@ -121,7 +127,7 @@
             // 
             this.tbName.BorderThickness = 0;
             this.tbName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbName.DefaultText = "LS V-League 2021";
+            this.tbName.DefaultText = "";
             this.tbName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -130,7 +136,7 @@
             this.tbName.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.FocusedState.Parent = this.tbName;
-            this.tbName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.tbName.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tbName.ForeColor = System.Drawing.Color.Black;
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.HoverState.Parent = this.tbName;
@@ -138,9 +144,8 @@
             this.tbName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
-            this.tbName.PlaceholderText = "";
+            this.tbName.PlaceholderText = "Ví dụ: LS V-League 1";
             this.tbName.SelectedText = "";
-            this.tbName.SelectionStart = 16;
             this.tbName.ShadowDecoration.Parent = this.tbName;
             this.tbName.Size = new System.Drawing.Size(601, 43);
             this.tbName.TabIndex = 1;
@@ -150,7 +155,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(227, 43);
             this.panel3.TabIndex = 0;
@@ -158,7 +163,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -173,7 +178,7 @@
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 129);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1165, 43);
             this.panel4.TabIndex = 2;
@@ -182,7 +187,7 @@
             // 
             this.tbYear.BorderThickness = 0;
             this.tbYear.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbYear.DefaultText = "2021";
+            this.tbYear.DefaultText = "";
             this.tbYear.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbYear.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbYear.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -191,7 +196,7 @@
             this.tbYear.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbYear.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbYear.FocusedState.Parent = this.tbYear;
-            this.tbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.tbYear.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tbYear.ForeColor = System.Drawing.Color.Black;
             this.tbYear.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbYear.HoverState.Parent = this.tbYear;
@@ -199,9 +204,8 @@
             this.tbYear.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbYear.Name = "tbYear";
             this.tbYear.PasswordChar = '\0';
-            this.tbYear.PlaceholderText = "";
+            this.tbYear.PlaceholderText = "Ví dụ: 2021";
             this.tbYear.SelectedText = "";
-            this.tbYear.SelectionStart = 4;
             this.tbYear.ShadowDecoration.Parent = this.tbYear;
             this.tbYear.Size = new System.Drawing.Size(601, 43);
             this.tbYear.TabIndex = 1;
@@ -211,7 +215,7 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(227, 43);
             this.panel5.TabIndex = 0;
@@ -219,7 +223,7 @@
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -234,7 +238,7 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 172);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1165, 43);
             this.panel6.TabIndex = 3;
@@ -243,7 +247,7 @@
             // 
             this.tbDonor.BorderThickness = 0;
             this.tbDonor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbDonor.DefaultText = "Tập đoàn LS";
+            this.tbDonor.DefaultText = "";
             this.tbDonor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.tbDonor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.tbDonor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -252,7 +256,7 @@
             this.tbDonor.Dock = System.Windows.Forms.DockStyle.Left;
             this.tbDonor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDonor.FocusedState.Parent = this.tbDonor;
-            this.tbDonor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.tbDonor.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.tbDonor.ForeColor = System.Drawing.Color.Black;
             this.tbDonor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbDonor.HoverState.Parent = this.tbDonor;
@@ -260,9 +264,8 @@
             this.tbDonor.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbDonor.Name = "tbDonor";
             this.tbDonor.PasswordChar = '\0';
-            this.tbDonor.PlaceholderText = "";
+            this.tbDonor.PlaceholderText = "Ví dụ: Tập đoàn LS";
             this.tbDonor.SelectedText = "";
-            this.tbDonor.SelectionStart = 11;
             this.tbDonor.ShadowDecoration.Parent = this.tbDonor;
             this.tbDonor.Size = new System.Drawing.Size(601, 43);
             this.tbDonor.TabIndex = 1;
@@ -272,7 +275,7 @@
             this.panel7.Controls.Add(this.label3);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(227, 43);
             this.panel7.TabIndex = 0;
@@ -280,7 +283,7 @@
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
@@ -294,7 +297,7 @@
             this.panel8.Controls.Add(this.panel9);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 215);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1165, 43);
             this.panel8.TabIndex = 4;
@@ -304,7 +307,7 @@
             this.panel9.Controls.Add(this.btnAdd);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel9.Location = new System.Drawing.Point(0, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(273, 43);
             this.panel9.TabIndex = 0;
@@ -316,14 +319,14 @@
             this.btnAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 10.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAdd.IconColor = System.Drawing.Color.White;
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 30;
             this.btnAdd.Location = new System.Drawing.Point(0, 0);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(273, 43);
             this.btnAdd.TabIndex = 0;
@@ -335,23 +338,24 @@
             // 
             // btnLoadImage
             // 
-            this.btnLoadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnLoadImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnLoadImage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLoadImage.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnLoadImage.FlatAppearance.BorderSize = 0;
             this.btnLoadImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLoadImage.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.btnLoadImage.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnLoadImage.ForeColor = System.Drawing.Color.White;
             this.btnLoadImage.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.btnLoadImage.IconColor = System.Drawing.Color.White;
             this.btnLoadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLoadImage.IconSize = 30;
             this.btnLoadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoadImage.Location = new System.Drawing.Point(478, 458);
-            this.btnLoadImage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoadImage.Location = new System.Drawing.Point(0, 0);
+            this.btnLoadImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLoadImage.Name = "btnLoadImage";
-            this.btnLoadImage.Size = new System.Drawing.Size(439, 49);
+            this.btnLoadImage.Size = new System.Drawing.Size(467, 49);
             this.btnLoadImage.TabIndex = 8;
-            this.btnLoadImage.Text = "Tải ảnh lên";
+            this.btnLoadImage.Text = "Tải ảnh Logo lên";
             this.btnLoadImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLoadImage.UseVisualStyleBackColor = false;
             this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
@@ -359,19 +363,54 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.pbImage);
-            this.panel10.Location = new System.Drawing.Point(480, 290);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(437, 161);
+            this.panel10.Size = new System.Drawing.Size(467, 169);
             this.panel10.TabIndex = 9;
             // 
             // pbImage
             // 
-            this.pbImage.Location = new System.Drawing.Point(3, 16);
+            this.pbImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbImage.Location = new System.Drawing.Point(0, 0);
+            this.pbImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(431, 142);
+            this.pbImage.Size = new System.Drawing.Size(467, 169);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 0;
             this.pbImage.TabStop = false;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.panel12);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 258);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1165, 218);
+            this.panel11.TabIndex = 10;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.panel10);
+            this.panel12.Controls.Add(this.panel13);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(698, 0);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(467, 218);
+            this.panel12.TabIndex = 0;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.btnLoadImage);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 169);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(467, 49);
+            this.panel13.TabIndex = 0;
             // 
             // formAddMuaGiai
             // 
@@ -379,15 +418,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1165, 814);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.btnLoadImage);
+            this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formAddMuaGiai";
             this.Text = "formAddMuaGiai";
             this.panel1.ResumeLayout(false);
@@ -401,6 +439,9 @@
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -428,5 +469,8 @@
         private FontAwesome.Sharp.IconButton btnLoadImage;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.PictureBox pbImage;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel13;
     }
 }

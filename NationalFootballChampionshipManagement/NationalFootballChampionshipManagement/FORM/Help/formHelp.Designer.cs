@@ -90,9 +90,9 @@
             this.panel4.Controls.Add(this.btnError);
             this.panel4.Controls.Add(this.btnHowToUse);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(59, 70);
+            this.panel4.Location = new System.Drawing.Point(19, 70);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(479, 379);
+            this.panel4.Size = new System.Drawing.Size(519, 379);
             this.panel4.TabIndex = 3;
             // 
             // btnContactToDevelopers
@@ -111,12 +111,13 @@
             this.btnContactToDevelopers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContactToDevelopers.Location = new System.Drawing.Point(0, 100);
             this.btnContactToDevelopers.Name = "btnContactToDevelopers";
-            this.btnContactToDevelopers.Size = new System.Drawing.Size(479, 50);
+            this.btnContactToDevelopers.Size = new System.Drawing.Size(519, 50);
             this.btnContactToDevelopers.TabIndex = 7;
             this.btnContactToDevelopers.Text = "Liên hệ với nhà phát triển";
             this.btnContactToDevelopers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContactToDevelopers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnContactToDevelopers.UseVisualStyleBackColor = false;
+            this.btnContactToDevelopers.Click += new System.EventHandler(this.btnContactToDevelopers_Click);
             // 
             // btnError
             // 
@@ -134,12 +135,13 @@
             this.btnError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnError.Location = new System.Drawing.Point(0, 50);
             this.btnError.Name = "btnError";
-            this.btnError.Size = new System.Drawing.Size(479, 50);
+            this.btnError.Size = new System.Drawing.Size(519, 50);
             this.btnError.TabIndex = 6;
             this.btnError.Text = "Báo lỗi";
             this.btnError.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnError.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnError.UseVisualStyleBackColor = false;
+            this.btnError.Click += new System.EventHandler(this.btnError_Click);
             // 
             // btnHowToUse
             // 
@@ -157,12 +159,13 @@
             this.btnHowToUse.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHowToUse.Location = new System.Drawing.Point(0, 0);
             this.btnHowToUse.Name = "btnHowToUse";
-            this.btnHowToUse.Size = new System.Drawing.Size(479, 50);
+            this.btnHowToUse.Size = new System.Drawing.Size(519, 50);
             this.btnHowToUse.TabIndex = 5;
             this.btnHowToUse.Text = "Hướng dẫn sử dụng";
             this.btnHowToUse.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHowToUse.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnHowToUse.UseVisualStyleBackColor = false;
+            this.btnHowToUse.Click += new System.EventHandler(this.btnHowToUse_Click);
             // 
             // panel3
             // 
@@ -188,7 +191,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(59, 415);
+            this.panel2.Size = new System.Drawing.Size(19, 415);
             this.panel2.TabIndex = 1;
             // 
             // panel1

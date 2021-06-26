@@ -40,11 +40,11 @@
             this.lbTimeNow.AutoSize = true;
             this.lbTimeNow.BackColor = System.Drawing.Color.Transparent;
             this.lbTimeNow.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbTimeNow.Font = new System.Drawing.Font("Microsoft Sans Serif", 35.25F);
+            this.lbTimeNow.Font = new System.Drawing.Font("Segoe UI", 25F);
             this.lbTimeNow.ForeColor = System.Drawing.Color.White;
-            this.lbTimeNow.Location = new System.Drawing.Point(0, 133);
+            this.lbTimeNow.Location = new System.Drawing.Point(0, 141);
             this.lbTimeNow.Name = "lbTimeNow";
-            this.lbTimeNow.Size = new System.Drawing.Size(147, 54);
+            this.lbTimeNow.Size = new System.Drawing.Size(109, 46);
             this.lbTimeNow.TabIndex = 0;
             this.lbTimeNow.Text = "label1";
             // 

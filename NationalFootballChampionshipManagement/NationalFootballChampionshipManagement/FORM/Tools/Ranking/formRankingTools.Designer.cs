@@ -59,9 +59,8 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1165, 86);
+            this.panel1.Size = new System.Drawing.Size(874, 70);
             this.panel1.TabIndex = 0;
             // 
             // lTitle
@@ -69,10 +68,9 @@
             this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(57, 0);
-            this.lTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
             this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(1108, 86);
+            this.lTitle.Size = new System.Drawing.Size(831, 70);
             this.lTitle.TabIndex = 8;
             this.lTitle.Text = "Thứ tự xếp hạng";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,9 +87,8 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(57, 86);
+            this.btnClose.Size = new System.Drawing.Size(43, 70);
             this.btnClose.TabIndex = 2;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -101,10 +98,9 @@
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1165, 728);
+            this.panel2.Size = new System.Drawing.Size(874, 591);
             this.panel2.TabIndex = 1;
             // 
             // panel5
@@ -113,9 +109,8 @@
             this.panel5.Controls.Add(this.dgvRankingRule);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1165, 654);
+            this.panel5.Size = new System.Drawing.Size(874, 531);
             this.panel5.TabIndex = 3;
             // 
             // dgvRankingRule
@@ -155,7 +150,6 @@
             this.dgvRankingRule.EnableHeadersVisualStyles = false;
             this.dgvRankingRule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRankingRule.Location = new System.Drawing.Point(0, 0);
-            this.dgvRankingRule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvRankingRule.MultiSelect = false;
             this.dgvRankingRule.Name = "dgvRankingRule";
             this.dgvRankingRule.ReadOnly = true;
@@ -163,7 +157,7 @@
             this.dgvRankingRule.RowHeadersWidth = 51;
             this.dgvRankingRule.RowTemplate.Height = 40;
             this.dgvRankingRule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRankingRule.Size = new System.Drawing.Size(1165, 654);
+            this.dgvRankingRule.Size = new System.Drawing.Size(874, 531);
             this.dgvRankingRule.TabIndex = 0;
             this.dgvRankingRule.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvRankingRule.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -211,10 +205,9 @@
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Controls.Add(this.btnSave);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 654);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(0, 531);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1165, 74);
+            this.panel4.Size = new System.Drawing.Size(874, 60);
             this.panel4.TabIndex = 2;
             // 
             // panel3
@@ -222,10 +215,9 @@
             this.panel3.Controls.Add(this.btnUp);
             this.panel3.Controls.Add(this.btnDown);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(854, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(641, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(155, 74);
+            this.panel3.Size = new System.Drawing.Size(116, 60);
             this.panel3.TabIndex = 5;
             // 
             // btnUp
@@ -235,16 +227,15 @@
             this.btnUp.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnUp.FlatAppearance.BorderSize = 0;
             this.btnUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnUp.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnUp.ForeColor = System.Drawing.Color.White;
             this.btnUp.IconChar = FontAwesome.Sharp.IconChar.SortUp;
             this.btnUp.IconColor = System.Drawing.Color.White;
             this.btnUp.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnUp.IconSize = 25;
             this.btnUp.Location = new System.Drawing.Point(0, 0);
-            this.btnUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUp.Name = "btnUp";
-            this.btnUp.Size = new System.Drawing.Size(155, 37);
+            this.btnUp.Size = new System.Drawing.Size(116, 30);
             this.btnUp.TabIndex = 5;
             this.btnUp.Text = "Tăng";
             this.btnUp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,16 +250,15 @@
             this.btnDown.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnDown.FlatAppearance.BorderSize = 0;
             this.btnDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnDown.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDown.ForeColor = System.Drawing.Color.White;
             this.btnDown.IconChar = FontAwesome.Sharp.IconChar.SortDown;
             this.btnDown.IconColor = System.Drawing.Color.White;
             this.btnDown.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDown.IconSize = 25;
-            this.btnDown.Location = new System.Drawing.Point(0, 37);
-            this.btnDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDown.Location = new System.Drawing.Point(0, 30);
             this.btnDown.Name = "btnDown";
-            this.btnDown.Size = new System.Drawing.Size(155, 37);
+            this.btnDown.Size = new System.Drawing.Size(116, 30);
             this.btnDown.TabIndex = 1;
             this.btnDown.Text = "Giảm";
             this.btnDown.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -283,16 +273,15 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.IconChar = FontAwesome.Sharp.IconChar.Save;
             this.btnSave.IconColor = System.Drawing.Color.White;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSave.IconSize = 28;
-            this.btnSave.Location = new System.Drawing.Point(1009, 0);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.IconSize = 35;
+            this.btnSave.Location = new System.Drawing.Point(757, 0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(156, 74);
+            this.btnSave.Size = new System.Drawing.Size(117, 60);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -302,14 +291,13 @@
             // 
             // formRankingTools
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1165, 814);
+            this.ClientSize = new System.Drawing.Size(874, 661);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formRankingTools";
             this.Text = "formRankingTools";
             this.panel1.ResumeLayout(false);

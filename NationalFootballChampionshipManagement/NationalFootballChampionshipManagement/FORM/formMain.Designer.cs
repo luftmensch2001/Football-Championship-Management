@@ -48,6 +48,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChampionshipLogo = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlSubToolsMenu.SuspendLayout();
@@ -70,6 +71,7 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnHelp);
             this.panel2.Controls.Add(this.btnTournaments);
             this.panel2.Controls.Add(this.pnlSubToolsMenu);
@@ -92,7 +94,7 @@
             this.btnHelp.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnHelp.FlatAppearance.BorderSize = 0;
             this.btnHelp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHelp.Font = new System.Drawing.Font("TUV Coco Gothic", 13F);
+            this.btnHelp.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.btnHelp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnHelp.IconChar = FontAwesome.Sharp.IconChar.Info;
             this.btnHelp.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -116,7 +118,7 @@
             this.btnTournaments.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTournaments.FlatAppearance.BorderSize = 0;
             this.btnTournaments.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTournaments.Font = new System.Drawing.Font("TUV Coco Gothic", 13F);
+            this.btnTournaments.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.btnTournaments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnTournaments.IconChar = FontAwesome.Sharp.IconChar.Trophy;
             this.btnTournaments.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -151,7 +153,7 @@
             this.btnRankingTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRankingTools.FlatAppearance.BorderSize = 0;
             this.btnRankingTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRankingTools.Font = new System.Drawing.Font("TUV Coco Gothic", 10F);
+            this.btnRankingTools.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnRankingTools.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnRankingTools.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
             this.btnRankingTools.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -176,7 +178,7 @@
             this.btnScoresTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnScoresTools.FlatAppearance.BorderSize = 0;
             this.btnScoresTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnScoresTools.Font = new System.Drawing.Font("TUV Coco Gothic", 10F);
+            this.btnScoresTools.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnScoresTools.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnScoresTools.IconChar = FontAwesome.Sharp.IconChar.Angular;
             this.btnScoresTools.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -201,7 +203,7 @@
             this.btnChampionshipTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnChampionshipTools.FlatAppearance.BorderSize = 0;
             this.btnChampionshipTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChampionshipTools.Font = new System.Drawing.Font("TUV Coco Gothic", 10F);
+            this.btnChampionshipTools.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnChampionshipTools.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnChampionshipTools.IconChar = FontAwesome.Sharp.IconChar.Trophy;
             this.btnChampionshipTools.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -226,7 +228,7 @@
             this.btnTools.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTools.FlatAppearance.BorderSize = 0;
             this.btnTools.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTools.Font = new System.Drawing.Font("TUV Coco Gothic", 13F);
+            this.btnTools.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.btnTools.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnTools.IconChar = FontAwesome.Sharp.IconChar.Tools;
             this.btnTools.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -260,7 +262,7 @@
             this.btnPlayerFile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPlayerFile.FlatAppearance.BorderSize = 0;
             this.btnPlayerFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPlayerFile.Font = new System.Drawing.Font("TUV Coco Gothic", 10F);
+            this.btnPlayerFile.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnPlayerFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnPlayerFile.IconChar = FontAwesome.Sharp.IconChar.User;
             this.btnPlayerFile.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -285,7 +287,7 @@
             this.btnTeamFile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTeamFile.FlatAppearance.BorderSize = 0;
             this.btnTeamFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTeamFile.Font = new System.Drawing.Font("TUV Coco Gothic", 10F);
+            this.btnTeamFile.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.btnTeamFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnTeamFile.IconChar = FontAwesome.Sharp.IconChar.Users;
             this.btnTeamFile.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -310,7 +312,7 @@
             this.btnFile.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnFile.FlatAppearance.BorderSize = 0;
             this.btnFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFile.Font = new System.Drawing.Font("TUV Coco Gothic", 13F);
+            this.btnFile.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.btnFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnFile.IconChar = FontAwesome.Sharp.IconChar.File;
             this.btnFile.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -334,7 +336,7 @@
             this.btnRankingChart.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRankingChart.FlatAppearance.BorderSize = 0;
             this.btnRankingChart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRankingChart.Font = new System.Drawing.Font("TUV Coco Gothic", 13F);
+            this.btnRankingChart.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.btnRankingChart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnRankingChart.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
             this.btnRankingChart.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -358,7 +360,7 @@
             this.btnResult.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnResult.FlatAppearance.BorderSize = 0;
             this.btnResult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResult.Font = new System.Drawing.Font("TUV Coco Gothic", 13F);
+            this.btnResult.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.btnResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnResult.IconChar = FontAwesome.Sharp.IconChar.Trophy;
             this.btnResult.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -382,7 +384,7 @@
             this.btnCompetitionSchedule.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCompetitionSchedule.FlatAppearance.BorderSize = 0;
             this.btnCompetitionSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompetitionSchedule.Font = new System.Drawing.Font("TUV Coco Gothic", 13F);
+            this.btnCompetitionSchedule.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold);
             this.btnCompetitionSchedule.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
             this.btnCompetitionSchedule.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
             this.btnCompetitionSchedule.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(113)))), ((int)(((byte)(121)))));
@@ -427,6 +429,17 @@
             this.pnlChildForm.Size = new System.Drawing.Size(874, 661);
             this.pnlChildForm.TabIndex = 2;
             // 
+            // label1
+            // 
+            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label1.Location = new System.Drawing.Point(0, 582);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(210, 23);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "label1";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // formMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,6 +481,7 @@
         private FontAwesome.Sharp.IconButton btnRankingChart;
         private FontAwesome.Sharp.IconButton btnTournaments;
         private FontAwesome.Sharp.IconButton btnHelp;
+        private System.Windows.Forms.Label label1;
     }
 }
 

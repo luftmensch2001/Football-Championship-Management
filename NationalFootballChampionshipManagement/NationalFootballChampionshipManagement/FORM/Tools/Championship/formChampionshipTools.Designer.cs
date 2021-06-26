@@ -81,22 +81,22 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
             this.dgvGoalType = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel23 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.btnRemoveTypeOfGoal = new FontAwesome.Sharp.IconButton();
             this.btnAddTypeOfGoal = new FontAwesome.Sharp.IconButton();
             this.panel18 = new System.Windows.Forms.Panel();
             this.dgvPlayerType = new Guna.UI2.WinForms.Guna2DataGridView();
             this.panel22 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.btnRemoveTypeOfPlayer = new FontAwesome.Sharp.IconButton();
             this.btnAddTypeOfPlayer = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -205,7 +205,7 @@
             // 
             this.guna2TextBox1.BorderThickness = 0;
             this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "Tập đoàn LS";
+            this.guna2TextBox1.DefaultText = "";
             this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -214,7 +214,7 @@
             this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.FocusedState.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
@@ -222,9 +222,8 @@
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderText = "";
+            this.guna2TextBox1.PlaceholderText = "Ví dụ: Tập đoàn LS";
             this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.SelectionStart = 11;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Size = new System.Drawing.Size(277, 35);
             this.guna2TextBox1.TabIndex = 3;
@@ -241,7 +240,7 @@
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 35);
@@ -262,7 +261,7 @@
             // 
             this.guna2TextBox2.BorderThickness = 0;
             this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "LS VL-League 2021";
+            this.guna2TextBox2.DefaultText = "";
             this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -271,7 +270,7 @@
             this.guna2TextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.FocusedState.Parent = this.guna2TextBox2;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.HoverState.Parent = this.guna2TextBox2;
@@ -279,9 +278,8 @@
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.PlaceholderText = "Ví dụ: LS VL-League 2021";
             this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.SelectionStart = 17;
             this.guna2TextBox2.ShadowDecoration.Parent = this.guna2TextBox2;
             this.guna2TextBox2.Size = new System.Drawing.Size(218, 35);
             this.guna2TextBox2.TabIndex = 1;
@@ -298,7 +296,7 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 35);
@@ -338,7 +336,7 @@
             // 
             this.guna2TextBox7.BorderThickness = 0;
             this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox7.DefaultText = "2021";
+            this.guna2TextBox7.DefaultText = "";
             this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
@@ -347,7 +345,7 @@
             this.guna2TextBox7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox7.FocusedState.Parent = this.guna2TextBox7;
-            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2TextBox7.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox7.HoverState.Parent = this.guna2TextBox7;
@@ -355,9 +353,8 @@
             this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.guna2TextBox7.Name = "guna2TextBox7";
             this.guna2TextBox7.PasswordChar = '\0';
-            this.guna2TextBox7.PlaceholderText = "";
+            this.guna2TextBox7.PlaceholderText = "Ví dụ: 2021";
             this.guna2TextBox7.SelectedText = "";
-            this.guna2TextBox7.SelectionStart = 4;
             this.guna2TextBox7.ShadowDecoration.Parent = this.guna2TextBox7;
             this.guna2TextBox7.Size = new System.Drawing.Size(294, 35);
             this.guna2TextBox7.TabIndex = 1;
@@ -374,7 +371,7 @@
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(131, 35);
@@ -419,7 +416,7 @@
             this.nudMinPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMinPlayer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudMinPlayer.FocusedState.Parent = this.nudMinPlayer;
-            this.nudMinPlayer.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.nudMinPlayer.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudMinPlayer.ForeColor = System.Drawing.Color.Black;
             this.nudMinPlayer.Location = new System.Drawing.Point(0, 0);
             this.nudMinPlayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -440,7 +437,7 @@
             // label8
             // 
             this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(217, 35);
@@ -471,7 +468,7 @@
             this.nudMinAge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMinAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudMinAge.FocusedState.Parent = this.nudMinAge;
-            this.nudMinAge.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.nudMinAge.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudMinAge.ForeColor = System.Drawing.Color.Black;
             this.nudMinAge.Location = new System.Drawing.Point(0, 0);
             this.nudMinAge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -492,7 +489,7 @@
             // label6
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 35);
@@ -523,7 +520,7 @@
             this.nudNumberOfTeams.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudNumberOfTeams.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudNumberOfTeams.FocusedState.Parent = this.nudNumberOfTeams;
-            this.nudNumberOfTeams.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.nudNumberOfTeams.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudNumberOfTeams.ForeColor = System.Drawing.Color.Black;
             this.nudNumberOfTeams.Location = new System.Drawing.Point(0, 0);
             this.nudNumberOfTeams.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -544,7 +541,7 @@
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 35);
@@ -589,7 +586,7 @@
             this.nudMaxPlayer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMaxPlayer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudMaxPlayer.FocusedState.Parent = this.nudMaxPlayer;
-            this.nudMaxPlayer.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.nudMaxPlayer.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudMaxPlayer.ForeColor = System.Drawing.Color.Black;
             this.nudMaxPlayer.Location = new System.Drawing.Point(0, 0);
             this.nudMaxPlayer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -610,7 +607,7 @@
             // label9
             // 
             this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label9.Location = new System.Drawing.Point(0, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(217, 35);
@@ -641,7 +638,7 @@
             this.nudMaxAge.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudMaxAge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudMaxAge.FocusedState.Parent = this.nudMaxAge;
-            this.nudMaxAge.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.nudMaxAge.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudMaxAge.ForeColor = System.Drawing.Color.Black;
             this.nudMaxAge.Location = new System.Drawing.Point(0, 0);
             this.nudMaxAge.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -662,7 +659,7 @@
             // label7
             // 
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 35);
@@ -693,7 +690,7 @@
             this.nudTimeGoalsMax.Dock = System.Windows.Forms.DockStyle.Fill;
             this.nudTimeGoalsMax.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudTimeGoalsMax.FocusedState.Parent = this.nudTimeGoalsMax;
-            this.nudTimeGoalsMax.Font = new System.Drawing.Font("Segoe UI", 13F);
+            this.nudTimeGoalsMax.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudTimeGoalsMax.ForeColor = System.Drawing.Color.Black;
             this.nudTimeGoalsMax.Location = new System.Drawing.Point(0, 0);
             this.nudTimeGoalsMax.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -714,7 +711,7 @@
             // label5
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.Location = new System.Drawing.Point(0, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(166, 35);
@@ -812,6 +809,18 @@
             this.dgvGoalType.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dgvGoalType.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGoalType_CellClick);
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Số thứ tự";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Loại bàn thắng";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
             // panel23
             // 
             this.panel23.Controls.Add(this.label11);
@@ -820,6 +829,18 @@
             this.panel23.Name = "panel23";
             this.panel23.Size = new System.Drawing.Size(325, 30);
             this.panel23.TabIndex = 2;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
+            this.label11.ForeColor = System.Drawing.Color.Red;
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(325, 30);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Các loại bàn thắng";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel21
             // 
@@ -838,12 +859,12 @@
             this.btnRemoveTypeOfGoal.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRemoveTypeOfGoal.FlatAppearance.BorderSize = 0;
             this.btnRemoveTypeOfGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveTypeOfGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnRemoveTypeOfGoal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveTypeOfGoal.ForeColor = System.Drawing.Color.White;
             this.btnRemoveTypeOfGoal.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnRemoveTypeOfGoal.IconColor = System.Drawing.Color.White;
             this.btnRemoveTypeOfGoal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRemoveTypeOfGoal.IconSize = 28;
+            this.btnRemoveTypeOfGoal.IconSize = 25;
             this.btnRemoveTypeOfGoal.Location = new System.Drawing.Point(113, 0);
             this.btnRemoveTypeOfGoal.Name = "btnRemoveTypeOfGoal";
             this.btnRemoveTypeOfGoal.Size = new System.Drawing.Size(113, 38);
@@ -861,12 +882,12 @@
             this.btnAddTypeOfGoal.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAddTypeOfGoal.FlatAppearance.BorderSize = 0;
             this.btnAddTypeOfGoal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTypeOfGoal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnAddTypeOfGoal.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTypeOfGoal.ForeColor = System.Drawing.Color.White;
             this.btnAddTypeOfGoal.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddTypeOfGoal.IconColor = System.Drawing.Color.White;
             this.btnAddTypeOfGoal.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddTypeOfGoal.IconSize = 28;
+            this.btnAddTypeOfGoal.IconSize = 25;
             this.btnAddTypeOfGoal.Location = new System.Drawing.Point(0, 0);
             this.btnAddTypeOfGoal.Name = "btnAddTypeOfGoal";
             this.btnAddTypeOfGoal.Size = new System.Drawing.Size(113, 38);
@@ -964,6 +985,18 @@
             this.panel22.Size = new System.Drawing.Size(410, 30);
             this.panel22.TabIndex = 1;
             // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(410, 30);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Các loại cầu thủ";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel20
             // 
             this.panel20.Controls.Add(this.btnRemoveTypeOfPlayer);
@@ -981,12 +1014,12 @@
             this.btnRemoveTypeOfPlayer.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnRemoveTypeOfPlayer.FlatAppearance.BorderSize = 0;
             this.btnRemoveTypeOfPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemoveTypeOfPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnRemoveTypeOfPlayer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveTypeOfPlayer.ForeColor = System.Drawing.Color.White;
             this.btnRemoveTypeOfPlayer.IconChar = FontAwesome.Sharp.IconChar.Trash;
             this.btnRemoveTypeOfPlayer.IconColor = System.Drawing.Color.White;
             this.btnRemoveTypeOfPlayer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRemoveTypeOfPlayer.IconSize = 28;
+            this.btnRemoveTypeOfPlayer.IconSize = 25;
             this.btnRemoveTypeOfPlayer.Location = new System.Drawing.Point(113, 0);
             this.btnRemoveTypeOfPlayer.Name = "btnRemoveTypeOfPlayer";
             this.btnRemoveTypeOfPlayer.Size = new System.Drawing.Size(113, 38);
@@ -1004,12 +1037,12 @@
             this.btnAddTypeOfPlayer.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnAddTypeOfPlayer.FlatAppearance.BorderSize = 0;
             this.btnAddTypeOfPlayer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddTypeOfPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnAddTypeOfPlayer.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTypeOfPlayer.ForeColor = System.Drawing.Color.White;
             this.btnAddTypeOfPlayer.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddTypeOfPlayer.IconColor = System.Drawing.Color.White;
             this.btnAddTypeOfPlayer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAddTypeOfPlayer.IconSize = 28;
+            this.btnAddTypeOfPlayer.IconSize = 25;
             this.btnAddTypeOfPlayer.Location = new System.Drawing.Point(0, 0);
             this.btnAddTypeOfPlayer.Name = "btnAddTypeOfPlayer";
             this.btnAddTypeOfPlayer.Size = new System.Drawing.Size(113, 38);
@@ -1027,7 +1060,7 @@
             this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
+            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.IconChar = FontAwesome.Sharp.IconChar.Archive;
             this.btnSave.IconColor = System.Drawing.Color.White;
@@ -1050,42 +1083,6 @@
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(139, 68);
             this.panel28.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(410, 30);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Các loại cầu thủ";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(325, 30);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Các loại bàn thắng";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Số thứ tự";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Loại bàn thắng";
-            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // formChampionshipTools
             // 

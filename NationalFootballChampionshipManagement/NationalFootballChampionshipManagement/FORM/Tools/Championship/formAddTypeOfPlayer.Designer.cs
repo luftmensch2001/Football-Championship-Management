@@ -60,9 +60,8 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1144, 86);
+            this.panel1.Size = new System.Drawing.Size(858, 70);
             this.panel1.TabIndex = 0;
             // 
             // lTitle
@@ -70,10 +69,9 @@
             this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(57, 0);
-            this.lTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
             this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(1087, 86);
+            this.lTitle.Size = new System.Drawing.Size(815, 70);
             this.lTitle.TabIndex = 8;
             this.lTitle.Text = "Thêm loại cầu thủ mới";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -90,9 +88,8 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(57, 86);
+            this.btnClose.Size = new System.Drawing.Size(43, 70);
             this.btnClose.TabIndex = 2;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -102,10 +99,9 @@
             this.panel2.Controls.Add(this.tbNameOfPlayerType);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1144, 43);
+            this.panel2.Size = new System.Drawing.Size(858, 35);
             this.panel2.TabIndex = 1;
             // 
             // tbNameOfPlayerType
@@ -125,14 +121,14 @@
             this.tbNameOfPlayerType.ForeColor = System.Drawing.Color.Black;
             this.tbNameOfPlayerType.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNameOfPlayerType.HoverState.Parent = this.tbNameOfPlayerType;
-            this.tbNameOfPlayerType.Location = new System.Drawing.Point(233, 0);
-            this.tbNameOfPlayerType.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbNameOfPlayerType.Location = new System.Drawing.Point(175, 0);
+            this.tbNameOfPlayerType.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNameOfPlayerType.Name = "tbNameOfPlayerType";
             this.tbNameOfPlayerType.PasswordChar = '\0';
             this.tbNameOfPlayerType.PlaceholderText = "Cầu thủ nhập tịch, .etc..";
             this.tbNameOfPlayerType.SelectedText = "";
             this.tbNameOfPlayerType.ShadowDecoration.Parent = this.tbNameOfPlayerType;
-            this.tbNameOfPlayerType.Size = new System.Drawing.Size(911, 43);
+            this.tbNameOfPlayerType.Size = new System.Drawing.Size(683, 35);
             this.tbNameOfPlayerType.TabIndex = 1;
             // 
             // panel4
@@ -140,9 +136,8 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(233, 43);
+            this.panel4.Size = new System.Drawing.Size(175, 35);
             this.panel4.TabIndex = 0;
             // 
             // label1
@@ -150,9 +145,8 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(233, 43);
+            this.label1.Size = new System.Drawing.Size(175, 35);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên loại cầu thủ:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,10 +156,9 @@
             this.panel3.Controls.Add(this.nudMaxNumber);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 129);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(0, 105);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1144, 43);
+            this.panel3.Size = new System.Drawing.Size(858, 35);
             this.panel3.TabIndex = 2;
             // 
             // nudMaxNumber
@@ -182,13 +175,12 @@
             this.nudMaxNumber.Dock = System.Windows.Forms.DockStyle.Left;
             this.nudMaxNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nudMaxNumber.FocusedState.Parent = this.nudMaxNumber;
-            this.nudMaxNumber.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudMaxNumber.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudMaxNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.nudMaxNumber.Location = new System.Drawing.Point(233, 0);
-            this.nudMaxNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.nudMaxNumber.Location = new System.Drawing.Point(175, 0);
             this.nudMaxNumber.Name = "nudMaxNumber";
             this.nudMaxNumber.ShadowDecoration.Parent = this.nudMaxNumber;
-            this.nudMaxNumber.Size = new System.Drawing.Size(157, 43);
+            this.nudMaxNumber.Size = new System.Drawing.Size(118, 35);
             this.nudMaxNumber.TabIndex = 2;
             // 
             // panel5
@@ -196,9 +188,8 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(233, 43);
+            this.panel5.Size = new System.Drawing.Size(175, 35);
             this.panel5.TabIndex = 1;
             // 
             // label2
@@ -206,9 +197,8 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(233, 43);
+            this.label2.Size = new System.Drawing.Size(175, 35);
             this.label2.TabIndex = 1;
             this.label2.Text = "Số lượng tối đa:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,10 +207,9 @@
             // 
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 172);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(0, 140);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1144, 43);
+            this.panel6.Size = new System.Drawing.Size(858, 35);
             this.panel6.TabIndex = 3;
             // 
             // panel7
@@ -228,9 +217,8 @@
             this.panel7.Controls.Add(this.btnAddPlayerType);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(233, 43);
+            this.panel7.Size = new System.Drawing.Size(175, 35);
             this.panel7.TabIndex = 1;
             // 
             // btnAddPlayerType
@@ -240,16 +228,15 @@
             this.btnAddPlayerType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAddPlayerType.FlatAppearance.BorderSize = 0;
             this.btnAddPlayerType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddPlayerType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.btnAddPlayerType.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPlayerType.ForeColor = System.Drawing.Color.White;
             this.btnAddPlayerType.IconChar = FontAwesome.Sharp.IconChar.Plus;
             this.btnAddPlayerType.IconColor = System.Drawing.Color.White;
             this.btnAddPlayerType.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddPlayerType.IconSize = 25;
             this.btnAddPlayerType.Location = new System.Drawing.Point(0, 0);
-            this.btnAddPlayerType.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddPlayerType.Name = "btnAddPlayerType";
-            this.btnAddPlayerType.Size = new System.Drawing.Size(233, 43);
+            this.btnAddPlayerType.Size = new System.Drawing.Size(175, 35);
             this.btnAddPlayerType.TabIndex = 3;
             this.btnAddPlayerType.Text = "Thêm";
             this.btnAddPlayerType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -262,27 +249,25 @@
             this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.iconButton1.IconColor = System.Drawing.Color.Black;
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(479, 374);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.iconButton1.Location = new System.Drawing.Point(359, 304);
             this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(11, 10);
+            this.iconButton1.Size = new System.Drawing.Size(8, 8);
             this.iconButton1.TabIndex = 4;
             this.iconButton1.Text = "iconButton1";
             this.iconButton1.UseVisualStyleBackColor = true;
             // 
             // formAddTypeOfPlayer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1144, 766);
+            this.ClientSize = new System.Drawing.Size(858, 622);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formAddTypeOfPlayer";
             this.Text = "formAddTypeOfPlayer";
             this.panel1.ResumeLayout(false);

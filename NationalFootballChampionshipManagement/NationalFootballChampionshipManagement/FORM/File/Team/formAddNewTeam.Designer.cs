@@ -155,15 +155,16 @@
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(401, 642);
+            this.panel5.Size = new System.Drawing.Size(401, 639);
             this.panel5.TabIndex = 1;
             // 
             // pbTeamImage
             // 
-            this.pbTeamImage.Location = new System.Drawing.Point(3, 32);
+            this.pbTeamImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbTeamImage.Location = new System.Drawing.Point(0, 0);
             this.pbTeamImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pbTeamImage.Name = "pbTeamImage";
-            this.pbTeamImage.Size = new System.Drawing.Size(391, 490);
+            this.pbTeamImage.Size = new System.Drawing.Size(401, 639);
             this.pbTeamImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTeamImage.TabIndex = 0;
             this.pbTeamImage.TabStop = false;
@@ -172,15 +173,15 @@
             // 
             this.panel4.Controls.Add(this.btnUpload);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 642);
+            this.panel4.Location = new System.Drawing.Point(0, 639);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(401, 34);
+            this.panel4.Size = new System.Drawing.Size(401, 37);
             this.panel4.TabIndex = 0;
             // 
             // btnUpload
             // 
-            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnUpload.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpload.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnUpload.FlatAppearance.BorderSize = 0;
@@ -190,11 +191,11 @@
             this.btnUpload.IconChar = FontAwesome.Sharp.IconChar.Upload;
             this.btnUpload.IconColor = System.Drawing.Color.White;
             this.btnUpload.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUpload.IconSize = 30;
+            this.btnUpload.IconSize = 25;
             this.btnUpload.Location = new System.Drawing.Point(0, 0);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpload.Name = "btnUpload";
-            this.btnUpload.Size = new System.Drawing.Size(401, 34);
+            this.btnUpload.Size = new System.Drawing.Size(401, 37);
             this.btnUpload.TabIndex = 1;
             this.btnUpload.Text = "Tải ảnh lên";
             this.btnUpload.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,24 +232,24 @@
             this.tbTeamName.ForeColor = System.Drawing.Color.Black;
             this.tbTeamName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbTeamName.HoverState.Parent = this.tbTeamName;
-            this.tbTeamName.Location = new System.Drawing.Point(161, 0);
+            this.tbTeamName.Location = new System.Drawing.Point(208, 0);
             this.tbTeamName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbTeamName.Name = "tbTeamName";
             this.tbTeamName.PasswordChar = '\0';
             this.tbTeamName.PlaceholderText = "Tên của đội bóng";
             this.tbTeamName.SelectedText = "";
             this.tbTeamName.ShadowDecoration.Parent = this.tbTeamName;
-            this.tbTeamName.Size = new System.Drawing.Size(495, 50);
+            this.tbTeamName.Size = new System.Drawing.Size(524, 50);
             this.tbTeamName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(161, 50);
+            this.label2.Size = new System.Drawing.Size(208, 50);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tên đội bóng:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,24 +283,24 @@
             this.tbCoachName.ForeColor = System.Drawing.Color.Black;
             this.tbCoachName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbCoachName.HoverState.Parent = this.tbCoachName;
-            this.tbCoachName.Location = new System.Drawing.Point(161, 0);
+            this.tbCoachName.Location = new System.Drawing.Point(208, 0);
             this.tbCoachName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbCoachName.Name = "tbCoachName";
             this.tbCoachName.PasswordChar = '\0';
             this.tbCoachName.PlaceholderText = "Tên huấn luyện viên trưởng";
             this.tbCoachName.SelectedText = "";
             this.tbCoachName.ShadowDecoration.Parent = this.tbCoachName;
-            this.tbCoachName.Size = new System.Drawing.Size(495, 50);
+            this.tbCoachName.Size = new System.Drawing.Size(524, 50);
             this.tbCoachName.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3.Location = new System.Drawing.Point(0, 0);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 50);
+            this.label3.Size = new System.Drawing.Size(208, 50);
             this.label3.TabIndex = 0;
             this.label3.Text = "Huấn luyện viên:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -333,24 +334,24 @@
             this.tbHost.ForeColor = System.Drawing.Color.Black;
             this.tbHost.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbHost.HoverState.Parent = this.tbHost;
-            this.tbHost.Location = new System.Drawing.Point(161, 0);
+            this.tbHost.Location = new System.Drawing.Point(208, 0);
             this.tbHost.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.tbHost.Name = "tbHost";
             this.tbHost.PasswordChar = '\0';
             this.tbHost.PlaceholderText = "Tên sân nhà";
             this.tbHost.SelectedText = "";
             this.tbHost.ShadowDecoration.Parent = this.tbHost;
-            this.tbHost.Size = new System.Drawing.Size(495, 50);
+            this.tbHost.Size = new System.Drawing.Size(524, 50);
             this.tbHost.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label4.Location = new System.Drawing.Point(0, 0);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(161, 50);
+            this.label4.Size = new System.Drawing.Size(208, 50);
             this.label4.TabIndex = 0;
             this.label4.Text = "Sân nhà:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

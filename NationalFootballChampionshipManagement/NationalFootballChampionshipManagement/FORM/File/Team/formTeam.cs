@@ -59,6 +59,8 @@ namespace NationalFootballChampionshipManagement
             mybtn.Text = team.TeamName;
             mybtn.Height = 50;
             mybtn.Width = panel1.Width;
+            mybtn.FlatStyle = FlatStyle.Flat;
+            mybtn.FlatAppearance.BorderSize = 0;
             if (lastButton == iconButton1)
                 mybtn.Top = lbTeamList.Location.Y + lbTeamList.Height + 6;
             else
@@ -71,6 +73,10 @@ namespace NationalFootballChampionshipManagement
             mybtn.IconSize = 35;
             mybtn.Click += Mybtn_Click;
             mybtn.Tag = team;
+            mybtn.TextAlign = ContentAlignment.MiddleLeft;
+            mybtn.TextImageRelation = TextImageRelation.ImageBeforeText;
+            mybtn.IconChar = FontAwesome.Sharp.IconChar.None;
+            mybtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             lastButton = mybtn;
             this.panel1.Controls.Add(mybtn);
         }
