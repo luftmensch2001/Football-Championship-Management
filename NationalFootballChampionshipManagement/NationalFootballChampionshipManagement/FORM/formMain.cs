@@ -22,14 +22,17 @@ namespace NationalFootballChampionshipManagement
 
             openChildForm(new formHome(this));
 
+            LoadStatus();
+
             int idmg = LeagueDAO.Instance.GetCurrIDMG();
             if (idmg == -1)
             {
                 DisableButton();
                 MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy mở mục Mùa Giải và tạo cho mình mùa giải đầu tiên nhé!");
+                openChildForm(new formAddMuaGiai(this));
             }
             else
-            {
+            {              
                 LoadLogo();
             }
             
@@ -53,6 +56,10 @@ namespace NationalFootballChampionshipManagement
             btnTools.Enabled = true;
         }
 
+        public void LoadStatus()
+        {
+            lbStatus.Text = LeagueDAO.Instance.GetCurrLeagueStatus();
+        }
         public void LoadLogo()
         {
             panelChampionshipLogo.BackgroundImage = LeagueDAO.Instance.GetCurrLeagueImage();

@@ -178,7 +178,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnLoadImage_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter="Image files(*.jpg;*.jpeg;*.png)|*.jpg|*.jpeg|*.png", Multiselect = false };
+            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter="Image files(*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png", Multiselect = false };
             openFileDialog.ShowDialog();
             string path = openFileDialog.FileName;
             if (path != "")

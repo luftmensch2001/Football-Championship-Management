@@ -58,10 +58,12 @@ namespace NationalFootballChampionshipManagement.DAO
                                     "SET KqDoi1 =" + kqDoi1.ToString() + ", KqDoi2 =" + kqDoi2.ToString() +
                                     "Where IDTRANDAU = " + idTranDau.ToString());
         }
-        public void DeleteAllResultMatch()
+        public void DeleteAllResultMatch(List<int> listIDTD)
         {
-            int idmg = LeagueDAO.Instance.GetCurrIDMG();
-            DataProvider.Instance.ExecuteQuery("Delete from KetQuaThiDau Where IDMG");
+            foreach (int item in listIDTD)
+            {
+                DataProvider.Instance.ExecuteQuery("Delete from KetQuaThiDau Where IDTranDau = " + item.ToString());
+            }        
         }
     }
 }

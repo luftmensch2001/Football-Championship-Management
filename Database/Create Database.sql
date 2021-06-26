@@ -15,7 +15,8 @@ CREATE TABLE MuaGiai
 	TenMG NVARCHAR(50),
 	Nam INT,
 	MuaGiaiHienTai BIT,
-	Logo IMAGE
+	Logo IMAGE,
+	TrangThai INT
 )
 GO
 

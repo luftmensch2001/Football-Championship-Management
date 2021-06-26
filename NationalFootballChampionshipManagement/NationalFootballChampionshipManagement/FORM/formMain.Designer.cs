@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lbStatus = new System.Windows.Forms.Label();
             this.btnHelp = new FontAwesome.Sharp.IconButton();
             this.btnTournaments = new FontAwesome.Sharp.IconButton();
             this.pnlSubToolsMenu = new System.Windows.Forms.Panel();
@@ -48,7 +49,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelChampionshipLogo = new System.Windows.Forms.Panel();
             this.pnlChildForm = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlSubToolsMenu.SuspendLayout();
@@ -64,14 +64,15 @@
             this.panelMenu.Controls.Add(this.panelChampionshipLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(210, 661);
+            this.panelMenu.Size = new System.Drawing.Size(280, 814);
             this.panelMenu.TabIndex = 0;
             // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.lbStatus);
             this.panel2.Controls.Add(this.btnHelp);
             this.panel2.Controls.Add(this.btnTournaments);
             this.panel2.Controls.Add(this.pnlSubToolsMenu);
@@ -82,10 +83,22 @@
             this.panel2.Controls.Add(this.btnResult);
             this.panel2.Controls.Add(this.btnCompetitionSchedule);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 56);
+            this.panel2.Location = new System.Drawing.Point(0, 69);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 605);
+            this.panel2.Size = new System.Drawing.Size(280, 745);
             this.panel2.TabIndex = 11;
+            // 
+            // lbStatus
+            // 
+            this.lbStatus.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbStatus.Font = new System.Drawing.Font("Segoe UI", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatus.Location = new System.Drawing.Point(0, 711);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(280, 34);
+            this.lbStatus.TabIndex = 22;
+            this.lbStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnHelp
             // 
@@ -101,9 +114,10 @@
             this.btnHelp.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnHelp.IconSize = 35;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHelp.Location = new System.Drawing.Point(0, 459);
+            this.btnHelp.Location = new System.Drawing.Point(0, 563);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(210, 40);
+            this.btnHelp.Size = new System.Drawing.Size(280, 49);
             this.btnHelp.TabIndex = 21;
             this.btnHelp.Text = "Trợ giúp";
             this.btnHelp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -125,9 +139,10 @@
             this.btnTournaments.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnTournaments.IconSize = 35;
             this.btnTournaments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTournaments.Location = new System.Drawing.Point(0, 419);
+            this.btnTournaments.Location = new System.Drawing.Point(0, 514);
+            this.btnTournaments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTournaments.Name = "btnTournaments";
-            this.btnTournaments.Size = new System.Drawing.Size(210, 40);
+            this.btnTournaments.Size = new System.Drawing.Size(280, 49);
             this.btnTournaments.TabIndex = 20;
             this.btnTournaments.Text = "Mùa giải";
             this.btnTournaments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -141,9 +156,10 @@
             this.pnlSubToolsMenu.Controls.Add(this.btnScoresTools);
             this.pnlSubToolsMenu.Controls.Add(this.btnChampionshipTools);
             this.pnlSubToolsMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubToolsMenu.Location = new System.Drawing.Point(0, 288);
+            this.pnlSubToolsMenu.Location = new System.Drawing.Point(0, 353);
+            this.pnlSubToolsMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSubToolsMenu.Name = "pnlSubToolsMenu";
-            this.pnlSubToolsMenu.Size = new System.Drawing.Size(210, 131);
+            this.pnlSubToolsMenu.Size = new System.Drawing.Size(280, 161);
             this.pnlSubToolsMenu.TabIndex = 18;
             // 
             // btnRankingTools
@@ -160,10 +176,11 @@
             this.btnRankingTools.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRankingTools.IconSize = 25;
             this.btnRankingTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRankingTools.Location = new System.Drawing.Point(0, 80);
+            this.btnRankingTools.Location = new System.Drawing.Point(0, 98);
+            this.btnRankingTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRankingTools.Name = "btnRankingTools";
-            this.btnRankingTools.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnRankingTools.Size = new System.Drawing.Size(210, 40);
+            this.btnRankingTools.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnRankingTools.Size = new System.Drawing.Size(280, 49);
             this.btnRankingTools.TabIndex = 10;
             this.btnRankingTools.Text = "Quy định xếp hạng";
             this.btnRankingTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,10 +202,11 @@
             this.btnScoresTools.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnScoresTools.IconSize = 25;
             this.btnScoresTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnScoresTools.Location = new System.Drawing.Point(0, 40);
+            this.btnScoresTools.Location = new System.Drawing.Point(0, 49);
+            this.btnScoresTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnScoresTools.Name = "btnScoresTools";
-            this.btnScoresTools.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnScoresTools.Size = new System.Drawing.Size(210, 40);
+            this.btnScoresTools.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnScoresTools.Size = new System.Drawing.Size(280, 49);
             this.btnScoresTools.TabIndex = 9;
             this.btnScoresTools.Text = "Quy định điểm số";
             this.btnScoresTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,9 +229,10 @@
             this.btnChampionshipTools.IconSize = 25;
             this.btnChampionshipTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChampionshipTools.Location = new System.Drawing.Point(0, 0);
+            this.btnChampionshipTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChampionshipTools.Name = "btnChampionshipTools";
-            this.btnChampionshipTools.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnChampionshipTools.Size = new System.Drawing.Size(210, 40);
+            this.btnChampionshipTools.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnChampionshipTools.Size = new System.Drawing.Size(280, 49);
             this.btnChampionshipTools.TabIndex = 8;
             this.btnChampionshipTools.Text = "Quy định giải đấu";
             this.btnChampionshipTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,9 +254,10 @@
             this.btnTools.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnTools.IconSize = 35;
             this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTools.Location = new System.Drawing.Point(0, 248);
+            this.btnTools.Location = new System.Drawing.Point(0, 304);
+            this.btnTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTools.Name = "btnTools";
-            this.btnTools.Size = new System.Drawing.Size(210, 40);
+            this.btnTools.Size = new System.Drawing.Size(280, 49);
             this.btnTools.TabIndex = 17;
             this.btnTools.Text = "Quy định";
             this.btnTools.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -250,9 +270,10 @@
             this.pnlSubFileMenu.Controls.Add(this.btnPlayerFile);
             this.pnlSubFileMenu.Controls.Add(this.btnTeamFile);
             this.pnlSubFileMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlSubFileMenu.Location = new System.Drawing.Point(0, 160);
+            this.pnlSubFileMenu.Location = new System.Drawing.Point(0, 196);
+            this.pnlSubFileMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlSubFileMenu.Name = "pnlSubFileMenu";
-            this.pnlSubFileMenu.Size = new System.Drawing.Size(210, 88);
+            this.pnlSubFileMenu.Size = new System.Drawing.Size(280, 108);
             this.pnlSubFileMenu.TabIndex = 16;
             // 
             // btnPlayerFile
@@ -269,10 +290,11 @@
             this.btnPlayerFile.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnPlayerFile.IconSize = 25;
             this.btnPlayerFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPlayerFile.Location = new System.Drawing.Point(0, 40);
+            this.btnPlayerFile.Location = new System.Drawing.Point(0, 49);
+            this.btnPlayerFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlayerFile.Name = "btnPlayerFile";
-            this.btnPlayerFile.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnPlayerFile.Size = new System.Drawing.Size(210, 40);
+            this.btnPlayerFile.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnPlayerFile.Size = new System.Drawing.Size(280, 49);
             this.btnPlayerFile.TabIndex = 8;
             this.btnPlayerFile.Text = "Cầu thủ";
             this.btnPlayerFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,9 +317,10 @@
             this.btnTeamFile.IconSize = 25;
             this.btnTeamFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeamFile.Location = new System.Drawing.Point(0, 0);
+            this.btnTeamFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnTeamFile.Name = "btnTeamFile";
-            this.btnTeamFile.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.btnTeamFile.Size = new System.Drawing.Size(210, 40);
+            this.btnTeamFile.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btnTeamFile.Size = new System.Drawing.Size(280, 49);
             this.btnTeamFile.TabIndex = 7;
             this.btnTeamFile.Text = "Đội bóng";
             this.btnTeamFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -319,9 +342,10 @@
             this.btnFile.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnFile.IconSize = 35;
             this.btnFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFile.Location = new System.Drawing.Point(0, 120);
+            this.btnFile.Location = new System.Drawing.Point(0, 147);
+            this.btnFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFile.Name = "btnFile";
-            this.btnFile.Size = new System.Drawing.Size(210, 40);
+            this.btnFile.Size = new System.Drawing.Size(280, 49);
             this.btnFile.TabIndex = 15;
             this.btnFile.Text = "Hồ sơ";
             this.btnFile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -343,9 +367,10 @@
             this.btnRankingChart.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnRankingChart.IconSize = 35;
             this.btnRankingChart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRankingChart.Location = new System.Drawing.Point(0, 80);
+            this.btnRankingChart.Location = new System.Drawing.Point(0, 98);
+            this.btnRankingChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRankingChart.Name = "btnRankingChart";
-            this.btnRankingChart.Size = new System.Drawing.Size(210, 40);
+            this.btnRankingChart.Size = new System.Drawing.Size(280, 49);
             this.btnRankingChart.TabIndex = 12;
             this.btnRankingChart.Text = "Bảng xếp hạng";
             this.btnRankingChart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -367,9 +392,10 @@
             this.btnResult.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnResult.IconSize = 35;
             this.btnResult.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnResult.Location = new System.Drawing.Point(0, 40);
+            this.btnResult.Location = new System.Drawing.Point(0, 49);
+            this.btnResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnResult.Name = "btnResult";
-            this.btnResult.Size = new System.Drawing.Size(210, 40);
+            this.btnResult.Size = new System.Drawing.Size(280, 49);
             this.btnResult.TabIndex = 10;
             this.btnResult.Text = "Kết quả thi đấu";
             this.btnResult.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -392,8 +418,9 @@
             this.btnCompetitionSchedule.IconSize = 35;
             this.btnCompetitionSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompetitionSchedule.Location = new System.Drawing.Point(0, 0);
+            this.btnCompetitionSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCompetitionSchedule.Name = "btnCompetitionSchedule";
-            this.btnCompetitionSchedule.Size = new System.Drawing.Size(210, 40);
+            this.btnCompetitionSchedule.Size = new System.Drawing.Size(280, 49);
             this.btnCompetitionSchedule.TabIndex = 3;
             this.btnCompetitionSchedule.Text = "Lập lịch thi đấu";
             this.btnCompetitionSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -404,9 +431,10 @@
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 55);
+            this.panel1.Location = new System.Drawing.Point(0, 68);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 1);
+            this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 10;
             // 
             // panelChampionshipLogo
@@ -416,39 +444,31 @@
             this.panelChampionshipLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChampionshipLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelChampionshipLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelChampionshipLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelChampionshipLogo.Name = "panelChampionshipLogo";
-            this.panelChampionshipLogo.Size = new System.Drawing.Size(210, 55);
+            this.panelChampionshipLogo.Size = new System.Drawing.Size(280, 68);
             this.panelChampionshipLogo.TabIndex = 0;
             // 
             // pnlChildForm
             // 
             this.pnlChildForm.BackColor = System.Drawing.Color.White;
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlChildForm.Location = new System.Drawing.Point(210, 0);
+            this.pnlChildForm.Location = new System.Drawing.Point(280, 0);
+            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlChildForm.Name = "pnlChildForm";
-            this.pnlChildForm.Size = new System.Drawing.Size(874, 661);
+            this.pnlChildForm.Size = new System.Drawing.Size(1165, 814);
             this.pnlChildForm.TabIndex = 2;
-            // 
-            // label1
-            // 
-            this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label1.Location = new System.Drawing.Point(0, 582);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(210, 23);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "label1";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // formMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1084, 661);
+            this.ClientSize = new System.Drawing.Size(1445, 814);
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1100, 675);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1461, 820);
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Phần mềm quản lý giải bóng đá vô địch quốc gia";
@@ -481,7 +501,7 @@
         private FontAwesome.Sharp.IconButton btnRankingChart;
         private FontAwesome.Sharp.IconButton btnTournaments;
         private FontAwesome.Sharp.IconButton btnHelp;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbStatus;
     }
 }
 

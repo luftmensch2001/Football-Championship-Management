@@ -38,8 +38,8 @@ namespace NationalFootballChampionshipManagement.DAO
 
         public void DeleteAllMatches()
         {
-            string query = "DELETE FROM TranDau";
-            ResultMatchDAO.Instance.DeleteAllResultMatch();
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
+            string query = "DELETE FROM TranDau WHERE IDMG = " + idmg.ToString();
             DataProvider.Instance.ExecuteNonQuery(query);
         }
 

@@ -1,4 +1,5 @@
 ﻿using NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
 using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
@@ -132,6 +133,8 @@ namespace NationalFootballChampionshipManagement
                 LoadDgv(MatchDAO.Instance.GetAllMatches());
                 LoadRadioButton();
                 btnCancelSchedule.Enabled = true;
+                LeagueDAO.Instance.UpdateStatus(1);
+                this.formFather.LoadStatus();
                 MessageBox.Show("Tạo lịch thi đấu thành công. Hãy tuỳ chỉnh thời gian cho các trận đấu!", "Thành công");
             } 
             catch
@@ -154,17 +157,20 @@ namespace NationalFootballChampionshipManagement
 
             try
             {
-                // xoa tat ca tran dau va cac bang co khoa lien quan, hien tai t moi chi xoa bang tran dau
+                // xoa tat ca tran dau va cac bang co khoa lien quan
+                ResultMatchDAO.Instance.DeleteAllResultMatch(listIDTranDau);
                 ScheduleDAO.Instance.CancelSchedule();
-                ResultMatchDAO.Instance.DeleteAllResultMatch();
+    
                 LoadDgv(MatchDAO.Instance.GetAllMatches());
                 LoadRadioButton();
                 btnAutoCreate.Enabled = true;
+                LeagueDAO.Instance.UpdateStatus(0);
+                this.formFather.LoadStatus();
                 MessageBox.Show("Huỷ lịch thi đấu thành công", "Thành công");
             }
             catch
             {
-                MessageBox.Show("Huỷ thi đấu thất bại", "Lỗi");
+                MessageBox.Show("Huỷ lịch thi đấu thất bại", "Lỗi");
             }
         }
 

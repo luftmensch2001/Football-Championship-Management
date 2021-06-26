@@ -30,8 +30,8 @@ namespace NationalFootballChampionshipManagement.DAO
             {
                 byte[] byteArr = ImageProcessing.Instance.convertImgToByte(img);
                 string query =
-                     "INSERT INTO MuaGiai(TenMG, Nam, MuaGiaiHienTai) " +
-                     "VALUES(N'" + name + "'," + year.ToString() + ", 0)";
+                     "INSERT INTO MuaGiai(TenMG, Nam, MuaGiaiHienTai, TrangThai) " +
+                     "VALUES(N'" + name + "'," + year.ToString() + ", 0, 0)";
 
                 DataProvider.Instance.ExecuteQuery(query);
 
@@ -100,6 +100,38 @@ namespace NationalFootballChampionshipManagement.DAO
 
                 if (data.Rows.Count == 0) return "No League Selected";
                 return data.Rows[0]["TenMG"].ToString();
+            }
+
+            public string GetCurrLeagueStatus()
+            {
+                string query = "SELECT TrangThai FROM MuaGiai WHERE MuaGiaiHienTai = 1";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+                if (data.Rows.Count == 0) return "No League Selected";
+                int status =  (int) data.Rows[0]["TrangThai"];
+                switch (status)
+                {
+                    case 0: return "Trạng thái: Đang đăng ký";
+                        break;
+                    case 1: return "Trạng thái: Chuẩn bị bắt đầu";
+                        break;
+                    case 2: return "Trạng thái: Đã bắt đầu";
+                        break;
+                }
+                return "No League Selected";
+            }
+
+            public void UpdateStatus(int status)
+            {
+                string query = "UPDATE MuaGiai SET TrangThai = " + status.ToString() + "WHERE MuaGiaiHienTai = 1";
+                try
+                {
+                    DataProvider.Instance.ExecuteQuery(query);
+                }
+                catch
+                {
+                    MessageBox.Show("Lỗi không xác định");
+                }
             }
 
             public Image GetCurrLeagueImage()
