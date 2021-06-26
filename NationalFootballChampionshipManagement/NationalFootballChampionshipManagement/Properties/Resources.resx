@@ -139,4 +139,16 @@
   <data name="Stadium Background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Stadium Background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="imgDraw" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgDraw.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgEmpty" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgEmpty.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgLose" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgLose.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imgWin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imgWin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -39,9 +39,10 @@ namespace NationalFootballChampionshipManagement.DAO
         }
         public List<ResultMatch> LoadResultMatchByName(string team1, string team2)
         {
+            int idmg = LeagueDAO.Instance.GetCurrIDMG();
             List<ResultMatch> listResultMatch = new List<ResultMatch>();
-            string query = "EXEC USP_LoadResultMatchByName";
-            query += " @TENDOI1 = N'" + team1 + "'";
+            string query = "EXEC USP_LoadResultMatchByName @idmg = " + idmg;
+            query += ", @TENDOI1 = N'" + team1 + "'";
             query += ", @TENDOI2 = N'" + team2 + "'";
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in dataTable.Rows)

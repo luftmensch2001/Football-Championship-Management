@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pnlFill = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPrint = new FontAwesome.Sharp.IconButton();
             this.dgvRanking = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnPrint = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCLB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMatches = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,7 +49,7 @@
             this.colGoalsAgainst = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCoefficient = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colScores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col5History = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlTitle.SuspendLayout();
             this.panel4.SuspendLayout();
             this.pnlFill.SuspendLayout();
@@ -82,25 +82,6 @@
             this.lTitle.Text = "Bảng xếp hạng";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
-            this.btnClose.IconColor = System.Drawing.Color.White;
-            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 35;
-            this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(57, 86);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.pnlFill);
@@ -131,29 +112,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 49);
             this.panel1.TabIndex = 1;
-            // 
-            // btnPrint
-            // 
-            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnPrint.FlatAppearance.BorderSize = 0;
-            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Underline);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.IconChar = FontAwesome.Sharp.IconChar.Print;
-            this.btnPrint.IconColor = System.Drawing.Color.White;
-            this.btnPrint.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPrint.IconSize = 30;
-            this.btnPrint.Location = new System.Drawing.Point(1032, 0);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(133, 49);
-            this.btnPrint.TabIndex = 0;
-            this.btnPrint.Text = "In";
-            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPrint.UseVisualStyleBackColor = false;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // dgvRanking
             // 
@@ -186,7 +144,7 @@
             this.colGoalsAgainst,
             this.colCoefficient,
             this.colScores,
-            this.col5History});
+            this.Column1});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -230,6 +188,48 @@
             this.dgvRanking.ThemeStyle.RowsStyle.Height = 30;
             this.dgvRanking.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvRanking.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Underline);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.btnPrint.IconColor = System.Drawing.Color.White;
+            this.btnPrint.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrint.IconSize = 30;
+            this.btnPrint.Location = new System.Drawing.Point(1032, 0);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(133, 49);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.Text = "In";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Times;
+            this.btnClose.IconColor = System.Drawing.Color.White;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnClose.IconSize = 35;
+            this.btnClose.Location = new System.Drawing.Point(0, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(57, 86);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // colSTT
             // 
@@ -310,13 +310,13 @@
             this.colScores.Name = "colScores";
             this.colScores.ReadOnly = true;
             // 
-            // col5History
+            // Column1
             // 
-            this.col5History.FillWeight = 50F;
-            this.col5History.HeaderText = "5 trận gần nhất";
-            this.col5History.MinimumWidth = 6;
-            this.col5History.Name = "col5History";
-            this.col5History.ReadOnly = true;
+            this.Column1.FillWeight = 55F;
+            this.Column1.HeaderText = "5 trận gần nhất";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // formRanking
             // 
@@ -360,6 +360,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colGoalsAgainst;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCoefficient;
         private System.Windows.Forms.DataGridViewTextBoxColumn colScores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn col5History;
+        private System.Windows.Forms.DataGridViewImageColumn Column1;
     }
 }

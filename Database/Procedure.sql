@@ -189,7 +189,7 @@ END
 GO
 
 -- ResultMatch--------------------------------------------------------------------------------------------
-Create proc USP_LoadResultMatch
+CREATE proc USP_LoadResultMatch
 @Idmg int 
 AS
 BEGIN
@@ -218,6 +218,7 @@ END
 GO
  -- Resutl Match By Name 2 Team
  CREATE proc USP_LoadResultMatchByName
+ @idmg INT,
  @TENDOI1 NVARCHAR(50),
  @TENDOI2 NVARCHAR(50)
 AS
@@ -228,6 +229,7 @@ BEGIN
 		TranDau.SanVanDong, TranDau.ThoiGian
 		FROM KetQuaThiDau JOIN TranDau 
 			ON KetQuaThiDau.IDTranDau=TranDau.IDTranDau
+			WHERE TranDau.IDMG = @Idmg
 	) AS KETQUA 
 	JOIN (
 		SELECT Doi.TenDB AS TENDOI1, Doi.IDDB 

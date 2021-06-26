@@ -20,7 +20,6 @@ namespace NationalFootballChampionshipManagement
         int SelectedIDLCT = 0;
         Rules rules = null;
         int selectedGoalTypeRow = -1;
-        int selectedPlayerTypeRow = -1;
         int roundCount;
         public formChampionshipTools(formMain f)
         {
@@ -223,7 +222,7 @@ namespace NationalFootballChampionshipManagement
             //Check logic
 
             //NumberOfTeams
-            if (nudMinAge.Value < 2)
+            if (nudNumberOfTeams.Value < 2)
             {
                 MessageBox.Show("Số lượng đội bóng phải lớn hơn 1", "Lỗi");
                 return;
