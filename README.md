@@ -17,7 +17,7 @@ Phần mềm của chúng tôi cung cấp những tính năng như sau:
 - Lập lịch thi đấu
 - Ghi nhận và lưu trữ kết quả trận đấu
 ## Phát triển
-- C#
+- Ngôn ngữ lập trình: C#
 - Ngoài ra, còn sử dụng Guna2, MaterialSurface, FontAwesome.Sharp trong việc thiết kế giao diện
 - Ứng dụng mô hình 3 lớp trong phát triển phần mềm
 
