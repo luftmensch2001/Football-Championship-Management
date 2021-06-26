@@ -51,6 +51,7 @@ namespace NationalFootballChampionshipManagement
             clbTeam.Top = 10;
             clbTeam.CheckOnClick = true;
             panelTeam.Controls.Add(clbTeam);
+            clbTeam.ItemCheck += clbTeam_ItemCheck;
 
             //  type
             clbLCT.Width = panelType.Width;
@@ -60,6 +61,7 @@ namespace NationalFootballChampionshipManagement
             clbLCT.Top = 10;
             clbLCT.CheckOnClick = true;
             panelType.Controls.Add(clbLCT);
+            clbLCT.ItemCheck += clbLCT_ItemCheck;
 
         }
         void LoadTypes()

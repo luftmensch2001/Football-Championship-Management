@@ -59,6 +59,7 @@ namespace NationalFootballChampionshipManagement
             checkedListBox1.BorderStyle = BorderStyle.None;
             checkedListBox1.Top = 10;
             checkedListBox1.CheckOnClick = true;
+            checkedListBox1.ItemCheck += CheckedBox1_Check;
             panelRound.Controls.Add(checkedListBox1);
 
             //  2
@@ -68,6 +69,7 @@ namespace NationalFootballChampionshipManagement
             checkedListBox2.BorderStyle = BorderStyle.None;
             checkedListBox2.Top = 10;
             checkedListBox2.CheckOnClick = true;
+            checkedListBox2.ItemCheck += checkedListBox2_ItemCheck;
             panelTeam.Controls.Add(checkedListBox2);
 
         }
