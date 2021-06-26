@@ -29,6 +29,9 @@ namespace NationalFootballChampionshipManagement
         List<Goal> listGoal2 = new List<Goal>();
         List<GoalType> listGoalType = new List<GoalType>();
 
+        List<int> countGoalPlayerTeam1 = new List<int>();
+        List<int> countGoalPlayerTeam2 = new List<int>();
+
         List<int> listIDGoalDelete = new List<int>();
 
         Rules rule = new Rules();
@@ -370,20 +373,18 @@ namespace NationalFootballChampionshipManagement
             foreach (Player player in listPlayerTeam1)
             {
                 int count = 0;
-                foreach (DataGridViewRow row in dgvGoalTeam1.Rows)
-                    if (row.Index < dgvGoalTeam1.Rows.Count)
-                        if (player.PlayName == row.Cells[1].Value.ToString())
-                            count++;
-                PlayerDAO.Instance.SetCountGoal(player.ID, count);
+                foreach (Goal goal in listGoal1)
+                    if (player.ID == goal.IdCauThu)
+                        count++;
+                PlayerDAO.Instance.SetCountGoal(player.ID, player.CountGoal + count);
             }
             foreach (Player player in listPlayerTeam2)
             {
                 int count = 0;
-                foreach (DataGridViewRow row in dgvGoalTeam2.Rows)
-                    if (row.Index < dgvGoalTeam2.Rows.Count)
-                        if (player.PlayName == row.Cells[1].Value.ToString())
-                            count++;
-                PlayerDAO.Instance.SetCountGoal(player.ID, count);
+                foreach (Goal goal in listGoal2)
+                    if (player.ID == goal.IdCauThu)
+                        count++;
+                PlayerDAO.Instance.SetCountGoal(player.ID, player.CountGoal + count);
             }
             return true;
         }
