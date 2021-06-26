@@ -39,7 +39,12 @@ namespace NationalFootballChampionshipManagement
                 bool firstLeague = (LeagueDAO.Instance.GetCurrIDMG() == -1);
                 LeagueDAO.Instance.AddLeague(tbName.Text, Int32.Parse(tbYear.Text), pbImage.Image);
                 MessageBox.Show("Thêm mùa giải thành công", "Thành công");
-                if (firstLeague) this.formFather.EnableButton();
+                if (firstLeague)
+                {
+                    this.formFather.EnableButton();
+                    this.formFather.LoadLogo();
+                }
+                this.formFather.openChildForm(new formMuaGiai(this.formFather));
             }
             catch
             {
