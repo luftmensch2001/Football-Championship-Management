@@ -209,6 +209,9 @@
     <Compile Include="FORM\Ranking\formRanking.Designer.cs">
       <DependentUpon>formRanking.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FORM\MuaGiai\formAddMuaGiai.resx">

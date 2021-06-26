@@ -25,6 +25,9 @@ namespace NationalFootballChampionshipManagement
         List<bool> listCheckedTeam = new List<bool>();
 
         List<int> tt = new List<int>();
+
+        MyListBox checkedListBox1 = new MyListBox();
+        MyListBox checkedListBox2 = new MyListBox();
         public formResultHistory(formMain f)
         {
             InitializeComponent();
@@ -32,8 +35,11 @@ namespace NationalFootballChampionshipManagement
             this.formFather = f;
             addInformationColumn();
 
+            FormatCheckedListBox();
+
             dgvResult.RowTemplate.Height = 30;
             dgvResult.AllowUserToResizeRows = false;
+            dgvResult.Columns[0].Width = 85;
 
             listResultMatch = ResultMatchDAO.Instance.LoadResultMatch();
 
@@ -42,6 +48,28 @@ namespace NationalFootballChampionshipManagement
             GetListTeamName();
             LoadRound();
             LoadListResultMatch();
+        }
+
+        private void FormatCheckedListBox()
+        {
+            //  1
+            checkedListBox1.Width = panelRound.Width;
+            checkedListBox1.Height = panelRound.Height;
+            checkedListBox1.BackColor = panelRound.BackColor;
+            checkedListBox1.BorderStyle = BorderStyle.None;
+            checkedListBox1.Top = 10;
+            checkedListBox1.CheckOnClick = true;
+            panelRound.Controls.Add(checkedListBox1);
+
+            //  2
+            checkedListBox2.Width = panelTeam.Width;
+            checkedListBox2.Height = panelTeam.Height;
+            checkedListBox2.BackColor = panelTeam.BackColor;
+            checkedListBox2.BorderStyle = BorderStyle.None;
+            checkedListBox2.Top = 10;
+            checkedListBox2.CheckOnClick = true;
+            panelTeam.Controls.Add(checkedListBox2);
+
         }
         public void GetListTeamName()
         {

@@ -24,15 +24,43 @@ namespace NationalFootballChampionshipManagement
 
         List<PlayerType> listPlayerType = new List<PlayerType>();
 
+        MyListBox clbTeam = new MyListBox();
+        MyListBox clbLCT = new MyListBox();
         public formPlayerList(formMain f)
         {
             InitializeComponent();
             this.formFather = f;
+
+            dgvPlayerList.RowTemplate.Height = 30;
+            dgvPlayerList.AllowUserToResizeRows = false;
+
+            FormatCheckedListBox();
+
             LoadTypes();
             GetTeams();
-
-
             SetDGV();
+        }
+
+        private void FormatCheckedListBox()
+        {
+            //  team
+            clbTeam.Width = panelTeam.Width;
+            clbTeam.Height = panelTeam.Height;
+            clbTeam.BackColor = panelTeam.BackColor;
+            clbTeam.BorderStyle = BorderStyle.None;
+            clbTeam.Top = 10;
+            clbTeam.CheckOnClick = true;
+            panelTeam.Controls.Add(clbTeam);
+
+            //  type
+            clbLCT.Width = panelType.Width;
+            clbLCT.Height = panelType.Height;
+            clbLCT.BackColor = panelType.BackColor;
+            clbLCT.BorderStyle = BorderStyle.None;
+            clbLCT.Top = 10;
+            clbLCT.CheckOnClick = true;
+            panelType.Controls.Add(clbLCT);
+
         }
         void LoadTypes()
         {
