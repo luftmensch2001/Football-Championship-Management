@@ -64,6 +64,12 @@ namespace NationalFootballChampionshipManagement.DTO
             this.ID = id;
             this.playName = name;
         }
+        public Player(int id, string name, int countGoal)
+        {
+            this.ID = id;
+            this.playName = name;
+            this.countGoal = countGoal;
+        }
         public Player(int id, string name, int iddb, int idLCT, int countGoal )
         {
             this.ID = id;

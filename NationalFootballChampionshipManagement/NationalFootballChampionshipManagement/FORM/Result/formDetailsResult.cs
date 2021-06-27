@@ -83,6 +83,8 @@ namespace NationalFootballChampionshipManagement
             btDelete.BackColor = Color.Gray;
             btFix.Enabled = false;
             btFix.BackColor = Color.Gray;
+
+            ResetCountGoal();
         }
         void LoaddgvGoal()
         {
@@ -438,6 +440,25 @@ namespace NationalFootballChampionshipManagement
         {
             nbTeam1.Text = dgvGoalTeam1.Rows.Count.ToString();
             nbTeam2.Text = dgvGoalTeam2.Rows.Count.ToString();
+        }
+        void ResetCountGoal()
+        {
+            foreach (Player player in listPlayerTeam1)
+            {
+                int count = 0;
+                foreach (Goal goal in listGoal1)
+                    if (player.ID == goal.IdCauThu)
+                        count++;
+                player.CountGoal -= count;
+            }
+            foreach (Player player in listPlayerTeam2)
+            {
+                int count = 0;
+                foreach (Goal goal in listGoal2)
+                    if (player.ID == goal.IdCauThu)
+                        count++;
+                player.CountGoal -= count;
+            }
         }
     }
 }

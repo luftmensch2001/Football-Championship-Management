@@ -112,7 +112,7 @@ namespace NationalFootballChampionshipManagement.DAO
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in dataTable.Rows)
             {
-                Player player = new Player((int) row[0],row[1].ToString());
+                Player player = new Player((int) row[0],row[1].ToString(),(int) row[2]);
                 players.Add(player);
             }
             return players;
