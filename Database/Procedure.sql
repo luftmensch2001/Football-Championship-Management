@@ -415,11 +415,18 @@ CREATE PROC USP_UpdatePriorityRankList_By_ThuTuUuTien
 END
 GO
 
-CREATE PROC USP_GETNAMEANDDoBCAUTHU
+Create PROC USP_GETNAMEANDDoBCAUTHU
 @IDMG INT
 AS
 BEGIN
-	Select CauThu.IDCT,CauThu.NgaySinh
-	From CauThu join DoiBong on CauThu.IDDB=CauThu.IDDB
-	where DoiBong.IDMG = @IDMG
+	Select CT.IDCT,CT.NgaySinh From
+	(
+		Select IDDB, IDMG
+		From DoiBong
+		Where DoiBong.IDMG = @IDMG
+	) DB join
+	(
+		Select IDCT, NgaySinh, IDDB
+		From CauThu
+	) CT on DB.IDDB = CT.IDDB
 END
