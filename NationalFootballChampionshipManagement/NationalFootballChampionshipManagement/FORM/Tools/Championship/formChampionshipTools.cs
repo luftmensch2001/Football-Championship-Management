@@ -275,7 +275,7 @@ namespace NationalFootballChampionshipManagement
                 btnRemoveTypeOfGoal.Enabled = false;
                 btnRemoveTypeOfPlayer.Enabled = false;
                 btnSave.Enabled = false;
-                MessageBox.Show("Không thể thay đổi quy định giải đấu khi đã tạo lịch thi đấu", "Thông báo");
+                MessageBox.Show("Không thể thay đổi quy định giải đấu khi mùa giải đã bắt đầu", "Thông báo");
             }
         }
     }
