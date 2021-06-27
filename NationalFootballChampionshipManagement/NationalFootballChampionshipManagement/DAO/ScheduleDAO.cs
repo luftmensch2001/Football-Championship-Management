@@ -46,9 +46,9 @@ namespace NationalFootballChampionshipManagement.DAO
             // Giam hien tuong 1 doi thi dau qua nhieu tran trong 1 vong dau
             Team tempTeam;
             Random rand = new Random();
-            for (int i=0; i<countOfTeam; i++)
+            for (int i=0; i<countOfMatch; i++)
             {
-                for (int j=i+1; j<countOfTeam; j++)
+                for (int j=i+1; j<countOfMatch; j++)
                 {
                     if (rand.Next(0, 5) >= rand.Next(0, 5))
                     {
