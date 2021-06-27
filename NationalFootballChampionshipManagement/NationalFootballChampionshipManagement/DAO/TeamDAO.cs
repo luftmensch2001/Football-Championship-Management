@@ -131,17 +131,27 @@ namespace NationalFootballChampionshipManagement.DAO
             }
             return teams;
         }
-        public List<Team> GetNameAndLogo()
+        public List<Team> GetNameAndLogoValidTeam()
         {
             List<Team> teams = new List<Team>();
             int idmg = LeagueDAO.Instance.GetCurrIDMG();
 
-            string query = "SELECT TenDb,HinhAnh FROM DoiBong where idmg =" + idmg.ToString();
+            string query = "SELECT iddb, TenDb, HinhAnh FROM DoiBong where idmg =" + idmg.ToString();
             DataTable data = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow dataRow in data.Rows)
             {
-                Team team = new Team(dataRow[0].ToString(), (byte[])dataRow[1]);
+                Team team = new Team((int)dataRow[0], dataRow[1].ToString(), (byte[])dataRow[2]);
                 teams.Add(team);
+            }
+
+            int minimumPlayer = RulesDAO.Instance.GetRules().SLTT; // so cau thu toi thieu
+            for (int i = 0; i < teams.Count; i++)
+            {
+                if (GetCountPlayer(teams[i].ID) < minimumPlayer)
+                {
+                    teams.RemoveAt(i);
+                    i--;
+                }
             }
             return teams;
         }

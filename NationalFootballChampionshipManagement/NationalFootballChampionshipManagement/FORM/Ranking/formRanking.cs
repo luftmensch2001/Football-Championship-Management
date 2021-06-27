@@ -48,7 +48,7 @@ namespace NationalFootballChampionshipManagement
 
         void InitListTeam()
         {
-            listNameTeam = TeamDAO.Instance.GetNameAndLogo();
+            listNameTeam = TeamDAO.Instance.GetNameAndLogoValidTeam();
             int i = 1;
             foreach (Team item in listNameTeam)
             {
