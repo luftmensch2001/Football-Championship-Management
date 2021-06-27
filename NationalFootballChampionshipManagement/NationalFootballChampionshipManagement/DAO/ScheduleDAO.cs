@@ -24,7 +24,7 @@ namespace NationalFootballChampionshipManagement.DAO
             List<Team> Team1 = new List<Team>();
             List<Team> Team2 = new List<Team>();
             int countOfTeam = Teams.Count;
-            int countOfMatch = 0;
+            int countOfMatch = (countOfTeam*(countOfTeam-1))/2;
 
             if (countOfTeam <= 1)
             {
@@ -32,33 +32,44 @@ namespace NationalFootballChampionshipManagement.DAO
                 return 0;
             }
             
-            for (int i=0; i<countOfTeam; i++) // Tao ra danh sach tat ca cac tran dau luot di
+            int[] arr = new int[200];
+            bool check = true; // check = true neu n chan va nguoc lai
+
+            if (countOfTeam % 2 == 1)
             {
-                for (int j=i+1; j<countOfTeam; j++)
-                {
-                    countOfMatch++;
-                    Team1.Add(Teams[i]);
-                    Team2.Add(Teams[j]);
-                }
+                countOfTeam++;
+                check = false;
+            }
+    
+            int center = countOfTeam - 1;
+            for (int i=0; i<center*3; i++)
+            {
+                arr[i] = i % center;
             }
 
-            // Sap xep cac tran dau theo thu tu ngau nhien 
-            // Giam hien tuong 1 doi thi dau qua nhieu tran trong 1 vong dau
-            Team tempTeam;
-            Random rand = new Random();
-            for (int i=0; i<countOfMatch; i++)
+            for (int i = center; i < center*2; i++)
             {
-                for (int j=i+1; j<countOfMatch; j++)
+                if (check == true)
                 {
-                    if (rand.Next(0, 5) >= rand.Next(0, 5))
-                    {
-                        tempTeam = Team1[i]; Team1[i] = Team1[j]; Team1[j] = tempTeam; // Swap two teams
-                        tempTeam = Team2[i]; Team2[i] = Team2[j]; Team2[j] = tempTeam;
-                    }
+                    Team1.Add(Teams[center]);
+                    Team2.Add(Teams[arr[i]]);
+                }
+                
+                int l = i - 1;
+                int r = i + 1;
+
+                for (int j=0; j < countOfTeam/2 - 1; j++)
+                {
+                    Team1.Add(Teams[arr[l]]);
+                    Team2.Add(Teams[arr[r]]);
+                    l--;
+                    r++;
                 }
             }
+            
 
             int round = 0;
+            if (check == false) countOfTeam--;
 
             // Luot di
             for (int i=0; i < countOfMatch; i++)

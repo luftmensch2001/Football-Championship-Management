@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
@@ -83,8 +83,9 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(874, 70);
+            this.panel1.Size = new System.Drawing.Size(1165, 86);
             this.panel1.TabIndex = 0;
             // 
             // lTitle
@@ -92,9 +93,10 @@
             this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(43, 0);
+            this.lTitle.Location = new System.Drawing.Point(57, 0);
+            this.lTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(831, 70);
+            this.lTitle.Size = new System.Drawing.Size(1108, 86);
             this.lTitle.TabIndex = 7;
             this.lTitle.Text = "Lịch thi đấu";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -111,8 +113,9 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(43, 70);
+            this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -125,8 +128,9 @@
             this.panel2.Controls.Add(this.guna2TextBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(681, 40);
+            this.panel2.Size = new System.Drawing.Size(908, 49);
             this.panel2.TabIndex = 1;
             // 
             // lbCurRound
@@ -134,9 +138,10 @@
             this.lbCurRound.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbCurRound.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lbCurRound.ForeColor = System.Drawing.Color.White;
-            this.lbCurRound.Location = new System.Drawing.Point(466, 0);
+            this.lbCurRound.Location = new System.Drawing.Point(622, 0);
+            this.lbCurRound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbCurRound.Name = "lbCurRound";
-            this.lbCurRound.Size = new System.Drawing.Size(99, 40);
+            this.lbCurRound.Size = new System.Drawing.Size(132, 49);
             this.lbCurRound.TabIndex = 5;
             this.lbCurRound.Text = "Vòng đấu:";
             this.lbCurRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,9 +151,10 @@
             this.lbRound.Dock = System.Windows.Forms.DockStyle.Right;
             this.lbRound.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.lbRound.ForeColor = System.Drawing.Color.White;
-            this.lbRound.Location = new System.Drawing.Point(565, 0);
+            this.lbRound.Location = new System.Drawing.Point(754, 0);
+            this.lbRound.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbRound.Name = "lbRound";
-            this.lbRound.Size = new System.Drawing.Size(106, 40);
+            this.lbRound.Size = new System.Drawing.Size(141, 49);
             this.lbRound.TabIndex = 4;
             this.lbRound.Text = "Tất cả";
             this.lbRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,15 +178,15 @@
             this.guna2TextBox3.ForeColor = System.Drawing.Color.White;
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.HoverState.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Location = new System.Drawing.Point(671, 0);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.guna2TextBox3.Location = new System.Drawing.Point(895, 0);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PasswordChar = '\0';
             this.guna2TextBox3.PlaceholderText = "";
             this.guna2TextBox3.SelectedText = "";
             this.guna2TextBox3.SelectionStart = 4;
             this.guna2TextBox3.ShadowDecoration.Parent = this.guna2TextBox3;
-            this.guna2TextBox3.Size = new System.Drawing.Size(10, 40);
+            this.guna2TextBox3.Size = new System.Drawing.Size(13, 49);
             this.guna2TextBox3.TabIndex = 2;
             // 
             // panel3
@@ -196,9 +202,10 @@
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(681, 70);
+            this.panel3.Location = new System.Drawing.Point(908, 86);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(193, 591);
+            this.panel3.Size = new System.Drawing.Size(257, 728);
             this.panel3.TabIndex = 2;
             // 
             // panel15
@@ -207,38 +214,40 @@
             this.panel15.Controls.Add(this.flpRound);
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.Location = new System.Drawing.Point(10, 170);
+            this.panel15.Location = new System.Drawing.Point(13, 209);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(173, 421);
+            this.panel15.Size = new System.Drawing.Size(231, 519);
             this.panel15.TabIndex = 8;
             // 
             // panel17
             // 
             this.panel17.Controls.Add(this.btnChangeTime);
-            this.panel17.Location = new System.Drawing.Point(5, 385);
-            this.panel17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel17.Location = new System.Drawing.Point(7, 474);
+            this.panel17.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(166, 34);
+            this.panel17.Size = new System.Drawing.Size(221, 42);
             this.panel17.TabIndex = 3;
             // 
             // btnChangeTime
             // 
             this.btnChangeTime.AutoRoundedCorners = true;
             this.btnChangeTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btnChangeTime.BorderRadius = 15;
+            this.btnChangeTime.BorderRadius = 19;
             this.btnChangeTime.BorderThickness = 2;
             this.btnChangeTime.CheckedState.Parent = this.btnChangeTime;
             this.btnChangeTime.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChangeTime.CustomImages.Parent = this.btnChangeTime;
-            this.btnChangeTime.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChangeTime.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnChangeTime.FillColor = System.Drawing.Color.Transparent;
             this.btnChangeTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
             this.btnChangeTime.HoverState.Parent = this.btnChangeTime;
-            this.btnChangeTime.Location = new System.Drawing.Point(0, 0);
+            this.btnChangeTime.Location = new System.Drawing.Point(0, 1);
+            this.btnChangeTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangeTime.Name = "btnChangeTime";
             this.btnChangeTime.ShadowDecoration.Parent = this.btnChangeTime;
-            this.btnChangeTime.Size = new System.Drawing.Size(166, 33);
+            this.btnChangeTime.Size = new System.Drawing.Size(221, 41);
             this.btnChangeTime.TabIndex = 1;
             this.btnChangeTime.Text = "Sửa thời gian";
             this.btnChangeTime.Click += new System.EventHandler(this.btnChangeTime_Click);
@@ -246,18 +255,19 @@
             // flpRound
             // 
             this.flpRound.AutoScroll = true;
-            this.flpRound.Location = new System.Drawing.Point(40, 0);
-            this.flpRound.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flpRound.Location = new System.Drawing.Point(53, 0);
+            this.flpRound.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpRound.Name = "flpRound";
-            this.flpRound.Size = new System.Drawing.Size(133, 380);
+            this.flpRound.Size = new System.Drawing.Size(177, 468);
             this.flpRound.TabIndex = 2;
             // 
             // panel16
             // 
             this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel16.Location = new System.Drawing.Point(0, 0);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(41, 421);
+            this.panel16.Size = new System.Drawing.Size(55, 519);
             this.panel16.TabIndex = 1;
             // 
             // panel14
@@ -265,9 +275,10 @@
             this.panel14.Controls.Add(this.label1);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.panel14.Location = new System.Drawing.Point(10, 126);
+            this.panel14.Location = new System.Drawing.Point(13, 155);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(173, 44);
+            this.panel14.Size = new System.Drawing.Size(231, 54);
             this.panel14.TabIndex = 7;
             // 
             // label1
@@ -275,9 +286,8 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 44);
+            this.label1.Size = new System.Drawing.Size(231, 54);
             this.label1.TabIndex = 0;
             this.label1.Text = "Vòng đấu";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -285,9 +295,10 @@
             // panel13
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(10, 109);
+            this.panel13.Location = new System.Drawing.Point(13, 134);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(173, 17);
+            this.panel13.Size = new System.Drawing.Size(231, 21);
             this.panel13.TabIndex = 6;
             // 
             // panel9
@@ -296,25 +307,28 @@
             this.panel9.Controls.Add(this.panel10);
             this.panel9.Controls.Add(this.btnCancelSchedule);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(10, 71);
+            this.panel9.Location = new System.Drawing.Point(13, 87);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(173, 38);
+            this.panel9.Size = new System.Drawing.Size(231, 47);
             this.panel9.TabIndex = 5;
             // 
             // panel11
             // 
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(154, 0);
+            this.panel11.Location = new System.Drawing.Point(206, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(19, 38);
+            this.panel11.Size = new System.Drawing.Size(25, 47);
             this.panel11.TabIndex = 1;
             // 
             // panel10
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(19, 38);
+            this.panel10.Size = new System.Drawing.Size(25, 47);
             this.panel10.TabIndex = 0;
             // 
             // btnCancelSchedule
@@ -322,7 +336,7 @@
             this.btnCancelSchedule.AutoRoundedCorners = true;
             this.btnCancelSchedule.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(170)))), ((int)(((byte)(175)))));
             this.btnCancelSchedule.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnCancelSchedule.BorderRadius = 18;
+            this.btnCancelSchedule.BorderRadius = 22;
             this.btnCancelSchedule.BorderThickness = 2;
             this.btnCancelSchedule.CheckedState.Parent = this.btnCancelSchedule;
             this.btnCancelSchedule.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -333,9 +347,10 @@
             this.btnCancelSchedule.ForeColor = System.Drawing.Color.Black;
             this.btnCancelSchedule.HoverState.Parent = this.btnCancelSchedule;
             this.btnCancelSchedule.Location = new System.Drawing.Point(0, 0);
+            this.btnCancelSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelSchedule.Name = "btnCancelSchedule";
             this.btnCancelSchedule.ShadowDecoration.Parent = this.btnCancelSchedule;
-            this.btnCancelSchedule.Size = new System.Drawing.Size(173, 38);
+            this.btnCancelSchedule.Size = new System.Drawing.Size(231, 47);
             this.btnCancelSchedule.TabIndex = 3;
             this.btnCancelSchedule.Text = "Huỷ lịch thi đấu";
             this.btnCancelSchedule.Click += new System.EventHandler(this.btnCancelSchedule_Click);
@@ -343,16 +358,17 @@
             // panel8
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(10, 60);
+            this.panel8.Location = new System.Drawing.Point(13, 73);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(173, 11);
+            this.panel8.Size = new System.Drawing.Size(231, 14);
             this.panel8.TabIndex = 4;
             // 
             // btnAutoCreate
             // 
             this.btnAutoCreate.AutoRoundedCorners = true;
             this.btnAutoCreate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btnAutoCreate.BorderRadius = 21;
+            this.btnAutoCreate.BorderRadius = 26;
             this.btnAutoCreate.BorderThickness = 2;
             this.btnAutoCreate.CheckedState.Parent = this.btnAutoCreate;
             this.btnAutoCreate.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -362,10 +378,11 @@
             this.btnAutoCreate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAutoCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
             this.btnAutoCreate.HoverState.Parent = this.btnAutoCreate;
-            this.btnAutoCreate.Location = new System.Drawing.Point(10, 15);
+            this.btnAutoCreate.Location = new System.Drawing.Point(13, 18);
+            this.btnAutoCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAutoCreate.Name = "btnAutoCreate";
             this.btnAutoCreate.ShadowDecoration.Parent = this.btnAutoCreate;
-            this.btnAutoCreate.Size = new System.Drawing.Size(173, 45);
+            this.btnAutoCreate.Size = new System.Drawing.Size(231, 55);
             this.btnAutoCreate.TabIndex = 0;
             this.btnAutoCreate.Text = "Tự động tạo lịch";
             this.btnAutoCreate.Click += new System.EventHandler(this.btnAddNewCompetiton_Click);
@@ -373,25 +390,28 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(183, 15);
+            this.panel6.Location = new System.Drawing.Point(244, 18);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 576);
+            this.panel6.Size = new System.Drawing.Size(13, 710);
             this.panel6.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(0, 15);
+            this.panel5.Location = new System.Drawing.Point(0, 18);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(10, 576);
+            this.panel5.Size = new System.Drawing.Size(13, 710);
             this.panel5.TabIndex = 1;
             // 
             // panel4
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(193, 15);
+            this.panel4.Size = new System.Drawing.Size(257, 18);
             this.panel4.TabIndex = 0;
             // 
             // panel7
@@ -399,9 +419,10 @@
             this.panel7.Controls.Add(this.panel12);
             this.panel7.Controls.Add(this.panel2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(0, 70);
+            this.panel7.Location = new System.Drawing.Point(0, 86);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(681, 591);
+            this.panel7.Size = new System.Drawing.Size(908, 728);
             this.panel7.TabIndex = 3;
             // 
             // panel12
@@ -409,46 +430,48 @@
             this.panel12.Controls.Add(this.dgvSchedule);
             this.panel12.Controls.Add(this.guna2DataGridView1);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel12.Location = new System.Drawing.Point(0, 40);
+            this.panel12.Location = new System.Drawing.Point(0, 49);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(681, 551);
+            this.panel12.Size = new System.Drawing.Size(908, 679);
             this.panel12.TabIndex = 2;
             // 
             // dgvSchedule
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgvSchedule.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvSchedule.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSchedule.BackgroundColor = System.Drawing.Color.White;
             this.dgvSchedule.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSchedule.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvSchedule.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSchedule.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSchedule.ColumnHeadersHeight = 35;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSchedule.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSchedule.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSchedule.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSchedule.EnableHeadersVisualStyles = false;
             this.dgvSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSchedule.Location = new System.Drawing.Point(0, 0);
+            this.dgvSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvSchedule.Name = "dgvSchedule";
             this.dgvSchedule.RowHeadersVisible = false;
             this.dgvSchedule.RowHeadersWidth = 51;
             this.dgvSchedule.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSchedule.Size = new System.Drawing.Size(681, 551);
+            this.dgvSchedule.Size = new System.Drawing.Size(908, 679);
             this.dgvSchedule.TabIndex = 1;
             this.dgvSchedule.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.dgvSchedule.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -475,39 +498,40 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.guna2DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.guna2DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.guna2DataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.guna2DataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.guna2DataGridView1.ColumnHeadersHeight = 4;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(681, 551);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(908, 679);
             this.guna2DataGridView1.TabIndex = 0;
             this.guna2DataGridView1.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -534,14 +558,15 @@
             // 
             // formCompetitionSchedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(874, 661);
+            this.ClientSize = new System.Drawing.Size(1165, 814);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formCompetitionSchedule";
             this.Text = "formCompetitionSchedule";
             this.panel1.ResumeLayout(false);
