@@ -64,7 +64,7 @@
             this.panelMenu.Controls.Add(this.panelChampionshipLogo);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
-            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4);
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(280, 814);
             this.panelMenu.TabIndex = 0;
@@ -84,7 +84,7 @@
             this.panel2.Controls.Add(this.btnCompetitionSchedule);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 69);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(280, 745);
             this.panel2.TabIndex = 11;
@@ -115,7 +115,7 @@
             this.btnHelp.IconSize = 35;
             this.btnHelp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHelp.Location = new System.Drawing.Point(0, 563);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
             this.btnHelp.Name = "btnHelp";
             this.btnHelp.Size = new System.Drawing.Size(280, 49);
             this.btnHelp.TabIndex = 21;
@@ -140,7 +140,7 @@
             this.btnTournaments.IconSize = 35;
             this.btnTournaments.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTournaments.Location = new System.Drawing.Point(0, 514);
-            this.btnTournaments.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTournaments.Margin = new System.Windows.Forms.Padding(4);
             this.btnTournaments.Name = "btnTournaments";
             this.btnTournaments.Size = new System.Drawing.Size(280, 49);
             this.btnTournaments.TabIndex = 20;
@@ -157,7 +157,7 @@
             this.pnlSubToolsMenu.Controls.Add(this.btnChampionshipTools);
             this.pnlSubToolsMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubToolsMenu.Location = new System.Drawing.Point(0, 353);
-            this.pnlSubToolsMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSubToolsMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSubToolsMenu.Name = "pnlSubToolsMenu";
             this.pnlSubToolsMenu.Size = new System.Drawing.Size(280, 161);
             this.pnlSubToolsMenu.TabIndex = 18;
@@ -177,7 +177,7 @@
             this.btnRankingTools.IconSize = 25;
             this.btnRankingTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRankingTools.Location = new System.Drawing.Point(0, 98);
-            this.btnRankingTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRankingTools.Margin = new System.Windows.Forms.Padding(4);
             this.btnRankingTools.Name = "btnRankingTools";
             this.btnRankingTools.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnRankingTools.Size = new System.Drawing.Size(280, 49);
@@ -203,7 +203,7 @@
             this.btnScoresTools.IconSize = 25;
             this.btnScoresTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnScoresTools.Location = new System.Drawing.Point(0, 49);
-            this.btnScoresTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnScoresTools.Margin = new System.Windows.Forms.Padding(4);
             this.btnScoresTools.Name = "btnScoresTools";
             this.btnScoresTools.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnScoresTools.Size = new System.Drawing.Size(280, 49);
@@ -229,7 +229,7 @@
             this.btnChampionshipTools.IconSize = 25;
             this.btnChampionshipTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChampionshipTools.Location = new System.Drawing.Point(0, 0);
-            this.btnChampionshipTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChampionshipTools.Margin = new System.Windows.Forms.Padding(4);
             this.btnChampionshipTools.Name = "btnChampionshipTools";
             this.btnChampionshipTools.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnChampionshipTools.Size = new System.Drawing.Size(280, 49);
@@ -255,7 +255,7 @@
             this.btnTools.IconSize = 35;
             this.btnTools.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTools.Location = new System.Drawing.Point(0, 304);
-            this.btnTools.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTools.Margin = new System.Windows.Forms.Padding(4);
             this.btnTools.Name = "btnTools";
             this.btnTools.Size = new System.Drawing.Size(280, 49);
             this.btnTools.TabIndex = 17;
@@ -271,7 +271,7 @@
             this.pnlSubFileMenu.Controls.Add(this.btnTeamFile);
             this.pnlSubFileMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubFileMenu.Location = new System.Drawing.Point(0, 196);
-            this.pnlSubFileMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlSubFileMenu.Margin = new System.Windows.Forms.Padding(4);
             this.pnlSubFileMenu.Name = "pnlSubFileMenu";
             this.pnlSubFileMenu.Size = new System.Drawing.Size(280, 108);
             this.pnlSubFileMenu.TabIndex = 16;
@@ -291,7 +291,7 @@
             this.btnPlayerFile.IconSize = 25;
             this.btnPlayerFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPlayerFile.Location = new System.Drawing.Point(0, 49);
-            this.btnPlayerFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPlayerFile.Margin = new System.Windows.Forms.Padding(4);
             this.btnPlayerFile.Name = "btnPlayerFile";
             this.btnPlayerFile.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnPlayerFile.Size = new System.Drawing.Size(280, 49);
@@ -317,7 +317,7 @@
             this.btnTeamFile.IconSize = 25;
             this.btnTeamFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTeamFile.Location = new System.Drawing.Point(0, 0);
-            this.btnTeamFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnTeamFile.Margin = new System.Windows.Forms.Padding(4);
             this.btnTeamFile.Name = "btnTeamFile";
             this.btnTeamFile.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnTeamFile.Size = new System.Drawing.Size(280, 49);
@@ -343,7 +343,7 @@
             this.btnFile.IconSize = 35;
             this.btnFile.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFile.Location = new System.Drawing.Point(0, 147);
-            this.btnFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFile.Margin = new System.Windows.Forms.Padding(4);
             this.btnFile.Name = "btnFile";
             this.btnFile.Size = new System.Drawing.Size(280, 49);
             this.btnFile.TabIndex = 15;
@@ -368,7 +368,7 @@
             this.btnRankingChart.IconSize = 35;
             this.btnRankingChart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRankingChart.Location = new System.Drawing.Point(0, 98);
-            this.btnRankingChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRankingChart.Margin = new System.Windows.Forms.Padding(4);
             this.btnRankingChart.Name = "btnRankingChart";
             this.btnRankingChart.Size = new System.Drawing.Size(280, 49);
             this.btnRankingChart.TabIndex = 12;
@@ -393,7 +393,7 @@
             this.btnResult.IconSize = 35;
             this.btnResult.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnResult.Location = new System.Drawing.Point(0, 49);
-            this.btnResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnResult.Margin = new System.Windows.Forms.Padding(4);
             this.btnResult.Name = "btnResult";
             this.btnResult.Size = new System.Drawing.Size(280, 49);
             this.btnResult.TabIndex = 10;
@@ -418,7 +418,7 @@
             this.btnCompetitionSchedule.IconSize = 35;
             this.btnCompetitionSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompetitionSchedule.Location = new System.Drawing.Point(0, 0);
-            this.btnCompetitionSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompetitionSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnCompetitionSchedule.Name = "btnCompetitionSchedule";
             this.btnCompetitionSchedule.Size = new System.Drawing.Size(280, 49);
             this.btnCompetitionSchedule.TabIndex = 3;
@@ -432,7 +432,7 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 68);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 10;
@@ -440,11 +440,10 @@
             // panelChampionshipLogo
             // 
             this.panelChampionshipLogo.BackColor = System.Drawing.Color.White;
-            this.panelChampionshipLogo.BackgroundImage = global::NationalFootballChampionshipManagement.Properties.Resources.LS_V_League_Logo;
             this.panelChampionshipLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelChampionshipLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelChampionshipLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelChampionshipLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelChampionshipLogo.Margin = new System.Windows.Forms.Padding(4);
             this.panelChampionshipLogo.Name = "panelChampionshipLogo";
             this.panelChampionshipLogo.Size = new System.Drawing.Size(280, 68);
             this.panelChampionshipLogo.TabIndex = 0;
@@ -454,7 +453,7 @@
             this.pnlChildForm.BackColor = System.Drawing.Color.White;
             this.pnlChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlChildForm.Location = new System.Drawing.Point(280, 0);
-            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlChildForm.Margin = new System.Windows.Forms.Padding(4);
             this.pnlChildForm.Name = "pnlChildForm";
             this.pnlChildForm.Size = new System.Drawing.Size(1165, 814);
             this.pnlChildForm.TabIndex = 2;
@@ -467,7 +466,7 @@
             this.Controls.Add(this.pnlChildForm);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimumSize = new System.Drawing.Size(1461, 820);
             this.Name = "formMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
