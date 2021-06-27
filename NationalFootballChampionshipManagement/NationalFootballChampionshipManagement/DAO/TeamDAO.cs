@@ -156,6 +156,17 @@ namespace NationalFootballChampionshipManagement.DAO
             return teams;
         }
 
+        public void DeleteTeamByID(int iddb)
+        {
+            // Xoa cac cau thu trong doi bong
+            string query = "DELETE FROM CauThu WHERE IDDB = " + iddb.ToString();
+            DataProvider.Instance.ExecuteQuery(query);
+
+            // Xoa team
+            query = "DELETE FROM DoiBong WHERE IDDB = " + iddb.ToString();
+            DataProvider.Instance.ExecuteQuery(query); 
+        }
+
 
     }
 }

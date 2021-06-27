@@ -23,6 +23,8 @@ namespace NationalFootballChampionshipManagement
             this.formFather = f;
 
             InitializeComponent();
+
+            btnDelete.Hide();
         }
 
         public formAddNewTeam(formMain f, Team team)
@@ -102,6 +104,26 @@ namespace NationalFootballChampionshipManagement
                 {
                     MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi");
                 }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá đội bóng này không ? Tất cả cầu thủ trong đội cũng sẽ bị xoá", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                TeamDAO.Instance.DeleteTeamByID(team.ID);
+                MessageBox.Show("Xoá đội bóng thành công", "Thành công");
+                this.formFather.openChildForm(new formTeam(this.formFather));
+            }
+            catch
+            {
+                MessageBox.Show("Xoá đội bóng thất bại", "Lỗi");
+            }
         }
     }
 }

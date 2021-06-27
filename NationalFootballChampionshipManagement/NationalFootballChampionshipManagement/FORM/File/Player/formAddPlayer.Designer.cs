@@ -74,7 +74,7 @@
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(449, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(27, 616);
             this.panel6.TabIndex = 0;
@@ -98,7 +98,7 @@
             "Nữ"});
             this.cbGender.ItemsAppearance.Parent = this.cbGender;
             this.cbGender.Location = new System.Drawing.Point(1, 0);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGender.Margin = new System.Windows.Forms.Padding(4);
             this.cbGender.Name = "cbGender";
             this.cbGender.ShadowDecoration.Parent = this.cbGender;
             this.cbGender.Size = new System.Drawing.Size(448, 36);
@@ -151,7 +151,7 @@
             this.cbTypeOfPlayer.ItemHeight = 30;
             this.cbTypeOfPlayer.ItemsAppearance.Parent = this.cbTypeOfPlayer;
             this.cbTypeOfPlayer.Location = new System.Drawing.Point(0, 0);
-            this.cbTypeOfPlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTypeOfPlayer.Margin = new System.Windows.Forms.Padding(4);
             this.cbTypeOfPlayer.Name = "cbTypeOfPlayer";
             this.cbTypeOfPlayer.ShadowDecoration.Parent = this.cbTypeOfPlayer;
             this.cbTypeOfPlayer.Size = new System.Drawing.Size(449, 36);
@@ -168,7 +168,7 @@
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBirthday.HoverState.Parent = this.dtpBirthday;
             this.dtpBirthday.Location = new System.Drawing.Point(0, 199);
-            this.dtpBirthday.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpBirthday.Margin = new System.Windows.Forms.Padding(4);
             this.dtpBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthday.Name = "dtpBirthday";
@@ -192,7 +192,7 @@
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(251, 198);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(476, 616);
             this.panel5.TabIndex = 13;
@@ -201,7 +201,7 @@
             // 
             this.panel13.Controls.Add(this.tbNote);
             this.panel13.Location = new System.Drawing.Point(0, 336);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(449, 279);
             this.panel13.TabIndex = 10;
@@ -250,7 +250,7 @@
             this.cbCLB.ItemHeight = 30;
             this.cbCLB.ItemsAppearance.Parent = this.cbCLB;
             this.cbCLB.Location = new System.Drawing.Point(0, 280);
-            this.cbCLB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbCLB.Margin = new System.Windows.Forms.Padding(4);
             this.cbCLB.Name = "cbCLB";
             this.cbCLB.ShadowDecoration.Parent = this.cbCLB;
             this.cbCLB.Size = new System.Drawing.Size(449, 36);
@@ -261,7 +261,7 @@
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel12.Location = new System.Drawing.Point(0, 265);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(449, 15);
             this.panel12.TabIndex = 8;
@@ -271,7 +271,7 @@
             this.panel10.Controls.Add(this.cbTypeOfPlayer);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 147);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(449, 52);
             this.panel10.TabIndex = 5;
@@ -280,7 +280,7 @@
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(0, 132);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(449, 15);
             this.panel9.TabIndex = 4;
@@ -290,7 +290,7 @@
             this.panel8.Controls.Add(this.cbGender);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 12);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(449, 54);
             this.panel8.TabIndex = 2;
@@ -299,7 +299,7 @@
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(449, 12);
             this.panel7.TabIndex = 1;
@@ -319,7 +319,7 @@
             this.btnAdd.IconSize = 25;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Location = new System.Drawing.Point(0, 567);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(211, 49);
             this.btnAdd.TabIndex = 5;
@@ -341,7 +341,7 @@
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.Location = new System.Drawing.Point(40, 198);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(211, 616);
             this.panel4.TabIndex = 12;
@@ -361,7 +361,7 @@
             this.btnDelete.IconSize = 25;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.Location = new System.Drawing.Point(0, 518);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(211, 49);
             this.btnDelete.TabIndex = 12;
@@ -451,7 +451,7 @@
             this.pnlPlayerAvatar.Controls.Add(this.pbPlayerImage);
             this.pnlPlayerAvatar.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPlayerAvatar.Location = new System.Drawing.Point(727, 198);
-            this.pnlPlayerAvatar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlPlayerAvatar.Margin = new System.Windows.Forms.Padding(4);
             this.pnlPlayerAvatar.Name = "pnlPlayerAvatar";
             this.pnlPlayerAvatar.Size = new System.Drawing.Size(438, 616);
             this.pnlPlayerAvatar.TabIndex = 11;
@@ -471,7 +471,7 @@
             this.btnLoadImage.IconSize = 25;
             this.btnLoadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLoadImage.Location = new System.Drawing.Point(0, 572);
-            this.btnLoadImage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoadImage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoadImage.Name = "btnLoadImage";
             this.btnLoadImage.Size = new System.Drawing.Size(436, 42);
             this.btnLoadImage.TabIndex = 6;
@@ -508,7 +508,7 @@
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.HoverState.Parent = this.tbName;
             this.tbName.Location = new System.Drawing.Point(40, 98);
-            this.tbName.Margin = new System.Windows.Forms.Padding(11, 11, 11, 11);
+            this.tbName.Margin = new System.Windows.Forms.Padding(11);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderText = "Tên cầu thủ";
@@ -521,7 +521,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 98);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(40, 716);
             this.panel3.TabIndex = 9;
@@ -530,7 +530,7 @@
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1165, 12);
             this.panel2.TabIndex = 8;
@@ -547,7 +547,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 0;
@@ -561,7 +561,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 86);
             this.panel1.TabIndex = 7;
@@ -593,7 +593,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formAddPlayer";
             this.Text = "formAddPlayer";
             this.panel5.ResumeLayout(false);
