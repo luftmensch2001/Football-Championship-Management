@@ -41,11 +41,13 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lbLeagueName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.lbLeagueYear = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel16 = new System.Windows.Forms.Panel();
@@ -93,8 +95,6 @@
             this.btnAddTypeOfPlayer = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.lbLeagueName = new System.Windows.Forms.Label();
-            this.lbLeagueYear = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -220,6 +220,17 @@
             this.panel4.Size = new System.Drawing.Size(291, 43);
             this.panel4.TabIndex = 1;
             // 
+            // lbLeagueName
+            // 
+            this.lbLeagueName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbLeagueName.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbLeagueName.Location = new System.Drawing.Point(0, 0);
+            this.lbLeagueName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbLeagueName.Name = "lbLeagueName";
+            this.lbLeagueName.Size = new System.Drawing.Size(291, 43);
+            this.lbLeagueName.TabIndex = 1;
+            this.lbLeagueName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label1);
@@ -272,6 +283,17 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(392, 43);
             this.panel14.TabIndex = 1;
+            // 
+            // lbLeagueYear
+            // 
+            this.lbLeagueYear.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbLeagueYear.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.lbLeagueYear.Location = new System.Drawing.Point(0, 0);
+            this.lbLeagueYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbLeagueYear.Name = "lbLeagueYear";
+            this.lbLeagueYear.Size = new System.Drawing.Size(392, 43);
+            this.lbLeagueYear.TabIndex = 2;
+            this.lbLeagueYear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel15
             // 
@@ -502,7 +524,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(221, 43);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Số đội bóng tham gia:";
+            this.label4.Text = "Số đội bóng tối đa:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel10
@@ -1102,28 +1124,6 @@
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(185, 84);
             this.panel28.TabIndex = 7;
-            // 
-            // lbLeagueName
-            // 
-            this.lbLeagueName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbLeagueName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbLeagueName.Location = new System.Drawing.Point(0, 0);
-            this.lbLeagueName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbLeagueName.Name = "lbLeagueName";
-            this.lbLeagueName.Size = new System.Drawing.Size(291, 43);
-            this.lbLeagueName.TabIndex = 1;
-            this.lbLeagueName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbLeagueYear
-            // 
-            this.lbLeagueYear.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbLeagueYear.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.lbLeagueYear.Location = new System.Drawing.Point(0, 0);
-            this.lbLeagueYear.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbLeagueYear.Name = "lbLeagueYear";
-            this.lbLeagueYear.Size = new System.Drawing.Size(392, 43);
-            this.lbLeagueYear.TabIndex = 2;
-            this.lbLeagueYear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // formChampionshipTools
             // 
