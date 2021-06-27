@@ -1,4 +1,5 @@
 ﻿using NationalFootballChampionshipManagement.DAO;
+using NationalFootballChampionshipManagement.DAO.NationalFootballChampionshipManagement.DAO;
 using NationalFootballChampionshipManagement.DTO;
 using System;
 using System.Collections.Generic;
@@ -34,6 +35,7 @@ namespace NationalFootballChampionshipManagement
             {
                 roundCount = -1;
             }
+            LoadInforLeague();
             LoadRules();
             lockValue();
             LoadDgvPlayerType();
@@ -41,6 +43,11 @@ namespace NationalFootballChampionshipManagement
             dgvGoalType.ClearSelection();
         }
 
+        void LoadInforLeague()
+        {
+            lbLeagueName.Text = LeagueDAO.Instance.GetCurrLeagueName();
+            lbLeagueYear.Text = LeagueDAO.Instance.GetCurrLeagueYear();
+        }
         void LoadRules()
         {
             try
@@ -268,8 +275,6 @@ namespace NationalFootballChampionshipManagement
                 btnRemoveTypeOfGoal.Enabled = false;
                 btnRemoveTypeOfPlayer.Enabled = false;
                 btnSave.Enabled = false;
-                tbLeagueName.Enabled = false;
-                tbYear.Enabled = false;
                 MessageBox.Show("Không thể thay đổi quy định giải đấu khi mùa giải đã bắt đầu", "Thông báo");
             }
         }

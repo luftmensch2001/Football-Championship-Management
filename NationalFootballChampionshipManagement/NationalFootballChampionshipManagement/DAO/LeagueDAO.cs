@@ -102,6 +102,15 @@ namespace NationalFootballChampionshipManagement.DAO
                 return data.Rows[0]["TenMG"].ToString();
             }
 
+            public string GetCurrLeagueYear()
+            {
+                string query = "SELECT Nam FROM MuaGiai WHERE MuaGiaiHienTai = 1";
+                DataTable data = DataProvider.Instance.ExecuteQuery(query);
+
+                if (data.Rows.Count == 0) return "No League Selected";
+                return data.Rows[0]["Nam"].ToString();
+            }
+
             public string GetCurrLeagueStatus()
             {
                 string query = "SELECT TrangThai FROM MuaGiai WHERE MuaGiaiHienTai = 1";
