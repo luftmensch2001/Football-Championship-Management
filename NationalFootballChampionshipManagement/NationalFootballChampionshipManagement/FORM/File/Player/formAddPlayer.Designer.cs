@@ -73,10 +73,9 @@
             // panel6
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(449, 0);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Location = new System.Drawing.Point(337, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(27, 616);
+            this.panel6.Size = new System.Drawing.Size(20, 500);
             this.panel6.TabIndex = 0;
             // 
             // cbGender
@@ -97,11 +96,10 @@
             "Nam",
             "Nữ"});
             this.cbGender.ItemsAppearance.Parent = this.cbGender;
-            this.cbGender.Location = new System.Drawing.Point(1, 0);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGender.Location = new System.Drawing.Point(0, 0);
             this.cbGender.Name = "cbGender";
             this.cbGender.ShadowDecoration.Parent = this.cbGender;
-            this.cbGender.Size = new System.Drawing.Size(448, 36);
+            this.cbGender.Size = new System.Drawing.Size(337, 36);
             this.cbGender.StartIndex = 0;
             this.cbGender.TabIndex = 0;
             this.cbGender.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -123,15 +121,15 @@
             this.tbNationality.ForeColor = System.Drawing.Color.Black;
             this.tbNationality.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNationality.HoverState.Parent = this.tbNationality;
-            this.tbNationality.Location = new System.Drawing.Point(0, 66);
-            this.tbNationality.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbNationality.Location = new System.Drawing.Point(0, 54);
+            this.tbNationality.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNationality.Name = "tbNationality";
             this.tbNationality.PasswordChar = '\0';
             this.tbNationality.PlaceholderText = "Quốc tịch";
             this.tbNationality.SelectedText = "";
             this.tbNationality.SelectionStart = 8;
             this.tbNationality.ShadowDecoration.Parent = this.tbNationality;
-            this.tbNationality.Size = new System.Drawing.Size(449, 66);
+            this.tbNationality.Size = new System.Drawing.Size(337, 54);
             this.tbNationality.TabIndex = 3;
             this.tbNationality.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -151,10 +149,9 @@
             this.cbTypeOfPlayer.ItemHeight = 30;
             this.cbTypeOfPlayer.ItemsAppearance.Parent = this.cbTypeOfPlayer;
             this.cbTypeOfPlayer.Location = new System.Drawing.Point(0, 0);
-            this.cbTypeOfPlayer.Margin = new System.Windows.Forms.Padding(4);
             this.cbTypeOfPlayer.Name = "cbTypeOfPlayer";
             this.cbTypeOfPlayer.ShadowDecoration.Parent = this.cbTypeOfPlayer;
-            this.cbTypeOfPlayer.Size = new System.Drawing.Size(449, 36);
+            this.cbTypeOfPlayer.Size = new System.Drawing.Size(337, 36);
             this.cbTypeOfPlayer.TabIndex = 1;
             this.cbTypeOfPlayer.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -167,13 +164,12 @@
             this.dtpBirthday.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpBirthday.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpBirthday.HoverState.Parent = this.dtpBirthday;
-            this.dtpBirthday.Location = new System.Drawing.Point(0, 199);
-            this.dtpBirthday.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpBirthday.Location = new System.Drawing.Point(0, 162);
             this.dtpBirthday.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpBirthday.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpBirthday.Name = "dtpBirthday";
             this.dtpBirthday.ShadowDecoration.Parent = this.dtpBirthday;
-            this.dtpBirthday.Size = new System.Drawing.Size(449, 66);
+            this.dtpBirthday.Size = new System.Drawing.Size(337, 54);
             this.dtpBirthday.TabIndex = 6;
             this.dtpBirthday.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.dtpBirthday.Value = new System.DateTime(2021, 6, 7, 15, 23, 56, 230);
@@ -191,19 +187,17 @@
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(251, 198);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(188, 161);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(476, 616);
+            this.panel5.Size = new System.Drawing.Size(357, 500);
             this.panel5.TabIndex = 13;
             // 
             // panel13
             // 
             this.panel13.Controls.Add(this.tbNote);
-            this.panel13.Location = new System.Drawing.Point(0, 336);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4);
+            this.panel13.Location = new System.Drawing.Point(0, 273);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(449, 279);
+            this.panel13.Size = new System.Drawing.Size(337, 227);
             this.panel13.TabIndex = 10;
             // 
             // tbNote
@@ -224,14 +218,14 @@
             this.tbNote.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNote.HoverState.Parent = this.tbNote;
             this.tbNote.Location = new System.Drawing.Point(0, 0);
-            this.tbNote.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.tbNote.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tbNote.Multiline = true;
             this.tbNote.Name = "tbNote";
             this.tbNote.PasswordChar = '\0';
             this.tbNote.PlaceholderText = "Ghi chú về cầu thủ đó";
             this.tbNote.SelectedText = "";
             this.tbNote.ShadowDecoration.Parent = this.tbNote;
-            this.tbNote.Size = new System.Drawing.Size(449, 279);
+            this.tbNote.Size = new System.Drawing.Size(337, 227);
             this.tbNote.TabIndex = 7;
             // 
             // cbCLB
@@ -249,59 +243,53 @@
             this.cbCLB.HoverState.Parent = this.cbCLB;
             this.cbCLB.ItemHeight = 30;
             this.cbCLB.ItemsAppearance.Parent = this.cbCLB;
-            this.cbCLB.Location = new System.Drawing.Point(0, 280);
-            this.cbCLB.Margin = new System.Windows.Forms.Padding(4);
+            this.cbCLB.Location = new System.Drawing.Point(0, 228);
             this.cbCLB.Name = "cbCLB";
             this.cbCLB.ShadowDecoration.Parent = this.cbCLB;
-            this.cbCLB.Size = new System.Drawing.Size(449, 36);
+            this.cbCLB.Size = new System.Drawing.Size(337, 36);
             this.cbCLB.TabIndex = 9;
             this.cbCLB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // panel12
             // 
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 265);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Location = new System.Drawing.Point(0, 216);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(449, 15);
+            this.panel12.Size = new System.Drawing.Size(337, 12);
             this.panel12.TabIndex = 8;
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.cbTypeOfPlayer);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 147);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4);
+            this.panel10.Location = new System.Drawing.Point(0, 120);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(449, 52);
+            this.panel10.Size = new System.Drawing.Size(337, 42);
             this.panel10.TabIndex = 5;
             // 
             // panel9
             // 
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 132);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4);
+            this.panel9.Location = new System.Drawing.Point(0, 108);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(449, 15);
+            this.panel9.Size = new System.Drawing.Size(337, 12);
             this.panel9.TabIndex = 4;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.cbGender);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 12);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
+            this.panel8.Location = new System.Drawing.Point(0, 10);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(449, 54);
+            this.panel8.Size = new System.Drawing.Size(337, 44);
             this.panel8.TabIndex = 2;
             // 
             // panel7
             // 
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(449, 12);
+            this.panel7.Size = new System.Drawing.Size(337, 10);
             this.panel7.TabIndex = 1;
             // 
             // btnAdd
@@ -318,10 +306,9 @@
             this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAdd.IconSize = 25;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(0, 567);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAdd.Location = new System.Drawing.Point(0, 460);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(211, 49);
+            this.btnAdd.Size = new System.Drawing.Size(158, 40);
             this.btnAdd.TabIndex = 5;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -340,10 +327,9 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(40, 198);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Location = new System.Drawing.Point(30, 161);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(211, 616);
+            this.panel4.Size = new System.Drawing.Size(158, 500);
             this.panel4.TabIndex = 12;
             // 
             // btnDelete
@@ -360,10 +346,9 @@
             this.btnDelete.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDelete.IconSize = 25;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(0, 518);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Location = new System.Drawing.Point(0, 420);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(211, 49);
+            this.btnDelete.Size = new System.Drawing.Size(158, 40);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Xoá";
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -375,10 +360,9 @@
             // 
             this.label6.Dock = System.Windows.Forms.DockStyle.Top;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label6.Location = new System.Drawing.Point(0, 330);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(0, 270);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(211, 66);
+            this.label6.Size = new System.Drawing.Size(158, 54);
             this.label6.TabIndex = 11;
             this.label6.Text = "Ghi chú:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -387,10 +371,9 @@
             // 
             this.label5.Dock = System.Windows.Forms.DockStyle.Top;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label5.Location = new System.Drawing.Point(0, 264);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(0, 216);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(211, 66);
+            this.label5.Size = new System.Drawing.Size(158, 54);
             this.label5.TabIndex = 10;
             this.label5.Text = "Câu lạc bộ:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -399,10 +382,9 @@
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Top;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label4.Location = new System.Drawing.Point(0, 198);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(0, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(211, 66);
+            this.label4.Size = new System.Drawing.Size(158, 54);
             this.label4.TabIndex = 9;
             this.label4.Text = "Ngày sinh:";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -411,10 +393,9 @@
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Top;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label3.Location = new System.Drawing.Point(0, 132);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(0, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(211, 66);
+            this.label3.Size = new System.Drawing.Size(158, 54);
             this.label3.TabIndex = 8;
             this.label3.Text = "Loại cầu thủ:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -423,10 +404,9 @@
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Top;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label2.Location = new System.Drawing.Point(0, 66);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(0, 54);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(211, 66);
+            this.label2.Size = new System.Drawing.Size(158, 54);
             this.label2.TabIndex = 7;
             this.label2.Text = "Quốc tịch:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -436,9 +416,8 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(211, 66);
+            this.label1.Size = new System.Drawing.Size(158, 54);
             this.label1.TabIndex = 6;
             this.label1.Text = "Giới tính:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -450,10 +429,9 @@
             this.pnlPlayerAvatar.Controls.Add(this.btnLoadImage);
             this.pnlPlayerAvatar.Controls.Add(this.pbPlayerImage);
             this.pnlPlayerAvatar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlPlayerAvatar.Location = new System.Drawing.Point(727, 198);
-            this.pnlPlayerAvatar.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlPlayerAvatar.Location = new System.Drawing.Point(545, 161);
             this.pnlPlayerAvatar.Name = "pnlPlayerAvatar";
-            this.pnlPlayerAvatar.Size = new System.Drawing.Size(438, 616);
+            this.pnlPlayerAvatar.Size = new System.Drawing.Size(329, 500);
             this.pnlPlayerAvatar.TabIndex = 11;
             // 
             // btnLoadImage
@@ -470,10 +448,9 @@
             this.btnLoadImage.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLoadImage.IconSize = 25;
             this.btnLoadImage.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLoadImage.Location = new System.Drawing.Point(0, 572);
-            this.btnLoadImage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoadImage.Location = new System.Drawing.Point(0, 464);
             this.btnLoadImage.Name = "btnLoadImage";
-            this.btnLoadImage.Size = new System.Drawing.Size(436, 42);
+            this.btnLoadImage.Size = new System.Drawing.Size(327, 34);
             this.btnLoadImage.TabIndex = 6;
             this.btnLoadImage.Text = "Tải ảnh lên";
             this.btnLoadImage.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -484,9 +461,9 @@
             // 
             this.pbPlayerImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbPlayerImage.Location = new System.Drawing.Point(0, 0);
-            this.pbPlayerImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbPlayerImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbPlayerImage.Name = "pbPlayerImage";
-            this.pbPlayerImage.Size = new System.Drawing.Size(436, 614);
+            this.pbPlayerImage.Size = new System.Drawing.Size(327, 498);
             this.pbPlayerImage.TabIndex = 1;
             this.pbPlayerImage.TabStop = false;
             // 
@@ -507,32 +484,30 @@
             this.tbName.ForeColor = System.Drawing.Color.Black;
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbName.HoverState.Parent = this.tbName;
-            this.tbName.Location = new System.Drawing.Point(40, 98);
-            this.tbName.Margin = new System.Windows.Forms.Padding(11);
+            this.tbName.Location = new System.Drawing.Point(30, 80);
+            this.tbName.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
             this.tbName.PlaceholderText = "Tên cầu thủ";
             this.tbName.SelectedText = "";
             this.tbName.ShadowDecoration.Parent = this.tbName;
-            this.tbName.Size = new System.Drawing.Size(1125, 100);
+            this.tbName.Size = new System.Drawing.Size(844, 81);
             this.tbName.TabIndex = 10;
             // 
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 98);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Location = new System.Drawing.Point(0, 80);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(40, 716);
+            this.panel3.Size = new System.Drawing.Size(30, 581);
             this.panel3.TabIndex = 9;
             // 
             // panel2
             // 
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1165, 12);
+            this.panel2.Size = new System.Drawing.Size(874, 10);
             this.panel2.TabIndex = 8;
             // 
             // btnClose
@@ -547,9 +522,8 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(57, 86);
+            this.btnClose.Size = new System.Drawing.Size(43, 70);
             this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -561,9 +535,8 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1165, 86);
+            this.panel1.Size = new System.Drawing.Size(874, 70);
             this.panel1.TabIndex = 7;
             // 
             // lTitle
@@ -571,20 +544,19 @@
             this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(57, 0);
-            this.lTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
             this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(1108, 86);
+            this.lTitle.Size = new System.Drawing.Size(831, 70);
             this.lTitle.TabIndex = 7;
             this.lTitle.Text = "Thêm cầu thủ mới";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // formAddPlayer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1165, 814);
+            this.ClientSize = new System.Drawing.Size(874, 661);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.pnlPlayerAvatar);
@@ -593,7 +565,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formAddPlayer";
             this.Text = "formAddPlayer";
             this.panel5.ResumeLayout(false);

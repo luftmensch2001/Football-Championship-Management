@@ -37,6 +37,11 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dgvPlayerList = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -58,12 +63,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnPrint = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -207,6 +207,39 @@
             this.dgvPlayerList.ThemeStyle.RowsStyle.Height = 22;
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // colSTT
+            // 
+            this.colSTT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.MinimumWidth = 6;
+            this.colSTT.Name = "colSTT";
+            this.colSTT.Width = 53;
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Cầu thủ";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            // 
+            // colTeam
+            // 
+            this.colTeam.HeaderText = "Đội";
+            this.colTeam.MinimumWidth = 6;
+            this.colTeam.Name = "colTeam";
+            // 
+            // colTypeOfPlayer
+            // 
+            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
+            this.colTypeOfPlayer.MinimumWidth = 6;
+            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
+            // 
+            // colNumberOfGoals
+            // 
+            this.colNumberOfGoals.HeaderText = "Tổng số bàn thắng";
+            this.colNumberOfGoals.MinimumWidth = 6;
+            this.colNumberOfGoals.Name = "colNumberOfGoals";
+            this.colNumberOfGoals.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label2
             // 
@@ -444,68 +477,35 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.btnSave);
+            this.panel2.Controls.Add(this.btnPrint);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 514);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(858, 38);
             this.panel2.TabIndex = 1;
             // 
-            // btnSave
+            // btnPrint
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.Archive;
-            this.btnSave.IconColor = System.Drawing.Color.White;
-            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSave.IconSize = 25;
-            this.btnSave.Location = new System.Drawing.Point(740, 0);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(118, 38);
-            this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "In";
-            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // colSTT
-            // 
-            this.colSTT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.MinimumWidth = 6;
-            this.colSTT.Name = "colSTT";
-            this.colSTT.Width = 53;
-            // 
-            // colName
-            // 
-            this.colName.HeaderText = "Cầu thủ";
-            this.colName.MinimumWidth = 6;
-            this.colName.Name = "colName";
-            // 
-            // colTeam
-            // 
-            this.colTeam.HeaderText = "Đội";
-            this.colTeam.MinimumWidth = 6;
-            this.colTeam.Name = "colTeam";
-            // 
-            // colTypeOfPlayer
-            // 
-            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
-            this.colTypeOfPlayer.MinimumWidth = 6;
-            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
-            // 
-            // colNumberOfGoals
-            // 
-            this.colNumberOfGoals.HeaderText = "Tổng số bàn thắng";
-            this.colNumberOfGoals.MinimumWidth = 6;
-            this.colNumberOfGoals.Name = "colNumberOfGoals";
-            this.colNumberOfGoals.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrint.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnPrint.FlatAppearance.BorderSize = 0;
+            this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.IconChar = FontAwesome.Sharp.IconChar.Archive;
+            this.btnPrint.IconColor = System.Drawing.Color.White;
+            this.btnPrint.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPrint.IconSize = 25;
+            this.btnPrint.Location = new System.Drawing.Point(740, 0);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(118, 38);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.Text = "In";
+            this.btnPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPrint.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPrint.UseVisualStyleBackColor = false;
+            this.btnPrint.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // formPlayerList
             // 
@@ -538,7 +538,7 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel2;
-        private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnPrint;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Panel panel3;

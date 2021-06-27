@@ -35,9 +35,9 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
+            this.pnlDoi2Name = new System.Windows.Forms.Panel();
             this.lbTeam2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.pnlDoi1Name = new System.Windows.Forms.Panel();
             this.lbTeam1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
@@ -61,8 +61,8 @@
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
+            this.pnlDoi2Name.SuspendLayout();
+            this.pnlDoi1Name.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudMinute)).BeginInit();
@@ -83,9 +83,8 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1165, 86);
+            this.panel1.Size = new System.Drawing.Size(874, 70);
             this.panel1.TabIndex = 0;
             // 
             // lTitle
@@ -93,10 +92,9 @@
             this.lTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 21.75F, System.Drawing.FontStyle.Bold);
             this.lTitle.ForeColor = System.Drawing.Color.White;
-            this.lTitle.Location = new System.Drawing.Point(57, 0);
-            this.lTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTitle.Location = new System.Drawing.Point(43, 0);
             this.lTitle.Name = "lTitle";
-            this.lTitle.Size = new System.Drawing.Size(1108, 86);
+            this.lTitle.Size = new System.Drawing.Size(831, 70);
             this.lTitle.TabIndex = 6;
             this.lTitle.Text = "Chọn thời gian";
             this.lTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,9 +111,8 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(57, 86);
+            this.btnClose.Size = new System.Drawing.Size(43, 70);
             this.btnClose.TabIndex = 5;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -128,32 +125,29 @@
             this.panel2.Controls.Add(this.pnlLogo2);
             this.panel2.Controls.Add(this.pnlLogo1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 86);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(0, 70);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1165, 309);
+            this.panel2.Size = new System.Drawing.Size(874, 251);
             this.panel2.TabIndex = 1;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.panel9);
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Controls.Add(this.panel7);
+            this.panel6.Controls.Add(this.pnlDoi2Name);
+            this.panel6.Controls.Add(this.pnlDoi1Name);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(267, 121);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Location = new System.Drawing.Point(200, 98);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(631, 58);
+            this.panel6.Size = new System.Drawing.Size(474, 47);
             this.panel6.TabIndex = 4;
             // 
             // panel9
             // 
             this.panel9.Controls.Add(this.guna2TextBox1);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(241, 0);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Location = new System.Drawing.Point(181, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(149, 58);
+            this.panel9.Size = new System.Drawing.Size(112, 47);
             this.panel9.TabIndex = 2;
             // 
             // guna2TextBox1
@@ -174,57 +168,58 @@
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.HoverState.Parent = this.guna2TextBox1;
             this.guna2TextBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
             this.guna2TextBox1.SelectionStart = 2;
             this.guna2TextBox1.ShadowDecoration.Parent = this.guna2TextBox1;
-            this.guna2TextBox1.Size = new System.Drawing.Size(149, 58);
+            this.guna2TextBox1.Size = new System.Drawing.Size(112, 47);
             this.guna2TextBox1.TabIndex = 0;
             this.guna2TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // panel8
+            // pnlDoi2Name
             // 
-            this.panel8.Controls.Add(this.lbTeam2);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(390, 0);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(241, 58);
-            this.panel8.TabIndex = 1;
+            this.pnlDoi2Name.Controls.Add(this.lbTeam2);
+            this.pnlDoi2Name.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pnlDoi2Name.Location = new System.Drawing.Point(293, 0);
+            this.pnlDoi2Name.Name = "pnlDoi2Name";
+            this.pnlDoi2Name.Size = new System.Drawing.Size(181, 47);
+            this.pnlDoi2Name.TabIndex = 1;
             // 
             // lbTeam2
             // 
-            this.lbTeam2.AutoSize = true;
+            this.lbTeam2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTeam2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTeam2.Location = new System.Drawing.Point(67, 16);
+            this.lbTeam2.Location = new System.Drawing.Point(0, 0);
+            this.lbTeam2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTeam2.Name = "lbTeam2";
-            this.lbTeam2.Size = new System.Drawing.Size(95, 29);
+            this.lbTeam2.Size = new System.Drawing.Size(181, 47);
             this.lbTeam2.TabIndex = 1;
             this.lbTeam2.Text = "Team 2";
             this.lbTeam2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel7
+            // pnlDoi1Name
             // 
-            this.panel7.Controls.Add(this.lbTeam1);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(241, 58);
-            this.panel7.TabIndex = 0;
+            this.pnlDoi1Name.Controls.Add(this.lbTeam1);
+            this.pnlDoi1Name.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlDoi1Name.Location = new System.Drawing.Point(0, 0);
+            this.pnlDoi1Name.Name = "pnlDoi1Name";
+            this.pnlDoi1Name.Size = new System.Drawing.Size(181, 47);
+            this.pnlDoi1Name.TabIndex = 0;
             // 
             // lbTeam1
             // 
-            this.lbTeam1.AutoSize = true;
+            this.lbTeam1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbTeam1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTeam1.Location = new System.Drawing.Point(53, 16);
+            this.lbTeam1.Location = new System.Drawing.Point(0, 0);
+            this.lbTeam1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbTeam1.Name = "lbTeam1";
-            this.lbTeam1.Size = new System.Drawing.Size(95, 29);
+            this.lbTeam1.Size = new System.Drawing.Size(181, 47);
             this.lbTeam1.TabIndex = 0;
             this.lbTeam1.Text = "Team 1";
+            this.lbTeam1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -232,10 +227,9 @@
             this.panel5.Controls.Add(this.panel11);
             this.panel5.Controls.Add(this.panel10);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(267, 179);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(200, 145);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(631, 130);
+            this.panel5.Size = new System.Drawing.Size(474, 106);
             this.panel5.TabIndex = 3;
             // 
             // panel12
@@ -245,10 +239,9 @@
             this.panel12.Controls.Add(this.nudHour);
             this.panel12.Controls.Add(this.label4);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 82);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Location = new System.Drawing.Point(0, 66);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(631, 41);
+            this.panel12.Size = new System.Drawing.Size(474, 33);
             this.panel12.TabIndex = 2;
             // 
             // nudMinute
@@ -267,8 +260,8 @@
             this.nudMinute.FocusedState.Parent = this.nudMinute;
             this.nudMinute.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudMinute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.nudMinute.Location = new System.Drawing.Point(295, 0);
-            this.nudMinute.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nudMinute.Location = new System.Drawing.Point(221, 0);
+            this.nudMinute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudMinute.Maximum = new decimal(new int[] {
             59,
             0,
@@ -276,16 +269,15 @@
             0});
             this.nudMinute.Name = "nudMinute";
             this.nudMinute.ShadowDecoration.Parent = this.nudMinute;
-            this.nudMinute.Size = new System.Drawing.Size(109, 41);
+            this.nudMinute.Size = new System.Drawing.Size(82, 33);
             this.nudMinute.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Location = new System.Drawing.Point(260, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(195, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 41);
+            this.label2.Size = new System.Drawing.Size(26, 33);
             this.label2.TabIndex = 8;
             this.label2.Text = ":";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -306,8 +298,8 @@
             this.nudHour.FocusedState.Parent = this.nudHour;
             this.nudHour.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.nudHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.nudHour.Location = new System.Drawing.Point(151, 0);
-            this.nudHour.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.nudHour.Location = new System.Drawing.Point(113, 0);
+            this.nudHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudHour.Maximum = new decimal(new int[] {
             23,
             0,
@@ -315,7 +307,7 @@
             0});
             this.nudHour.Name = "nudHour";
             this.nudHour.ShadowDecoration.Parent = this.nudHour;
-            this.nudHour.Size = new System.Drawing.Size(109, 41);
+            this.nudHour.Size = new System.Drawing.Size(82, 33);
             this.nudHour.TabIndex = 7;
             // 
             // label4
@@ -323,9 +315,8 @@
             this.label4.Dock = System.Windows.Forms.DockStyle.Left;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(151, 41);
+            this.label4.Size = new System.Drawing.Size(113, 33);
             this.label4.TabIndex = 3;
             this.label4.Text = "Giờ (hh : mm):";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -335,10 +326,9 @@
             this.panel11.Controls.Add(this.dtpDate);
             this.panel11.Controls.Add(this.label3);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 41);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Location = new System.Drawing.Point(0, 33);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(631, 41);
+            this.panel11.Size = new System.Drawing.Size(474, 33);
             this.panel11.TabIndex = 1;
             // 
             // dtpDate
@@ -351,13 +341,12 @@
             this.dtpDate.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpDate.HoverState.Parent = this.dtpDate;
-            this.dtpDate.Location = new System.Drawing.Point(151, 0);
-            this.dtpDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpDate.Location = new System.Drawing.Point(113, 0);
             this.dtpDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDate.Name = "dtpDate";
             this.dtpDate.ShadowDecoration.Parent = this.dtpDate;
-            this.dtpDate.Size = new System.Drawing.Size(267, 41);
+            this.dtpDate.Size = new System.Drawing.Size(200, 33);
             this.dtpDate.TabIndex = 4;
             this.dtpDate.Value = new System.DateTime(2021, 6, 10, 15, 57, 43, 587);
             // 
@@ -366,9 +355,8 @@
             this.label3.Dock = System.Windows.Forms.DockStyle.Left;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 41);
+            this.label3.Size = new System.Drawing.Size(113, 33);
             this.label3.TabIndex = 3;
             this.label3.Text = "Ngày:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -377,19 +365,17 @@
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(631, 41);
+            this.panel10.Size = new System.Drawing.Size(474, 33);
             this.panel10.TabIndex = 0;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.lbLeague);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(267, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(200, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(631, 121);
+            this.panel4.Size = new System.Drawing.Size(474, 98);
             this.panel4.TabIndex = 2;
             // 
             // lbLeague
@@ -397,9 +383,8 @@
             this.lbLeague.Dock = System.Windows.Forms.DockStyle.Top;
             this.lbLeague.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.lbLeague.Location = new System.Drawing.Point(0, 0);
-            this.lbLeague.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbLeague.Name = "lbLeague";
-            this.lbLeague.Size = new System.Drawing.Size(631, 70);
+            this.lbLeague.Size = new System.Drawing.Size(474, 57);
             this.lbLeague.TabIndex = 0;
             this.lbLeague.Text = "Unknown League";
             this.lbLeague.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -409,18 +394,17 @@
             this.pnlLogo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pnlLogo2.Controls.Add(this.pbTeam2);
             this.pnlLogo2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlLogo2.Location = new System.Drawing.Point(898, 0);
-            this.pnlLogo2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlLogo2.Location = new System.Drawing.Point(674, 0);
             this.pnlLogo2.Name = "pnlLogo2";
-            this.pnlLogo2.Size = new System.Drawing.Size(267, 309);
+            this.pnlLogo2.Size = new System.Drawing.Size(200, 251);
             this.pnlLogo2.TabIndex = 1;
             // 
             // pbTeam2
             // 
-            this.pbTeam2.Location = new System.Drawing.Point(7, 7);
-            this.pbTeam2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbTeam2.Location = new System.Drawing.Point(5, 6);
+            this.pbTeam2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbTeam2.Name = "pbTeam2";
-            this.pbTeam2.Size = new System.Drawing.Size(257, 299);
+            this.pbTeam2.Size = new System.Drawing.Size(193, 243);
             this.pbTeam2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTeam2.TabIndex = 0;
             this.pbTeam2.TabStop = false;
@@ -431,17 +415,16 @@
             this.pnlLogo1.Controls.Add(this.pbTeam1);
             this.pnlLogo1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLogo1.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlLogo1.Name = "pnlLogo1";
-            this.pnlLogo1.Size = new System.Drawing.Size(267, 309);
+            this.pnlLogo1.Size = new System.Drawing.Size(200, 251);
             this.pnlLogo1.TabIndex = 0;
             // 
             // pbTeam1
             // 
-            this.pbTeam1.Location = new System.Drawing.Point(3, 7);
-            this.pbTeam1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pbTeam1.Location = new System.Drawing.Point(2, 6);
+            this.pbTeam1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pbTeam1.Name = "pbTeam1";
-            this.pbTeam1.Size = new System.Drawing.Size(257, 295);
+            this.pbTeam1.Size = new System.Drawing.Size(193, 240);
             this.pbTeam1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbTeam1.TabIndex = 0;
             this.pbTeam1.TabStop = false;
@@ -450,10 +433,9 @@
             // 
             this.panel3.Controls.Add(this.btnSave);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 762);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(0, 619);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1165, 52);
+            this.panel3.Size = new System.Drawing.Size(874, 42);
             this.panel3.TabIndex = 2;
             // 
             // btnSave
@@ -469,10 +451,9 @@
             this.btnSave.IconColor = System.Drawing.Color.White;
             this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSave.IconSize = 30;
-            this.btnSave.Location = new System.Drawing.Point(964, 0);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSave.Location = new System.Drawing.Point(723, 0);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(201, 52);
+            this.btnSave.Size = new System.Drawing.Size(151, 42);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Lưu";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -482,25 +463,22 @@
             // 
             // formChangeTime
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1165, 814);
+            this.ClientSize = new System.Drawing.Size(874, 661);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "formChangeTime";
             this.Text = "formAddCompetition";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
+            this.pnlDoi2Name.ResumeLayout(false);
+            this.pnlDoi1Name.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudMinute)).EndInit();
@@ -526,8 +504,8 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel9;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel pnlDoi2Name;
+        private System.Windows.Forms.Panel pnlDoi1Name;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel11;

@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1165, 86);
             this.panel1.TabIndex = 0;
@@ -113,7 +113,7 @@
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 35;
             this.btnClose.Location = new System.Drawing.Point(0, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(57, 86);
             this.btnClose.TabIndex = 4;
@@ -128,7 +128,7 @@
             this.panel2.Controls.Add(this.guna2TextBox3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(908, 49);
             this.panel2.TabIndex = 1;
@@ -203,7 +203,7 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(908, 86);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(257, 728);
             this.panel3.TabIndex = 2;
@@ -215,7 +215,7 @@
             this.panel15.Controls.Add(this.panel16);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.Location = new System.Drawing.Point(13, 209);
-            this.panel15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel15.Margin = new System.Windows.Forms.Padding(4);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(231, 519);
             this.panel15.TabIndex = 8;
@@ -244,7 +244,7 @@
             this.btnChangeTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
             this.btnChangeTime.HoverState.Parent = this.btnChangeTime;
             this.btnChangeTime.Location = new System.Drawing.Point(0, 1);
-            this.btnChangeTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChangeTime.Margin = new System.Windows.Forms.Padding(4);
             this.btnChangeTime.Name = "btnChangeTime";
             this.btnChangeTime.ShadowDecoration.Parent = this.btnChangeTime;
             this.btnChangeTime.Size = new System.Drawing.Size(221, 41);
@@ -265,7 +265,7 @@
             // 
             this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel16.Location = new System.Drawing.Point(0, 0);
-            this.panel16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel16.Margin = new System.Windows.Forms.Padding(4);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(55, 519);
             this.panel16.TabIndex = 1;
@@ -276,7 +276,7 @@
             this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.panel14.Location = new System.Drawing.Point(13, 155);
-            this.panel14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(231, 54);
             this.panel14.TabIndex = 7;
@@ -296,7 +296,7 @@
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(13, 134);
-            this.panel13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(231, 21);
             this.panel13.TabIndex = 6;
@@ -308,7 +308,7 @@
             this.panel9.Controls.Add(this.btnCancelSchedule);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel9.Location = new System.Drawing.Point(13, 87);
-            this.panel9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(231, 47);
             this.panel9.TabIndex = 5;
@@ -317,7 +317,7 @@
             // 
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel11.Location = new System.Drawing.Point(206, 0);
-            this.panel11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(25, 47);
             this.panel11.TabIndex = 1;
@@ -326,7 +326,7 @@
             // 
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(25, 47);
             this.panel10.TabIndex = 0;
@@ -347,7 +347,7 @@
             this.btnCancelSchedule.ForeColor = System.Drawing.Color.Black;
             this.btnCancelSchedule.HoverState.Parent = this.btnCancelSchedule;
             this.btnCancelSchedule.Location = new System.Drawing.Point(0, 0);
-            this.btnCancelSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelSchedule.Name = "btnCancelSchedule";
             this.btnCancelSchedule.ShadowDecoration.Parent = this.btnCancelSchedule;
             this.btnCancelSchedule.Size = new System.Drawing.Size(231, 47);
@@ -359,7 +359,7 @@
             // 
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(13, 73);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(231, 14);
             this.panel8.TabIndex = 4;
@@ -379,7 +379,7 @@
             this.btnAutoCreate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(194)))), ((int)(((byte)(138)))));
             this.btnAutoCreate.HoverState.Parent = this.btnAutoCreate;
             this.btnAutoCreate.Location = new System.Drawing.Point(13, 18);
-            this.btnAutoCreate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAutoCreate.Margin = new System.Windows.Forms.Padding(4);
             this.btnAutoCreate.Name = "btnAutoCreate";
             this.btnAutoCreate.ShadowDecoration.Parent = this.btnAutoCreate;
             this.btnAutoCreate.Size = new System.Drawing.Size(231, 55);
@@ -391,7 +391,7 @@
             // 
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel6.Location = new System.Drawing.Point(244, 18);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(13, 710);
             this.panel6.TabIndex = 2;
@@ -400,7 +400,7 @@
             // 
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(0, 18);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(13, 710);
             this.panel5.TabIndex = 1;
@@ -409,7 +409,7 @@
             // 
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(257, 18);
             this.panel4.TabIndex = 0;
@@ -420,7 +420,7 @@
             this.panel7.Controls.Add(this.panel2);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(0, 86);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(908, 728);
             this.panel7.TabIndex = 3;
@@ -431,7 +431,7 @@
             this.panel12.Controls.Add(this.guna2DataGridView1);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel12.Location = new System.Drawing.Point(0, 49);
-            this.panel12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(908, 679);
             this.panel12.TabIndex = 2;
@@ -466,7 +466,7 @@
             this.dgvSchedule.EnableHeadersVisualStyles = false;
             this.dgvSchedule.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvSchedule.Location = new System.Drawing.Point(0, 0);
-            this.dgvSchedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvSchedule.Margin = new System.Windows.Forms.Padding(4);
             this.dgvSchedule.Name = "dgvSchedule";
             this.dgvSchedule.RowHeadersVisible = false;
             this.dgvSchedule.RowHeadersWidth = 51;
@@ -526,7 +526,7 @@
             this.guna2DataGridView1.EnableHeadersVisualStyles = false;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2DataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
@@ -566,7 +566,7 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "formCompetitionSchedule";
             this.Text = "formCompetitionSchedule";
             this.panel1.ResumeLayout(false);

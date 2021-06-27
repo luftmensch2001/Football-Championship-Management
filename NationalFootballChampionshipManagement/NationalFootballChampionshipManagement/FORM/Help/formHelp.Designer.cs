@@ -36,7 +36,7 @@
             this.btnError = new FontAwesome.Sharp.IconButton();
             this.btnHowToUse = new FontAwesome.Sharp.IconButton();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlTeamDevLogo = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
@@ -169,22 +169,22 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.pnlTeamDevLogo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(538, 70);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(320, 415);
             this.panel3.TabIndex = 2;
             // 
-            // panel5
+            // pnlTeamDevLogo
             // 
-            this.panel5.BackgroundImage = global::NationalFootballChampionshipManagement.Properties.Resources.Team_Logo;
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel5.Location = new System.Drawing.Point(0, 200);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(320, 215);
-            this.panel5.TabIndex = 0;
+            this.pnlTeamDevLogo.BackgroundImage = global::NationalFootballChampionshipManagement.Properties.Resources.Team_Logo;
+            this.pnlTeamDevLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pnlTeamDevLogo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlTeamDevLogo.Location = new System.Drawing.Point(0, 200);
+            this.pnlTeamDevLogo.Name = "pnlTeamDevLogo";
+            this.pnlTeamDevLogo.Size = new System.Drawing.Size(320, 215);
+            this.pnlTeamDevLogo.TabIndex = 0;
             // 
             // panel2
             // 
@@ -266,7 +266,7 @@
         private FontAwesome.Sharp.IconButton btnContactToDevelopers;
         private FontAwesome.Sharp.IconButton btnError;
         private FontAwesome.Sharp.IconButton btnHowToUse;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlTeamDevLogo;
         private FontAwesome.Sharp.IconButton btnClose;
         private System.Windows.Forms.Label lTitle;
         private System.Windows.Forms.Label label1;
