@@ -65,5 +65,11 @@ namespace NationalFootballChampionshipManagement.DAO
                 DataProvider.Instance.ExecuteQuery("Delete from KetQuaThiDau Where IDTranDau = " + item.ToString());
             }        
         }
+        public int GetCountResultMatch(int idmg)
+        {
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery("Select Count(trandau.idmg) from ketquathidau join trandau on ketquathidau.idtrandau = trandau.idtrandau" +
+                                                                " where kqdoi1<>-1 and idmg =" + idmg.ToString());
+            return (int)dataTable.Rows[0][0];
+        }
     }
 }

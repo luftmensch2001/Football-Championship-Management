@@ -47,5 +47,9 @@ namespace NationalFootballChampionshipManagement.DAO
         {
             DataProvider.Instance.ExecuteQuery("EXEC USP_DELETEGOAL @IDBANTHANG = " + idBanThang.ToString());
         }
+        public void DeleteGoalinMatch(int idTranDau)
+        {
+            DataProvider.Instance.ExecuteQuery("Delete BanThang Where idTranDau = "+ idTranDau.ToString());
+        }
     }
 }

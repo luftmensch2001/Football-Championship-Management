@@ -460,5 +460,27 @@ namespace NationalFootballChampionshipManagement
                 player.CountGoal -= count;
             }
         }
+
+        private void btCancel_Click(object sender, EventArgs e)
+        {
+            foreach (Player player in listPlayerTeam1)
+            {
+                PlayerDAO.Instance.SetCountGoal(player.ID, player.CountGoal);
+            }
+            foreach (Player player in listPlayerTeam2)
+            {
+                PlayerDAO.Instance.SetCountGoal(player.ID, player.CountGoal);
+            }
+            GoalDAO.Instance.DeleteGoalinMatch(idTranDau);
+            ResultMatchDAO.Instance.SetKQ(idTranDau, -1, -1);
+
+
+            if (ResultMatchDAO.Instance.GetCountResultMatch(LeagueDAO.Instance.GetCurrIDMG()) == 0)
+            {
+                LeagueDAO.Instance.UpdateStatus(1);
+                formFather.LoadStatus();
+            }
+            this.formFather.openChildForm(new formResultHistory(this.formFather));
+        }
     }
 }
