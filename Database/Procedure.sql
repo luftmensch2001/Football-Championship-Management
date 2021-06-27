@@ -414,3 +414,12 @@ CREATE PROC USP_UpdatePriorityRankList_By_ThuTuUuTien
 	WHERE IDMG = @idmg AND ThuTuUuTien = @ThuTuUuTien
 END
 GO
+
+CREATE PROC USP_GETNAMEANDDoBCAUTHU
+@IDMG INT
+AS
+BEGIN
+	Select CauThu.IDCT,CauThu.NgaySinh
+	From CauThu join DoiBong on CauThu.IDDB=CauThu.IDDB
+	where DoiBong.IDMG = @IDMG
+END

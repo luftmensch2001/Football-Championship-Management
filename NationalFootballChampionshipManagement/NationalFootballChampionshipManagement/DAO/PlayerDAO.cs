@@ -170,11 +170,11 @@ namespace NationalFootballChampionshipManagement.DAO
         {
             int idmg = NationalFootballChampionshipManagement.DAO.LeagueDAO.Instance.GetCurrIDMG();
             List<Player> players = new List<Player>();
-            string query = "SELECT IDCT, NgaySinh FROM CauThu WHERE @idmg =" + idmg;
+            string query = "Exec USP_GETNAMEANDDoBCAUTHU @idmg =" + idmg;
             DataTable dataTable = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow row in dataTable.Rows)
             {
-                Player player = new Player((int)row[0], (DateTime)row[4]);
+                Player player = new Player((int)row[0], (DateTime)row[1]);
                 players.Add(player);
             }
             return players;
