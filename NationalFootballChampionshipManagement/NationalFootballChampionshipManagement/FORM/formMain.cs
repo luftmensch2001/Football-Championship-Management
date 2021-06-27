@@ -20,22 +20,30 @@ namespace NationalFootballChampionshipManagement
             customizeDesing();
             //activeFullScreenMode();
 
-            openChildForm(new formHome(this));
-
-            LoadStatus();
-
-            int idmg = LeagueDAO.Instance.GetCurrIDMG();
-            if (idmg == -1)
+            try
             {
-                DisableButton();
-                MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy mở mục Mùa Giải và tạo cho mình mùa giải đầu tiên nhé!");
-                openChildForm(new formAddMuaGiai(this));
+                LoadStatus();
+
+                int idmg = LeagueDAO.Instance.GetCurrIDMG();
+
+                openChildForm(new formHome(this));
+
+                if (idmg == -1)
+                {
+                    DisableButton();
+                    MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy mở mục Mùa Giải và tạo cho mình mùa giải đầu tiên nhé!");
+                    openChildForm(new formAddMuaGiai(this));
+                }
+                else
+                {
+                    LoadLogo();
+                }
             }
-            else
-            {              
-                LoadLogo();
+            catch
+            {
+                MessageBox.Show("Không tìm thấy cơ sở dữ liệu. Nếu chưa có vui lòng khởi tạo trước\n(Hướng dẫn tại phần cài đặt phần mềm trong file readme)", "Lỗi");
+                Environment.Exit(1);
             }
-            
         }
 
         private void DisableButton()
