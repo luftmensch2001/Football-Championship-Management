@@ -28,20 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.dgvPlayerList = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -64,6 +59,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTeam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTypeOfPlayer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNumberOfGoals = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -144,21 +144,21 @@
             this.dgvPlayerList.AllowUserToDeleteRows = false;
             this.dgvPlayerList.AllowUserToResizeColumns = false;
             this.dgvPlayerList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvPlayerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvPlayerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPlayerList.BackgroundColor = System.Drawing.Color.White;
             this.dgvPlayerList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPlayerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvPlayerList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPlayerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPlayerList.ColumnHeadersHeight = 35;
             this.dgvPlayerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSTT,
@@ -166,14 +166,14 @@
             this.colTeam,
             this.colTypeOfPlayer,
             this.colNumberOfGoals});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPlayerList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPlayerList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPlayerList.EnableHeadersVisualStyles = false;
             this.dgvPlayerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -207,37 +207,6 @@
             this.dgvPlayerList.ThemeStyle.RowsStyle.Height = 22;
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvPlayerList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // colSTT
-            // 
-            this.colSTT.HeaderText = "STT";
-            this.colSTT.MinimumWidth = 6;
-            this.colSTT.Name = "colSTT";
-            // 
-            // colName
-            // 
-            this.colName.HeaderText = "Cầu thủ";
-            this.colName.MinimumWidth = 6;
-            this.colName.Name = "colName";
-            // 
-            // colTeam
-            // 
-            this.colTeam.HeaderText = "Đội";
-            this.colTeam.MinimumWidth = 6;
-            this.colTeam.Name = "colTeam";
-            // 
-            // colTypeOfPlayer
-            // 
-            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
-            this.colTypeOfPlayer.MinimumWidth = 6;
-            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
-            // 
-            // colNumberOfGoals
-            // 
-            this.colNumberOfGoals.HeaderText = "Tổng số bàn thắng";
-            this.colNumberOfGoals.MinimumWidth = 6;
-            this.colNumberOfGoals.Name = "colNumberOfGoals";
-            this.colNumberOfGoals.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // label2
             // 
@@ -408,7 +377,7 @@
             this.tbNamePlayer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.tbNamePlayer.HoverState.Parent = this.tbNamePlayer;
             this.tbNamePlayer.Location = new System.Drawing.Point(5, 7);
-            this.tbNamePlayer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbNamePlayer.Margin = new System.Windows.Forms.Padding(4);
             this.tbNamePlayer.Name = "tbNamePlayer";
             this.tbNamePlayer.PasswordChar = '\0';
             this.tbNamePlayer.PlaceholderText = "Nguyễn Văn A";
@@ -505,6 +474,39 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // colSTT
+            // 
+            this.colSTT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.colSTT.HeaderText = "STT";
+            this.colSTT.MinimumWidth = 6;
+            this.colSTT.Name = "colSTT";
+            this.colSTT.Width = 53;
+            // 
+            // colName
+            // 
+            this.colName.HeaderText = "Cầu thủ";
+            this.colName.MinimumWidth = 6;
+            this.colName.Name = "colName";
+            // 
+            // colTeam
+            // 
+            this.colTeam.HeaderText = "Đội";
+            this.colTeam.MinimumWidth = 6;
+            this.colTeam.Name = "colTeam";
+            // 
+            // colTypeOfPlayer
+            // 
+            this.colTypeOfPlayer.HeaderText = "Loại cầu thủ";
+            this.colTypeOfPlayer.MinimumWidth = 6;
+            this.colTypeOfPlayer.Name = "colTypeOfPlayer";
+            // 
+            // colNumberOfGoals
+            // 
+            this.colNumberOfGoals.HeaderText = "Tổng số bàn thắng";
+            this.colNumberOfGoals.MinimumWidth = 6;
+            this.colNumberOfGoals.Name = "colNumberOfGoals";
+            this.colNumberOfGoals.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // formPlayerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,11 +554,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTeam;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeOfPlayer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfGoals;
         private FontAwesome.Sharp.IconButton btSearch;
         private Guna.UI2.WinForms.Guna2TextBox tbNamePlayer;
         private System.Windows.Forms.Panel panel15;
@@ -565,5 +562,10 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panelType;
         private System.Windows.Forms.Panel panelTeam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSTT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTeam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTypeOfPlayer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumberOfGoals;
     }
 }
