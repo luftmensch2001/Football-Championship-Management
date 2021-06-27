@@ -59,10 +59,24 @@ namespace NationalFootballChampionshipManagement
         public void LoadStatus()
         {
             lbStatus.Text = LeagueDAO.Instance.GetCurrLeagueStatus();
+            CheckStatusResultRanking();
         }
         public void LoadLogo()
         {
             panelChampionshipLogo.BackgroundImage = LeagueDAO.Instance.GetCurrLeagueImage();
+        }
+
+        public void CheckStatusResultRanking()
+        {
+            if (lbStatus.Text == "Trạng thái: Đang đăng ký")
+            {
+                btnResult.Enabled = false;
+                btnRankingChart.Enabled = false;
+            }  else
+            {
+                btnResult.Enabled = true;
+                btnRankingChart.Enabled = true;
+            }    
         }
 
         private void activeFullScreenMode()
