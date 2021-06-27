@@ -28,7 +28,7 @@ namespace NationalFootballChampionshipManagement.DAO
 
             if (countOfTeam <= 1)
             {
-                MessageBox.Show("Số lượng đội bóng không đủ đê tạo lịch", "Lỗi");
+                MessageBox.Show("Số lượng đội bóng không đủ để tạo lịch", "Lỗi");
                 return 0;
             }
             

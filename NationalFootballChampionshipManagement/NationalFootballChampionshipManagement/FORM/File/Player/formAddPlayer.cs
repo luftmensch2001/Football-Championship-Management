@@ -171,8 +171,13 @@ namespace NationalFootballChampionshipManagement
             }
             if (PlayerDAO.Instance.DeletePlayerByID(player.ID) == 1) // xoa thanh cong
             {
+                MessageBox.Show("Xoá cầu thủ thành công", "Thành công");
                 this.formFather.openChildForm(new formTeam(this.formFather));
                 this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Xoá cầu thủ thất bại", "Lỗi");
             }
         }
 

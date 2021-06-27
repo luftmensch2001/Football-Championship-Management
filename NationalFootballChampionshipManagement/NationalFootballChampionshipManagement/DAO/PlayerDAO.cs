@@ -150,12 +150,10 @@ namespace NationalFootballChampionshipManagement.DAO
             {
                 string query = "DELETE FROM CauThu WHERE IDCT = " + idct.ToString();
                 DataProvider.Instance.ExecuteQuery(query);
-                MessageBox.Show("Xoá cầu thủ thành công", "Thành công");
                 return 1;
             }
             catch
             {
-                MessageBox.Show("Xoá cầu thủ thất bại", "Lỗi");
                 return 0;
             }
         }
