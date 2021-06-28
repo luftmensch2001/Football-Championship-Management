@@ -463,6 +463,12 @@ namespace NationalFootballChampionshipManagement
 
         private void btCancel_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn huỷ kết quả trận đấu này không ?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.No)
+            {
+                return;
+            }
+
             foreach (Player player in listPlayerTeam1)
             {
                 PlayerDAO.Instance.SetCountGoal(player.ID, player.CountGoal);
