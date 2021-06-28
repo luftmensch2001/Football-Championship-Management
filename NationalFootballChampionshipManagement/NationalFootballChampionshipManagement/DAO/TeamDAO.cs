@@ -167,6 +167,5 @@ namespace NationalFootballChampionshipManagement.DAO
             DataProvider.Instance.ExecuteQuery(query); 
         }
 
-
     }
 }

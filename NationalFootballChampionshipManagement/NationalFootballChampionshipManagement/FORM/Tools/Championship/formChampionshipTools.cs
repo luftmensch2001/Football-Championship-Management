@@ -209,6 +209,11 @@ namespace NationalFootballChampionshipManagement
                 MessageBox.Show("Số lượng cầu thủ tối thiểu không được lớn hơn số lượng cầu thủ tối đa", "Lỗi");
                 return;
             }
+            if (IsLowerThanMaxPlayer())
+            {
+                MessageBox.Show("Hiện tại có đội có số lượng cầu thủ mượt mức này\nVui lòng xoá và thử lại", "Lỗi");
+                return;
+            }    
 
             DialogResult dialogResult = MessageBox.Show("Chú ý: Sau khi lưu thay đổi, các cầu thủ có tuổi không hợp lệ sẽ bị xoá khỏi danh sách\nLưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.No) return;
@@ -224,7 +229,7 @@ namespace NationalFootballChampionshipManagement
                 nudMinAge.Value.ToString(),
                 nudMaxAge.Value.ToString(),
                 nudMinPlayer.Value.ToString(),
-                nudMaxAge.Value.ToString(),
+                nudMaxPlayer.Value.ToString(),
                 nudTimeGoalsMax.Value.ToString()
                 );
 
@@ -277,6 +282,17 @@ namespace NationalFootballChampionshipManagement
                 btnSave.Enabled = false;
                 MessageBox.Show("Không thể thay đổi quy định giải đấu khi đã tạo lịch thi đấu", "Thông báo");
             }
+        }
+
+        private bool IsLowerThanMaxPlayer()
+        {
+            List<Team> team = TeamDAO.Instance.GetNameAndIdTeam();
+            foreach (Team i in team)
+            {
+                if (TeamDAO.Instance.GetCountPlayer(i.ID) > nudMaxPlayer.Value)
+                    return true;
+            }
+            return false;
         }
     }
 }
