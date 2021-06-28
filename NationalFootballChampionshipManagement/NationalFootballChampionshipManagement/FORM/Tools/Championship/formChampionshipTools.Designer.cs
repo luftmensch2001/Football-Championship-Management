@@ -802,7 +802,9 @@
             this.dgvGoalType.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvGoalType.Location = new System.Drawing.Point(0, 37);
             this.dgvGoalType.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvGoalType.MultiSelect = false;
             this.dgvGoalType.Name = "dgvGoalType";
+            this.dgvGoalType.ReadOnly = true;
             this.dgvGoalType.RowHeadersVisible = false;
             this.dgvGoalType.RowHeadersWidth = 51;
             this.dgvGoalType.RowTemplate.Height = 30;
@@ -824,7 +826,7 @@
             this.dgvGoalType.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.dgvGoalType.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dgvGoalType.ThemeStyle.HeaderStyle.Height = 40;
-            this.dgvGoalType.ThemeStyle.ReadOnly = false;
+            this.dgvGoalType.ThemeStyle.ReadOnly = true;
             this.dgvGoalType.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvGoalType.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgvGoalType.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -846,6 +848,7 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Loại bàn thắng";
             this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // panel23
             // 
