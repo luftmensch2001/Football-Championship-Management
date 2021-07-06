@@ -43,31 +43,24 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                try
+                if (File.Exists(@".\Data\Create database.bat"))
                 {
-                    if (File.Exists(@".\Data\Create database.bat"))
-                    {
-                        String batDir = @".\Data\";
-                        Process proc = new Process();
-                        proc.StartInfo.WorkingDirectory = batDir;
-                        proc.StartInfo.FileName = "Create database.bat";
-                        proc.StartInfo.CreateNoWindow = false;
-                        proc.Start();
-                        proc.WaitForExit();
-                    }    
+                    String batDir = @".\Data\";
+                    Process proc = new Process();
+                    proc.StartInfo.WorkingDirectory = batDir;
+                    proc.StartInfo.FileName = "Create database.bat";
+                    proc.StartInfo.CreateNoWindow = false;
+                    proc.Start();
+                    proc.WaitForExit();
 
                     DisableButton();
-                    MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy tạo cho mình mùa giải đầu tiên nhé!", "Chào mừng!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); 
+                    MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy tạo cho mình mùa giải đầu tiên nhé!", "Chào mừng!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     openChildForm(new formAddMuaGiai(this));
-                } catch
+                } else
                 {
                     MessageBox.Show("Có vẻ như bạn đã xóa mất file Create database.bat, hãy cài lại phần mềm nhé!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     Environment.Exit(1);
                 }
-
-
-
-                
             }
         }
 
