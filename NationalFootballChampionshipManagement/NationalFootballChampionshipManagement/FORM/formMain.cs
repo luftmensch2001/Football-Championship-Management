@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -31,7 +33,7 @@ namespace NationalFootballChampionshipManagement
                 if (idmg == -1)
                 {
                     DisableButton();
-                    MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy mở mục Mùa Giải và tạo cho mình mùa giải đầu tiên nhé!");
+                    MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy tạo cho mình mùa giải đầu tiên nhé!", "Chào mừng!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     openChildForm(new formAddMuaGiai(this));
                 }
                 else
@@ -41,8 +43,31 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                MessageBox.Show("Không tìm thấy cơ sở dữ liệu. Nếu chưa có vui lòng khởi tạo trước\n(Hướng dẫn tại phần cài đặt phần mềm trong file readme)", "Lỗi");
-                Environment.Exit(1);
+                try
+                {
+                    if (File.Exists(@".\Data\Create database.bat"))
+                    {
+                        String batDir = @".\Data\";
+                        Process proc = new Process();
+                        proc.StartInfo.WorkingDirectory = batDir;
+                        proc.StartInfo.FileName = "Create database.bat";
+                        proc.StartInfo.CreateNoWindow = false;
+                        proc.Start();
+                        proc.WaitForExit();
+                    }    
+
+                    DisableButton();
+                    MessageBox.Show("Chào mừng bạn đến với phần mềm. Hãy tạo cho mình mùa giải đầu tiên nhé!", "Chào mừng!", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); 
+                    openChildForm(new formAddMuaGiai(this));
+                } catch
+                {
+                    MessageBox.Show("Có vẻ như bạn đã xóa mất file Create database.bat, hãy cài lại phần mềm nhé!", "Lỗi!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Environment.Exit(1);
+                }
+
+
+
+                
             }
         }
 

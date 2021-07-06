@@ -57,12 +57,12 @@ namespace NationalFootballChampionshipManagement
         {
             if (isSpace(tbTeamName.Text) || isSpace(tbCoachName.Text) || isSpace(tbHost.Text))
             {
-                MessageBox.Show("Thông tin không được là khoảng trắng", "Lỗi");
+                MessageBox.Show("Thông tin không được là khoảng trắng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (pbTeamImage.Image == null)
             {
-                MessageBox.Show("Vui lòng thêm hình ảnh", "Lỗi");
+                MessageBox.Show("Vui lòng thêm hình ảnh", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -70,12 +70,12 @@ namespace NationalFootballChampionshipManagement
                 try
                 {
                     TeamDAO.Instance.AddTeam(tbTeamName.Text, tbCoachName.Text, tbHost.Text, pbTeamImage.Image);
-                    MessageBox.Show("Thêm đội bóng thành công!", "Thành công");
+                    MessageBox.Show("Thêm đội bóng thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.formFather.openChildForm(new formTeam(this.formFather));
                 }
                 catch
                 {
-                    MessageBox.Show("Thêm đội bóng thất bại!", "Lỗi");
+                    MessageBox.Show("Thêm đội bóng thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             else 
                 try
@@ -86,7 +86,7 @@ namespace NationalFootballChampionshipManagement
                 }
                 catch
                 {
-                    MessageBox.Show("Sửa thông tin thất bại!", "Lỗi");
+                    MessageBox.Show("Sửa thông tin thất bại!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
         }
 
@@ -102,13 +102,13 @@ namespace NationalFootballChampionshipManagement
                 }
                 catch
                 {
-                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi");
+                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá đội bóng này không ? Tất cả cầu thủ trong đội cũng sẽ bị xoá", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá đội bóng này không ? Tất cả cầu thủ trong đội cũng sẽ bị xoá", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.No)
             {
                 return;
@@ -117,12 +117,12 @@ namespace NationalFootballChampionshipManagement
             try
             {
                 TeamDAO.Instance.DeleteTeamByID(team.ID);
-                MessageBox.Show("Xoá đội bóng thành công", "Thành công");
+                MessageBox.Show("Xoá đội bóng thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.formFather.openChildForm(new formTeam(this.formFather));
             }
             catch
             {
-                MessageBox.Show("Xoá đội bóng thất bại", "Lỗi");
+                MessageBox.Show("Xoá đội bóng thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

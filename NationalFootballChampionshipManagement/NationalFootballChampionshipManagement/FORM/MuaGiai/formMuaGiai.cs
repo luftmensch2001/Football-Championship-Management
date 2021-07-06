@@ -52,11 +52,11 @@ namespace NationalFootballChampionshipManagement
                 this.formFather.LoadLogo();
                 this.formFather.LoadStatus();
                 this.formFather.openChildForm(new formMuaGiai(this.formFather));
-                MessageBox.Show("Chuyển mùa giải thành công", "Thành công");
+                MessageBox.Show("Chuyển mùa giải thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Chuyển mùa giải thất bại", "Lỗi");
+                MessageBox.Show("Chuyển mùa giải thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
             
             

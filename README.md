@@ -20,7 +20,8 @@
 
 ## Hướng dẫn cài đặt
 - Yêu cầu phần mềm: Net Framework, Sql Express
-- Vào thư mục Data trong thư mục cài đặt phần mềm và chạy file Create database.txt để khởi tạo cơ sở dữ liệu cho phần mềm.
+- Chạy file NFCM.msi và cài đặt như các phần mềm thông thường
+- Lưu ý: tuyệt đối không được xóa file Create database.bat trong thư mục cài đặt
 
 ## Hướng dẫn sử dụng
 - Mỗi mùa giải gồm 3 trạng thái: 

@@ -75,7 +75,7 @@ namespace NationalFootballChampionshipManagement
         {
             if (cbCLB.SelectedValue == null || cbTypeOfPlayer.SelectedValue == null)
             {
-                MessageBox.Show("Vui lòng nhập đẩy đủ thông tin", "Lỗi");
+                MessageBox.Show("Vui lòng nhập đẩy đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             try
@@ -106,13 +106,13 @@ namespace NationalFootballChampionshipManagement
                 int maxCount = PlayerTypeDAO.Instance.GetMax(idLCT);
                 if (countOfThisPlayerType >= maxCount)
                 {
-                    MessageBox.Show("Số lượng loại cầu thủ này trong đội bóng đã đạt tối đa", "Lỗi");
+                    MessageBox.Show("Số lượng loại cầu thủ này trong đội bóng đã đạt tối đa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
                 if (nameCT == "" || nationalityCT == "")
                 {
-                    MessageBox.Show("Vui lòng nhập đẩy đủ thông tin", "Lỗi");
+                    MessageBox.Show("Vui lòng nhập đẩy đủ thông tin", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -120,7 +120,7 @@ namespace NationalFootballChampionshipManagement
                 {
                     if (pbPlayerImage.Image == null)
                     {
-                        MessageBox.Show("Vui lòng thêm hình ảnh", "Lỗi");
+                        MessageBox.Show("Vui lòng thêm hình ảnh", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     } 
                         
@@ -128,14 +128,14 @@ namespace NationalFootballChampionshipManagement
 
                     if (TeamDAO.Instance.GetCountPlayer(idDB) >= rules.SLTD)
                     {
-                        MessageBox.Show("Đội bóng đã đạt số lượng cầu thủ tối đa", "Lỗi");
+                        MessageBox.Show("Đội bóng đã đạt số lượng cầu thủ tối đa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
                     int status = PlayerDAO.Instance.AddPlayer(nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes, pbPlayerImage.Image);
                     if (status == 1)
                     {
-                        MessageBox.Show("Thêm cầu thủ thành công!", "Thành công");
+                        MessageBox.Show("Thêm cầu thủ thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.formFather.openChildForm(new formTeam(this.formFather));
                         this.Close();
                     }
@@ -145,7 +145,7 @@ namespace NationalFootballChampionshipManagement
                     int status = PlayerDAO.Instance.UpdatePlayer(player.ID, nameCT, genderCT, nationalityCT, idLCT, dob, idDB, notes, pbPlayerImage.Image);
                     if (status == 1)
                     {
-                        MessageBox.Show("Cập nhật thành công!", "Thành công");
+                        MessageBox.Show("Cập nhật thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         this.formFather.openChildForm(new formTeam(this.formFather));
                         this.Close();
                     }
@@ -164,7 +164,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá cầu thủ này không ?","Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn xoá cầu thủ này không ?","Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.No)
             {
                 return;
@@ -188,7 +188,7 @@ namespace NationalFootballChampionshipManagement
                 }
                 catch
                 {
-                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi");
+                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
         }
     }

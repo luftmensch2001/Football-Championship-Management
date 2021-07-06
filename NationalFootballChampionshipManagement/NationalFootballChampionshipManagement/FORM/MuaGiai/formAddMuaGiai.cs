@@ -30,7 +30,7 @@ namespace NationalFootballChampionshipManagement
         {
             if (pbImage.Image == null)
             {
-                MessageBox.Show("Vui lòng thêm logo cho mùa giải", "Lỗi");
+                MessageBox.Show("Vui lòng thêm logo cho mùa giải", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -38,7 +38,7 @@ namespace NationalFootballChampionshipManagement
             {
                 bool firstLeague = (LeagueDAO.Instance.GetCurrIDMG() == -1);
                 LeagueDAO.Instance.AddLeague(tbName.Text, Int32.Parse(tbYear.Text), pbImage.Image);
-                MessageBox.Show("Thêm mùa giải thành công", "Thành công");
+                MessageBox.Show("Thêm mùa giải thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 if (firstLeague)
                 {
                     this.formFather.EnableButton();
@@ -48,7 +48,7 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                MessageBox.Show("Thêm mùa giải thất bại", "Lỗi");
+                MessageBox.Show("Thêm mùa giải thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 }
@@ -66,7 +66,7 @@ namespace NationalFootballChampionshipManagement
                 }
                 catch
                 {
-                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi");
+                    MessageBox.Show("File không hợp lệ, vui lòng chọn lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
         }
     }

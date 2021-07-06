@@ -216,7 +216,7 @@ namespace NationalFootballChampionshipManagement
             }
             else
             {
-                MessageBox.Show("Không có thông tin để in");
+                MessageBox.Show("Không có thông tin để in", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

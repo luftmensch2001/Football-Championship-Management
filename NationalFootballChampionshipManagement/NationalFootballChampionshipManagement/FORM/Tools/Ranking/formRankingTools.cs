@@ -46,7 +46,7 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                MessageBox.Show("Lỗi khi tải dữ liệu", "Lỗi");
+                MessageBox.Show("Lỗi khi tải dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void dgvRankingRule_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -88,7 +88,7 @@ namespace NationalFootballChampionshipManagement
         private void btnSave_Click(object sender, EventArgs e)
         {
             string Ten;
-            DialogResult dialogResult = MessageBox.Show("Lưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Lưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.No) return;
             try
             {
@@ -97,11 +97,11 @@ namespace NationalFootballChampionshipManagement
                     Ten = dgvRankingRule[0, i].Value.ToString();
                     PriorityRankDAO.Instance.UpdateListPriorityRankByThuTuUuTien(Ten, i + 1);
                 }
-                MessageBox.Show("Cập nhật thành công", "Thành công");
+                MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Có lỗi trong quá trình cập nhật thứ tự \nVui lòng tạo lại giải đấu nếu bị trùng lặp điều kiện", "Lỗi nghiêm trọng");
+                MessageBox.Show("Có lỗi trong quá trình cập nhật thứ tự \nVui lòng tạo lại giải đấu nếu bị trùng lặp điều kiện", "Lỗi nghiêm trọng", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

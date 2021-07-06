@@ -228,7 +228,7 @@ namespace NationalFootballChampionshipManagement
                 }
                 Reset();
                 EditGoalNumber();
-                MessageBox.Show("Thêm bàn thắng thành công");
+                MessageBox.Show("Thêm bàn thắng thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 isChanged = true;
 
             }
@@ -276,7 +276,7 @@ namespace NationalFootballChampionshipManagement
                     //AutoId(dgvGoalTeam2);
                 }
                 EditGoalNumber();
-                MessageBox.Show("Xóa bàn thắng thành công");
+                MessageBox.Show("Xóa bàn thắng thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 isChanged = true;
 
             }
@@ -306,7 +306,7 @@ namespace NationalFootballChampionshipManagement
                     dgvGoalTeam2.Rows[rowIndex].Cells[2].Value = cbbTypeGoal.SelectedItem.ToString();
                     dgvGoalTeam2.Rows[rowIndex].Cells[3].Value = listGoal2[Int32.Parse(tbSTT.Text) - 1].IdThoiDiem;
                 }
-                MessageBox.Show("Sửa bàn thắng thành công");
+                MessageBox.Show("Sửa bàn thắng thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 EditGoalNumber();
                 isChanged = true;
             }
@@ -315,22 +315,22 @@ namespace NationalFootballChampionshipManagement
         {
             if (cbbNameTeam.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên đội bóng", "Lỗi thiếu thông tin");
+                MessageBox.Show("Vui lòng nhập tên đội bóng", "Lỗi thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return false;
             }
             if (cbbNamePlayer.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập tên cầu thủ", "Lỗi thiếu thông tin");
+                MessageBox.Show("Vui lòng nhập tên cầu thủ", "Lỗi thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (cbbTypeGoal.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập loại bàn thắng", "Lỗi thiếu thông tin");
+                MessageBox.Show("Vui lòng nhập loại bàn thắng", "Lỗi thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             if (nbMinute.Text == "")
             {
-                MessageBox.Show("Vui lòng nhập thời gian ghi bàn", "Lỗi thiếu thông tin");
+                MessageBox.Show("Vui lòng nhập thời gian ghi bàn", "Lỗi thiếu thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             return true;
@@ -342,7 +342,7 @@ namespace NationalFootballChampionshipManagement
                 isChanged = false;
                 LeagueDAO.Instance.UpdateStatus(2);
                 this.formFather.LoadStatus();
-                MessageBox.Show("Lưu dữ liệu thành công");
+                MessageBox.Show("Lưu dữ liệu thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         bool Save()
@@ -403,7 +403,7 @@ namespace NationalFootballChampionshipManagement
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Dữ liệu chưa được lưu. Bạn có muốn lưu dữ liệu trước khi thoát", "Xác nhận", MessageBoxButtons.YesNoCancel);
+                DialogResult dialogResult = MessageBox.Show("Dữ liệu chưa được lưu. Bạn có muốn lưu dữ liệu trước khi thoát", "Xác nhận", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.Cancel) return;
                 if (dialogResult == DialogResult.Yes)
                     Save();
@@ -463,7 +463,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btCancel_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn huỷ kết quả trận đấu này không ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Bạn có chắc muốn huỷ kết quả trận đấu này không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dialogResult == DialogResult.No)
             {
                 return;

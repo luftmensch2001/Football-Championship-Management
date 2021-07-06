@@ -33,7 +33,7 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                MessageBox.Show("Lỗi khi tải dữ liệu", "Lỗi");
+                MessageBox.Show("Lỗi khi tải dữ liệu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
         }
@@ -47,21 +47,21 @@ namespace NationalFootballChampionshipManagement
             //Check Logic
             if (nudWinScore.Value > nudDrawScore.Value && nudDrawScore.Value > nudLoseScore.Value)
             {
-                DialogResult dialogResult = MessageBox.Show("Lưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Lưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (dialogResult == DialogResult.No) return;
                 try
                 {
                     ScoreDAO.Instance.UpdateScoreRule((int)nudWinScore.Value, (int)nudDrawScore.Value, (int)nudLoseScore.Value);
-                    MessageBox.Show("Cập nhật quy định điểm số thành công", "Thành công");
+                    MessageBox.Show("Cập nhật quy định điểm số thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch
                 {
-                    MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại", "Lỗi");
+                    MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Điểm thắng > Điểm hoà > Điểm thua", "Lỗi");
+                MessageBox.Show("Điểm thắng > Điểm hoà > Điểm thua", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

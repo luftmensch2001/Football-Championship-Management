@@ -63,7 +63,7 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                MessageBox.Show("Lỗi khi tải quy định", "Lỗi");
+                MessageBox.Show("Lỗi khi tải quy định", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         void LoadDgvPlayerType()
@@ -84,7 +84,7 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                MessageBox.Show("Lỗi khi tải danh sách loại cầu thủ", "Lỗi");
+                MessageBox.Show("Lỗi khi tải danh sách loại cầu thủ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         void LoadDgvGoalType()
@@ -101,7 +101,7 @@ namespace NationalFootballChampionshipManagement
             }
             catch
             {
-                MessageBox.Show("Lỗi khi tải danh sách loại bàn thắng", "Lỗi");
+                MessageBox.Show("Lỗi khi tải danh sách loại bàn thắng", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void dgvPlayerType_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -121,7 +121,7 @@ namespace NationalFootballChampionshipManagement
         }
         private void btnRemoveTypeOfPlayer_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Tất cả cầu thủ thuộc loại này cũng bị xoá. Bạn có chắc muốn xoá loại cầu thủ này không ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Tất cả cầu thủ thuộc loại này cũng bị xoá. Bạn có chắc muốn xoá loại cầu thủ này không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.No)
             {
                 return;
@@ -130,13 +130,13 @@ namespace NationalFootballChampionshipManagement
             try
             {
                 PlayerTypeDAO.Instance.DeleteByID(SelectedIDLCT);
-                MessageBox.Show("Xoá loại cầu thủ thành công", "Thành công");
+                MessageBox.Show("Xoá loại cầu thủ thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadDgvPlayerType();
             }
             catch
             {
 
-                MessageBox.Show("Xoá loại cầu thủ thất bại", "Lỗi");
+                MessageBox.Show("Xoá loại cầu thủ thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnAddTypeOfGoal_Click(object sender, EventArgs e)
@@ -154,7 +154,7 @@ namespace NationalFootballChampionshipManagement
                 MessageBox.Show("Vui lòng chọn loại bàn thắng cần xoá", "Lỗi");
                 return;
             }
-            DialogResult dialogResult = MessageBox.Show("Xoá loại bàn thắng này ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Xoá loại bàn thắng này ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.No) return;
             try
             {
@@ -163,11 +163,11 @@ namespace NationalFootballChampionshipManagement
                 dgvGoalType.Rows.Clear();
                 LoadDgvGoalType();
                 dgvGoalType.ClearSelection();
-                MessageBox.Show("Xoá loại bàn thắng thành công", "Thành công");
+                MessageBox.Show("Xoá loại bàn thắng thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại", "Lỗi");
+                MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
@@ -177,45 +177,45 @@ namespace NationalFootballChampionshipManagement
             //NumberOfTeams
             if (nudNumberOfTeams.Value < TeamDAO.Instance.GetCountTeam())
             {
-                MessageBox.Show("Số lượng đội bóng phải lớn hơn số lượng đội đang có", "Lỗi");
+                MessageBox.Show("Số lượng đội bóng phải lớn hơn số lượng đội đang có", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (nudNumberOfTeams.Value < 2)
             {
-                MessageBox.Show("Số lượng đội bóng phải lớn hơn 1", "Lỗi");
+                MessageBox.Show("Số lượng đội bóng phải lớn hơn 1", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             //Age
             if (nudMinAge.Value < 1)
             {
-                MessageBox.Show("Số tuổi phải lớn hơn 0", "Lỗi");
+                MessageBox.Show("Số tuổi phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (nudMinAge.Value > nudMaxAge.Value)
             {
-                MessageBox.Show("Tuổi tối thiểu không được lớn hơn tuổi tối đa", "Lỗi");
+                MessageBox.Show("Tuổi tối thiểu không được lớn hơn tuổi tối đa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             //Player
             if (nudMinPlayer.Value < 1)
             {
-                MessageBox.Show("Số lượng cầu thủ tối thiểu phải lớn hơn 0", "Lỗi");
+                MessageBox.Show("Số lượng cầu thủ tối thiểu phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (nudMinPlayer.Value > nudMaxPlayer.Value)
             {
-                MessageBox.Show("Số lượng cầu thủ tối thiểu không được lớn hơn số lượng cầu thủ tối đa", "Lỗi");
+                MessageBox.Show("Số lượng cầu thủ tối thiểu không được lớn hơn số lượng cầu thủ tối đa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (IsLowerThanMaxPlayer())
             {
-                MessageBox.Show("Hiện tại có đội có số lượng cầu thủ mượt mức này\nVui lòng xoá và thử lại", "Lỗi");
+                MessageBox.Show("Hiện tại có đội có số lượng cầu thủ mượt mức này\nVui lòng xoá và thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }    
 
-            DialogResult dialogResult = MessageBox.Show("Chú ý: Sau khi lưu thay đổi, các cầu thủ có tuổi không hợp lệ sẽ bị xoá khỏi danh sách\nLưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Chú ý: Sau khi lưu thay đổi, các cầu thủ có tuổi không hợp lệ sẽ bị xoá khỏi danh sách\nLưu những thay đổi này ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.No) return;
 
 
@@ -248,16 +248,16 @@ namespace NationalFootballChampionshipManagement
                         }
                         catch
                         {
-                            MessageBox.Show("Có lỗi trong quá trình xoá cầu thủ không hợp lệ", "Lỗi");
+                            MessageBox.Show("Có lỗi trong quá trình xoá cầu thủ không hợp lệ", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
 
-                MessageBox.Show("Cập nhật quy định thành công", "Thành công");
+                MessageBox.Show("Cập nhật quy định thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại", "Lỗi");
+                MessageBox.Show("Có lỗi xảy ra, vui lòng thử lại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void btnClose_Click(object sender, EventArgs e)
@@ -280,7 +280,7 @@ namespace NationalFootballChampionshipManagement
                 btnRemoveTypeOfGoal.Enabled = false;
                 btnRemoveTypeOfPlayer.Enabled = false;
                 btnSave.Enabled = false;
-                MessageBox.Show("Không thể thay đổi quy định giải đấu khi đã tạo lịch thi đấu", "Thông báo");
+                MessageBox.Show("Không thể thay đổi quy định giải đấu khi đã tạo lịch thi đấu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

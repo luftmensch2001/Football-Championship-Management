@@ -38,10 +38,10 @@ namespace NationalFootballChampionshipManagement
 
             if (nudMaxNumber.Value < 1)
             {
-                MessageBox.Show("Số lượng tối đa phải lớn hơn 0", "Lỗi");
+                MessageBox.Show("Số lượng tối đa phải lớn hơn 0", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            DialogResult dialogResult = MessageBox.Show("Thêm loại cầu thủ mới ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Thêm loại cầu thủ mới ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.No) return;
             try
             {
@@ -54,7 +54,7 @@ namespace NationalFootballChampionshipManagement
 
                 if (name == "")
                 {
-                    MessageBox.Show("Tên không hợp lệ");
+                    MessageBox.Show("Tên không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 listPlayerType = PlayerTypeDAO.Instance.GetPlayerTypes();
@@ -62,17 +62,17 @@ namespace NationalFootballChampionshipManagement
                 {
                     if (name == playerType.TypeName)
                     {
-                        MessageBox.Show("Loại cầu thủ đã tồn tại", "Thất bại");
+                        MessageBox.Show("Loại cầu thủ đã tồn tại", "Thất bại", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
                 PlayerTypeDAO.Instance.AddNewType(name, (int)nudMaxNumber.Value, LeagueDAO.Instance.GetCurrIDMG());
-                MessageBox.Show("Thêm loại cầu thủ thành công", "Thành công");
+                MessageBox.Show("Thêm loại cầu thủ thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.formFather.openChildForm(new formChampionshipTools(this.formFather));
             }
             catch
             {
-                MessageBox.Show("Thêm loại cầu thủ thất bại", "Lỗi");
+                MessageBox.Show("Thêm loại cầu thủ thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

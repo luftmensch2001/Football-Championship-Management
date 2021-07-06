@@ -121,10 +121,10 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAddNewCompetiton_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Sau khi tạo lịch thi đấu, sẽ không thể thay đổi danh sách đăng ký và quy định giải đấu. Bạn có chắc không ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Sau khi tạo lịch thi đấu, sẽ không thể thay đổi danh sách đăng ký và quy định giải đấu. Bạn có chắc không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.No) return;
 
-            dialogResult = MessageBox.Show("Các đội bóng không đạt số cầu thủ tối thiểu sẽ không được tham gia. Tiếp tục ?", "Xác nhận", MessageBoxButtons.YesNo);
+            dialogResult = MessageBox.Show("Các đội bóng không đạt số cầu thủ tối thiểu sẽ không được tham gia. Tiếp tục ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.No) return;
             
             try
@@ -135,11 +135,11 @@ namespace NationalFootballChampionshipManagement
                 btnCancelSchedule.Enabled = true;
                 LeagueDAO.Instance.UpdateStatus(1);
                 this.formFather.LoadStatus();
-                MessageBox.Show("Tạo lịch thi đấu thành công. Hãy tuỳ chỉnh thời gian cho các trận đấu!", "Thành công");
+                MessageBox.Show("Tạo lịch thi đấu thành công. Hãy tuỳ chỉnh thời gian cho các trận đấu!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             } 
             catch
             {
-                MessageBox.Show("Tạo lịch thi đấu thất bại", "Lỗi");
+                MessageBox.Show("Tạo lịch thi đấu thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
                 
 
@@ -152,12 +152,12 @@ namespace NationalFootballChampionshipManagement
 
         private void btnCancelSchedule_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Dữ liệu về các trận đấu sẽ bị xoá hết. Bạn có chắc không ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Dữ liệu về các trận đấu sẽ bị xoá hết. Bạn có chắc không ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (dialogResult == DialogResult.No) return;
 
             if (LeagueDAO.Instance.GetCurrLeagueStatus() == "Trạng thái: Đã bắt đầu")
             {
-                MessageBox.Show("Không thể huỷ lịch khi mùa giải đã bắt đầu", "Lỗi");
+                MessageBox.Show("Không thể huỷ lịch khi mùa giải đã bắt đầu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -173,11 +173,11 @@ namespace NationalFootballChampionshipManagement
                 btnAutoCreate.Enabled = true;
                 LeagueDAO.Instance.UpdateStatus(0);
                 this.formFather.LoadStatus();
-                MessageBox.Show("Huỷ lịch thi đấu thành công", "Thành công");
+                MessageBox.Show("Huỷ lịch thi đấu thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch
             {
-                MessageBox.Show("Huỷ lịch thi đấu thất bại", "Lỗi");
+                MessageBox.Show("Huỷ lịch thi đấu thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -185,7 +185,7 @@ namespace NationalFootballChampionshipManagement
         {
             if (selectedRow < 0 || selectedRow >= dgvSchedule.Rows.Count-1)
             {
-                MessageBox.Show("Vui lòng chọn trận đấu");
+                MessageBox.Show("Vui lòng chọn trận đấu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
             this.formFather.openChildForm(new formChangeTime(this.formFather, listIDTranDau[selectedRow]));

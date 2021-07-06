@@ -131,7 +131,7 @@ namespace NationalFootballChampionshipManagement
             if (e.RowIndex < 0 || e.RowIndex >= dgvPlayerList.Rows.Count - 1 ||  e.ColumnIndex != 0) return;
             if (roundCount > 0)
             {
-                MessageBox.Show("Không thể thay đổi thông tin khi mùa giải đã bắt đầu");
+                MessageBox.Show("Không thể thay đổi thông tin khi mùa giải đã bắt đầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             this.formFather.openChildForm(new formAddPlayer(this.formFather, IDCT[e.RowIndex]));
@@ -145,14 +145,14 @@ namespace NationalFootballChampionshipManagement
         {
             if (roundCount > 0)
             {
-                MessageBox.Show("Không thể đăng ký thêm khi mùa giải đã bắt đầu");
+                MessageBox.Show("Không thể đăng ký thêm khi mùa giải đã bắt đầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 
             Rules rules = RulesDAO.Instance.GetRules();
             if (TeamDAO.Instance.GetCountTeam() >= rules.SLDB)
             {
-                MessageBox.Show("Số lượng đội bóng đã đạt tối đa", "Lỗi");
+                MessageBox.Show("Số lượng đội bóng đã đạt tối đa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             this.formFather.openChildForm(new formAddNewTeam(this.formFather));
@@ -162,14 +162,14 @@ namespace NationalFootballChampionshipManagement
         {
             if (roundCount > 0)
             {
-                MessageBox.Show("Không thể sửa thông tin đăng ký khi mùa giải đã bắt đầu");
+                MessageBox.Show("Không thể sửa thông tin đăng ký khi mùa giải đã bắt đầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             // Mở form thêm đội bóng mới lên và đôi button "Thêm" thành button "Lưu", 
             // và đổi tiêu đề thành "THay đổi thông tin đội bóng"
             if (curTeam == null)
             {
-                MessageBox.Show("Vui lòng chọn đội bóng");
+                MessageBox.Show("Vui lòng chọn đội bóng", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             this.formFather.openChildForm(new formAddNewTeam(this.formFather, curTeam));
@@ -184,7 +184,7 @@ namespace NationalFootballChampionshipManagement
         {
             if (roundCount > 0)
             {
-                MessageBox.Show("Không thể đăng ký thêm khi mùa giải đã bắt đầu");
+                MessageBox.Show("Không thể đăng ký thêm khi mùa giải đã bắt đầu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
 

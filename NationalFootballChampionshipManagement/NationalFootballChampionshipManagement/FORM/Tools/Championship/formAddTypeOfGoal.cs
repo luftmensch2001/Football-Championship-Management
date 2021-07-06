@@ -33,7 +33,7 @@ namespace NationalFootballChampionshipManagement
 
         private void btnAddGoal_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Thêm loại bàn thắng mới ?", "Xác nhận", MessageBoxButtons.YesNo);
+            DialogResult dialogResult = MessageBox.Show("Thêm loại bàn thắng mới ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.No) return;
             try
             {
@@ -46,7 +46,7 @@ namespace NationalFootballChampionshipManagement
 
                 if (name == "")
                 {
-                    MessageBox.Show("Tên không hợp lệ");
+                    MessageBox.Show("Tên không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -55,17 +55,17 @@ namespace NationalFootballChampionshipManagement
                 {
                     if (name == goalType.Name)
                     {
-                        MessageBox.Show("Loại bàn thắng đã tồn tại", "Lỗi");
+                        MessageBox.Show("Loại bàn thắng đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
                 }
                 GoalTypeDAO.Instance.AddNewGoalType(name);
-                MessageBox.Show("Thêm loại bàn thắng thành công", "Thành công");
+                MessageBox.Show("Thêm loại bàn thắng thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.formFather.openChildForm(new formChampionshipTools(this.formFather));
             }
             catch
             {
-                MessageBox.Show("Thêm loại bàn thắng thất bại", "Lỗi");
+                MessageBox.Show("Thêm loại bàn thắng thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

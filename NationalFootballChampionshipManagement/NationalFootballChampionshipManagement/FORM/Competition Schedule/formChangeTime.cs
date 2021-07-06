@@ -56,12 +56,12 @@ namespace NationalFootballChampionshipManagement
                 timeString += " " + nudHour.Value.ToString() + ":" + nudMinute.Value.ToString();
                 timeString = "'" + timeString + "'";
                 MatchDAO.Instance.UpdateTime(match.IDTranDau, timeString);
-                MessageBox.Show("Cập nhật thành công", "Thành công");
+                MessageBox.Show("Cập nhật thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.formFather.openChildForm(new formCompetitionSchedule(this.formFather));
             }
             catch
             {
-                MessageBox.Show("Cập nhật thất bại", "Lỗi");
+                MessageBox.Show("Cập nhật thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
